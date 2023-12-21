@@ -18,17 +18,22 @@ Feel the energy, see the progress, and get inspired to join me on the path to fi
 
 Contact Me
 
-Have a question or just want to say hello? Feel free to reach out to me [via email](mailto:mail@mohdasif.com) 
+Have a question or just want to say hello? Feel free to reach out to me [via email]() ## How to Reach Me
 
+- Email: mailto:mail@mohdasif.com
+- LinkedIn: [Mohd Asif on LinkedIn](https://www.linkedin.com/in/mohdasif/)
+- Twitter: [@mohdasif](https://twitter.com/mohdasif)
+- GitHub: [mohdasif on GitHub](https://github.com/mohdasif)
+- Personal Website: [mohdasif.com](https://www.mohdasif.com)
 
-- 🔭 I’m currently working on ... gettign abs
+- 🔭 I’m currently working on ... getting abs
 - 🌱 I’m currently learning ... communication skills
-- 👯 I’m looking to collaborate on ... business
+- 👯 I’m looking to collaborate on ... anything with business or job
 - 🤔 I’m looking for help with ... relationship advice
 - 💬 Ask me about ... workout and fitness
 - 📫 How to reach me: ... contact page
-- 😄 Pronouns: ... Asif
-- ⚡ Fun fact: ... i dont have abs in my life till now, but will get it soon.
+- 😄 Pronouns: ... He/Him
+- ⚡ Fun fact: ... I once attempted to read a book while working out on a treadmill. Let's just say it was an ambitious experiment, and the book didn't survive the adventure!
 
 - Thanks for visiting! 😊
 -->
