@@ -18,9 +18,8 @@ Feel the energy, see the progress, and get inspired to join me on the path to fi
 
 Contact Me
 
-Have a question or just want to say hello? Feel free to reach out to me [via email]() ## How to Reach Me
+Have a question or just want to say hello? Feel free to reach out to me
 
-- Email: mailto:mail@mohdasif.com
 - LinkedIn: [Mohd Asif on LinkedIn](https://www.linkedin.com/in/mohdasif/)
 - Twitter: [@mohdasif](https://twitter.com/mohdasif)
 - GitHub: [mohdasif on GitHub](https://github.com/mohdasif)
