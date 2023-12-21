@@ -3,8 +3,6 @@ Welcome to My Personal Website!
 
 I'm Asif, and this is my personal website. Explore the various sections to get to know more about me and my interests.
 
-Navigation
-
 About Me
 
 I'm passionate about reading books, indulging in poetry, and maintaining a healthy lifestyle through regular workouts. This is the place where I share my thoughts, experiences, and projects related to these passions.
@@ -27,7 +25,7 @@ Have a question or just want to say hello? Feel free to reach out to me
 
 - 🔭 I’m currently working on ... getting abs
 - 🌱 I’m currently learning ... communication skills
-- 👯 I’m looking to collaborate on ... anything with business or job
+- 👯 I’m looking to collaborate on ... anything with business
 - 🤔 I’m looking for help with ... relationship advice
 - 💬 Ask me about ... workout and fitness
 - 📫 How to reach me: ... contact page
