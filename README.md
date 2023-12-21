@@ -21,7 +21,7 @@ Have a question or just want to say hello? Feel free to reach out to me
 - LinkedIn: [Mohd Asif on LinkedIn](https://www.linkedin.com/in/mohdasif/)
 - Twitter: [@mohdasif](https://twitter.com/mohdasif)
 - GitHub: [mohdasif on GitHub](https://github.com/mohdasif)
-- Personal Website: [mohdasif.com](https://www.mohdasif.com)
+- Personal Website: [mohdasif.com](https://mohdasif.com)
 
 - 🔭 I’m currently working on ... getting abs
 - 🌱 I’m currently learning ... communication skills
