@@ -5,11 +5,6 @@ I'm Asif, and this is my personal website. Explore the various sections to get t
 
 Navigation
 
-- [Home]
-- [About]
-- [Photos]
-- [Contact]
-
 About Me
 
 I'm passionate about reading books, indulging in poetry, and maintaining a healthy lifestyle through regular workouts. This is the place where I share my thoughts, experiences, and projects related to these passions.
@@ -24,7 +19,6 @@ Feel the energy, see the progress, and get inspired to join me on the path to fi
 Contact Me
 
 Have a question or just want to say hello? Feel free to reach out to me [via email](mailto:mail@mohdasif.com) 
-Thanks for visiting! 😊
 
 
 - 🔭 I’m currently working on ... gettign abs
@@ -35,4 +29,6 @@ Thanks for visiting! 😊
 - 📫 How to reach me: ... contact page
 - 😄 Pronouns: ... Asif
 - ⚡ Fun fact: ... i dont have abs in my life till now, but will get it soon.
+
+- Thanks for visiting! 😊
 -->
