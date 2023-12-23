@@ -1,13 +1,10 @@
-### Hi there 👋
-Welcome to My Personal Website!
-
-I'm Asif, and this is my personal website. Explore the various sections to get to know more about me and my interests.
+Hi there 👋
 
 About Me
 
 I'm passionate about reading books, indulging in poetry, and maintaining a healthy lifestyle through regular workouts. This is the place where I share my thoughts, experiences, and projects related to these passions.
 
-Personal Photos
+mohdasif.com/photos
 
 Explore a collection of my personal photos, capturing moments from my fitness journey and gym workouts. From workout routines to fitness achievements, this section provides a visual diary of my dedication to a healthy lifestyle.
 
