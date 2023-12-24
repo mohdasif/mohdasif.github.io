@@ -1,0 +1,68 @@
+---
+title: "Home"
+layout: default
+pagination:
+  enabled: true
+description: "Your description here."
+---
+
+<div class="container">
+    <!-- Display the first 4 posts with images -->
+    <div class="row remove-site-content-margin">
+        {% for post in site.posts limit:4 %}
+            <div class="col-md-6">
+                <div class="card border-0 mb-4 box-shadow">
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                        <div class="topfirstimage" style="background-image: url({{ post.image | absolute_url }}); height: 200px; background-size: cover; background-repeat: no-repeat;"></div>
+                    </a>
+                    <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
+                        <h2 class="h4 font-weight-bold">
+                            <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                        </h2>
+                        <p class="excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}</p>
+                        <div>
+                            <small class="d-block text-muted">
+                                In <span class="catlist">
+                                    {% for category in post.categories %}
+                                        <a class="text-capitalize text-muted smoothscroll" href="{{ site.baseurl }}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                                    {% endfor %}
+                                </span>
+                            </small>
+                            <small class="text-muted">{{ post.date | date: '%b %d, %Y' }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Display sticky post if available -->
+    {% for post in site.posts %}
+        {% if post.tags contains "sticky" %}
+            <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
+                <!-- Your sticky post content here -->
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    <!-- Display the rest of the posts with pagination -->
+    <div class="row mt-3">
+        <div class="col-md-8 main-loop">
+            <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
+            {% for post in paginator.posts %}
+                {% include main-loop-card.html %}
+            {% endfor %}
+            <div class="mt-5">
+                <!-- Pagination links -->
+                {% if paginator.total_pages > 1 %}
+                    <ul class="pagination">
+                        <!-- Pagination links go here -->
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- Include the sidebar or featured content here -->
+        </div>
+    </div>
+</div>
