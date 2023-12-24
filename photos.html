@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,37 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+        }
+
+        #desktop-navigation,
+        #mobile-navigation {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+        }
+
+        #mobile-navigation {
+            background-color: #f8f8f8;
+            color: #000;
+            padding: 10px;
+            display: none;
         }
 
         section {
@@ -23,7 +55,26 @@
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="/mohdasif">Home</a>
+        <a href="/mohdasif/about.html">About</a>
+        <a href="/mohdasif/photos.html">Photos</a>
+        <a href="/mohdasif/contact.html">Contact</a>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-navigation">
+        <a href="/mohdasif">🏠</a>
+        <a href="/mohdasif/about.html">📝</a>
+        <a href="/mohdasif/photos.html">📷</a>
+        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
+        <a href="/mohdasif/contact.html">💬</a>
+
+    </div>
 
     <!-- Main Content -->
     <section>
