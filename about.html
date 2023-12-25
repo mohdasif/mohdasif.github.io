@@ -4,28 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Asif's Website</title>
+    <title>About - Asif's Website</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        #desktop-navigation,
+        #desktop-navigation {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: block;
+        }
+
         #mobile-navigation {
             text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-        }
-
-        #desktop-navigation {
-            background-color: #333;
-            color: #fff;
+            background-color: #f8f8f8;
+            color: #000;
             padding: 10px;
+            display: none;
         }
 
         #desktop-navigation a,
@@ -37,55 +50,57 @@
             border-bottom: 2px solid transparent;
         }
 
-        #mobile-navigation {
-            background-color: #f8f8f8;
-            color: #000;
-            padding: 10px;
-            display: none;
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
         }
 
-        section {
-            max-width: 800px;
-            margin: 20px auto;
+        .content-container {
+            max-width: 600px;
+            margin: 20px;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        h2 {
+        .left-section {
+            text-align: left;
+        }
+
+        h1 {
             color: #333;
         }
 
         p {
+            color: #555;
             margin-bottom: 20px;
         }
 
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
         a {
-            color: #0066cc;
             text-decoration: none;
+            color: #4285f4;
+            font-weight: bold;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .center-section {
+            text-align: center;
         }
 
-        li {
-            margin-bottom: 10px;
-        }
-
-        @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-        }
     </style>
 </head>
 
@@ -108,44 +123,42 @@
         <a href="/mohdasif/contact.html">💬</a>
     </div>
 
-    <section>
-        <!-- Your existing content goes here -->
-        <h2>About Me</h2>
-        <p>I'm Asif, and this is my personal website. Explore the various sections to get to know more about me and my interests.</p>
+    <div class="content-container">
+        <h1>About</h1>
+        <p>
+            I’m passionate about reading books, indulging in poetry, and maintaining a healthy lifestyle through
+            regular workouts.
+            This is the place where I share my thoughts, experiences, and projects related to these passions.
+        </p>
+        <div class="center-section">
+            <p><strong>Links</strong></p>
+            <ul>
+                <li><a href="https://m.youtube.com/@mohdasif">YouTube</a></li>
+                <li><a href="https://www.clubhouse.com/@mohdasif">Clubhouse</a></li>
+                <li><a href="https://href.li/?https://www.linkedin.com/in/mohdasif" title="Linkedin">LinkedIn</a></li>
+                <li><a href="https://pinterest.com/mohdasif/">Pinterest</a></li>
+                <li><a href="https://href.li/?https://www.reddit.com/user/mohdasif">Reddit</a></li>
+                <li><a href="https://github.com/mohdasif">GitHub</a></li>
+                <li><a href="https://twitter.com/mohdasif">X</a></li>
+            </ul>
+        </div>
+        <div class="left-section">
+            <p>
+                <strong>🛍️ <a href="#href.li%22:https://href.li/?https://www.amazon.in/shop/mohdasif"
+                        style="color: #4285f4;">Shop</a></strong>
+            </p>
+            <p>
+                <strong>🎧 <a href="https://www.youtube.com/playlist?list=PLIVm4C5LjspTKPD3n2Eb6VN7SAOMYUBhn"
+                        style="color: #4285f4;">Podcast</a></strong>
+            </p>
+            <p>
+                <strong>🏋️ <a href="https://m.youtube.com/@mohdasifGym/playlists"
+                        style="color: #4285f4;">Workout</a></strong>
+            </p>
+        </div>
+    </div>
 
-        <h2>Passions</h2>
-        <p>I'm passionate about reading books, indulging in poetry, and maintaining a healthy lifestyle through regular workouts. This is the place where I share my thoughts, experiences, and projects related to these passions.</p>
-
-        <h2>Personal Photos</h2>
-        <p>Explore a collection of my personal photos, capturing moments from my fitness journey and gym workouts. From workout routines to fitness achievements, this section provides a visual diary of my dedication to a healthy lifestyle.</p>
-        <p>Feel the energy, see the progress, and get inspired to join me on the path to fitness excellence!</p>
-
-        <!-- Add the Videos section -->
-        <h2>Videos</h2>
-        <p>Check out my latest videos on YouTube:</p>
-        <p><a href="https://m.youtube.com/@mohdasif/shorts" target="_blank">YouTube Shorts</a></p>
-
-        <h2>Contact Me</h2>
-        <p>Have a question or just want to say hello? Feel free to reach out to me:</p>
-        <ul>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/mohdasif/">Mohd Asif on LinkedIn</a></li>
-            <li>Twitter: <a href="https://twitter.com/mohdasif">@mohdasif</a></li>
-            <li>GitHub: <a href="https://github.com/mohdasif">mohdasif on GitHub</a></li>
-            <li>Personal Website: <a href="https://mohdasif.com">mohdasif.com</a></li>
-        </ul>
-
-        <h2>Fun Facts</h2>
-        <ul>
-            <li>🔭 I’m currently working on ... getting abs</li>
-            <li>🌱 I’m currently learning ... communication skills</li>
-            <li>👯 I’m looking to collaborate on ... anything with business</li>
-            <li>🤔 I’m looking for help with ... relationship advice</li>
-            <li>💬 Ask me about ... workout and fitness</li>
-            <li>📫 How to reach me: ... contact page</li>
-            <li>😄 Pronouns: ... He/Him</li>
-            <li>⚡ Fun fact: ... I once attempted to read a book while working out on a treadmill. Let's just say it was an ambitious experiment, and the book didn't survive the adventure!</li>
-        </ul>
-    </section>
 </body>
 
 </html>
+``
