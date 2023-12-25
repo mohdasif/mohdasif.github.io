@@ -1,0 +1,163 @@
+[33mcommit 180ba80ae2369368482df0f8aa268bfb8e3e936f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Asif <x@mohdasif.com>
+Date:   Sun Dec 24 16:10:32 2023 +0530
+
+    Initial commit with contact.html for main
+
+[33mcommit 63543f8709dda02ff269421bd517e1476989a722[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Asif <x@mohdasif.com>
+Date:   Sun Dec 24 02:13:50 2023 +0530
+
+    Update index.html with About page link
+
+[33mcommit e7afc532bb23a39332cafefebb6430d16fb58ab5[m
+Author: Asif <x@mohdasif.com>
+Date:   Sun Dec 24 02:08:44 2023 +0530
+
+    Adjust content margin for navigation bar
+
+[33mcommit a8e700dc97a9a6e88506f10b07b77258b9750e7e[m
+Author: Asif <x@mohdasif.com>
+Date:   Sun Dec 24 01:44:46 2023 +0530
+
+    Update index.html with About page link
+
+[33mcommit 38efa7aa48fa71d594262018f1066326e7979f3b[m
+Author: Asif <x@mohdasif.com>
+Date:   Sun Dec 24 01:24:18 2023 +0530
+
+    Update index.html with About page link
+
+[33mcommit dc2c78ef419a3069423dcdf7d0e29fa5a05c7a33[m
+Author: Asif <x@mohdasif.com>
+Date:   Sun Dec 24 01:15:08 2023 +0530
+
+    Add README file
+
+[33mcommit 131c078d9d6935768b4db85555901fcab5b94540[m
+Author: Asif <x@mohdasif.com>
+Date:   Sun Dec 24 01:12:14 2023 +0530
+
+    Update About link in desktop navigation
+
+[33mcommit fc563df13c33263b5b1f853b90045d254e05abb6[m
+Author: Asif <x@mohdasif.com>
+Date:   Sun Dec 24 01:06:43 2023 +0530
+
+    Add about.html with README.md content
+
+[33mcommit 215a26b2f87f632d713ab4f0f7c20b67ffa5e2d4[m
+Author: Asif <x@mohdasif.com>
+Date:   Sun Dec 24 00:07:35 2023 +0530
+
+    Add new HTML file
+
+[33mcommit 5242e7fe518cf856dd091a2b1336cd7f0b22c639[m
+Author: Asif <x@mohdasif.com>
+Date:   Sat Dec 23 15:42:48 2023 +0530
+
+    Update README.md
+
+[33mcommit fdd6a5f1ee3385fd41ae1afdb44eacf780b496a6[m
+Merge: e6ba46c e041dd1
+Author: Asif <x@mohdasif.com>
+Date:   Sat Dec 23 11:50:35 2023 +0530
+
+    Merge branch 'main' of https://github.com/mohdasif/mohdasif
+
+[33mcommit e6ba46c562af61eecfab6e29ac5d3511d3905015[m
+Author: Asif <x@mohdasif.com>
+Date:   Sat Dec 23 11:49:21 2023 +0530
+
+    Add Jekyll theme files
+
+[33mcommit e041dd1143f10ff24613067e5c844d6b61ac8272[m
+Author: Asif <x@mohdasif.com>
+Date:   Sat Dec 23 11:46:54 2023 +0530
+
+    Delete CNAME
+
+[33mcommit e1042477e9a03874e1fae1d970de1a53ff16d1d9[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 23:14:20 2023 +0530
+
+    Create CNAME
+
+[33mcommit 8bc5c7aad51d2444aa978a3eb979816eac59d6e0[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 22:16:52 2023 +0530
+
+    Remove deleted files
+
+[33mcommit 4c1d467b99f909e1d861a8b9f84391168622e378[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 22:10:39 2023 +0530
+
+    Remove all files except README.md
+
+[33mcommit 12a4e6c8d98962f6b71137dff5b97db58c9aacfc[m
+Merge: ea23ba6 b76db31
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 21:46:53 2023 +0530
+
+    Merge branch 'main' of https://github.com/mohdasif/mohdasif
+
+[33mcommit ea23ba6bbc0e52c7eb6f93a9eff364d32596f23b[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 21:44:56 2023 +0530
+
+    Add index.html
+
+[33mcommit b76db317ddf0f8db0221998565f9ca084a3eba81[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 03:30:49 2023 +0530
+
+    Update README.md
+
+[33mcommit b871c33a404cb3cd2baa9b3172138de22f894398[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 03:24:42 2023 +0530
+
+    Update README.md
+
+[33mcommit f2bba97d64220ca6e8d304a139ce568ff1dc3459[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 02:50:12 2023 +0530
+
+    Update README.md
+
+[33mcommit d7e83451d6cb0859d0ad69c443424c9532a2ef72[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 02:46:16 2023 +0530
+
+    Update README.md
+
+[33mcommit 0b105942c86dcadd47d4b3b199b4c716c79392e7[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 02:40:05 2023 +0530
+
+    Update README.md
+
+[33mcommit 0fb9f4dca5f99478e5e9fec65d3e808beeba760e[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 02:38:28 2023 +0530
+
+    Update README.md
+
+[33mcommit 3878c8b359eabce05f12721383fc135ecd2cc96b[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 02:18:41 2023 +0530
+
+    Remove zipped folders
+
+[33mcommit 0cb7d353c2f9c563d2f603a057f91de818a96ca0[m
+Author: Asif <x@mohdasif.com>
+Date:   Fri Dec 22 01:34:21 2023 +0530
+
+    Add Tumblr export data
+
+[33mcommit dcd8f98cdff48f8cb5d7af8cd1b5334322eb4bc0[m
+Author: Asif <68572074+mohdasif@users.noreply.github.com>
+Date:   Fri Dec 22 00:44:25 2023 +0530
+
+    Initial commit
