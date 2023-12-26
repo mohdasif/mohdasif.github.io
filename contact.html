@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Contact Us - Asif's Website</title>
     <style>
         body {
@@ -12,12 +11,12 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            height: 100vh; /* Ensure full viewport height on mobile */
         }
 
         #desktop-navigation,
         #mobile-navigation {
             text-align: center;
-            position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
@@ -97,6 +96,10 @@
             #mobile-navigation {
                 display: block;
             }
+
+            #desktop-navigation, #mobile-navigation {
+                position: relative; /* Avoid fixed positioning on mobile */
+            }
         }
     </style>
 </head>
@@ -113,11 +116,11 @@
 
     <!-- Mobile Navigation -->
     <div id="mobile-navigation">
-        <a href="/">🏠</a>
-        <a href="/about.html">📝</a>
-        <a href="/photos.html">📷</a>
-        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
-        <a href="/contact.html">💬</a>
+        <a href="/">ð </a>
+        <a href="/about.html">ð</a>
+        <a href="/photos.html">ð·</a>
+        <a href="https://m.youtube.com/@mohdasif/shorts">ð¬</a>
+        <a href="/contact.html">ð¬</a>
     </div>
 
     <div class="contact-container">
@@ -134,3 +137,4 @@
     </div>
 
 </body>
+</html>
