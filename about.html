@@ -11,10 +11,6 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
         #desktop-navigation,
@@ -30,7 +26,6 @@
             background-color: #333;
             color: #fff;
             padding: 10px;
-            display: block;
         }
 
         #desktop-navigation a,
@@ -55,20 +50,17 @@
 
         .content-container {
             max-width: 600px;
-            margin: 20px;
-            padding: 20px;
+            margin: 20px auto;
             background-color: #fff;
             border-radius: 8px;
+            padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        .left-section {
-            text-align: left;
-        }
-
         h1 {
             color: #333;
+            margin-bottom: 20px; /* Add space between title and content */
         }
 
         p {
@@ -96,23 +88,6 @@
             text-decoration: underline;
         }
 
-        .center-section {
-            text-align: center;
-        }
-
-        .fun-facts-section {
-            margin-top: 20px;
-        }
-
-        .fun-facts-section h2,
-        .fun-facts-section p {
-            text-align: left;
-        }
-
-        .fun-facts-section p {
-            margin-bottom: 10px;
-        }
-
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
@@ -124,14 +99,10 @@
             }
 
             .content-container {
-                max-width: none; /* Remove max-width constraint */
-                margin: 0; /* Remove margin */
-                box-shadow: none; /* Remove box shadow */
-                border-radius: 0; /* Remove border radius */
-            }
-
-            .left-section, .center-section {
-                text-align: center; /* Center-align content on mobile */
+                max-width: 100%; /* Adjusted max-width for mobile */
+                margin: 50px auto; /* Adjusted margin for mobile */
+                box-shadow: none; /* Remove box shadow on mobile */
+                border-radius: 0; /* Remove border radius on mobile */
             }
         }
     </style>
@@ -160,8 +131,7 @@
         <h1>About</h1>
         <p>
             I’m passionate about reading books, indulging in poetry, and maintaining a healthy lifestyle through
-            regular workouts.
-            This is the place where I share my thoughts, experiences, and projects related to these passions.
+            regular workouts. This is the place where I share my thoughts, experiences, and projects related to these passions.
         </p>
         <div class="center-section">
             <p><strong>Links</strong></p>
@@ -174,49 +144,7 @@
                 <li><a href="https://github.com/mohdasif">GitHub</a></li>
                 <li><a href="https://twitter.com/mohdasif">X</a></li>
             </ul>
-        
-        <!-- Add this code within the existing content-container div -->
-<div class="content-container">
-    <!-- Existing content ... -->
-
-    <!-- Workout Stats Section -->
-    <div class="workout-stats-section">
-        <h2>Workout Stats</h2>
-        <blockquote>
-            <p>Deadlift</p>
-            <p>Sumo: 150 Kg</p>
-            <p>Conventional: 160 Kg</p>
-        </blockquote>
-        <blockquote>
-            <p>Squat: 120 Kg</p>
-            <p>Bench Press: 110 Kg</p>
-        </blockquote>
-        <blockquote>
-            <p>Chest: 42 Inches</p>
-            <p>Biceps: 17 Inches</p>
-            <p>Thigh: 24 Inches</p>
-        </blockquote>
-        <blockquote>
-            <p>Height: 5'9</p>
-            <p>Weight: 75 kg</p>
-        </blockquote>
-    </div>
-
-    <!-- Fun Facts Section -->
-    <div class="fun-facts-section">
-        <h2>Fun Facts</h2>
-        <p>🔭 Currently Working On: Getting Abs</p>
-        <p>🌱 Currently Learning: The art of web development with HTML, CSS & JavaScript</p>
-        <p>👯 Looking to Collaborate On: Innovative business ventures and projects.</p>
-        <p>🤔 Looking for Help With: Navigating the complexities of relationships and seeking valuable advice.</p>
-        <p>💬 Ask Me About: My favorite workout routines and fitness tips.</p>
-        <p>📫 How to Reach Me: [<a href="https://mohdasif.com/contact">Contact Page</a>]</p>
-        <p>😄 Pronouns: He/Him</p>
-
-        <!-- Add more content as needed -->
-    </div>
-</div>
-</div>
+        </div>
         <div class="left-section">
             <p>
                 <strong>🛍️ <a href="#href.li%22:https://href.li/?https://www.amazon.in/shop/mohdasif"
@@ -230,147 +158,8 @@
                 <strong>🏋️ <a href="https://m.youtube.com/@mohdasifGym/playlists"
                         style="color: #4285f4;">Workout</a></strong>
             </p>
-
         </div>
     </div>
 </body>
 
 </html>
-
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-
-    #desktop-navigation,
-    #mobile-navigation {
-        text-align: center;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-    }
-
-    #desktop-navigation {
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-        display: block;
-        margin-bottom: 20px; /* Add space between navigation and content */
-    }
-
-    #desktop-navigation a,
-    #mobile-navigation a {
-        color: inherit;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-        border-bottom: 2px solid transparent;
-    }
-
-    #desktop-navigation a:last-child {
-        margin-right: 0; /* Remove margin from the last element */
-    }
-
-    #mobile-navigation {
-        background-color: #f8f8f8;
-        color: #000;
-        padding: 10px;
-        display: none;
-    }
-
-    .content-container {
-        max-width: 600px;
-        margin: 20px;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-
-    .left-section {
-        text-align: left;
-    }
-
-    h1 {
-        color: #333;
-        margin-bottom: 20px; /* Add space between title and content */
-    }
-
-    p {
-        color: #555;
-        margin-bottom: 20px;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    li {
-        margin: 10px 0;
-    }
-
-    a {
-        text-decoration: none;
-        color: #4285f4;
-        font-weight: bold;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .center-section {
-        text-align: center;
-    }
-
-    .fun-facts-section {
-        margin-top: 20px;
-    }
-
-    .fun-facts-section h2,
-    .fun-facts-section p {
-        text-align: left;
-    }
-
-    .fun-facts-section p {
-        margin-bottom: 10px;
-    }
-
-    @media only screen and (max-width: 600px) {
-        /* Show mobile navigation and hide desktop navigation on small screens */
-        #desktop-navigation {
-            display: none;
-        }
-
-        #mobile-navigation {
-            display: block;
-        }
-
-        .content-container {
-            max-width: none; /* Remove max-width constraint */
-            margin: 0; /* Remove margin */
-            box-shadow: none; /* Remove box shadow */
-            border-radius: 0; /* Remove border radius */
-        }
-
-        .left-section,
-        .center-section {
-            text-align: center; /* Center-align content on mobile */
-        }
-
-        h1 {
-            margin-bottom: 10px; /* Adjust space between title and content on mobile */
-        }
-    }
-</style>
