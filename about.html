@@ -26,6 +26,7 @@
             background-color: #333;
             color: #fff;
             padding: 10px;
+            display: block; /* Ensure the desktop navigation is visible */
         }
 
         #desktop-navigation a,
@@ -88,6 +89,16 @@
             text-decoration: underline;
         }
 
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
+
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
@@ -96,13 +107,6 @@
 
             #mobile-navigation {
                 display: block;
-            }
-
-            .content-container {
-                max-width: 100%; /* Adjusted max-width for mobile */
-                margin: 50px auto; /* Adjusted margin for mobile */
-                box-shadow: none; /* Remove box shadow on mobile */
-                border-radius: 0; /* Remove border radius on mobile */
             }
         }
     </style>
@@ -127,6 +131,7 @@
         <a href="/contact.html">💬</a>
     </div>
 
+    <!-- Content for the About page -->
     <div class="content-container">
         <h1>About</h1>
         <p>
@@ -145,7 +150,7 @@
                 <li><a href="https://twitter.com/mohdasif">X</a></li>
             </ul>
         </div>
-        <div class="left-section">
+        <div class="left-section left-align"> <!-- Added left-align class -->
             <p>
                 <strong>🛍️ <a href="#href.li%22:https://href.li/?https://www.amazon.in/shop/mohdasif"
                         style="color: #4285f4;">Shop</a></strong>
@@ -159,6 +164,11 @@
                         style="color: #4285f4;">Workout</a></strong>
             </p>
         </div>
+
+        <!-- Center-align About.me link -->
+        <p class="about-me">
+            <a href="https://about.me">About.me</a>
+        </p>
     </div>
 </body>
 
