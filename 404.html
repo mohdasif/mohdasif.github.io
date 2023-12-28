@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
-        const excludedPaths = ['/about', '/photos', '/contact'];
-
-        // Function to check if the current path should be excluded
-        function isExcludedPath() {
+        // Function to check if the current path should be redirected
+        function shouldRedirect() {
             const currentPath = window.location.pathname.toLowerCase();
-            return excludedPaths.includes(currentPath);
+            return currentPath === '/videos';
         }
 
-        // Redirect only if the path is not excluded
-        if (!isExcludedPath()) {
+        // Redirect only if the path should be redirected
+        if (shouldRedirect()) {
             window.location.replace('https://m.youtube.com/@mohdasif/shorts');
         }
     </script>
 </head>
 <body>
-    <!-- Content for excluded paths -->
-    <h1>This is the content for excluded paths</h1>
+    <!-- Content for the specified path -->
+    <h1>This is the content for /videos</h1>
 </body>
 </html>
