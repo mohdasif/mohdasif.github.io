@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0;url=https://m.youtube.com/@mohdasif/shorts">
+    <script>
+        const excludedPaths = ['/about', '/photos', '/contact'];
+
+        // Function to check if the current path should be excluded
+        function isExcludedPath() {
+            const currentPath = window.location.pathname.toLowerCase();
+            return excludedPaths.some(excludedPath => currentPath.startsWith(excludedPath));
+        }
+
+        // Redirect only if the path is not excluded
+        if (!isExcludedPath()) {
+            window.location.replace('https://m.youtube.com/@mohdasif/shorts');
+        }
+    </script>
 </head>
 <body>
     <p>If you are not redirected, <a href="https://m.youtube.com/@mohdasif/shorts">click here</a>.</p>
