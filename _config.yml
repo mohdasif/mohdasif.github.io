@@ -1,20 +1,2 @@
-permalink: /:title
-
-# Permalinks for specific pages
-defaults:
-  - scope:
-      path: ""
-    values:
-      permalink: /:title/
-  - scope:
-      path: "about"
-    values:
-      permalink: /about/
-  - scope:
-      path: "contact"
-    values:
-      permalink: /contact/
-  - scope:
-      path: "photos"
-    values:
-      permalink: /photos/
+markdown: kramdown
+permalink: pretty
