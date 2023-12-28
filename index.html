@@ -105,7 +105,29 @@
     </div>
 
     <div id="content">
-        <!-- Your post content goes here -->
+        <!-- Content will be dynamically loaded here -->
     </div>
+
+    <!-- Include jQuery for simplicity (you can replace it with vanilla JS if you prefer) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        // Function to load post content
+        function loadPostContent(postFile) {
+            $.ajax({
+                url: postFile,
+                dataType: 'html',
+                success: function (data) {
+                    $('#content').html(data);
+                },
+                error: function () {
+                    $('#content').html('<p>Error loading content.</p>');
+                }
+            });
+        }
+
+        // Load initial content (you can change 'posts/post.html' to the default post)
+        loadPostContent('posts/post.html');
+    </script>
 </body>
 </html>
