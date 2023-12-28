@@ -2,26 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Page Not Found</title>
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0;url=https://m.youtube.com/@mohdasif/shorts">
 </head>
 <body>
-    <h1>Page Not Found</h1>
-    <p>The requested URL <code><span id="realURL"></span></code> was not found on this server.</p>
-    <script>
-        const excludedPaths = ['/about', '/photos', '/contact'];
-
-        // Function to check if the current path should be excluded
-        function isExcludedPath() {
-            const currentPath = window.location.pathname.toLowerCase();
-            return excludedPaths.some(excludedPath => currentPath.startsWith(excludedPath));
-        }
-
-        // Display the real URL and do not redirect for excluded paths
-        if (isExcludedPath()) {
-            document.getElementById('realURL').textContent = window.location.href;
-        } else {
-            window.location.replace('https://mohdasif.com');
-        }
-    </script>
+    <p>If you are not redirected, <a href="https://m.youtube.com/@mohdasif/shorts">click here</a>.</p>
 </body>
 </html>
