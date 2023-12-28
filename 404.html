@@ -9,7 +9,7 @@
         // Function to check if the current path should be excluded
         function isExcludedPath() {
             const currentPath = window.location.pathname.toLowerCase();
-            return excludedPaths.some(excludedPath => currentPath.startsWith(excludedPath));
+            return excludedPaths.includes(currentPath);
         }
 
         // Redirect only if the path is not excluded
@@ -19,6 +19,7 @@
     </script>
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://m.youtube.com/@mohdasif/shorts">click here</a>.</p>
+    <!-- Content for excluded paths -->
+    <h1>This is the content for excluded paths</h1>
 </body>
 </html>
