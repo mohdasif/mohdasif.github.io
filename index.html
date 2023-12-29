@@ -3,8 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
-    <title>{Title}{block:PostTitle} &#8212; {PostTitle}{/block:PostTitle}</title>
-    <link rel="shortcut icon" href="{Favicon}">
+    
+    <!-- Dynamic Title -->
+    <title>
+        {block:IndexPage}
+            Asif
+        {/block:IndexPage}
+
+        {block:PermalinkPage}
+            {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
+        {/block:PermalinkPage}
+
+        {block:Page}
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var pageTitle = "Asif"; // Default title
+                    var path = window.location.pathname.toLowerCase();
+                    
+                    if (path.includes("/about")) {
+                        pageTitle = "Asif | About";
+                    } else if (path.includes("/photos")) {
+                        pageTitle = "Asif | Photos";
+                    } else if (path.includes("/contact")) {
+                        pageTitle = "Asif | Contact";
+                    }
+
+                    document.title = pageTitle;
+                });
+            </script>
+        {/block:Page}
+    </title>
+
+    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     {block:Description}
         <meta name="description" content="{MetaDescription}" />
