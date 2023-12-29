@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Your existing head content -->
     <title>
         {block:IndexPage}
@@ -59,7 +62,7 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            border-bottom: 2px solid transparent;
+            display: inline-block; /* Make sure the links are on separate lines */
         }
 
         #desktop-navigation a:last-child {
@@ -141,7 +144,7 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var pageTitle = "Asif | About"; // Default title for the About page
+            var pageTitle = "Asif | About"; // Default title for the  About page
             document.title = pageTitle;
         });
     </script>
