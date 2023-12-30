@@ -21,6 +21,14 @@
                         pageTitle = "Asif | About";
                     } else if (path.includes("/photos")) {
                         pageTitle = "Asif | Photos";
+                    } else if (path.includes("/videos")) {
+                        pageTitle = "Asif | Videos";
+                        // Redirect to the videos page
+                        window.location.href = "/redirect/videos.html";
+                    } else if (path.includes("/audio")) {
+                        pageTitle = "Asif | Audio";
+                        // Redirect to the audio page
+                        window.location.href = "/redirect/audio.html";
                     } else if (path.includes("/contact")) {
                         pageTitle = "Asif | Contact";
                     }
@@ -40,7 +48,8 @@
         }
 
         #desktop-navigation,
-        #mobile-navigation {
+        #mobile-navigation,
+        #redirection-links {
             text-align: center;
             position: fixed;
             width: 100%;
@@ -48,7 +57,8 @@
             z-index: 1000;
         }
 
-        #desktop-navigation {
+        #desktop-navigation,
+        #mobile-navigation {
             background-color: #333;
             color: #fff;
             padding: 10px;
@@ -75,6 +85,10 @@
             display: none;
         }
 
+        #redirection-links {
+            display: none; /* Hide the redirection links section */
+        }
+
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
@@ -86,12 +100,6 @@
             }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var pageTitle = "Asif | Home"; // Default title for the Index page
-            document.title = pageTitle;
-        });
-    </script>
 </head>
 
 <body>
@@ -111,6 +119,13 @@
         <a href="/photos">📷</a>
         <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
         <a href="/contact">💬</a>
+    </div>
+
+    <!-- Redirection Links Section -->
+    <div id="redirection-links">
+        <a href="/redirect/videos.html">🎬</a>
+        <a href="/redirect/audio.html">🔊</a>
+        <!-- Add more redirection links here if needed -->
     </div>
 </body>
 
