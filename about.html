@@ -7,28 +7,28 @@
     <!-- Your existing head content -->
     <title>
         {block:IndexPage}
-            Asif
+        Asif
         {/block:IndexPage}
         {block:PermalinkPage}
-            {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
+        {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
         {/block:PermalinkPage}
         {block:Page}
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    var pageTitle = "Asif"; // Default title
-                    var path = window.location.pathname.toLowerCase();
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var pageTitle = "Asif"; // Default title
+                var path = window.location.pathname.toLowerCase();
 
-                    if (path.includes("/about")) {
-                        pageTitle = "Asif | About";
-                    } else if (path.includes("/photos")) {
-                        pageTitle = "Asif | Photos";
-                    } else if (path.includes("/contact")) {
-                        pageTitle = "Asif | Contact";
-                    }
+                if (path.includes("/about")) {
+                    pageTitle = "Asif | About";
+                } else if (path.includes("/photos")) {
+                    pageTitle = "Asif | Photos";
+                } else if (path.includes("/contact")) {
+                    pageTitle = "Asif | Contact";
+                }
 
-                    document.title = pageTitle;
-                });
-            </script>
+                document.title = pageTitle;
+            });
+        </script>
         {/block:Page}
     </title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
@@ -91,6 +91,11 @@
             margin-bottom: 20px; /* Add space between title and content */
         }
 
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
         p {
             color: #555;
             margin-bottom: 20px;
@@ -141,10 +146,27 @@
                 display: block;
             }
         }
+    /* New styles for the about.me link container and button */
+        .about-me-container {
+            text-align: center;
+        }
+
+        .about-me-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .about-me-button:hover {
+            background-color: #3367d6;
+        }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var pageTitle = "Asif | About"; // Default title for the  About page
+        document.addEventListener("DOMContentLoaded", function () {
+            var pageTitle = "Asif | About"; // Default title for the About page
             document.title = pageTitle;
         });
     </script>
@@ -175,6 +197,7 @@
         <p class="left-align">
             I really enjoy reading books, exploring poetry, and staying healthy with regular workouts. This is where I talk about what I think, share my experiences, and discuss projects related to these interests.
         </p>
+
         <p class="center-section"><strong>Links</strong></p>
         <div class="center-section">
             <ul>
@@ -187,6 +210,9 @@
                 <li><a href="https://twitter.com/mohdasif">X</a></li>
             </ul>
         </div>
+        <!-- Content for the About page -->
+    <div class="content-container">
+
         <div class="left-section left-align">
             <p>
                 <strong>🎧 <a href="https://www.youtube.com/playlist?list=PLIVm4C5LjspTKPD3n2Eb6VN7SAOMYUBhn"
@@ -200,13 +226,36 @@
                 <strong>🛍️ <a href="#href.li%22:https://href.li/?https://www.amazon.in/shop/mohdasif"
                         style="color: #4285f4;">Shop</a></strong>
             </p>
+    <!-- Close the .content-container div -->
+        </div>
+        </div>
+        <!-- Content for the Fun Fact -->
+    <div class="content-container">
+
+        <!-- Content for the Fun Fact  -->
+        <div class="fun-facts-section left-align">
+            <h2>Fun Facts</h2>
+            <ul>
+                <li>🔭 Currently Working On: Working on a comprehensive guide to nutrition and exercises for achieving killer abs.</li>
+                <li>🌱 Currently Learning: The art of web development with HTML, CSS & JavaScript</li>
+                <li>👯 Looking to Collaborate On: Passionate about collaborating on educational programs and initiatives for lifelong learning</li>
+                <li>🤔 Looking for Help With: Looking for help with website development and UX/UI optimization</li>
+                <li>💬 Ask Me About: Ask me about the benefits of strength training and how to get started</li>
+                <li>📫 How to Reach Me: [Contact]</li>
+                <li>😄 Pronouns: He/Him</li>
+            </ul>
+    <!-- Close the .content-container div -->
         </div>
 
-        <!-- Center-align About.me link -->
-        <p class="about-me">
-            <a href="https://about.me/mohdasif">about.me</a>
-        </p>
     </div>
+
+<!-- Separate button for about.me link -->
+<div class="about-me-container">
+    <a href="https://about.me/mohdasif" class="about-me-button">about.me</a>
+</div>
+
+
+    <!-- Your existing scripts or closing body/html tags -->
 </body>
 
 </html>
