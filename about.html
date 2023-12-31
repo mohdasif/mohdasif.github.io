@@ -146,21 +146,25 @@
                 display: block;
             }
         }
-    /* New styles for the about.me link container and button */
+
+        /* New styles for the about.me link container and button */
         .about-me-container {
             text-align: center;
         }
 
-        .about-me-button {
+        .about-me-button,
+        .link-button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 5px 10px;
             background-color: #4285f4;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
+            margin: 5px;
         }
 
-        .about-me-button:hover {
+        .about-me-button:hover,
+        .link-button:hover {
             background-color: #3367d6;
         }
     </style>
@@ -201,17 +205,14 @@
         <p class="center-section"><strong>Links</strong></p>
         <div class="center-section">
             <ul>
-                <li><a href="https://m.youtube.com/@mohdasif">YouTube</a></li>
-                <li><a href="https://www.clubhouse.com/@mohdasif">Clubhouse</a></li>
-                <li><a href="https://href.li/?https://www.linkedin.com/in/mohdasif" title="Linkedin">LinkedIn</a></li>
-                <li><a href="https://pinterest.com/mohdasif/">Pinterest</a></li>
-                <li><a href="https://href.li/?https://www.reddit.com/user/mohdasif">Reddit</a></li>
-                <li><a href="https://github.com/mohdasif">GitHub</a></li>
-                <li><a href="https://twitter.com/mohdasif">X</a></li>
+                <li><a href="https://href.li/?https://www.linkedin.com/in/mohdasif" class="link-button" title="Linkedin">LinkedIn</a></li>
+                <li><a href="https://pinterest.com/mohdasif/" class="link-button">Pinterest</a></li>
+                <li><a href="https://href.li/?https://www.reddit.com/user/mohdasif" class="link-button">Reddit</a></li>
+                <li><a href="https://github.com/mohdasif" class="link-button">GitHub</a></li>
+                <li><a href="https://twitter.com/mohdasif" class="link-button">X</a></li>
             </ul>
         </div>
         <!-- Content for the About page -->
-    <div class="content-container">
 
         <div class="left-section left-align">
             <p>
@@ -241,8 +242,9 @@
                 <li>👯 Looking to Collaborate On: Passionate about collaborating on educational programs and initiatives for lifelong learning</li>
                 <li>🤔 Looking for Help With: Looking for help with website development and UX/UI optimization</li>
                 <li>💬 Ask Me About: Ask me about the benefits of strength training and how to get started</li>
-                <li>📫 How to Reach Me: [Contact]</li>
-                <li>😄 Pronouns: He/Him</li>
+                <li>📫 How to Reach Me: <a href="https://mohdasif.com/contact">Contact</a></li>
+
+
             </ul>
     <!-- Close the .content-container div -->
         </div>
