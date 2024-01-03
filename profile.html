@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {block:IndexPage}
+        Asif
+        {/block:IndexPage}
+        {block:PermalinkPage}
+        {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
+        {/block:PermalinkPage}
+        {block:Page}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var pageTitle = "Asif"; // Default title
+                var path = window.location.pathname.toLowerCase();
+
+                if (path.includes("/about")) {
+                    pageTitle = "Asif | About";
+                } else if (path.includes("/photos")) {
+                    pageTitle = "Asif | Photos";
+                } else if (path.includes("/videos")) {
+                    pageTitle = "Asif | Videos";
+                    // Redirect to the videos page
+                    window.location.href = "/redirect/videos.html";
+                } else if (path.includes("/audio")) {
+                    pageTitle = "Asif | Audio";
+                    // Redirect to the audio page
+                    window.location.href = "/redirect/audio.html";
+                } else if (path.includes("/contact")) {
+                    pageTitle = "Asif | Contact";
+                }
+
+                document.title = pageTitle;
+            });
+        </script>
+        {/block:Page}
+    </title>
+    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FDFCFA;
+            margin: 0;
+            padding: 0;
+        }
+
+        #desktop-navigation,
+        #mobile-navigation,
+        #redirection-links {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #desktop-navigation,
+        #mobile-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: block; /* Ensure the desktop navigation is visible */
+        }
+
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
+
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
+        }
+
+        #mobile-navigation {
+            background-color: #f8f8f8;
+            color: #000;
+            padding: 10px;
+            display: none;
+        }
+
+        #redirection-links {
+            display: none; /* Hide the redirection links section */
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
+
+        .content-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Align text to the left */
+        }
+
+        section {
+            max-width: 600px;
+            margin: 60px auto 20px; /* Adjusted margin to make space for the navigation */
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn ease-in-out 1s;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .scrolling-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .scrolling-text.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/photos">Photos</a>
+        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-navigation">
+        <a href="/">🏠</a>
+        <a href="/about">📝</a>
+        <a href="/photos">📷</a>
+        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
+        <a href="/contact">💬</a>
+    </div>
+
+    <!-- Redirection Links Section -->
+    <div id="redirection-links">
+      
+        <!-- Add more redirection links here if needed -->
+    </div>
+
+    <!-- Content Container -->
+    <div class="content-container">
+        <h1>Profile</h1>
+
+        <h2>Personal Information</h2>
+        <ul>
+            <li><strong>Name:</strong> Mohd Asif</li>
+            <li><strong>Date of Birth:</strong> 9th July</li>
+            <li><strong>Gender:</strong> Male</li>
+            <li><strong>Height:</strong> 5'9"</li>
+            <li><strong>Weight:</strong> 75 kg</li>
+            <li><strong>Nationality:</strong> Indian</li>
+            <li><strong>Marital Status:</strong> Unmarried</li>
+        </ul>
+
+        <div class="scrolling-text">
+            <p>
+            </p>
+        </div>
+
+        <h2>Contact Information</h2>
+        <ul>
+            <li><strong>Address:</strong> Moradabad</li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mohdasif" target="_blank">linkedin.com/in/mohdasif</a></li>
+            <li><strong>Website:</strong> <a href="https://mohdasif.com" target="_blank">mohdasif.com</a></li>
+        </ul>
+
+        <h2>Educational Background</h2>
+        <ul>
+            <li><strong>Degree:</strong> Bachelor of Business Administration</li>
+            <li><strong>Institution:</strong> TMIMT</li>
+            <li><strong>Year of Graduation:</strong> 2017</li>
+        </ul>
+
+        <h2>Work Experience</h2>
+        <ul>
+            <li><strong>Position:</strong> Production Merchandiser</li>
+            <li><strong>Company:</strong> Design Co</li>
+            <li><strong>Location:</strong> Moradabad</li>
+            <li><strong>Duration:</strong> 2021 – 2023</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>Production Management</li>
+            <li>Email Management</li>
+        </ul>
+
+        <h2>Languages</h2>
+        <ul>
+            <li>English</li>
+        </ul>
+
+        <h2>Hobbies and Interests</h2>
+        <p>
+            I love working out every day, finding my energy at the gym. I enjoy reading, listening to podcasts, and learning new things.
+            Staying updated on tech trends, especially in web development with HTML and JavaScript, is something I find exciting.
+        </p>
+
+        <h2>Additional Information</h2>
+        <div class="workout-stats">
+            <h3>Workout Stats</h3>
+            <ul>
+                <li><strong>Deadlift - Sumo:</strong> 150 Kg</li>
+                <li><strong>Deadlift - Conventional:</strong> 160 Kg</li>
+                <li><strong>Squat:</strong> 120 Kg</li>
+                <li><strong>Bench Press:</strong> 110 Kg</li>
+                <li><strong>Chest:</strong> 42 Inches</li>
+                <li><strong>Biceps:</strong> 17 Inches</li>
+                <li><strong>Thigh:</strong> 24 Inches</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+
+</body>
+
+</html>
