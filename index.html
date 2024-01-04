@@ -47,6 +47,94 @@
             padding: 0;
         }
 
+        header,
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            margin-bottom: 10px; /* Adjust the margin-bottom value as needed */
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section {
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 20px; /* Adjust the margin-top value as needed */
+        }
+
+        .blog-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .blog-card {
+            flex: 1 1 calc(33.33% - 20px); /* Adjust width for three columns */
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .blog-card-content {
+            padding: 20px;
+        }
+
+        .featured-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .featured-post {
+            flex: 1 1 calc(50% - 20px); /* Adjust width for two columns */
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .featured-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .featured-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Desktop Navigation */
         #desktop-navigation,
         #mobile-navigation,
         #redirection-links {
@@ -98,20 +186,19 @@
             #mobile-navigation {
                 display: block;
             }
+
+            .blog-card,
+            .featured-post {
+                flex: 1 1 100%; /* Adjust width for one column on small screens */
+            }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var pageTitle = "Asif"; // Default title for the Index page
-            document.title = pageTitle;
-        });
-    </script>
 </head>
 
 <body>
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
-        <a href="/">Home</a>
+        <a href="https://mohdasif.com/">Home</a>
         <a href="/about">About</a>
         <a href="/photos">Photos</a>
         <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
@@ -120,7 +207,7 @@
 
     <!-- Mobile Navigation -->
     <div id="mobile-navigation">
-        <a href="/">🏠</a>
+        <a href="https://mohdasif.com/">🏠</a>
         <a href="/about">📝</a>
         <a href="/photos">📷</a>
         <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
@@ -128,13 +215,92 @@
     </div>
 
     <!-- Redirection Links Section -->
-<div id="redirection-links">
-    <a href="/watch">Watch</a>
-    <a href="/audio">Audio</a>
-    <!-- Add more redirection links here if needed -->
-</div>
+    <div id="redirection-links">
+        <a href="/watch">Watch</a>
+        <a href="/audio">Audio</a>
+        <!-- Add more redirection links here if needed -->
+    </div>
 
+    <section>
+        <h2>Latest Blog Posts</h2>
 
+        <div class="blog-cards">
+            <!-- Blog Post 1 -->
+            <div class="blog-card">
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 1">
+                </a>
+                <div class="blog-card-content">
+                    <h3><a href="#">Exploring the Beauty of Nature</a></h3>
+                    <p>Take a virtual journey through breathtaking landscapes and discover the wonders of our planet.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="blog-card">
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 2">
+                </a>
+                <div class="blog-card-content">
+                    <h3><a href="#">The Art of Mindfulness</a></h3>
+                    <p>Learn how practicing mindfulness can enhance your well-being and bring peace to your daily life.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="blog-card">
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 3">
+                </a>
+                <div class="blog-card-content">
+                    <h3><a href="#">Tech Trends: What's Next in 2023</a></h3>
+                    <p>Explore the latest technological advancements and trends that are shaping the future in 2023.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 4 -->
+            <div class="blog-card">
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 4">
+                </a>
+                <div class="blog-card-content">
+                    <h3><a href="#">The Impact of Artificial Intelligence in Healthcare</a></h3>
+                    <p>Discover how AI is revolutionizing the healthcare industry and improving patient outcomes.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 5 -->
+            <div class="blog-card">
+                <a href="#">
+                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 5">
+                </a>
+                <div class="blog-card-content">
+                    <h3><a href="#">Traveling on a Budget: Tips and Tricks</a></h3>
+                    <p>Learn practical strategies to explore the world without breaking the bank. Adventure awaits!</p>
+                </div>
+            </div>
+
+            <!-- Add more blog cards as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Featured</h2>
+
+        <div class="featured-section">
+            <div class="featured-post">
+                <img src="https://via.placeholder.com/600x300" alt="Featured Post 1">
+                <h3><a href="#">Mastering the Art of Photography</a></h3>
+                <p>Discover expert tips and tricks to elevate your photography skills and capture stunning moments.</p>
+            </div>
+
+            <div class="featured-post">
+                <img src="https://via.placeholder.com/600x300" alt="Featured Post 2">
+                <h3><a href="#">The Ultimate Guide to Productivity</a></h3>
+                <p>Boost your productivity with actionable strategies and tools to achieve more in less time.</p>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
