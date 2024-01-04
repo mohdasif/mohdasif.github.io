@@ -231,21 +231,27 @@ Here I talk about what I think, share my experiences, and discuss projects relat
 <h2>Bookshelves</h2>
 <ul>
     <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0;" onclick="window.open('https://www.goodreads.com/review/list/57681068-asif?shelf=currently-reading', '_blank')">
+        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=currently-reading')">
             Reading
         </button>
     </li>
     <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0;" onclick="window.open('https://www.goodreads.com/review/list/57681068-asif?shelf=to-read', '_blank')">
+        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=to-read')">
             Want to Read
         </button>
     </li>
     <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0;" onclick="window.open('https://www.goodreads.com/review/list/57681068-asif?shelf=read', '_blank')">
+        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=read')">
             Read
         </button>
     </li>
 </ul>
+
+<script>
+    function openGoodreads(url) {
+        window.open(url, '_blank');
+    }
+</script>
 
 <br>
  <!-- Content for the Fun Fact  -->
