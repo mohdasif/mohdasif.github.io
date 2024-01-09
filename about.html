@@ -216,8 +216,21 @@ Here I talk about what I think, share my experiences, and discuss projects relat
 
 
 <br>
-    <div class="content-container" style="display: flex; gap: 25px; justify-content: center; align-items: center;">
+    <div class="content-container" style="display: flex; gap: 80px; justify-content: center; align-items: center;">
 
+    <style>
+        /* Mobile styles */
+        @media screen and (max-width: 768px) {
+            .content-container {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 40px !important; /* Added !important to override inline styles */
+            }
+        }
+    </style>
+
+    <!-- Your content goes here -->
     <button class="custom-button" onclick="window.location.href='https://mohdasif.in/profile'"
         style="background-color: #4169E1; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Profile</button>
     
@@ -226,9 +239,8 @@ Here I talk about what I think, share my experiences, and discuss projects relat
 
     <button class="custom-button" onclick="window.location.href='https://www.amazon.in/shop/mohdasif'"
         style="background-color: #4169E1; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Shop</button>
-    
-    <br>
 </div>
+
 
 <br>
 <h2>Bookshelves</h2>
@@ -261,7 +273,21 @@ Here I talk about what I think, share my experiences, and discuss projects relat
  <!-- Content for the Fun Fact  -->
 
 
-    <div class="content-container" style="display: flex; gap: 40px; justify-content: center; align-items: center;">
+    <div class="content-container" style="display: flex; gap: 80px; justify-content: center; align-items: center;">
+
+    <style>
+        /* Mobile styles */
+        @media screen and (max-width: 768px) {
+            .content-container {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 40px !important; /* Keep the gap value the same as in the inline style */
+            }
+        }
+    </style>
+
+    <!-- Your content goes here -->
     <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspTKPD3n2Eb6VN7SAOMYUBhn'"
         style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Podcast</button>
 
@@ -271,8 +297,6 @@ Here I talk about what I think, share my experiences, and discuss projects relat
     <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLW3rx81yseUDaedhEYD7PSX2C5UW93isi'"
         style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Poetry</button>
 </div>
-
-    </div>
     </div>
 
     <!-- Separate button for about.me link -->
