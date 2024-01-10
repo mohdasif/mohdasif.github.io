@@ -27,6 +27,7 @@
             background-color: #333;
             color: #fff;
             padding: 10px;
+            display: block; /* Ensure the desktop navigation is visible */
         }
 
         #desktop-navigation a,
@@ -35,7 +36,11 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            border-bottom: 2px solid transparent;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
+
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
         }
 
         #mobile-navigation {
