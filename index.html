@@ -13,7 +13,7 @@
         {/block:PermalinkPage}
         {block:Page}
             <script>
-                document.addEventListener("DOMContentLoaded", function () {
+                document.addEventListener("DOMContentLoaded", function() {
                     var pageTitle = "Asif"; // Default title
                     var path = window.location.pathname.toLowerCase();
 
@@ -35,32 +35,6 @@
 
                     document.title = pageTitle;
                 });
-
-                // Function to load blog posts dynamically
-                function loadBlogPosts() {
-                    var postsContainer = document.getElementById("blog-posts");
-
-                    // Update this variable with the correct path to your posts folder
-                    var postsFolder = "Documents/mohdasif/posts";
-
-                    // List of blog post files
-                    var postFiles = ["ghalib.html", "mir.html", "daag.html", "majaz.html", "jaun.html"];
-
-                    // Load each blog post
-                    postFiles.forEach(function (postFile) {
-                        fetch(`${postsFolder}/${postFile}`)
-                            .then(response => response.text())
-                            .then(html => {
-                                var postContainer = document.createElement("div");
-                                postContainer.innerHTML = html;
-                                postsContainer.appendChild(postContainer);
-                            })
-                            .catch(error => console.error(`Error loading post ${postFile}`, error));
-                    });
-                }
-
-                // Call the function to load blog posts when the page is loaded
-                loadBlogPosts();
             </script>
         {/block:Page}
     </title>
@@ -68,102 +42,13 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #FDFCFA;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
 
-        header,
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            margin-bottom: 10px; /* Adjust the margin-bottom value as needed */
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        section {
-            padding: 30px 20px;
-            text-align: center;
-            margin-top: 20px; /* Adjust the margin-top value as needed */
-        }
-
-        .blog-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .blog-card {
-            flex: 1 1 calc(33.33% - 20px); /* Adjust width for three columns */
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            margin-bottom: 20px;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .blog-card-content {
-            padding: 20px;
-        }
-
-        .featured-section {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .featured-post {
-            flex: 1 1 calc(50% - 20px); /* Adjust width for two columns */
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            margin-bottom: 20px;
-        }
-
-        .featured-post:hover {
-            transform: translateY(-5px);
-        }
-
-        .featured-post img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #ddd;
-        }
-
-        /* Desktop Navigation */
         #desktop-navigation,
-        #mobile-navigation,
-        #redirection-links {
+        #mobile-navigation {
             text-align: center;
             position: fixed;
             width: 100%;
@@ -171,12 +56,10 @@
             z-index: 1000;
         }
 
-        #desktop-navigation,
-        #mobile-navigation {
+        #desktop-navigation {
             background-color: #333;
             color: #fff;
             padding: 10px;
-            display: block; /* Ensure the desktop navigation is visible */
         }
 
         #desktop-navigation a,
@@ -185,26 +68,72 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block; /* Make sure the links are on separate lines */
-        }
-
-        #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
+            display: inline-block;
         }
 
         #mobile-navigation {
-            background-color: #f8f8f8;
+            background-color: #FDFCFA;
             color: #000;
             padding: 10px;
             display: none;
         }
 
-        #redirection-links {
-            display: none; /* Hide the redirection links section */
+        .contact-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #000000;
         }
 
         @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
                 display: none;
             }
@@ -212,16 +141,11 @@
             #mobile-navigation {
                 display: block;
             }
-
-            .blog-card,
-            .featured-post {
-                flex: 1 1 100%; /* Adjust width for one column on small screens */
-            }
         }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif "; // Default title for the Index
+            var pageTitle = "Asif | @mohdasif"; // Default title for the @mohdasif page
             document.title = pageTitle;
         });
     </script>
@@ -253,18 +177,30 @@
         <!-- Add more redirection links here if needed -->
     </div>
 
-    <section>
-        <h2>Latest Blog Posts</h2>
-        <div id="blog-posts" class="blog-cards">
-            <!-- Blog posts will be dynamically added here -->
-        </div>
-    </section>
+    <div class="contact-container" style="text-align: center;">
+        <h1>Links</h1>
 
-    <section>
-        <h2>Featured</h2>
-        <!-- Your existing featured section -->
-    </section>
-    <!-- Your existing footer -->
+<ul>
+<ul>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.location.href='https://telegram.me/mohdasif'">Telegram</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.location.href='sms:hi@mohdasif.com'">iMessage</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.location.href='mailto:mail@mohdasif.com'">Email</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://x.com/messages/compose?recipient_id=1483985376', '_blank')">X</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://clubhouse.com/@mohdasif', '_blank')">Clubhouse</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://linkedin.com/in/mohdasif', '_blank')" title="Linkedin">LinkedIn</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://pinterest.com/mohdasif', '_blank')">Pinterest</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://x.com/mohdasif', '_blank')">X</button></li>        
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://quora.com/mohdasif', '_blank')">Quora</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://tumblr.com/mohdasif', '_blank')">Tumblr</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://reddit.com/user/mohdasif', '_blank')">Reddit</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://goodreads.com/mohdasif', '_blank')">Goodreads</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://github.com/mohdasif', '_blank')">GitHub</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://music.apple.com/profile/mohdasif', '_blank')">Music</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://soundcloud.com/mohdasif', '_blank')">Soundcloud</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://flipboard.com/@mohdasif', '_blank')">Flipboard</button></li>
+</ul>
+
+    </div>
 </body>
 
 </html>
