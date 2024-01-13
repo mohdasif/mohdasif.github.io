@@ -13,6 +13,10 @@
         {/block:PermalinkPage}
         {block:Page}
             <script>
+  if (window.location.hostname === "mohdasif.in") {
+    window.location.href = "https://mohdasif.com" + window.location.pathname;
+  }
+</script>
                 document.addEventListener("DOMContentLoaded", function() {
                     var pageTitle = "Asif"; // Default title
                     var path = window.location.pathname.toLowerCase();
