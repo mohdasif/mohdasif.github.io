@@ -4,31 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Your existing head content -->
     <title>
         {block:IndexPage}
-        Asif
+            Asif
         {/block:IndexPage}
         {block:PermalinkPage}
-        {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
+            {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
         {/block:PermalinkPage}
         {block:Page}
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var pageTitle = "Asif"; // Default title
-                var path = window.location.pathname.toLowerCase();
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var pageTitle = "Asif"; // Default title
+                    var path = window.location.pathname.toLowerCase();
 
-                if (path.includes("/about")) {
-                    pageTitle = "Asif | About";
-                } else if (path.includes("/photos")) {
-                    pageTitle = "Asif | Photos";
-                } else if (path.includes("/contact")) {
-                    pageTitle = "Asif | Contact";
-                }
+                    if (path.includes("/about")) {
+                        pageTitle = "Asif | About";
+                    } else if (path.includes("/photos")) {
+                        pageTitle = "Asif | Photos";
+                    } else if (path.includes("/videos")) {
+                        pageTitle = "Asif | Videos";
+                        // Redirect to the videos page
+                        window.location.href = "/redirect/videos.html";
+                    } else if (path.includes("/audio")) {
+                        pageTitle = "Asif | Audio";
+                        // Redirect to the audio page
+                        window.location.href = "/redirect/audio.html";
+                    } else if (path.includes("/contact")) {
+                        pageTitle = "Asif | Contact";
+                    }
 
-                document.title = pageTitle;
-            });
-        </script>
+                    document.title = pageTitle;
+                });
+            </script>
         {/block:Page}
     </title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
@@ -39,7 +46,6 @@
             margin: 0;
             padding: 0;
         }
-
 
         #desktop-navigation,
         #mobile-navigation {
@@ -72,19 +78,18 @@
             display: none;
         }
 
-        .content-container {
+        .contact-container {
             max-width: 600px;
-            margin: 30px auto;
+            margin: 18px auto;
             background-color: #fff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left; /* Align text to the left */
+            text-align: center;
         }
 
         h1 {
             color: #333;
-            text-align: center; /* Center the title */
         }
 
         p {
@@ -140,7 +145,7 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif | Links"; // Default title for the Links
+            var pageTitle = "Asif | @mohdasif"; // Default title for the @mohdasif page
             document.title = pageTitle;
         });
     </script>
@@ -165,30 +170,26 @@
         <a href="/contact">💬</a>
     </div>
 
-    <!-- Content Container -->
-    <div class="content-container">
+    <div class="contact-container" style="text-align: center;">
+        <h1>Links</h1>
 
-<div class="links-container" style="text-align: center;">
-    <h2>Links</h2>
-    <ul>
-        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://quora.com/mohdasif', '_blank')">Quora</button></li>
-        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://tumblr.com/mohdasif', '_blank')">Tumblr</button></li>
-        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://reddit.com/user/mohdasif', '_blank')">Reddit</button></li>
-        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://goodreads.com/mohdasif', '_blank')">Goodreads</button></li>
-        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://github.com/mohdasif', '_blank')">GitHub</button></li>
-        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://music.apple.com/profile/mohdasif', '_blank')">Music</button></li>
-        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://soundcloud.com/mohdasif', '_blank')">Soundcloud</button></li>
-        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://flipboard.com/@mohdasif', '_blank')">Flipboard</button></li>
-    </ul>
-</div>
-<br>
+<ul>
+<ul>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.location.href='https://telegram.me/mohdasif'">Telegram</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://clubhouse.com/@mohdasif', '_blank')">Clubhouse</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://linkedin.com/in/mohdasif', '_blank')" title="Linkedin">LinkedIn</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://pinterest.com/mohdasif', '_blank')">Pinterest</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://x.com/mohdasif', '_blank')">X</button></li>  
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://reddit.com/user/mohdasif', '_blank')">Reddit</button></li>      
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://quora.com/mohdasif', '_blank')">Quora</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://goodreads.com/mohdasif', '_blank')">Goodreads</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://github.com/mohdasif', '_blank')">GitHub</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://tumblr.com/mohdasif', '_blank')">Tumblr</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://music.apple.com/profile/mohdasif', '_blank')">Music</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://soundcloud.com/mohdasif', '_blank')">Soundcloud</button></li>
+</ul>
 
-       
-        </div>
-
-    <script>
-
-
+    </div>
 </body>
 
 </html>
