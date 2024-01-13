@@ -13,7 +13,7 @@
         {/block:PermalinkPage}
         {block:Page}
             <script>
-                document.addEventListener("DOMContentLoaded", function() {
+                document.addEventListener("DOMContentLoaded", function () {
                     var pageTitle = "Asif"; // Default title
                     var path = window.location.pathname.toLowerCase();
 
@@ -35,6 +35,32 @@
 
                     document.title = pageTitle;
                 });
+
+                // Function to load blog posts dynamically
+                function loadBlogPosts() {
+                    var postsContainer = document.getElementById("blog-posts");
+
+                    // Update this variable with the correct path to your posts folder
+                    var postsFolder = "Documents/mohdasif/posts";
+
+                    // List of blog post files
+                    var postFiles = ["ghalib.html", "mir.html", "daag.html", "majaz.html", "jaun.html"];
+
+                    // Load each blog post
+                    postFiles.forEach(function (postFile) {
+                        fetch(`${postsFolder}/${postFile}`)
+                            .then(response => response.text())
+                            .then(html => {
+                                var postContainer = document.createElement("div");
+                                postContainer.innerHTML = html;
+                                postsContainer.appendChild(postContainer);
+                            })
+                            .catch(error => console.error(`Error loading post ${postFile}`, error));
+                    });
+                }
+
+                // Call the function to load blog posts when the page is loaded
+                loadBlogPosts();
             </script>
         {/block:Page}
     </title>
@@ -229,84 +255,16 @@
 
     <section>
         <h2>Latest Blog Posts</h2>
-
-        <div class="blog-cards">
-            <!-- Blog Post 1 -->
-            <div class="blog-card">
-                <a href="#">
-                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 1">
-                </a>
-                <div class="blog-card-content">
-                    <h3><a href="#">Exploring the Beauty of Nature</a></h3>
-                    <p>Take a virtual journey through breathtaking landscapes and discover the wonders of our planet.</p>
-                </div>
-            </div>
-
-            <!-- Blog Post 2 -->
-            <div class="blog-card">
-                <a href="#">
-                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 2">
-                </a>
-                <div class="blog-card-content">
-                    <h3><a href="#">The Art of Mindfulness</a></h3>
-                    <p>Learn how practicing mindfulness can enhance your well-being and bring peace to your daily life.</p>
-                </div>
-            </div>
-
-            <!-- Blog Post 3 -->
-            <div class="blog-card">
-                <a href="#">
-                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 3">
-                </a>
-                <div class="blog-card-content">
-                    <h3><a href="#">Tech Trends: What's Next in 2023</a></h3>
-                    <p>Explore the latest technological advancements and trends that are shaping the future in 2023.</p>
-                </div>
-            </div>
-
-            <!-- Blog Post 4 -->
-            <div class="blog-card">
-                <a href="#">
-                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 4">
-                </a>
-                <div class="blog-card-content">
-                    <h3><a href="#">The Impact of Artificial Intelligence in Healthcare</a></h3>
-                    <p>Discover how AI is revolutionizing the healthcare industry and improving patient outcomes.</p>
-                </div>
-            </div>
-
-            <!-- Blog Post 5 -->
-            <div class="blog-card">
-                <a href="#">
-                    <img src="https://via.placeholder.com/800x400" alt="Blog Post 5">
-                </a>
-                <div class="blog-card-content">
-                    <h3><a href="#">Traveling on a Budget: Tips and Tricks</a></h3>
-                    <p>Learn practical strategies to explore the world without breaking the bank. Adventure awaits!</p>
-                </div>
-            </div>
-
-            <!-- Add more blog cards as needed -->
+        <div id="blog-posts" class="blog-cards">
+            <!-- Blog posts will be dynamically added here -->
         </div>
     </section>
 
     <section>
         <h2>Featured</h2>
-
-        <div class="featured-section">
-            <div class="featured-post">
-                <img src="https://via.placeholder.com/600x300" alt="Featured Post 1">
-                <h3><a href="#">Mastering the Art of Photography</a></h3>
-                <p>Discover expert tips and tricks to elevate your photography skills and capture stunning moments.</p>
-            </div>
-
-            <div class="featured-post">
-                <img src="https://via.placeholder.com/600x300" alt="Featured Post 2">
-                <h3><a href="#">The Ultimate Guide to Productivity</a></h3>
-                <p>Boost your productivity with actionable strategies and tools to achieve more in less time.</p>
-            </div>
-        </div>
+        <!-- Your existing featured section -->
     </section>
+    <!-- Your existing footer -->
 </body>
 
 </html>
