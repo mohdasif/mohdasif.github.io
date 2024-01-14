@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        {block:IndexPage}
-            Asif
-        {/block:IndexPage}
-        {block:PermalinkPage}
-            {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
-        {/block:PermalinkPage}
-        {block:Page}
-    </title>
+    <title>Asif</title>
+    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
-    <!-- Moved the JavaScript block outside the title tag -->
+    <!-- Add this style block to hide navigation links -->
+    <style>
+        #desktop-navigation,
+        #mobile-navigation {
+            display: none;
+        }
+    </style>
+
+    <!-- Redirection Script -->
     <script>
         if (window.location.hostname === "mohdasif.in") {
             window.location.href = "https://mohdasif.com" + window.location.pathname;
@@ -24,7 +25,9 @@
             var pageTitle = "Asif"; // Default title
             var path = window.location.pathname.toLowerCase();
 
-            if (path.includes("/about")) {
+            if (path === "/" || path === "/index.html" || path === "/home") {
+                pageTitle = "Asif | Home"; // Set specific title for the Home page
+            } else if (path.includes("/about")) {
                 pageTitle = "Asif | About";
             } else if (path.includes("/photos")) {
                 pageTitle = "Asif | Photos";
@@ -46,23 +49,7 @@
 </head>
 
 <body>
-    <!-- Desktop Navigation -->
-    <div id="desktop-navigation">
-        <a href="https://mohdasif.com/">Home</a>
-        <a href="/about">About</a>
-        <a href="/photos">Photos</a>
-        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
-        <a href="/contact">Contact</a>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <div id="mobile-navigation">
-        <a href="https://mohdasif.com/">🏠</a>
-        <a href="/about">📝</a>
-        <a href="/photos">📷</a>
-        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
-        <a href="/contact">💬</a>
-    </div>
+    <!-- Your existing content or additional sections can be added here -->
 
     <!-- Redirection Links Section -->
     <div id="redirection-links">
@@ -71,26 +58,7 @@
         <!-- Add more redirection links here if needed -->
     </div>
 
-    <div class="contact-container" style="text-align: center;">
-        <h1>Links</h1>
-
-<ul>
-<ul>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.location.href='https://telegram.me/mohdasif'">Telegram</button></li>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://clubhouse.com/@mohdasif', '_blank')">Clubhouse</button></li>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://linkedin.com/in/mohdasif', '_blank')" title="Linkedin">LinkedIn</button></li>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://pinterest.com/mohdasif', '_blank')">Pinterest</button></li>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://x.com/mohdasif', '_blank')">X</button></li>    
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://reddit.com/user/mohdasif', '_blank')">Reddit</button></li>    
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://quora.com/mohdasif', '_blank')">Quora</button></li>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://goodreads.com/mohdasif', '_blank')">Goodreads</button></li>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://github.com/mohdasif', '_blank')">GitHub</button></li>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://tumblr.com/mohdasif', '_blank')">Tumblr</button></li>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://music.apple.com/profile/mohdasif', '_blank')">Music</button></li>
-    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;" onclick="window.open('https://soundcloud.com/mohdasif', '_blank')">Soundcloud</button></li>
-</ul>
-
-    </div>
+    <!-- Your existing scripts or closing body/html tags -->
 </body>
 
 </html>
