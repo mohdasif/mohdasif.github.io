@@ -16,36 +16,34 @@
     </style>
 
     <!-- Redirection Script -->
-    <script>
-        if (window.location.hostname === "mohdasif.in") {
-            window.location.href = "https://mohdasif.com" + window.location.pathname;
+<script>
+    if (window.location.hostname === "mohdasif.in") {
+        window.location.href = "https://mohdasif.com" + window.location.pathname;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var pageTitle = "Asif"; // Default title
+        var path = window.location.pathname.toLowerCase();
+
+        if (path.includes("/about")) {
+            pageTitle = "Asif | About";
+        } else if (path.includes("/photos")) {
+            pageTitle = "Asif | Photos";
+        } else if (path.includes("/videos")) {
+            pageTitle = "Asif | Videos";
+            // Redirect to the videos page
+            window.location.href = "/redirect/videos.html";
+        } else if (path.includes("/audio")) {
+            pageTitle = "Asif | Audio";
+            // Redirect to the audio page
+            window.location.href = "/redirect/audio.html";
+        } else if (path.includes("/contact")) {
+            pageTitle = "Asif | Contact";
         }
 
-        document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif"; // Default title
-            var path = window.location.pathname.toLowerCase();
-
-            if (path === "/" || path === "/index.html" || path === "/home") {
-                pageTitle = "Asif | Home"; // Set specific title for the Home page
-            } else if (path.includes("/about")) {
-                pageTitle = "Asif | About";
-            } else if (path.includes("/photos")) {
-                pageTitle = "Asif | Photos";
-            } else if (path.includes("/videos")) {
-                pageTitle = "Asif | Videos";
-                // Redirect to the videos page
-                window.location.href = "/redirect/videos.html";
-            } else if (path.includes("/audio")) {
-                pageTitle = "Asif | Audio";
-                // Redirect to the audio page
-                window.location.href = "/redirect/audio.html";
-            } else if (path.includes("/contact")) {
-                pageTitle = "Asif | Contact";
-            }
-
-            document.title = pageTitle;
-        });
-    </script>
+        document.title = pageTitle;
+    });
+</script>
 </head>
 
 <body>
