@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif"; // Default title
-            var path = window.location.pathname.toLowerCase();
+    document.title = "Asif"; // Default title
 
-            if (path.includes("/about")) {
-                pageTitle = "Asif | About";
-            } else if (path.includes("/photos")) {
-                pageTitle = "Asif | Photos";
-            } else if (path.includes("/contact")) {
-                pageTitle = "Asif | Contact";
-            }
+    // Get the lowercase path without waiting for DOMContentLoaded
+    var path = window.location.pathname.toLowerCase();
 
-            document.title = pageTitle;
-        });
-    </script>
+    // Update the title based on the path
+    if (path.includes("/about")) {
+        document.title = "Asif | About";
+    } else if (path.includes("/photos")) {
+        document.title = "Asif | Photos";
+    } else if (path.includes("/contact")) {
+        document.title = "Asif | Contact";
+    }
+</script>
 
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
     <style>
