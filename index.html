@@ -13,15 +13,12 @@
         #mobile-navigation {
             display: none;
         }
-    </style>
+    <script>
+        // Redirect from mohdasif.in to mohdasif.com
+        if (window.location.hostname === "mohdasif.in") {
+            window.location.href = "https://mohdasif.com" + window.location.pathname;
+        }
 
-    <!-- Redirection Script -->
-<script>
-    if (window.location.hostname === "mohdasif.in") {
-        window.location.href = "https://mohdasif.com" + window.location.pathname;
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
         var pageTitle = "Asif"; // Default title
         var path = window.location.pathname.toLowerCase();
 
@@ -42,8 +39,7 @@
         }
 
         document.title = pageTitle;
-    });
-</script>
+    </script>
 </head>
 
 <body>
