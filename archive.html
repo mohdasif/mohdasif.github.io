@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Asif's Website</title>
+    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #desktop-navigation,
+        #mobile-navigation {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: block; /* Ensure the desktop navigation is visible */
+        }
+
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
+
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
+        }
+
+        #mobile-navigation {
+            background-color: #FDFCFA;
+            color: #000;
+            padding: 10px;
+            display: none;
+        }
+
+        .photos-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px; /* Add space between title and content */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .view-more-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .photos-container {
+                max-width: 100%; /* Adjusted max-width for mobile */
+                margin: 20px auto; /* Adjusted margin for mobile */
+                box-shadow: none; /* Remove box shadow on mobile */
+                border-radius: 0; /* Remove border radius on mobile */
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var pageTitle = "Asif | Photos"; // Default title for the Photos page
+            document.title = pageTitle;
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="https://mohdasif.com/">Home</a>
+        <a href="/about">About</a>
+        <a href="/photos">Photos</a>
+        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-navigation">
+        <a href="https://mohdasif.com/">🏠</a>
+        <a href="/about">📝</a>
+        <a href="/photos">📷</a>
+        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
+        <a href="/contact">💬</a>
+    </div>
+
+    <div class="photos-container">
+        <h1></h1>
+
+        <p><img src="https://64.media.tumblr.com/de9beb6b6fdf2d760ee397d5c244f7b0/tumblr_inline_s7cs27u7zI1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/62540f892c9e4aaca22196ea5091d8ec/tumblr_inline_s7cs38jJ4b1x6k5f7_500.jpg" /></p>
+<p></p>
+<p><img src="https://64.media.tumblr.com/367b564979cadce76160c1a602f6ec5c/tumblr_inline_s7cs0w80HZ1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/e038b273de18a9d9398c86261c459cf4/tumblr_inline_s7cs04q49B1x6k5f7_500.jpg" /><img src="https://64.media.tumblr.com/ad5c48fca47f20978ef34823f3146a80/tumblr_inline_s7cs4kMn6H1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/3459ade02e38feb6116324ed2e395ef7/tumblr_inline_s7cs1jrACa1x6k5f7_500.jpg" /><img src="https://64.media.tumblr.com/e8ef9b33d3bb7d50566b9dc5fde7c110/tumblr_inline_s7cs5lR1FE1x6k5f7_500.jpg" /></p>
+
+    </div>
+</body>
+
+</html>
