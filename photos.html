@@ -91,6 +91,19 @@
             margin-top: 20px;
         }
 
+        .content-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; /* Adjusted to display buttons in a single line */
+            margin-bottom: 20px; /* Add space between buttons and photos on small screens */
+        }
+
+        .content-container button {
+            /* margin-bottom: 15px; Remove margin to keep buttons in a single line */
+        }
+
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
@@ -110,7 +123,7 @@
         }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var pageTitle = "Asif | Photos"; // Default title for the Photos page
             document.title = pageTitle;
         });
@@ -137,31 +150,30 @@
     </div>
 
     <div class="photos-container">
-        <h1></h1>
+<br><br>
+<div class="content-container">
+    <!-- Your content goes here -->
+    <button class="custom-button" onclick="window.location.href='/archive'" style="background-color: #4285f4; color: #ffffff; padding: 5px 10px; border: none; cursor: pointer; border-radius: 15px;">Archive</button>
 
-        <p><img src="https://64.media.tumblr.com/333f0cf4a5c68e3745514afbdd9061ca/tumblr_inline_s73belWEHl1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/484a70e5d3c63165046872e7f53c4c36/tumblr_inline_s73bce6IzM1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/1b381bedb95dcc576a64c4040f806c8f/tumblr_inline_s72exhEeRU1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/644264257271732a7c3cc8c3f097a358/tumblr_inline_s72eeoEPcC1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/29d54da1e8e0fe051cdeaa51363fb38b/tumblr_inline_s72edkZy0a1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/9ab24ab9178b41f0ce0601568d3b135a/tumblr_inline_s72ee80Yca1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/d450c8d7b7eaaea6dab56dadd323ef9d/tumblr_inline_s72ecqg1Ef1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/670bec75f7babacd2b2f5d2b14579340/tumblr_inline_s72ed3bM361x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/82aed19fe74b94aa7fcd77e12528fdea/tumblr_inline_s73bblxhWJ1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/66687c78ccedc11a67ddbde6b57ac4b6/tumblr_inline_s73bawe15F1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/b165c8bc5f1f648ad2b54d5d7d24d97b/tumblr_inline_s73baemp7m1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/3a9ba30da13e17bd6f76b173f32dca1e/tumblr_inline_s73b98iJMc1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/3bced528ea0012bf277f8cfc16ccb155/tumblr_inline_s73b9rD5A61x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/27790374b4ad6af3fe4b2e4e01418ea2/tumblr_inline_s73bs58lkA1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/0da1b44ce676c32749d25af62997dcd3/tumblr_inline_s73bosDZPi1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/078bcbf704868bfaf890de3f2f366190/tumblr_inline_s7cr7lLX6r1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/086cdbc400b82d97d829f39ac6bd57ad/tumblr_inline_s73bpr9kjr1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/6cdc9544fab268245f821ababe748bdb/tumblr_inline_s7crdayVgy1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/d46c8502b501556446fc8c3dd523578f/tumblr_inline_s7crgrU27c1x6k5f7_500.jpg" /></p>
-        <p><img src="https://64.media.tumblr.com/2553e0d9a1ebaa328641731dfa2e2c4d/tumblr_inline_s7cr68Ozqk1x6k5f7_500.jpg" /></p>
+    <button class="custom-button" onclick="window.location.href='/gym'" style="background-color: #4285f4; color: #ffffff; padding: 5px 10px; border: none; cursor: pointer; border-radius: 15px;">Gym</button>
 
-<!-- View More Button -->
-        <a class="view-more-btn" href="/photos/archive">View More</a>
+    <button class="custom-button" onclick="window.location.href='/travel'" style="background-color: #4285f4; color: #ffffff; padding: 5px 10px; border: none; cursor: pointer; border-radius: 15px;">Travel</button>
+
+</div>
+
+<p><img src="https://64.media.tumblr.com/7eb1e0e54a4ff553fead00bfd04cd562/tumblr_inline_s7dehaKa7T1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/484a70e5d3c63165046872e7f53c4c36/tumblr_inline_s73bce6IzM1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/1b381bedb95dcc576a64c4040f806c8f/tumblr_inline_s72exhEeRU1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/644264257271732a7c3cc8c3f097a358/tumblr_inline_s72eeoEPcC1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/29d54da1e8e0fe051cdeaa51363fb38b/tumblr_inline_s72edkZy0a1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/9ab24ab9178b41f0ce0601568d3b135a/tumblr_inline_s72ee80Yca1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/d450c8d7b7eaaea6dab56dadd323ef9d/tumblr_inline_s72ecqg1Ef1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/670bec75f7babacd2b2f5d2b14579340/tumblr_inline_s72ed3bM361x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/82aed19fe74b94aa7fcd77e12528fdea/tumblr_inline_s73bblxhWJ1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/66687c78ccedc11a67ddbde6b57ac4b6/tumblr_inline_s73bawe15F1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/3a9ba30da13e17bd6f76b173f32dca1e/tumblr_inline_s73b98iJMc1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/3bced528ea0012bf277f8cfc16ccb155/tumblr_inline_s73b9rD5A61x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/086cdbc400b82d97d829f39ac6bd57ad/tumblr_inline_s73bpr9kjr1x6k5f7_500.jpg" /></p>
     </div>
 </body>
 
