@@ -45,6 +45,10 @@
             display: none;
         }
 
+        #main-container {
+            text-align: center;
+        }
+
         .contact-container {
             max-width: 600px;
             margin: 30px auto;
@@ -61,13 +65,6 @@
 
         p {
             color: #666;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
         }
 
         ul {
@@ -109,6 +106,21 @@
                 display: block;
             }
         }
+button {
+    width: 100px; /* Set the width to your desired value */
+    height: 30px; /* Set the height to your desired value */
+    padding: 5px 3px;
+    background-color: #24a0ed;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+}
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -137,10 +149,16 @@
         <a href="/contact">💬</a>
     </div>
 
-    <div class="contact-container" style="text-align: center;">
+    <!-- Content for the About page -->
+    <div id="main-container">
+        <div class="contact-container">
+            <p class="center-section"><strong></strong></p>
+            <div class="center-section">
+                <div class="content-container">
+<br
+                    <p class="center-section"><strong>@mohdasif</strong></p>
+                    <ul>
 
-<ul>
-    <br>
                 <li><button class="social-button" onclick="window.location.href='https://telegram.me/mohdasif'">Telegram</button></li>
                 <li><button class="social-button" onclick="window.open('https://reddit.com/user/mohdasif', '_blank')">Reddit</button></li>
                 <li><button class="social-button" onclick="window.open('https://quora.com/mohdasif', '_blank')">Quora</button></li>
@@ -149,26 +167,12 @@
                 <li><button class="social-button" onclick="window.open('https://tumblr.com/mohdasif', '_blank')">Tumblr</button></li>
                 <li><button class="social-button" onclick="window.open('https://music.apple.com/profile/mohdasif', '_blank')">Music</button></li>
                 <li><button class="social-button" onclick="window.open('https://soundcloud.com/mohdasif', '_blank')">Soundcloud</button></li>
-            </ul>
+                        <!-- Add other content for the About page here -->
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-
-    <style>
-        .social-button {
-            width: 100px;
-            background-color: #218aff;
-            color: #ffffff;
-            padding: 12px 22px;
-            border: none;
-            cursor: pointer;
-            border-radius: 15px;
-        }
-
-        .social-button:hover {
-            background-color: #000000;
-        }
-
-    </style>
 </body>
 
 </html>
