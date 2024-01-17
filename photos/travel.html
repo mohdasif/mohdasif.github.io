@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Asif's Website</title>
-    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+    <title>Asif | Photos</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -100,8 +99,17 @@
             margin-bottom: 20px; /* Add space between buttons and photos on small screens */
         }
 
-        .content-container button {
-            /* margin-bottom: 15px; Remove margin to keep buttons in a single line */
+        .custom-button {
+            background-color: #4285f4;
+            color: #ffffff;
+            padding: 5px 8px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .custom-button:hover {
+            background-color: #000000;
         }
 
         @media only screen and (max-width: 600px) {
@@ -150,14 +158,14 @@
     </div>
 
     <div class="photos-container">
-<br><br>
-<div class="content-container">
-    <!-- Your content goes here -->
-    <button class="custom-button" onclick="window.location.href='/photos/archive'" style="background-color: #4285f4; color: #ffffff; padding: 5px 8px; border: none; cursor: pointer; border-radius: 10px;">Archive</button>
+        <br><br>
+        <div class="content-container">
+            <!-- Your content goes here -->
+            <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
 
-    <button class="custom-button" onclick="window.location.href='/photos/gym'" style="background-color: #4285f4; color: #ffffff; padding: 5px 8px; border: none; cursor: pointer; border-radius: 10px;">Gym</button>
+            <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
 
-    <button class="custom-button" onclick="window.location.href='/photos/travel'" style="background-color: #000000; color: #ffffff; padding: 5px 8px; border: none; cursor: pointer; border-radius: 10px;">Travel</button>
+            <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
 
 </div>
 
