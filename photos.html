@@ -92,7 +92,7 @@
 
         .content-container {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             justify-content: center;
             align-items: center;
             flex-direction: row; /* Adjusted to display buttons in a single line */
@@ -106,7 +106,7 @@
         border: none;
         cursor: pointer;
         border-radius: 10px;
-        transition: background-color 0.3s; /* Added transition effect */
+        transition: background-color 0.9s; /* Added transition effect */
     }
 
     .custom-button:hover,
@@ -115,23 +115,33 @@
     }
 
         @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
+        /* ... (styles for small screens) ... */
 
-            #mobile-navigation {
-                display: block;
-            }
-
-            .photos-container {
-                max-width: 100%; /* Adjusted max-width for mobile */
-                margin: 20px auto; /* Adjusted margin for mobile */
-                box-shadow: none; /* Remove box shadow on mobile */
-                border-radius: 0; /* Remove border radius on mobile */
-            }
+        .custom-button {
+            padding: 5px 5px;
+            margin: 1px 0; /* Adjust the margin to reduce space between buttons */
+            border-radius: 10px;
+            transition: background-color 0.3s;
         }
-    </style>
+
+        /* ... (other styles for small screens) ... */
+
+        #desktop-navigation {
+            display: none;
+        }
+
+        #mobile-navigation {
+            display: block;
+        }
+
+        .photos-container {
+            max-width: 100%; /* Adjusted max-width for mobile */
+            margin: 20px auto; /* Adjusted margin for mobile */
+            box-shadow: none; /* Remove box shadow on mobile */
+            border-radius: 0; /* Remove border radius on mobile */
+        }
+    }
+</style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var pageTitle = "Asif | Photos"; // Default title for the Photos page
@@ -164,9 +174,8 @@
         <div class="content-container">
             <!-- Your content goes here -->
             <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
-
+            <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
             <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
-
             <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
 
 </div>
