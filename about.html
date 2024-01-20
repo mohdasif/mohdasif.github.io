@@ -196,13 +196,29 @@
 <div class="center-section">
     <ul>
         <li><a href="https://telegram.me/mohdasif" class="link-button" style="border-radius: 15px;">Telegram</a></li>
-        <li><a href="https://clubhouse.com/@mohdasif" class="link-button" style="border-radius: 15px;">Clubhouse</a></li>
-        <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin" style="border-radius: 15px;">LinkedIn</a></li>
-        <li><a href="https://pinterest.com/mohdasif" class="link-button" style="border-radius: 15px;">Pinterest</a></li>
-        <li><a href="https://x.com/mohdasif" class="link-button" style="border-radius: 15px;">X</a></li>        
-        <li><a href="/connect" class="link-button" style="border-radius: 15px;">⌵</a></li> 
-   </ul>
+    <li><a href="https://clubhouse.com/@mohdasif" class="link-button" style="border-radius: 15px;">Clubhouse</a></li>
+    <li><a href="https://www.youtube.com/@mohdasif/shorts" class="link-button" id="youtubeLink" style="border-radius: 15px;">YouTube</a></li>
+    <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin" style="border-radius: 15px;">LinkedIn</a></li>
+    <li><a href="https://x.com/mohdasif" class="link-button" style="border-radius: 15px;">X</a></li>
+    <li><a href="/connect" class="link-button" style="border-radius: 15px;">⌵</a></li>
+</ul>
 </div>
+
+<!-- Add the JavaScript script here -->
+<script>
+  // Check if the user is on a mobile device
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  // Get the YouTube link element by its ID
+  var youtubeLink = document.getElementById('youtubeLink');
+
+  // Set the href attribute based on the device type
+  if (isMobile) {
+    youtubeLink.href = 'https://m.youtube.com/@mohdasif/shorts';
+  } else {
+    youtubeLink.href = 'https://www.youtube.com/@mohdasif/shorts';
+  }
+</script>
 
 
 <br>
