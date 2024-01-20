@@ -4,7 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Asif's Website</title>
+    <!-- Your existing head content -->
+    <title>
+        {block:IndexPage}
+        Asif
+        {/block:IndexPage}
+        {block:PermalinkPage}
+        {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
+        {/block:PermalinkPage}
+        {block:Page}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var pageTitle = "Asif"; // Default title
+                var path = window.location.pathname.toLowerCase();
+
+                if (path.includes("/about")) {
+                    pageTitle = "Asif | About";
+                } else if (path.includes("/photos")) {
+                    pageTitle = "Asif | Photos";
+                } else if (path.includes("/contact")) {
+                    pageTitle = "Asif | Contact";
+                }
+
+                document.title = pageTitle;
+            });
+        </script>
+        {/block:Page}
+    </title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
     <style>
         body {
@@ -13,6 +39,7 @@
             margin: 0;
             padding: 0;
         }
+
 
         #desktop-navigation,
         #mobile-navigation {
@@ -45,26 +72,30 @@
             display: none;
         }
 
-        #main-container {
-            text-align: center;
-        }
-
-        .contact-container {
+        .content-container {
             max-width: 600px;
             margin: 30px auto;
             background-color: #fff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left; /* Align text to the left */
         }
 
         h1 {
             color: #333;
+            text-align: center; /* Center the title */
         }
 
         p {
             color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
         }
 
         ul {
@@ -106,30 +137,10 @@
                 display: block;
             }
         }
-
-        .social-button {
-            display: inline-block;
-            width: 85px; /* Set the width to your desired value */
-            height: 10px; /* Set the height to your desired value */
-            padding: 10px;
-            background-color: #24a0ed;
-            color: white;
-            text-decoration: none;
-            border-radius: 20px;
-            margin: 5px;
-            cursor: pointer;
-            font-weight: lighter;
-            text-align: center;
-            line-height: 10px; /* Adjust line-height based on button height */
-        }
-
-        .social-button:hover {
-            background-color: #000000;
-        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif | @mohdasif"; // Default title for the @mohdasif page
+            var pageTitle = "Asif | Links"; // Default title for the Links
             document.title = pageTitle;
         });
     </script>
@@ -154,25 +165,30 @@
         <a href="/contact">💬</a>
     </div>
 
-    <!-- Content for the About page -->
-    <div id="main-container">
-        <div class="contact-container">
-            <p class="center-section"><strong></strong></p>
-            <div class="center-section">
-                <div class="content-container">
-                    <p class="center-section"><strong>Connect</strong></p>
-                    <ul>
-               <ul>
-        <ul>
-        <li><a href="https://pinterest.com/mohdasif" class="social-button">Pinterest</a></li>
-        <li><a href="https://reddit.com/user/mohdasif" class="social-button">Reddit</a></li>
-        <li><a href="https://quora.com/mohdasif" class="social-button">Quora</a></li>
-        <li><a href="https://goodreads.com/mohdasif" class="social-button">Goodreads</a></li>
-        <li><a href="https://github.com/mohdasif" class="social-button">GitHub</a></li>
-        <li><a href="https://tumblr.com/mohdasif" class="social-button">Tumblr</a></li>
-        <li><a href="https://music.apple.com/profile/mohdasif" class="social-button">Music</a></li>
-        <li><a href="https://soundcloud.com/mohdasif" class="social-button">Soundcloud</a></li>
+    <!-- Content Container -->
+    <div class="content-container">
+
+<div class="links-container" style="text-align: center;">
+    <h3>Links</h3>
+    <ul>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://pinterest.com/mohdasif', '_blank')">Pinterest</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://reddit.com/user/mohdasif', '_blank')">Reddit</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://quora.com/mohdasif', '_blank')">Quora</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://goodreads.com/mohdasif', '_blank')">Goodreads</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://github.com/mohdasif', '_blank')">GitHub</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://tumblr.com/@mohdasif', '_blank')">Tumblr</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://music.apple.com/mohdasif', '_blank')">Music</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://soundcloud.com/mohdasif', '_blank')">Soundcloud</button></li>
     </ul>
+</div>
+<br>
+
+       
+        </div>
+
+    <script>
+
+
 </body>
 
 </html>
