@@ -289,24 +289,26 @@
         }
     </style>
 
-    <!-- Your content goes here -->
-    <button class="custom-button" onclick="redirectToYouTube('https://m.youtube.com/@mohdasifGym/playlists')"
-        style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Workout</button>
+<!-- Your content goes here -->
+<button class="custom-button" onclick="redirectToYouTube()"
+    style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Workout</button>
 
-    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspTe6QuJnzxKZVXhp3SV6WPl'"
-        style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Motivation</button>
+<button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspTe6QuJnzxKZVXhp3SV6WPl'"
+    style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Motivation</button>
 
-    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspRPpF1MmIxd4o4Tm7EH7Cjk'"
-        style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Epic</button>
+<button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspRPpF1MmIxd4o4Tm7EH7Cjk'"
+    style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Epic</button>
 
 </div>
 
-<!-- JavaScript for redirecting on mobile -->
+<!-- JavaScript for redirecting -->
 <script>
-function redirectToYouTube(url) {
+function redirectToYouTube() {
   // Check if the viewport width is less than or equal to 768 pixels (adjust this value as needed)
   if (window.innerWidth <= 768) {
-    window.location.href = url;
+    window.location.href = 'https://m.youtube.com/@mohdasifGym/playlists';
+  } else {
+    window.location.href = 'https://www.youtube.com/@mohdasifGym/playlists';
   }
 }
 </script>
