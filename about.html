@@ -274,16 +274,14 @@
 </script>
 
 <br>
- <!-- Content for the Fun Fact  -->
-
-
-    <div class="content-container" style="display: flex; gap: 80px; justify-content: center; align-items: center;">
+<!-- Content for the Fun Fact -->
+<div class="content-container" style="display: flex; gap: 80px; justify-content: center; align-items: center;">
 
     <style>
         /* Mobile styles */
         @media screen and (max-width: 768px) {
             .content-container {
-                flex-direction: row;
+                flex-direction: row; /* Keep as row for mobile view */
                 align-items: center;
                 justify-content: center;
                 gap: 40px !important; /* Keep the gap value the same as in the inline style */
@@ -291,21 +289,27 @@
         }
     </style>
 
-<!-- Your content goes here -->
-<button class="custom-button" onclick="window.location.href='https://www.youtube.com/@mohdasifGym/playlists'"
-    style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Workout</button>
+    <!-- Your content goes here -->
+    <button class="custom-button" onclick="redirectToYouTube('https://m.youtube.com/@mohdasifGym/playlists')"
+        style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Workout</button>
 
-<button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspTe6QuJnzxKZVXhp3SV6WPl'"
-    style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Motivation</button>
+    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspTe6QuJnzxKZVXhp3SV6WPl'"
+        style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Motivation</button>
 
-<button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspRPpF1MmIxd4o4Tm7EH7Cjk'"
-    style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Epic</button>
-</div>
-    </div>
-
-    <!-- Separate button for about.me link -->
+    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspRPpF1MmIxd4o4Tm7EH7Cjk'"
+        style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Epic</button>
 
 </div>
+
+<!-- JavaScript for redirecting on mobile -->
+<script>
+function redirectToYouTube(url) {
+  // Check if the viewport width is less than or equal to 768 pixels (adjust this value as needed)
+  if (window.innerWidth <= 768) {
+    window.location.href = url;
+  }
+}
+</script>
 
 <!-- Your existing scripts or closing body/html tags -->
 </body>
