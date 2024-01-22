@@ -53,6 +53,7 @@
             background-color: #333;
             color: #fff;
             padding: 10px;
+            display: block; /* Ensure the desktop navigation is visible */
         }
 
         #desktop-navigation a,
@@ -61,7 +62,11 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
+
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
         }
 
         #mobile-navigation {
@@ -70,6 +75,7 @@
             padding: 10px;
             display: none;
         }
+
 
         .content-container {
             max-width: 600px;
