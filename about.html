@@ -156,10 +156,16 @@
         outline: none; /* Remove the default focus outline */
     }
 
-        .about-me-button:hover,
-        .link-button:hover {
-            background-color: #04AA6D;
-        }
+    .about-me-button:hover,
+    .link-button:hover {
+        background-color: #04AA6D;
+    }
+
+    /* Add a border around the button when it is focused for accessibility */
+    .about-me-button:focus,
+    .link-button:focus {
+        border: 2px solid #24a0ed; /* Adjust the color to match your button */
+    }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
