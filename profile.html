@@ -4,34 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Your existing head content -->
-    <title>
-        {block:IndexPage}
-        Asif
-        {/block:IndexPage}
-        {block:PermalinkPage}
-        {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
-        {/block:PermalinkPage}
-        {block:Page}
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var pageTitle = "Asif"; // Default title
-                var path = window.location.pathname.toLowerCase();
-
-                if (path.includes("/about")) {
-                    pageTitle = "Asif | About";
-                } else if (path.includes("/photos")) {
-                    pageTitle = "Asif | Photos";
-                } else if (path.includes("/contact")) {
-                    pageTitle = "Asif | Contact";
-                }
-
-                document.title = pageTitle;
-            });
-        </script>
-        {/block:Page}
-    </title>
+    <title>Asif | Profile</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+
+    <!-- Add this style block to hide navigation links -->
     <style>
         body {
             font-family: 'Arial', sans-serif;
