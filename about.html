@@ -197,6 +197,35 @@
         <p class="left-align">
             Passionate about books, podcasts, and poetry. Dedicated to fitness, constant learning, and minimalist living. Join me as I share thoughts & experiences centered around these interests.
         </p>
+
+
+    <div class="content-container" style="display: flex; gap: 70px; justify-content: center; align-items: center;">
+
+    <style>
+        /* Mobile styles */
+        @media screen and (max-width: 768px) {
+            .content-container {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 25px !important; /* Added !important to override inline styles */
+            }
+        }
+    </style>
+
+    <!-- Your content goes here -->
+    <button class="custom-button" onclick="window.location.href='/profile'"
+        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Profile</button>
+    
+    <button class="custom-button" onclick="window.location.href='/podcasts'"
+        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Podcast</button>
+
+    <button class="custom-button" onclick="window.location.href='/workout'"
+        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Workout</button>
+
+    <button class="custom-button" onclick="window.location.href='https://www.amazon.in/shop/mohdasif'"
+        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Shop</button>
+</div>
     <div class="content-container">
         <p class="center-section"><strong>Links</strong></p>
 <div class="center-section">
@@ -225,33 +254,8 @@
     youtubeLink.href = 'https://www.youtube.com/@mohdasif';
   }
 </script>
-
-    <div class="content-container" style="display: flex; gap: 80px; justify-content: center; align-items: center;">
-
-    <style>
-        /* Mobile styles */
-        @media screen and (max-width: 768px) {
-            .content-container {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 40px !important; /* Added !important to override inline styles */
-            }
-        }
-    </style>
-
-    <!-- Your content goes here -->
-    <button class="custom-button" onclick="window.location.href='/profile'"
-        style="background-color: #000000; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Profile</button>
-    
-    <button class="custom-button" onclick="window.location.href='/podcasts'"
-        style="background-color: #000000; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Podcast</button>
-
-    <button class="custom-button" onclick="window.location.href='https://www.amazon.in/shop/mohdasif'"
-        style="background-color: #000000; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Shop</button>
 </div>
-
-<br>
+    <div class="content-container">
 <h3>Bookshelves</h3>
 <ul>
     <li>
@@ -277,35 +281,37 @@
     }
 </script>
 
-<br>
+</div>
+
 <!-- Content for the Fun Fact -->
 <h3>Playlists</h3>
-<div class="content-container" style="display: flex; gap: 70px; justify-content: center; align-items: center;">
+    <div class="content-container" style="display: flex; gap: 70px; justify-content: center; align-items: center;">
 
     <style>
         /* Mobile styles */
         @media screen and (max-width: 768px) {
             .content-container {
-                flex-direction: row; /* Keep as row for mobile view */
+                flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                gap: 20px !important; /* Keep the gap value the same as in the inline style */
+                gap: 25px !important; /* Added !important to override inline styles */
             }
         }
     </style>
 
-<!-- Your content goes here -->
-<button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspTKPD3n2Eb6VN7SAOMYUBhn'"
-    style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Podcast</button>
+    <!-- Your content goes here -->
+    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PL16jSrmdcr03E4C8LTsC8542b0PRPydx5'"
+        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Listening</button>
+    
+    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLW3rx81yseUDaedhEYD7PSX2C5UW93isi'"
+        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Poetry</button>
 
-<button class="custom-button" onclick="redirectToYouTube()"
-    style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Workout</button>
+    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLW3rx81yseUDW3AtHA6Y49xHSfqBGfM_E'"
+        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Standup</button>
 
-<button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspTe6QuJnzxKZVXhp3SV6WPl'"
-    style="background-color: #fd0e35; color: #ffffff; padding: 10px 15px; border: none; cursor: pointer; border-radius: 15px;">Motivation</button>
-
+    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspTe6QuJnzxKZVXhp3SV6WPl'"
+        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Motivation</button>
 </div>
-
 <!-- JavaScript for redirecting -->
 <script>
 function redirectToYouTube() {
