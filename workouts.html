@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Your existing head content -->
+    <title>
+        {block:IndexPage}
+        Asif
+        {/block:IndexPage}
+        {block:PermalinkPage}
+        {block:PostTitle}{PostTitle} | Asif{/block:PostTitle}
+        {/block:PermalinkPage}
+        {block:Page}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var pageTitle = "Asif"; // Default title
+                var path = window.location.pathname.toLowerCase();
+
+                if (path.includes("/about")) {
+                    pageTitle = "Asif | About";
+                } else if (path.includes("/photos")) {
+                    pageTitle = "Asif | Photos";
+                } else if (path.includes("/contact")) {
+                    pageTitle = "Asif | Contact";
+                }
+
+                document.title = pageTitle;
+            });
+        </script>
+        {/block:Page}
+    </title>
+    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #desktop-navigation,
+        #mobile-navigation {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: block; /* Ensure the desktop navigation is visible */
+        }
+
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
+
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
+        }
+
+        #mobile-navigation {
+            background-color: #FDFCFA;
+            color: #000;
+            padding: 10px;
+            display: none;
+        }
+
+
+        .content-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Align text to the left */
+        }
+
+        h1 {
+            color: #333;
+            text-align: center; /* Center the title */
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #000000;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var pageTitle = "Asif | Links"; // Default title for the Links
+            document.title = pageTitle;
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="https://mohdasif.com/">Home</a>
+        <a href="/about">About</a>
+        <a href="/photos">Photos</a>
+        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-navigation">
+        <a href="https://mohdasif.com/">🏠</a>
+        <a href="/about">📝</a>
+        <a href="/photos">📷</a>
+        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
+        <a href="/contact">💬</a>
+    </div>
+
+
+    <div class="content-container">
+
+<div class="links-container" style="text-align: center;">
+    <h2>Workouts</h2>
+
+<div class="center-section">
+
+    <div class="content-container">
+
+<div class="links-container" style="text-align: center;">
+    <ul>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerIA7wz7PWtWMc2tnk23Kpt8', '_blank')">Legs</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerJhNigJ19IOhiB934eumyS4', '_blank')">Chest</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerLUJdH6cN_ZvPIIgka7j--v', '_blank')">Back</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerKx83a4biSWPU8yWUIiEmuM', '_blank')">Glutes</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerIQ8beyl-DA4D9c9VTO9EQc', '_blank')">Calf</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerJufVI5DzouyiBasbqv9Rlt', '_blank')">Shoulder</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerKHO02HRI_3ppFA_N7Vlegk', '_blank')">Triceps</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerLNa1Oz-3cRqRZvyikoFp_v', '_blank')">Biceps</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerKzFGj97SoQZSxhBz1BdMFM', '_blank')">Forearms</button></li>
+        <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerJ-D_LZMony5v2lpJ3C7XIO', '_blank')">Abs</button></li>
+    </ul>
+</div>
+<br>
+
+       
+        </div>
+
+    <script>
+
+
+</body>
+
+</html>
