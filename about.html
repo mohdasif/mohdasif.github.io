@@ -261,46 +261,6 @@
 
 </div>
 
-<!-- Content for the Fun Fact -->
-<h3>Playlists</h3>
-    <div class="content-container" style="display: flex; gap: 70px; justify-content: center; align-items: center;">
-
-    <style>
-        /* Mobile styles */
-        @media screen and (max-width: 768px) {
-            .content-container {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 20px !important; /* Added !important to override inline styles */
-            }
-        }
-    </style>
-
-    <!-- Your content goes here -->
-    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PL16jSrmdcr03E4C8LTsC8542b0PRPydx5'"
-        style="background-color: #000000; color: #ffffff; padding: 5px 7px; border: none; cursor: pointer; border-radius: 15px;">Listening</button>
-    
-    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLW3rx81yseUDaedhEYD7PSX2C5UW93isi'"
-        style="background-color: #000000; color: #ffffff; padding: 5px 7px; border: none; cursor: pointer; border-radius: 15px;">Poetry</button>
-
-    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLW3rx81yseUDW3AtHA6Y49xHSfqBGfM_E'"
-        style="background-color: #000000; color: #ffffff; padding: 5px 7px; border: none; cursor: pointer; border-radius: 15px;">Standup</button>
-
-    <button class="custom-button" onclick="window.location.href='https://www.youtube.com/playlist?list=PLIVm4C5LjspTe6QuJnzxKZVXhp3SV6WPl'"
-        style="background-color: #000000; color: #ffffff; padding: 5px 7px; border: none; cursor: pointer; border-radius: 15px;">Motivation</button>
-</div>
-<!-- JavaScript for redirecting -->
-<script>
-function redirectToYouTube() {
-  // Check if the viewport width is less than or equal to 768 pixels (adjust this value as needed)
-  if (window.innerWidth <= 768) {
-    window.location.href = 'https://m.youtube.com/@mohdasifGym/playlists';
-  } else {
-    window.location.href = 'https://www.youtube.com/@mohdasifGym/playlists';
-  }
-}
-</script>
 
 <!-- Your existing scripts or closing body/html tags -->
 </body>
