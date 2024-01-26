@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Profile</title>
+    <title>Asif | About</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <!-- Add this style block to hide navigation links -->
@@ -29,7 +29,7 @@
             background-color: #333;
             color: #fff;
             padding: 10px;
-            display: block; /* Ensure the desktop navigation is visible */
+            display: block;
         }
 
         #desktop-navigation a,
@@ -38,11 +38,11 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block; /* Make sure the links are on separate lines */
+            display: inline-block;
         }
 
         #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
+            margin-right: 0;
         }
 
         #mobile-navigation {
@@ -52,20 +52,25 @@
             display: none;
         }
 
-
         .content-container {
             max-width: 600px;
-            margin: 30px auto;
+            margin: 5px auto 3px;
             background-color: #fff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .profile-text {
             text-align: left; /* Align text to the left */
+            color: #333;
+            margin-top: 20px;
         }
 
         h1 {
             color: #333;
-            text-align: center; /* Center the title */
+            text-align: center;
         }
 
         p {
@@ -121,7 +126,7 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif | Profile"; // Default title for the Profile
+            var pageTitle = "Asif | About Me";
             document.title = pageTitle;
         });
     </script>
@@ -146,12 +151,18 @@
         <a href="/contact">💬</a>
     </div>
 
-    <!-- Content Container -->
-    <div class="content-container">
-
-<div class="links-container" style="text-align: center;">
-    <h2>Profile</h2>
-
+<!-- Content Container -->
+<div class="content-container">
+    <div class="links-container" style="text-align: center;">
+  <br>
+        <h2>About</h2>
+        <!-- About Text -->
+        <p class="profile-text">
+            Passionate about books, podcasts, and poetry. Dedicated to fitness, constant learning, and minimalist living. Join me as I share thoughts & experiences centered around these interests.
+        </p>
+    </div>
+    <!-- Rest of your content -->
+</div>
     <!-- Content Container -->
     <div class="content-container">
 
