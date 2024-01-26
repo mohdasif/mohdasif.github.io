@@ -4,24 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script>
-    document.title = "Asif"; // Default title
-
-    // Get the lowercase path without waiting for DOMContentLoaded
-    var path = window.location.pathname.toLowerCase();
-
-    // Update the title based on the path
-    if (path.includes("/about")) {
-        document.title = "Asif | About";
-    } else if (path.includes("/photos")) {
-        document.title = "Asif | Photos";
-    } else if (path.includes("/contact")) {
-        document.title = "Asif | Contact";
-    }
-</script>
-
+    <title>Asif | Podcasts</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+
+    <!-- Add this style block to hide navigation links -->
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -66,14 +52,18 @@
             display: none;
         }
 
-        .content-container {
-            max-width: 600px;
+        .page-container {
+            max-width: 630px;
             margin: 30px auto;
             background-color: #fff;
             border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            padding: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .content-container {
+            padding: 20px; /* Adjust padding as needed */
         }
 
         h1 {
@@ -135,6 +125,15 @@
             #mobile-navigation {
                 display: block;
             }
+
+            .page-container iframe,
+            .post-container iframe {
+                max-width: 100%;
+                width: 100%;
+                height: 190px; /* Adjust this height as needed */
+                display: block;
+                margin: 0 auto;
+            }
         }
 
         /* New styles for the about.me link container and button */
@@ -145,23 +144,23 @@
         .about-me-button,
         .link-button {
             display: inline-block;
-            padding: 8px 10px;
+            padding: 7px 8px;
             background-color: #24a0ed;
             color: #fff;
             text-decoration: none;
-            border-radius: 1px;
+            border-radius: 40px;
             margin: 1px;
-            font-weight: 540; /* Adjust the value to your preference */
         }
 
         .about-me-button:hover,
         .link-button:hover {
-            background-color: #04AA6D;
+            background-color: #000000;
         }
     </style>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif | About"; // Default title for the About page
+            var pageTitle = "Asif | Podcasts"; // Default title for the About page
             document.title = pageTitle;
         });
     </script>
@@ -186,144 +185,22 @@
         <a href="/contact">💬</a>
     </div>
 
+    <!-- Page Container -->
+    <div class="page-container">
+        <!-- Your post content goes here -->
 
-    <div class="content-container">
+  <br><br>
+            <!-- HTML post content -->
+            <p><iframe src="https://open.spotify.com/embed/episode/0ALpJ8EczwShV1p4qyo0Rj" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
+            <p><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/how-sex-drugs-and-money-can-make-you-more-happy-ft/id1247526593?i=1000642794859"></iframe></p>
+            <p></p>
+            <p></p>
+            <!-- Add more HTML content as needed -->
+        </div>
+    </div>
 
-<div class="links-container" style="text-align: center;">
-    <h2>About</h2>
-
-    <!-- Content Container -->
-
-        <p class="left-align">
-            Passionate about books, podcasts, and poetry. Dedicated to fitness, constant learning, and minimalist living. Join me as I share thoughts & experiences centered around these interests.
-        </p>
-
-
-    <div class="content-container" style="display: flex; gap: 70px; justify-content: center; align-items: center;">
-
-    <style>
-        /* Mobile styles */
-        @media screen and (max-width: 768px) {
-            .content-container {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 25px !important; /* Added !important to override inline styles */
-            }
-        }
-    </style>
-
-    <!-- Your content goes here -->
-    <button class="custom-button" onclick="window.location.href='/profile'"
-        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Profile</button>
-    
-    <button class="custom-button" onclick="window.location.href='/podcasts'"
-        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Podcast</button>
-
-    <button class="custom-button" onclick="window.location.href='/workout'"
-        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Workout</button>
-
-    <button class="custom-button" onclick="window.location.href='https://www.amazon.in/shop/mohdasif'"
-        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Shop</button>
-</div>
-    <div class="content-container">
-        <p class="center-section"><strong>Links</strong></p>
-<div class="center-section">
-    <ul>
-        <li><a href="https://telegram.me/mohdasif" class="link-button" style="border-radius: 15px;">Telegram</a></li>
-    <li><a href="https://clubhouse.com/@mohdasif" class="link-button" style="border-radius: 15px;">Clubhouse</a></li>
-    <li><a href="https://www.youtube.com/@mohdasif" class="link-button" id="youtubeLink" style="border-radius: 15px;">YouTube</a></li>
-    <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin" style="border-radius: 15px;">LinkedIn</a></li>
-    <li><a href="https://x.com/mohdasif" class="link-button" style="border-radius: 15px;">X</a></li>
-    <li><a href="/links" class="link-button" style="border-radius: 15px;">⌵</a></li>
-</ul>
-</div>
-
-<!-- Add the JavaScript script here -->
-<script>
-  // Check if the user is on a mobile device
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  // Get the YouTube link element by its ID
-  var youtubeLink = document.getElementById('youtubeLink');
-
-  // Set the href attribute based on the device type
-  if (isMobile) {
-    youtubeLink.href = 'https://m.youtube.com/@mohdasif';
-  } else {
-    youtubeLink.href = 'https://www.youtube.com/@mohdasif';
-  }
-</script>
-</div>
-    <div class="content-container">
-<h3>Bookshelves</h3>
-<ul>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=currently-reading')">
-            Reading
-        </button>
-    </li>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=to-read')">
-            Want to Read
-        </button>
-    </li>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=read')">
-            Read
-        </button>
-    </li>
-</ul>
-
-<script>
-    function openGoodreads(url) {
-        window.open(url, '_blank');
-    }
-</script>
-
-</div>
-
-<!-- Content for the Fun Fact -->
-<h3>Playlists</h3>
-    <div class="content-container" style="display: flex; gap: 70px; justify-content: center; align-items: center;">
-
-    <style>
-        /* Mobile styles */
-        @media screen and (max-width: 768px) {
-            .content-container {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 25px !important; /* Added !important to override inline styles */
-            }
-        }
-    </style>
-
-    <!-- Your content goes here -->
-    <button class="custom-button" onclick="window.location.href='/ppp'"
-        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Listening</button>
-    
-    <button class="custom-button" onclick="window.location.href='/ppp'"
-        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Poetry</button>
-
-    <button class="custom-button" onclick="window.location.href='/podcasts'"
-        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Standup</button>
-
-    <button class="custom-button" onclick="window.location.href='https://www.amazon.in/shop/mohdasif'"
-        style="background-color: #000000; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Motivation</button>
-</div>
-<!-- JavaScript for redirecting -->
-<script>
-function redirectToYouTube() {
-  // Check if the viewport width is less than or equal to 768 pixels (adjust this value as needed)
-  if (window.innerWidth <= 768) {
-    window.location.href = 'https://m.youtube.com/@mohdasifGym/playlists';
-  } else {
-    window.location.href = 'https://www.youtube.com/@mohdasifGym/playlists';
-  }
-}
-</script>
-
-<!-- Your existing scripts or closing body/html tags -->
+    <!-- Your existing code below -->
 </body>
+
+<!-- Rest of your existing code -->
 </html>
