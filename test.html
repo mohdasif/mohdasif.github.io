@@ -8,155 +8,135 @@
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <!-- Add this style block to hide navigation links -->
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
-        #desktop-navigation,
-        #mobile-navigation {
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+    #desktop-navigation,
+    #mobile-navigation {
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
 
+    #desktop-navigation {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: block; /* Ensure the desktop navigation is visible */
+    }
+
+    #desktop-navigation a,
+    #mobile-navigation a {
+        color: inherit;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block; /* Make sure the links are on separate lines */
+    }
+
+    #desktop-navigation a:last-child {
+        margin-right: 0; /* Remove margin from the last element */
+    }
+
+    #mobile-navigation {
+        background-color: #FDFCFA;
+        color: #000;
+        padding: 10px;
+        display: none;
+    }
+
+    .page-container {
+        max-width: 630px;
+        margin: 30px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px; /* Adjust padding as needed */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px; /* Add space between title and content */
+    }
+
+    h2 {
+        color: #333;
+        margin-top: 20px;
+    }
+
+    p {
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #4285f4;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: none; /* Remove underline on hover */
+    }
+
+    /* New style for left-aligning specific sections */
+    .left-align {
+        text-align: left;
+    }
+
+    /* Center-align the about.me link */
+    .about-me {
+        text-align: center;
+    }
+
+    /* Center-align Links */
+    .center-section {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+        /* Show mobile navigation and hide desktop navigation on small screens */
         #desktop-navigation {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            display: block; /* Ensure the desktop navigation is visible */
-        }
-
-        #desktop-navigation a,
-        #mobile-navigation a {
-            color: inherit;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block; /* Make sure the links are on separate lines */
-        }
-
-        #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
-        }
-
-        #mobile-navigation {
-            background-color: #FDFCFA;
-            color: #000;
-            padding: 10px;
             display: none;
         }
 
-        .page-container {
-            max-width: 630px;
-            margin: 30px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            text-align: left;
+        #mobile-navigation {
+            display: block;
         }
 
+        .page-container iframe,
+        .post-container iframe {
+            max-width: 100%;
+            width: 100%;
+            height: 190px; /* Adjust this height as needed */
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Remove content-container on mobile */
         .content-container {
-            padding: 20px; /* Adjust padding as needed */
+            padding: 0; /* Remove padding on mobile */
         }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
-        }
-
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
-        }
-
-        /* New style for left-aligning specific sections */
-        .left-align {
-            text-align: left;
-        }
-
-        /* Center-align the about.me link */
-        .about-me {
-            text-align: center;
-        }
-
-        /* Center-align Links */
-        .center-section {
-            text-align: center;
-        }
-
-        @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-
-            .page-container iframe,
-            .post-container iframe {
-                max-width: 100%;
-                width: 100%;
-                height: 190px; /* Adjust this height as needed */
-                display: block;
-                margin: 0 auto;
-            }
-        }
-
-        /* New styles for the about.me link container and button */
-        .about-me-container {
-            text-align: center;
-        }
-
-        .about-me-button,
-        .link-button {
-            display: inline-block;
-            padding: 7px 8px;
-            background-color: #24a0ed;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 40px;
-            margin: 1px;
-        }
-
-        .about-me-button:hover,
-        .link-button:hover {
-            background-color: #000000;
-        }
-    </style>
+    }
+</style>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -188,7 +168,7 @@
     <!-- Page Container -->
     <div class="page-container">
         <!-- Your post content goes here -->
-
+        <div class="content-container">
   <br><br>
             <!-- HTML post content -->
             <p><iframe src="https://open.spotify.com/embed/episode/0ALpJ8EczwShV1p4qyo0Rj" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
