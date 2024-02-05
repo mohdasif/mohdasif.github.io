@@ -128,23 +128,34 @@
             text-align: center;
         }
 
-        .about-me-button,
-        .link-button {
-            display: inline-block;
-            padding: 8px 10px;
-            background-color: #24a0ed;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 1px;
-            margin: 1px;
-            font-weight: 540; /* Adjust the value to your preference */
-        }
+/* Styling for the first five buttons */
+.center-section .link-button:not(.last-buttons) {
+    display: inline-block;
+    padding: 10px 15px; /* Adjust the padding as needed */
+    background-color: #24a0ed;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px; /* Adjust the border-radius as needed */
+    margin: 5px; /* Adjust the margin as needed */
+    width: 75px; /* Set a fixed width */
+    height: 20px; /* Set a fixed height */
+}
 
-        .about-me-button:hover,
-        .link-button:hover {
-            background-color: #000000;
-        }
-    </style>
+    /* Styling for the last two buttons */
+    .center-section .link-button.last-buttons {
+        display: inline-block;
+        padding: 10px 12px;
+        background-color: #24a0ed; /* Different background color if needed */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 15px; /* Adjust the border-radius as needed */
+        margin: 5px; /* Adjust the margin as needed */
+    }
+
+    .link-button:hover {
+        background-color: #000000;
+    }
+</style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var pageTitle = "Asif | About"; // Default title for the About page
@@ -206,18 +217,17 @@
 
 
 </div>
-    <div class="content-container">
-        <p class="center-section"><strong>Links</strong></p>
-<div class="center-section">
+    <div class="center-section">
+    <p class="center-section"><strong>Links</strong></p>
     <ul>
-        <li><a href="https://telegram.me/mohdasif" class="link-button" style="border-radius: 15px;">Telegram</a></li>
-    <li><a href="https://clubhouse.com/@mohdasif" class="link-button" style="border-radius: 15px;">Clubhouse</a></li>
-    <li><a href="https://www.youtube.com/@mohdasif" class="link-button" id="youtubeLink" style="border-radius: 15px;">YouTube</a></li>
-    <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin" style="border-radius: 15px;">LinkedIn</a></li>
-    <li><a href="https://in.pinterest.com/mohdasif" class="link-button" style="border-radius: 15px;">Pinterest</a></li>
-    <li><a href="https://x.com/mohdasif" class="link-button" style="border-radius: 15px;">X</a></li>
-    <li><a href="/links" class="link-button" style="border-radius: 15px;">⌵</a></li>
-</ul>
+        <li><a href="https://telegram.me/mohdasif" class="link-button">Telegram</a></li>
+        <li><a href="https://clubhouse.com/@mohdasif" class="link-button">Clubhouse</a></li>
+        <li><a href="https://www.youtube.com/@mohdasif" class="link-button" id="youtubeLink">YouTube</a></li>
+        <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin">LinkedIn</a></li>
+        <li><a href="https://in.pinterest.com/mohdasif" class="link-button">Pinterest</a></li>
+        <li><a href="https://x.com/mohdasif" class="link-button">X</a></li>
+        <li><a href="/links" class="link-button last-buttons">⌵</a></li>
+    </ul>
 </div>
 
 <!-- Add the JavaScript script here -->
