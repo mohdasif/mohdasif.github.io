@@ -7,7 +7,11 @@
     <title>Redirecting...</title>
     <script>
         // JavaScript code for redirection
-        window.location.href = "https://www.youtube.com/@mohdasif/shorts";
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = "https://m.youtube.com/@mohdasif/shorts";
+        } else {
+            window.location.href = "https://www.youtube.com/@mohdasif/shorts";
+        }
     </script>
 </head>
 
