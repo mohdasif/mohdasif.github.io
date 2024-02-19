@@ -8,60 +8,95 @@
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <!-- Add this style block to hide navigation links -->
-<style>
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
 
-#desktop-navigation,
-#mobile-navigation {
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
+        #desktop-navigation,
+        #mobile-navigation {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-#desktop-navigation {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    display: block; /* Ensure the desktop navigation is visible */
-    font-size: 18px; /* Increase font size for zoom effect */
-    padding: 8px 8px; /* Increase padding for more space */
-    margin: 5 15px; /* Maintain margin between links */
-    font-weight: bold;
-}
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            font-size: 18px; /* Increase font size for zoom effect */
+            padding: 8px 8px; /* Increase padding for more space */
+            margin: 5 15px; /* Maintain margin between links */
+            font-weight: bold;
+            display: block; /* Ensure the desktop navigation is visible */
+        }
 
-#desktop-navigation a {
-    color: #fff; /* Set color for desktop navigation links */
-    margin: 0 14px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-}
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 14px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
 
-#desktop-navigation a:last-child {
-    margin-right: 0; /* Remove margin from the last element */
-}
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
+        }
 
-#mobile-navigation {
-    background-color: #FDFCFA;
-    color: #000;
-    padding: 15px;
-    display: none;
-}
+        #mobile-navigation {
+            background-color: #FDFCFA;
+            color: #000;
+            padding: 10px;
+            display: none;
+            font-size: 18px; /* Adjust the font size as needed */
+        }
+        
+    /* Hide Date Styles */
+    .post .date {
+        display: none;
+    }
 
-#mobile-navigation a {
-    color: #000; /* Set color for mobile navigation links */
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-}
+    @media only screen and (max-width: 600px) {
+        #desktop-navigation {
+            display: none;
+        }
+
+        #mobile-navigation {
+            display: block;
+        }
+
+        .page-container,
+        .post-container {
+            margin-top: 15px;
+            padding: 5px !important; /* Add !important to ensure the style is applied */
+        }
+
+        .post-container:first-child {
+            margin-top: 40px;
+        }
+
+        #content iframe,
+        .page-container iframe,
+        .post-container iframe {
+            max-width: 100%;
+            width: 100%;
+            height: 190px; /* Adjust this height as needed */
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    /* Enable smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
 
 .page-container {
     max-width: 630px;
@@ -125,23 +160,6 @@ a:hover {
 
 @media only screen and (max-width: 600px) {
     /* Show mobile navigation and hide desktop navigation on small screens */
-    #desktop-navigation {
-        display: none;
-    }
-
-    #mobile-navigation {
-        display: block;
-    }
-
-    #mobile-navigation a {
-        color: #000; /* Set color for mobile navigation links */
-        margin: 2 1px 1px; /* Adjust bottom margin */
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-        font-size: 20px; /* Increase font size for zoom effect */
-        padding: 0px 0px; /* Increase padding for more space */
-    }
 
     /* Remove content-container on mobile */
     .content-container {
