@@ -4,10 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Podcasts</title>
+    <title>Asif | Photos</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <!-- Add this style block to hide navigation links -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -56,13 +64,83 @@
             display: none;
             font-size: 18px; /* Adjust the font size as needed */
         }
-        
-    /* Hide Date Styles */
-    .post .date {
-        display: none;
+
+        .photos-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px; /* Add space between title and content */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .view-more-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .content-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; /* Adjusted to display buttons in a single line */
+            margin-bottom: 20px; /* Add space between buttons and photos on small screens */
+        }
+
+        .custom-button {
+        background-color: #4285f4;
+        color: #ffffff;
+        padding: 5px 8px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-color 0.9s; /* Added transition effect */
     }
 
-    @media only screen and (max-width: 600px) {
+    .custom-button:hover,
+    .custom-button.active {
+        background-color: #000000; /* Change to black for hover and active states */
+    }
+
+        @media only screen and (max-width: 600px) {
+        /* ... (styles for small screens) ... */
+
+        .custom-button {
+            padding: 5px 5px;
+            margin: 1px 0; /* Adjust the margin to reduce space between buttons */
+            border-radius: 10px;
+            transition: background-color 0.9s;
+        }
+        /* ... (other styles for small screens) ... */
+
         #desktop-navigation {
             display: none;
         }
@@ -71,106 +149,34 @@
             display: block;
         }
 
-        .page-container,
-        .post-container {
-            margin-top: 15px;
-            padding: 5px !important; /* Add !important to ensure the style is applied */
-        }
-
-        .post-container:first-child {
-            margin-top: 40px;
-        }
-
-        #content iframe,
-        .page-container iframe,
-        .post-container iframe {
-            max-width: 100%;
-            width: 100%;
-            height: 190px; /* Adjust this height as needed */
-            display: block;
-            margin: 0 auto;
+        .photos-container {
+            max-width: 100%; /* Adjusted max-width for mobile */
+            margin: 20px auto; /* Adjusted margin for mobile */
+            box-shadow: none; /* Remove box shadow on mobile */
+            border-radius: 0; /* Remove border radius on mobile */
         }
     }
+        /* Styles for buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-    /* Enable smooth scrolling */
-    html {
-        scroll-behavior: smooth;
-    }
+        .button:hover {
+            background-color: #000000;
+        }
 </style>
-
-.page-container {
-    max-width: 630px;
-    margin: 30px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px; /* Adjust padding as needed */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-h1 {
-    color: #333;
-    margin-bottom: 20px; /* Add space between title and content */
-}
-
-h2 {
-    color: #333;
-    margin-top: 20px;
-}
-
-p {
-    color: #555;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    margin: 10px 0;
-}
-
-a {
-    text-decoration: none;
-    color: #4285f4;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: none; /* Remove underline on hover */
-}
-
-/* New style for left-aligning specific sections */
-.left-align {
-    text-align: left;
-}
-
-/* Center-align the about.me link */
-.about-me {
-    text-align: center;
-}
-
-/* Center-align Links */
-.center-section {
-    text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-    /* Show mobile navigation and hide desktop navigation on small screens */
-
-    /* Remove content-container on mobile */
-    .content-container {
-        padding: 0; /* Remove padding on mobile */
-    }
-}
-</style>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif | Podcasts"; // Default title for the About page
+            var pageTitle = "Asif | Photos"; // Default title for the Photos page
             document.title = pageTitle;
         });
     </script>
@@ -195,23 +201,42 @@ a:hover {
         <a href="/contact">💬</a>
     </div>
 
-    <!-- Page Container -->
-    <div class="page-container">
-        <!-- Your post content goes here -->
+    <div class="photos-container">
+        <br><br>
+        <div class="content-container">
+            <!-- Your content goes here -->
+            <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
+            <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
+            <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
+            <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
 
-  <br><br>
-            <!-- HTML post content -->
-            <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/what-nobody-tells-you-about-getting-rich-ft-morgan-housel/id1247526593?i=1000634149609&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
-            <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/5-harsh-truths-that-will-change-your-life/id1247526593?i=1000633374757&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
-            <p><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/how-sex-drugs-and-money-can-make-you-more-happy-ft/id1247526593?i=1000642794859"></iframe></p>
-            
-            <p></p>
-            <!-- Add more HTML content as needed -->
+</div>
+
+<p><img src="https://64.media.tumblr.com/29d54da1e8e0fe051cdeaa51363fb38b/tumblr_inline_s72edkZy0a1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/4e089ff20c04a0353cec7b1502769586/tumblr_inline_s7kobzIeVd1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/484a70e5d3c63165046872e7f53c4c36/tumblr_inline_s73bce6IzM1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/644264257271732a7c3cc8c3f097a358/tumblr_inline_s72eeoEPcC1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/9ab24ab9178b41f0ce0601568d3b135a/tumblr_inline_s72ee80Yca1x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/670bec75f7babacd2b2f5d2b14579340/tumblr_inline_s72ed3bM361x6k5f7_500.jpg" /></p>
+<p><img src="https://64.media.tumblr.com/66687c78ccedc11a67ddbde6b57ac4b6/tumblr_inline_s73bawe15F1x6k5f7_500.jpg" /></p>
+</body>
+        <div class="center-section">
+            <a href="https://www.flickr.com/photos/mohdasif/albums" class="button">View Albums</a>
+            <a href="https://unsplash.com/@mohdasif" class="button">Unsplash</a>
         </div>
     </div>
 
-    <!-- Your existing code below -->
+    <!-- Your post content goes here -->
+    <div class="content-container">
+        <!-- HTML post content -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var pageTitle = "Asif | Mirza Ghalib";
+            document.title = pageTitle;
+        });
+    </script>
 </body>
 
-<!-- Rest of your existing code -->
 </html>
