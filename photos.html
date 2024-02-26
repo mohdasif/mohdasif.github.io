@@ -10,21 +10,13 @@
     <!-- Add this style block to hide navigation links -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-        }
+            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
+            overflow-x: hidden;
 
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        #desktop-navigation,
+       #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -36,10 +28,13 @@
         #desktop-navigation {
             background-color: #333;
             color: #fff;
-            padding: 10px;
-            font-size: 18px; /* Increase font size for zoom effect */
-            padding: 8px 8px; /* Increase padding for more space */
-            margin: 5 15px; /* Maintain margin between links */
+            padding: 7px;
+            font-size: 18.7px; /* Increase font size for zoom effect */
+            padding:7px; /* Padding for top and bottom */
+            padding-left: 5px; /* Additional padding for left */
+            padding-right: 6px; /* Additional padding for right */
+            padding: 6px 7px; /* Increase padding for more space */
+            margin: 0px; /* Margin for top, right, bottom, and left */
             font-weight: bold;
             display: block; /* Ensure the desktop navigation is visible */
         }
@@ -47,7 +42,7 @@
         #desktop-navigation a,
         #mobile-navigation a {
             color: inherit;
-            margin: 0 14px;
+            margin: 0 16px;
             text-decoration: none;
             font-weight: bold;
             display: inline-block; /* Make sure the links are on separate lines */
