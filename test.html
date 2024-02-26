@@ -4,27 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Photos</title>
+    <title>Asif | Contact</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <!-- Add this style block to hide navigation links -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-        }
+            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
+            overflow-x: hidden;
 
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        #desktop-navigation,
+       #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -36,10 +28,13 @@
         #desktop-navigation {
             background-color: #333;
             color: #fff;
-            padding: 10px;
-            font-size: 18px; /* Increase font size for zoom effect */
-            padding: 8px 8px; /* Increase padding for more space */
-            margin: 5 15px; /* Maintain margin between links */
+            padding: 7px;
+            font-size: 18.7px; /* Increase font size for zoom effect */
+            padding:7px; /* Padding for top and bottom */
+            padding-left: 5px; /* Additional padding for left */
+            padding-right: 6px; /* Additional padding for right */
+            padding: 6px 7px; /* Increase padding for more space */
+            margin: 0px; /* Margin for top, right, bottom, and left */
             font-weight: bold;
             display: block; /* Ensure the desktop navigation is visible */
         }
@@ -47,7 +42,7 @@
         #desktop-navigation a,
         #mobile-navigation a {
             color: inherit;
-            margin: 0 14px;
+            margin: 0 16px;
             text-decoration: none;
             font-weight: bold;
             display: inline-block; /* Make sure the links are on separate lines */
@@ -64,8 +59,17 @@
             display: none;
             font-size: 18px; /* Adjust the font size as needed */
         }
-
-        .photos-container {
+        .contact-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+               .content-container {
             max-width: 600px;
             margin: 30px auto;
             background-color: #fff;
@@ -77,13 +81,27 @@
 
         h1 {
             color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
+        }
+
+        p {
+            color: #666;
         }
 
         img {
             max-width: 100%;
             height: auto;
             margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
         }
 
         a {
@@ -92,91 +110,33 @@
             font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: none;
-        }
-
-        .view-more-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4285f4;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .content-container {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row; /* Adjusted to display buttons in a single line */
-            margin-bottom: 20px; /* Add space between buttons and photos on small screens */
-        }
-
-        .custom-button {
-        background-color: #4285f4;
-        color: #ffffff;
-        padding: 5px 8px;
-        border: none;
-        cursor: pointer;
-        border-radius: 10px;
-        transition: background-color 0.9s; /* Added transition effect */
-    }
-
-    .custom-button:hover,
-    .custom-button.active {
-        background-color: #000000; /* Change to black for hover and active states */
-    }
-
-        @media only screen and (max-width: 600px) {
-        /* ... (styles for small screens) ... */
-
-        .custom-button {
-            padding: 5px 5px;
-            margin: 1px 0; /* Adjust the margin to reduce space between buttons */
-            border-radius: 10px;
-            transition: background-color 0.9s;
-        }
-        /* ... (other styles for small screens) ... */
-
-        #desktop-navigation {
-            display: none;
-        }
-
-        #mobile-navigation {
-            display: block;
-        }
-
-        .photos-container {
-            max-width: 100%; /* Adjusted max-width for mobile */
-            margin: 20px auto; /* Adjusted margin for mobile */
-            box-shadow: none; /* Remove box shadow on mobile */
-            border-radius: 0; /* Remove border radius on mobile */
-        }
-    }
-        /* Styles for buttons */
-        .button {
-            display: inline-block;
+        button {
             padding: 10px 20px;
             background-color: #24a0ed;
             color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-            margin: 5px;
             border: none;
+            border-radius: 5px;
+            margin: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
-        .button:hover {
+        button:hover {
             background-color: #000000;
         }
-</style>
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
+    </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif | Photos"; // Default title for the Photos page
+            var pageTitle = "Asif | Contact"; // Default title for the Contact page
             document.title = pageTitle;
         });
     </script>
@@ -200,43 +160,37 @@
         <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
         <a href="/contact">💬</a>
     </div>
+    <div class="content-container">
+    <div class="contact-container" style="text-align: center;">
+        <h2>Contact</h2>
+        <p>Have a question or just want to say hello? Feel free to reach out to me:</p>
 
-    <div class="photos-container">
-        <br><br>
-        <div class="content-container">
-            <!-- Your content goes here -->
-            <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
-            <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
-            <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
-            <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
+<ul>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;"
+            onclick="window.location.href='https://telegram.me/mohdasif'">Telegram</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;"
+            onclick="window.location.href='sms:hi@mohdasif.com'">iMessage</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;"
+            onclick="window.location.href='mailto:mail@mohdasif.com'">Email</button></li>
+    <li><button style="width: 100px; background-color: #218aff; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;"
+            onclick="window.open('https://x.com/messages/compose?recipient_id=1483985376', '_blank')">X</button></li>
+</ul>
+
+        <img src="https://64.media.tumblr.com/9f38644737a459047e8ed62dd47684f1/tumblr_inline_s5yzfn4qPJ1x6k5f7_500.gif" alt="Star GIF">
+        
+</div>
+<!-- Four consecutive line breaks -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Four consecutive line breaks -->
+    <br>
+    <br>
 
 </div>
-
-<p><img src="https://64.media.tumblr.com/29d54da1e8e0fe051cdeaa51363fb38b/tumblr_inline_s72edkZy0a1x6k5f7_500.jpg" /></p>
-<p><img src="https://64.media.tumblr.com/4e089ff20c04a0353cec7b1502769586/tumblr_inline_s7kobzIeVd1x6k5f7_500.jpg" /></p>
-<p><img src="https://64.media.tumblr.com/484a70e5d3c63165046872e7f53c4c36/tumblr_inline_s73bce6IzM1x6k5f7_500.jpg" /></p>
-<p><img src="https://64.media.tumblr.com/644264257271732a7c3cc8c3f097a358/tumblr_inline_s72eeoEPcC1x6k5f7_500.jpg" /></p>
-<p><img src="https://64.media.tumblr.com/9ab24ab9178b41f0ce0601568d3b135a/tumblr_inline_s72ee80Yca1x6k5f7_500.jpg" /></p>
-<p><img src="https://64.media.tumblr.com/670bec75f7babacd2b2f5d2b14579340/tumblr_inline_s72ed3bM361x6k5f7_500.jpg" /></p>
-<p><img src="https://64.media.tumblr.com/66687c78ccedc11a67ddbde6b57ac4b6/tumblr_inline_s73bawe15F1x6k5f7_500.jpg" /></p>
-</body>
-        <div class="center-section">
-            <a href="https://www.flickr.com/photos/mohdasif/albums" class="button">View Albums</a>
-            <a href="https://unsplash.com/@mohdasif" class="button">Unsplash</a>
-        </div>
     </div>
-
-    <!-- Your post content goes here -->
-    <div class="content-container">
-        <!-- HTML post content -->
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif | Mirza Ghalib";
-            document.title = pageTitle;
-        });
-    </script>
 </body>
 
 </html>
+
