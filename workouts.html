@@ -149,17 +149,23 @@
     </div>
 
 
-    <div class="content-container">
+<style>
+    /* Hide the workout title on mobile devices */
+    @media only screen and (max-width: 600px) {
+        .workout-title {
+            display: none;
+        }
+    }
+</style>
 
-<div class="links-container" style="text-align: center;">
-    <h2>Workouts</h2>
+<div class="content-container">
+    <!-- Desktop view: Workout title is visible -->
+    <div class="center-section">
+    <h2 class="workout-title">Workouts</h2>
 
-<div class="center-section">
-
-    <div class="content-container">
-
-<div class="links-container" style="text-align: center;">
-    <ul>
+    <!-- Mobile view: Workout title is hidden -->
+    <div class="links-container" style="text-align: center;">
+        <ul>
         <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerJ1ZwX4bSc1GdWn770XCkM4', '_blank')">Quads</button></li>
         <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerL_4Ky-Q-E4VbziGByYY2NA', '_blank')">Hamstrings</button></li>
         <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerKx83a4biSWPU8yWUIiEmuM', '_blank')">Glutes</button></li>
