@@ -103,17 +103,21 @@
         }
 
         button {
-            padding: 10px 20px;
-            background-color: #04AA6D;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            margin: 5px;
-            cursor: pointer;
-        }
+    display: inline-block;
+    padding: 17px 20px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 7px;
+    width: 75px; /* Set a fixed width */
+    height: 20px; /* Set a fixed height */
+    line-height: 0.2; /* Adjust line height as needed */
+}
 
         button:hover {
-            background-color: #000000;
+            background-color: #;
         }
 
         @media only screen and (max-width: 600px) {
@@ -164,10 +168,8 @@
 </style>
 
 <div class="content-container">
-    <!-- Desktop view: Workout title is visible -->
     <div class="center-section">
-        <h2 class="workout-title">Workouts</h2>
-    <!-- Mobile view: Workout title is hidden -->
+<div class="content-container">
     <div class="links-container" style="text-align: center;">
         <ul>
         <li><button style="width: 100px; border-radius: 15px;" onclick="window.open('https://www.youtube.com/playlist?list=PLhw5h54hrerJ1ZwX4bSc1GdWn770XCkM4', '_blank')">Quads</button></li>
