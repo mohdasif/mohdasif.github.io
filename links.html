@@ -15,7 +15,6 @@
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
             overflow-x: hidden;
-        }
 
        #desktop-navigation,
         #mobile-navigation {
@@ -68,29 +67,28 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left; /* Align text to the left */
+            text-align: center;
         }
 
         h1 {
             color: #333;
-            text-align: center; /* Center the title */
+            margin-bottom: 20px; /* Add space between title and content */
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
         }
 
         p {
-            color: #666;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
+            color: #555;
+            margin-bottom: 20px;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            margin-top: 20px;
+            margin: 0;
         }
 
         li {
@@ -103,27 +101,27 @@
             font-weight: bold;
         }
 
-        button {
-    display: inline-block;
-    padding: 17px 20px;
-    background-color: transparent;
-    color: black;
-    text-decoration: none;
-    border: 1px solid black;
-    border-radius: 15px;
-    margin: 7px;
-    width: 75px; /* Set a fixed width */
-    height: 20px; /* Set a fixed height */
-    line-height: 0.2; /* Adjust line height as needed */
-    cursor: pointer; /* Set cursor to pointer */
-}
-}
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
 
-        button:hover {
-            background-color: #;
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
+
+        /* Center-align Links */
+        .center-section {
+            text-align: center;
         }
 
         @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
                 display: none;
             }
@@ -132,7 +130,41 @@
                 display: block;
             }
         }
-    </style>
+
+        /* New styles for the about.me link container and button */
+        .about-me-container {
+            text-align: center;
+        }
+
+.center-section .link-button:not(.last-buttons) {
+    display: inline-block;
+    padding: 8px 13px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    border: 0.9px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    width: 80px; /* Set a fixed width */
+    height: 20px; /* Set a fixed height */
+    font-weight: 200; /* Adjust font weight to slightly reduce it */
+}
+.center-section .link-button.last-buttons {
+    display: inline-block;
+    padding: 10px 12px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    margin: 10px;
+    width: 18px;
+    height: 18px;
+    border: 0.1px solid black; /* Add a border with 1px width and black color */
+}
+    .link-button:hover {
+        background-color: #33b249;
+    }
+</style>
 
 </head>
 
@@ -156,32 +188,75 @@
     </div>
 
 
-<div class="content-container">
-    <div class="links-container" style="text-align: center;">
-        <h2>Links</h2>
-        <div class="center-section">
-            <div class="content-container">
-                <div class="links-container" style="text-align: center;">
-                    <ul>
-                        <li><button style="width: 100px; border-radius: 15px;" onclick="window.location.href='https://mohdasif.com/workouts'">Workouts</button></li>
-                        <li><button style="width: 100px; border-radius: 15px;" onclick="window.location.href='https://goodreads.com/mohdasif'">Goodreads</button></li>
-                        <li><button style="width: 100px; border-radius: 15px;" onclick="window.location.href='https://quora.com/mohdasif'">Quora</button></li>
-                        <li><button style="width: 100px; border-radius: 15px;" onclick="window.location.href='https://www.tumblr.com/mohdasif'">Tumblr</button></li>
-                        <li><button style="width: 100px; border-radius: 15px;" onclick="window.location.href='https://soundcloud.com/mohdasif'">Soundcloud</button></li>
-                        <li><button style="width: 100px; border-radius: 15px;" onclick="window.location.href='https://flipboard.com/@mohdasif'">Flipboard</button></li>        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Four consecutive line breaks -->
-    <br>
-    <br>
-    <br>
+    <div class="content-container">
+
+<div class="links-container" style="text-align: center;">
+
+    <div class="content-container" style="display: flex; gap: 70px; justify-content: center; align-items: center;">
+
+    <style>
+        /* Mobile styles */
+        @media screen and (max-width: 768px) {
+            .content-container {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 25px !important; /* Added !important to override inline styles */
+            }
+        }
+    </style>
+
+    <!-- Your content goes here -->
+    <button class="custom-button" onclick="window.location.href='/me'"
+        style="background-color: #24a0ed; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">About</button>
+
+    <button class="custom-button" onclick="window.location.href='https://blog.mohdasif.com'"
+        style="background-color: #24a0ed; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Blog</button>
+    
+    <button class="custom-button" onclick="window.location.href='/podcasts'"
+        style="background-color: #24a0ed; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Podcasts</button>
+
+    <button class="custom-button" onclick="window.location.href='/workouts'"
+        style="background-color: #24a0ed; color: #ffffff; padding: 6px 8px; border: none; cursor: pointer; border-radius: 15px;">Workouts</button>
+
 
 </div>
-    </div>
+    <div class="content-container">
+    <div class="center-section">
+    <p class="center-section"><strong>Links</strong></p>
+    <ul>
+<li><a href="https://goodreads.com/mohdasif" class="link-button">Goodreads</a></li>
+<li><a href="https://quora.com/mohdasif" class="link-button">Quora</a></li>
+<li><a href="https://www.tumblr.com/mohdasif" class="link-button">Tumblr</a></li>
+<li><a href="https://soundcloud.com/mohdasif" class="link-button">Soundcloud</a></li>
+<li><a href="https://flipboard.com/@mohdasif" class="link-button">Flipboard</a></li>
+
+    </ul>
+</div>
+
+<!-- Add the JavaScript script here -->
+<script>
+  // Check if the user is on a mobile device
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  // Get the YouTube link element by its ID
+  var youtubeLink = document.getElementById('youtubeLink');
+
+  // Set the href attribute based on the device type
+  if (isMobile) {
+    youtubeLink.href = 'https://m.youtube.com/@mohdasif';
+  } else {
+    youtubeLink.href = 'https://www.youtube.com/@mohdasif';
+  }
+</script>
+</div>
+
+
+<br>
+<br>
+
+
+
+<!-- Your existing scripts or closing body/html tags -->
 </body>
-
 </html>
