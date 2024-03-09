@@ -63,7 +63,7 @@
         }
         .page-container {
             max-width: 630px;
-            margin: 30px auto;
+            margin: 15px auto;
             background-color: #fff;
             border-radius: 8px;
             padding: 5px;
@@ -172,7 +172,7 @@
 <body>
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
-        <a href="https://mohdasif.com/">Home</a>
+        <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/photos">Photos</a>
         <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
@@ -181,16 +181,75 @@
 
     <!-- Mobile Navigation -->
     <div id="mobile-navigation">
-        <a href="https://mohdasif.com/">🏠</a>
+        <a href="/">🏠</a>
         <a href="/about">📝</a>
         <a href="/photos">📷</a>
         <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
         <a href="/contact">💬</a>
     </div>
 
-    <!-- Page Container -->
-    <div class="page-container">
-        <!-- Your post content goes here -->
+<style>
+    /* Add this style block to your existing styles */
+    @media only screen and (max-width: 600px) {
+        /* Hide the line break on mobile */
+        .desktop-br {
+            display: none;
+        }
+
+        /* Apply margin to the mobile navigation */
+        #mobile-navigation {
+            margin-bottom: 40px; /* Adjust the margin as needed */
+        }
+
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: transparent;
+            color: black;
+            padding: 5px 8px;
+            border: none;
+            cursor: pointer;
+            border: 0.9px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 20px; /* Add margin between buttons for mobile */
+            transform: translateX(21.5px); /* Move the custom button slightly to the right */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+    }
+
+    /* Styles for desktop */
+    @media only screen and (min-width: 601px) {
+        /* Hide buttons on desktop */
+        .custom-button {
+            display: none;
+        }
+
+        /* Apply margin to the desktop navigation */
+        #desktop-navigation {
+            margin-bottom: px; /* Adjust the margin as needed for desktop */
+        }
+    }
+</style>
+
+<!-- Page Container -->
+<div class="page-container">
+    <br> <br> <!-- Add two <br> for mobile -->
+    <div class="content-container">
+        <!-- Your content goes here -->
+        
+<button class="custom-button" onclick="window.location.href='https://mohdasif.net'">Poetry</button>
+
+<button class="custom-button" onclick="window.location.href='https://mohdasif.com/blog'">Blog</button>
+
+
+<button class="custom-button" onclick="window.location.href='https://mohdasif.com/podcasts'">Podcasts</button>
+
+<button class="custom-button" onclick="window.location.href='https://www.amazon.in/shop/mohdasif'">Shop</button>
+
+</body>
 
   <br><br>
             <!-- HTML post content -->
