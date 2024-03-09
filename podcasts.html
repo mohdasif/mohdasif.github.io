@@ -15,8 +15,9 @@
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
             overflow-x: hidden;
+        }
 
-       #desktop-navigation,
+        #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -61,14 +62,15 @@
             left: 0; /* Align to the left edge */
             transform: translateX(-12px); /* Move the navigation slightly to the left */
         }
+
         .page-container {
+            text-align: center;
             max-width: 630px;
-            margin: 15px auto;
+            margin: 30px auto;
             background-color: #fff;
             border-radius: 8px;
             padding: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            text-align: left;
         }
 
         .content-container {
@@ -167,40 +169,53 @@
         }
     </style>
 
-</head>
+    <!-- Additional styles -->
+    <style>
+        /* Style the dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-<body>
-    <!-- Desktop Navigation -->
-    <div id="desktop-navigation">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/photos">Photos</a>
-        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
-        <a href="/contact">Contact</a>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <div id="mobile-navigation">
-        <a href="/">🏠</a>
-        <a href="/about">📝</a>
-        <a href="/photos">📷</a>
-        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
-        <a href="/contact">💬</a>
-    </div>
-
-<style>
-    /* Add this style block to your existing styles */
-    @media only screen and (max-width: 600px) {
-        /* Hide the line break on mobile */
-        .desktop-br {
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
             display: none;
+            position: absolute;
+            background-color: #333; /* Black background */
+            color: #fff; /* White text */
+            width: 150px; /* Width remains the same */
+            top: calc(100% + 5px); /* Align 5px below the bottom of the navigation bar */
+            left: 0;
+            padding: 10px; /* Smaller padding */
+            text-align: center; /* Center align the content */
+            z-index: 9999;
+            font-size: 15px; /* Smaller font size */
+            line-height: 0.5; /* Smaller line height */
         }
 
-        /* Apply margin to the mobile navigation */
-        #mobile-navigation {
-            margin-bottom: 40px; /* Adjust the margin as needed */
+        /* Style the links inside the dropdown */
+        .dropdown-content a {
+            color: #fff; /* White text */
+            padding: 5px 0; /* Smaller padding */
+            text-decoration: none;
+            display: block; /* Display links as blocks */
         }
 
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #333; /* Darker background on hover */
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Adjust position of dropdown container */
+        .dropdown {
+            margin-bottom: -1px; /* Move the dropdown container up by 1px to align with navigation bar */
+        }
+        
         /* Apply margin to the buttons for mobile */
         .custom-button {
             background-color: transparent;
@@ -212,53 +227,66 @@
             border-radius: 20px;
             transition: background-color 0.9s; /* Added transition effect */
             margin-right: 20px; /* Add margin between buttons for mobile */
-            transform: translateX(21px); /* Move the custom button slightly to the right */
+            transform: translateX(px); /* Move the custom button slightly to the right */
+            margin-top: 11px; /* Add margin between navigation and buttons */
         }
+
         .custom-button:last-child {
             margin-right: 0; /* Remove margin from the last button for mobile */
         }
-    }
 
-    /* Styles for desktop */
-    @media only screen and (min-width: 601px) {
-        /* Hide buttons on desktop */
-        .custom-button {
-            display: none;
+        /* Styles for desktop */
+        @media only screen and (min-width: 601px) {
+            /* Hide buttons on desktop */
+            .custom-button {
+                display: none;
+            }
+
+            /* Apply margin to the desktop navigation */
+            #desktop-navigation {
+                margin-bottom: px; /* Adjust the margin as needed for desktop */
+            }
         }
+    </style>
+</head>
 
-        /* Apply margin to the desktop navigation */
-        #desktop-navigation {
-            margin-bottom: px; /* Adjust the margin as needed for desktop */
-        }
-    }
-</style>
+<body>
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="https://mohdasif.com/">Home</a>
+        <a href="/about">About</a>
+        <a href="/photos">Photos</a>
+        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
+        <a href="/contact">Contact</a>
+    </div>
 
-<!-- Page Container -->
-<div class="page-container">
-    <br> <br> <!-- Add two <br> for mobile -->
-    <div class="content-container">
+    <!-- Mobile Navigation -->
+    <div id="mobile-navigation">
+        <a href="https://mohdasif.com/">🏠</a>
+        <a href="/about">📝</a>
+        <a href="/photos">📷</a>
+        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
+        <a href="/contact">💬</a>
+    </div>
+
+    <!-- Page Container -->
+    <div class="page-container">
+        <br> <br> <!-- Add two <br> for mobile -->
+
         <!-- Your content goes here -->
-        
-<button class="custom-button" onclick="window.location.href='https://mohdasif.net'">Poetry</button>
+        <button class="custom-button" onclick="window.location.href='https://mohdasif.net'">Poetry</button>
+        <button class="custom-button" onclick="window.location.href='https://mohdasif.com/blog'">Blog</button>
+        <button class="custom-button" onclick="window.location.href='https://mohdasif.com/podcasts'">Podcasts</button>
+        <button class="custom-button" onclick="window.location.href='https://www.amazon.in/shop/mohdasif'">Shop</button>
 
-<button class="custom-button" onclick="window.location.href='https://mohdasif.com/blog'">Blog</button>
+        <br><br>
+        <!-- HTML post content -->
+        <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/what-nobody-tells-you-about-getting-rich-ft-morgan-housel/id1247526593?i=1000634149609&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
+        <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/5-harsh-truths-that-will-change-your-life/id1247526593?i=1000633374757&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
+        <p><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/how-sex-drugs-and-money-can-make-you-more-happy-ft/id1247526593?i=1000642794859"></iframe></p>
 
-
-<button class="custom-button" onclick="window.location.href='https://mohdasif.com/podcasts'">Podcasts</button>
-
-<button class="custom-button" onclick="window.location.href='https://www.amazon.in/shop/mohdasif'">Shop</button>
-
-</body>
-
-  <br><br>
-            <!-- HTML post content -->
-            <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/what-nobody-tells-you-about-getting-rich-ft-morgan-housel/id1247526593?i=1000634149609&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
-            <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/5-harsh-truths-that-will-change-your-life/id1247526593?i=1000633374757&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
-            <p><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/how-sex-drugs-and-money-can-make-you-more-happy-ft/id1247526593?i=1000642794859"></iframe></p>
-            
-            <p></p>
-            <!-- Add more HTML content as needed -->
-        </div>
+        <p></p>
+        <!-- Add more HTML content as needed -->
     </div>
 
     <!-- Your existing code below -->
