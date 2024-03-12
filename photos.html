@@ -15,9 +15,8 @@
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
             overflow-x: hidden;
-        }
 
-        #desktop-navigation,
+       #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -67,30 +66,10 @@
             max-width: 600px;
             margin: 30px auto;
             background-color: #fff;
-            border-radius: 1px;
-            padding: 10px;
-            box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-        }
-
-        .image {
-            overflow: hidden;
-            border-radius: 30px;
-            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-            transition: transform 1s ease;
-            display: inline-block;
-            margin: 15px;
-        }
-
-        .image:hover {
-            transform: scale(1);
-        }
-
-        .image img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
         }
 
         h1 {
@@ -134,67 +113,48 @@
         }
 
         .custom-button {
-            background-color: #24a0ed;
-            color: #ffffff;
-            padding: 5px 8px;
-            border: none;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: background-color 0.9s; /* Added transition effect */
-        }
+        background-color: #808080;
+        color: #ffffff;
+        padding: 5px 8px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-color 0.9s; /* Added transition effect */
+    }
 
-        .custom-button:hover,
-        .custom-button.active {
-            background-color: #000000; /* Change to black for hover and active states */
-        }
+    .custom-button:hover,
+    .custom-button.active {
+        background-color: #000000; /* Change to black for hover and active states */
+    }
 
         @media only screen and (max-width: 600px) {
-            /* ... (styles for small screens) ... */
+        /* ... (styles for small screens) ... */
 
-            .custom-button {
-                padding: 5px 5px;
-                margin: 1px 0; /* Adjust the margin to reduce space between buttons */
-                border-radius: 10px;
-                transition: background-color 0.9s;
-            }
-
-            /* ... (other styles for small screens) ... */
-
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-
-            .photos-container {
-                max-width: 100%; /* Adjusted max-width for mobile */
-                margin: 20px auto; /* Adjusted margin for mobile */
-                box-shadow: none; /* Remove box shadow on mobile */
-                border-radius: 0; /* Remove border radius on mobile */
-            }
+        .custom-button {
+            padding: 5px 5px;
+            margin: 1px 0; /* Adjust the margin to reduce space between buttons */
+            border-radius: 10px;
+            transition: background-color 0.9s;
         }
 
-        /* Styles for buttons */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-            margin: 5px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        /* ... (other styles for small screens) ... */
+
+        #desktop-navigation {
+            display: none;
         }
 
-        .button:hover {
-            background-color: #000000;
+        #mobile-navigation {
+            display: block;
         }
-    </style>
 
+        .photos-container {
+            max-width: 100%; /* Adjusted max-width for mobile */
+            margin: 20px auto; /* Adjusted margin for mobile */
+            box-shadow: none; /* Remove box shadow on mobile */
+            border-radius: 0; /* Remove border radius on mobile */
+        }
+    }
+</style>
     <script>
         </script></body><script>var topButton = "sleek/circle-blue";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
     </script>
@@ -229,15 +189,15 @@
             <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
             <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
 
+<div
+    <img class="image" src="https://storage.googleapis.com/mohdasif/photos/a1.JPG" />
+    <img class="image" src="https://storage.googleapis.com/mohdasif/photos/a2.JPG" />
+    <img class="image" src="https://storage.googleapis.com/mohdasif/photos/a3.JPG" />
+    <img class="image" src="https://storage.googleapis.com/mohdasif/photos/a4.JPG" />
+    <img class="image" src="https://storage.googleapis.com/mohdasif/photos/a5.JPG" />
+    <img class="image" src="https://storage.googleapis.com/mohdasif/photos/a6.JPG" />
+    <img class="image" src="https://storage.googleapis.com/mohdasif/photos/a7.JPG" />
 </div>
-<p><img src="https://storage.googleapis.com/mohdasif/photos/a1.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/photos/a2.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/photos/a3.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/photos/a4.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/photos/a5.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/photos/a6.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/photos/a7.JPG" /></p>
-</body>
 
     </div>
 
