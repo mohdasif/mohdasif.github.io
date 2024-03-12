@@ -113,18 +113,19 @@
         }
 
         .custom-button {
-        background-color: #808080;
-        color: #ffffff;
+        background-color: transparent;
+        color: #000000;
         padding: 5px 8px;
-        border: none;
+        border: 1px solid black;
         cursor: pointer;
         border-radius: 10px;
-        transition: background-color 0.9s; /* Added transition effect */
+        transition: background-color 0s; /* Added transition effect */
     }
 
     .custom-button:hover,
     .custom-button.active {
         background-color: #000000; /* Change to black for hover and active states */
+        color: #ffffff; /* Change text color to white */
     }
 
         @media only screen and (max-width: 600px) {
@@ -189,7 +190,8 @@
             <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
             <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
 
-<div
+</div>
+
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a1.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a2.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a3.JPG" /></p>
@@ -197,6 +199,7 @@
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a5.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a6.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a7.JPG" /></p>
+
 </div>
 
     </div>
