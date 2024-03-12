@@ -1,291 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | About</title>
-    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
-
-    <!-- Add this style block to hide navigation links -->
+    <title>Gallery</title>
     <style>
         body {
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
-            overflow-x: hidden;
-
-       #desktop-navigation,
-        #mobile-navigation {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
             text-align: center;
             position: fixed;
             width: 100%;
-            top: 0;
-            z-index: 1000;
+            bottom: 0;
         }
-
-        #desktop-navigation {
-            background-color: #333;
-            color: #fff;
-            padding: 7px;
-            font-size: 18.7px; /* Increase font size for zoom effect */
-            padding:7px; /* Padding for top and bottom */
-            padding-left: 5px; /* Additional padding for left */
-            padding-right: 6px; /* Additional padding for right */
-            padding: 6px 7px; /* Increase padding for more space */
-            margin: 0px; /* Margin for top, right, bottom, and left */
-            font-weight: bold;
-            display: block; /* Ensure the desktop navigation is visible */
-        }
-
-        #desktop-navigation a,
-        #mobile-navigation a {
-            color: inherit;
-            margin: 0 16px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block; /* Make sure the links are on separate lines */
-        }
-
-        #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
-        }
-
-        #mobile-navigation {
-            background-color: #FDFCFA;
-            color: #000;
-            padding: 10px;
-            display: none;
-            font-size: 18px; /* Adjust the font size as needed */
-            left: 0; /* Align to the left edge */
-            transform: translateX(-12px); /* Move the navigation slightly to the left */
-        }
-
-        .content-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: #fff;
-            border-radius: 8px;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 20px;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            margin-top: 70px; /* Adjusted for the header height */
         }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
+        .image {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-
-        h2 {
-            color: #333;
-            margin-top: 20px;
+        .image:hover {
+            transform: scale(1.05);
         }
-
-        p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
-        }
-
-        /* New style for left-aligning specific sections */
-        .left-align {
-            text-align: left;
-        }
-
-        /* Center-align the about.me link */
-        .about-me {
-            text-align: center;
-        }
-
-        /* Center-align Links */
-        .center-section {
-            text-align: center;
-        }
-
-        @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-        }
-
-        /* New styles for the about.me link container and button */
-        .about-me-container {
-            text-align: center;
-        }
-
-.center-section .link-button:not(.last-buttons) {
-    display: inline-block;
-    padding: 8px 13px;
-    background-color: #24a0ed;
-    color: #ffffff;
-    text-decoration: none;
-    border: 0px solid black;
-    border-radius: 20px;
-    margin: 5px;
-    width: 75px; /* Set a fixed width */
-    height: 20px; /* Set a fixed height */
-    font-weight: 500; /* Adjust font weight to slightly reduce it */
-}
-.center-section .link-button.last-buttons {
-    display: inline-block;
-    padding: 10px 12px;
-    background-color: #24a0ed;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 15px;
-    margin: 10px;
-    width: 18px;
-    height: 18px;
-    border: 0px solid black; /* Add a border with 1px width and black color */
-}
-    .link-button:hover {
-        background-color: #33b249;
-    }
-</style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var pageTitle = "Asif | About"; // Default title for the About page
-            document.title = pageTitle;
-        });
-    </script>
-</head>
-
-<body>
-    <!-- Desktop Navigation -->
-    <div id="desktop-navigation">
-        <a href="https://mohdasif.com/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>    
-        <a href="/photos">Photos</a>
-        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
-        <a href="/contact">Contact</a>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <div id="mobile-navigation">
-        <a href="https://mohdasif.com/">🏠</a>
-        <a href="/about">📝</a>
-        <a href="/photos">📷</a>
-        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
-        <a href="/contact">💬</a>
-    </div>
-
-
-    <div class="content-container">
-
-<div class="links-container" style="text-align: center;">
-
-    <div class="content-container" style="display: flex; gap: 70px; justify-content: center; align-items: center;">
-
-    <style>
-        /* Mobile styles */
-        @media screen and (max-width: 768px) {
-            .content-container {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 25px !important; /* Added !important to override inline styles */
-            }
+        .image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
     </style>
+</head>
+<body>
+    <header>
+        <h1>Beautiful Gallery</h1>
+    </header>
 
-    <!-- Your content goes here -->
-    <button class="custom-button" onclick="window.location.href='/me'"
-        style="background-color: transparent; color: black; padding: 6px 8px; border: 0.9px solid black; cursor: pointer; border-radius: 20px;">About</button>
+    <div class="gallery">
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a1.JPG" alt="Image 1">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a2.JPG" alt="Image 2">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/gym/g3.JPG" alt="Image 3">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a4.JPG" alt="Image 4">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a5.JPG" alt="Image 5">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a6.JPG" alt="Image 6">
+        </div>
+    </div>
+        <!-- Add more images as needed -->
+    </div>
 
-    <button class="custom-button" onclick="window.location.href='https://mohdasif.net'"
-        style="background-color: transparent; color: black; padding: 6px 8px; border: 0.9px solid black; cursor: pointer; border-radius: 20px;">Poetry</button>
-
-    <button class="custom-button" onclick="window.location.href='/music'"
-        style="background-color: transparent; color: black; padding: 6px 8px; border: 0.9px solid black; cursor: pointer; border-radius: 20px;">Music</button>
-
-    <button class="custom-button" onclick="window.location.href='/workouts'"
-        style="background-color: transparent; color: black; padding: 6px 8px; border: 0.9px solid black; cursor: pointer; border-radius: 20px;">Workouts</button>
-
-</div>
-    <div class="content-container">
-    <div class="center-section">
-    <p class="center-section"><strong>Links</strong></p>
-    <ul>
-        <li><a href="https://clubhouse.com/@mohdasif" class="link-button">Clubhouse</a></li>
-        <li><a href="https://www.youtube.com/@mohdasif" class="link-button" id="youtubeLink">YouTube</a></li>
-        <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin">LinkedIn</a></li>
-        <li><a href="https://pinterest.com/mohdasif" class="link-button">Pinterest</a></li>
-        <li><a href="https://reddit.com/user/mohdasif" class="link-button">Reddit</a></li>
-        <li><a href="/links" class="link-button last-buttons">⌵</a></li>
-    </ul>
-</div>
-
-<!-- Add the JavaScript script here -->
-<script>
-  // Check if the user is on a mobile device
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  // Get the YouTube link element by its ID
-  var youtubeLink = document.getElementById('youtubeLink');
-
-  // Set the href attribute based on the device type
-  if (isMobile) {
-    youtubeLink.href = 'https://m.youtube.com/@mohdasif';
-  } else {
-    youtubeLink.href = 'https://www.youtube.com/@mohdasif';
-  }
-</script>
-</div>
-    <div class="content-container">
-<h3>Bookshelves</h3>
-<ul>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=currently-reading')">
-            Reading
-        </button>
-    </li>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=to-read')">
-            Want to Read
-        </button>
-    </li>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=read')">
-            Read
-        </button>
-    </li>
-</ul>
-
-<script>
-    function openGoodreads(url) {
-        window.open(url, '_blank');
-    }
-</script>
-
-</div>
-
-
-<!-- Your existing scripts or closing body/html tags -->
 </body>
 </html>
