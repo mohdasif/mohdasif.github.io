@@ -69,7 +69,7 @@
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 20px;
         padding: 20px;
-        margin-top: 70px; /* Adjusted for the header height */
+        margin-top: 30px; /* Adjusted for the header height */
     }
 
     .image {
@@ -129,6 +129,42 @@
                 display: block;
             }
         }
+        /* Custom Button Styles */
+        .custom-button {
+            background-color: transparent;
+            color: #000000;
+            padding: 6px 12px;
+            border: 1px solid black;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0 10px; /* Add margin between buttons */
+        }
+
+        .custom-button:hover,
+        .custom-button.active {
+            background-color: black;
+            color: #ffffff;
+        }
+
+        /* Hide on Mobile */
+        .desktop-only {
+            display: block;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .desktop-only {
+                display: none;
+            }
+        }
     </style>
 
 </head>
@@ -153,7 +189,13 @@
         <a href="/contact">💬</a>
     </div>
 
-    </header>
+    <!-- Buttons -->
+    <div class="desktop-only" style="text-align: center; margin-top: 70px;">
+        <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
+        <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
+        <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
+        <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
+    </div>
 
     <div class="gallery">
         <div class="image">
@@ -175,8 +217,8 @@
             <img src="https://mohdasif.blob.core.windows.net/photos/a6.JPG" alt="Image 6">
         </div>
     </div>
-        <!-- Add more images as needed -->
-    </div>
+    <!-- Add more images as needed -->
 
 </body>
+
 </html>
