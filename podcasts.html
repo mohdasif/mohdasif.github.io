@@ -173,50 +173,6 @@
 
     <!-- Additional styles -->
     <style>
-        /* Style the dropdown container */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Style the dropdown content (hidden by default) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333; /* Black background */
-            color: #fff; /* White text */
-            width: 150px; /* Width remains the same */
-            top: calc(100% + 5px); /* Align 5px below the bottom of the navigation bar */
-            left: 0;
-            padding: 10px; /* Smaller padding */
-            text-align: center; /* Center align the content */
-            z-index: 9999;
-            font-size: 15px; /* Smaller font size */
-            line-height: 0.5; /* Smaller line height */
-        }
-
-        /* Style the links inside the dropdown */
-        .dropdown-content a {
-            color: #fff; /* White text */
-            padding: 5px 0; /* Smaller padding */
-            text-decoration: none;
-            display: block; /* Display links as blocks */
-        }
-
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: #333; /* Darker background on hover */
-        }
-
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Adjust position of dropdown container */
-        .dropdown {
-            margin-bottom: -1px; /* Move the dropdown container up by 1px to align with navigation bar */
-        }
         
         /* Apply margin to the buttons for mobile */
         .custom-button {
@@ -237,12 +193,7 @@
             margin-right: 0; /* Remove margin from the last button for mobile */
         }
 
-        /* Styles for desktop */
-        @media only screen and (min-width: 601px) {
-            /* Hide buttons on desktop */
-            .custom-button {
-                display: none;
-            }
+
 
             /* Apply margin to the desktop navigation */
             #desktop-navigation {
@@ -276,11 +227,11 @@
     <div class="page-container">
         <br> <br> <!-- Add two <br> for mobile -->
 
-        <!-- Your content goes here -->
-        <button class="custom-button" onclick="window.location.href='https://mohdasif.net'">Poetry</button>
-        <button class="custom-button" onclick="window.location.href='https://mohdasif.com/blog'">Blog</button>
-        <button class="custom-button" onclick="window.location.href='https://mohdasif.com/podcasts'">Podcasts</button>
-        <button class="custom-button" onclick="window.location.href='https://www.amazon.in/shop/mohdasif'">Shop</button>
+    <!-- Your content goes here -->
+        <button class="custom-button" onclick="window.location.href='/me'">About</button>
+        <button class="custom-button" onclick="window.location.href='/podcasts'">Podcast</button>
+        <button class="custom-button" onclick="window.location.href='/music'">Music</button>
+        <button class="custom-button" onclick="window.location.href='/workouts'">Workouts</button>
 
         <br><br>
         <!-- HTML post content -->
