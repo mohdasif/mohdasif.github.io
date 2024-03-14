@@ -24,7 +24,7 @@ body {
     font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
     overflow-x: hidden;
 }
-       #desktop-navigation,
+        #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -32,6 +32,7 @@ body {
             top: 0;
             z-index: 1000;
         }
+
 
         #desktop-navigation {
             background-color: #333;
@@ -72,14 +73,28 @@ body {
             transform: translateX(-12px); /* Move the navigation slightly to the left */
         }
 
-        .content-container {
-            max-width: 600px;
+        .page-container {
+            text-align: center;
+            max-width: 630px;
             margin: 30px auto;
             background-color: #fff;
             border-radius: 8px;
-            padding: 20px;
+            padding: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container {
+            max-width: 500px;
+            margin: 40px auto;
+            background-color: #fff; /* Off-white color */
+            border-radius: 8px;
+            padding: 40px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+        }
+
+        .content-container {
+            padding: 20px; /* Adjust padding as needed */
         }
 
         h1 {
@@ -147,6 +162,13 @@ body {
         .about-me-container {
             text-align: center;
         }
+}
+
+
+        /* New styles for the about.me link container and button */
+        .about-me-container {
+            text-align: center;
+        }
 
 .center-section .link-button:not(.last-buttons) {
     display: inline-block;
@@ -176,8 +198,51 @@ body {
     .link-button:hover {
         background-color: #000000 !important; /* Change the hover background color */
     }
-</style>
+        .about-me-button,
+        .link-button {
+            display: inline-block;
+            padding: 7px 8px;
+            background-color: #24a0ed;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 40px;
+            margin: 1px;
+        }
 
+        .about-me-button:hover,
+        .link-button:hover {
+            background-color: #000000;
+        }
+    </style>
+
+    <!-- Additional styles -->
+    <style>
+        
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: transparent;
+            color: black;
+            padding: 5px 8px;
+            border: none;
+            cursor: pointer;
+            border: 0.9px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 20px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 9px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+
+            /* Apply margin to the desktop navigation */
+            #desktop-navigation {
+                margin-bottom: px; /* Adjust the margin as needed for desktop */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -201,38 +266,16 @@ body {
     </div>
 
 
-    <div class="content-container">
-
-<div class="links-container" style="text-align: center;">
-
-    <div class="content-container" style="display: flex; gap: 70px; justify-content: center; align-items: center;">
-
-    <style>
-        /* Mobile styles */
-        @media screen and (max-width: 768px) {
-            .content-container {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 25px !important; /* Added !important to override inline styles */
-            }
-        }
-    </style>
+<!-- Page Container -->
+<div class="page-container">
+    <br> <br> <!-- Add two <br> for mobile -->
 
     <!-- Your content goes here -->
-    <button class="custom-button" onclick="window.location.href='/me'"
-        style="background-color: transparent; color: black; padding: 6px 8px; border: 0.9px solid black; cursor: pointer; border-radius: 20px;">About</button>
+        <button class="custom-button" onclick="window.location.href='/about'">About</button>
+        <button class="custom-button" onclick="window.location.href='/poetry'">Poetry</button>
+        <button class="custom-button" onclick="window.location.href='/music'">Music</button>
+        <button class="custom-button" onclick="window.location.href='/workouts'">Workouts</button>
 
-    <button class="custom-button" onclick="window.location.href='https://mohdasif.net'"
-        style="background-color: transparent; color: black; padding: 6px 8px; border: 0.9px solid black; cursor: pointer; border-radius: 20px;">Poetry</button>
-
-    <button class="custom-button" onclick="window.location.href='/music'"
-        style="background-color: transparent; color: black; padding: 6px 8px; border: 0.9px solid black; cursor: pointer; border-radius: 20px;">Music</button>
-
-    <button class="custom-button" onclick="window.location.href='/workouts'"
-        style="background-color: transparent; color: black; padding: 6px 8px; border: 0.9px solid black; cursor: pointer; border-radius: 20px;">Workouts</button>
-
-</div>
     <div class="content-container">
     <div class="center-section">
     <p class="center-section"><strong>Links</strong></p>
