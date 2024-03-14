@@ -15,8 +15,9 @@
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
             overflow-x: hidden;
+        }
 
-       #desktop-navigation,
+        #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -24,6 +25,7 @@
             top: 0;
             z-index: 1000;
         }
+
 
         #desktop-navigation {
             background-color: #333;
@@ -64,42 +66,49 @@
             transform: translateX(-12px); /* Move the navigation slightly to the left */
         }
 
-        .content-container {
+        .page-container {
             max-width: 600px;
-            margin: 5px auto 3px;
+            margin: 20px auto;
             background-color: #fff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
+            text-align: center;
+        }
+        
+               .content-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        .profile-text {
-            text-align: left; /* Align text to the left */
-            color: #333;
-            margin-top: 20px;
+        .content-container {
+            padding: 20px; /* Adjust padding as needed */
         }
 
         h1 {
             color: #333;
-            text-align: center;
+            margin-bottom: 20px; /* Add space between title and content */
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
         }
 
         p {
-            color: #666;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
+            color: #555;
+            margin-bottom: 20px;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            margin-top: 20px;
+            margin: 0;
         }
 
         li {
@@ -112,21 +121,27 @@
             font-weight: bold;
         }
 
-        button {
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            margin: 5px;
-            cursor: pointer;
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
         }
 
-        button:hover {
-            background-color: #000000;
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
+
+        /* Center-align Links */
+        .center-section {
+            text-align: center;
         }
 
         @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
                 display: none;
             }
@@ -135,8 +150,49 @@
                 display: block;
             }
         }
+
+        /* New styles for the about.me link container and button */
+        .about-me-container {
+            text-align: center;
+        }
+}
+
+
+        /* New styles for the about.me link container and button */
+        .about-me-container {
+            text-align: center;
+        }
+
     </style>
 
+    <!-- Additional styles -->
+    <style>
+        
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: transparent;
+            color: black;
+            padding: 5px 8px;
+            border: none;
+            cursor: pointer;
+            border: 0.9px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 20px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+
+            /* Apply margin to the desktop navigation */
+            #desktop-navigation {
+                margin-bottom: px; /* Adjust the margin as needed for desktop */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -159,10 +215,21 @@
         <a href="/contact">💬</a>
     </div>
 
+<!-- Page Container -->
+<div class="page-container">
+    <br> <br> <!-- Add two <br> for mobile -->
+
+    <!-- Your content goes here -->
+        <button class="custom-button" onclick="window.location.href='/me'">About</button>
+        <button class="custom-button" onclick="window.location.href='/poetry'">Poetry</button>
+        <button class="custom-button" onclick="window.location.href='/music'">Music</button>
+        <button class="custom-button" onclick="window.location.href='/workouts'">Workouts</button>
+
+
 <!-- Content Container -->
 <div class="content-container">
-    <div class="links-container" style="text-align: center;">
-  <br>
+    <div class="links-container" style="text-align: left;">
+        <br>
         <h2>About</h2>
         <!-- About Text -->
         <p class="profile-text">
@@ -171,66 +238,69 @@
     </div>
     <!-- Rest of your content -->
 </div>
-    <!-- Content Container -->
-    <div class="content-container">
 
-        <h2>Personal Information</h2>
+<!-- Content Container -->
+<div class="content-container" style="text-align: left;">
+    <h2>Personal Information</h2>
+    <ul>
+        <li><strong>Name:</strong> Mohd Asif</li>
+        <li><strong>Date of Birth:</strong> 9th July</li>
+        <li><strong>Height:</strong> 5'9"</li>
+        <li><strong>Weight:</strong> 75 kg</li>
+        <li><strong>Nationality:</strong> Indian</li>
+        <li><strong>Marital Status:</strong> Unmarried</li>
+    </ul>
+
+    <br>
+    <h2>Additional Information</h2>
+    <div class="workout-stats">
+        <br>
+        <h3>Workout Stats</h3>
         <ul>
-            <li><strong>Name:</strong> Mohd Asif</li>
-            <li><strong>Date of Birth:</strong> 9th July</li>
-            <li><strong>Height:</strong> 5'9"</li>
-            <li><strong>Weight:</strong> 75 kg</li>
-            <li><strong>Nationality:</strong> Indian</li>
-            <li><strong>Marital Status:</strong> Unmarried</li>
+            <li><strong>Deadlift - Sumo:</strong> 160 Kg</li>
+            <li><strong>Deadlift - Conventional:</strong> 160 Kg</li>
+            <li><strong>Squat:</strong> 150 Kg</li>
+            <li><strong>Bench Press:</strong> 110 Kg</li>
         </ul>
-
-
-<br>
-        <h2>Additional Information</h2>
-        <div class="workout-stats">
-<br>
-            <h3>Workout Stats</h3>
-            <ul>
-                <li><strong>Deadlift - Sumo:</strong> 160 Kg</li>
-                <li><strong>Deadlift - Conventional:</strong> 160 Kg</li>
-                <li><strong>Squat:</strong> 150 Kg</li>
-                <li><strong>Bench Press:</strong> 110 Kg</li>
-<br>
-            <h3>Body Measurement</h3>
-            <ul>
-                <li><strong>Chest:</strong> 42 Inches</li>
-                <li><strong>Biceps:</strong> 17 Inches</li>
-                <li><strong>Thigh:</strong> 24 Inches</li>
-            </ul>
-<br>
- <!-- Content for the Fun Fact  -->
+        <br>
+        <h3>Body Measurement</h3>
+        <ul>
+            <li><strong>Chest:</strong> 42 Inches</li>
+            <li><strong>Biceps:</strong> 17 Inches</li>
+            <li><strong>Thigh:</strong> 24 Inches</li>
+        </ul>
+        <br>
+        <!-- Content for the Fun Fact  -->
         <div class="fun-facts-section left-align">
             <h3>Fun Facts</h3>
             <ul>
-                <ul>
-  <li><span class="dark-text">Currently Working On</span>: Nutrition and Exercises for achieving killer abs.</li>
-  <li><span class="dark-text">Currently Learning</span>: The Art of web development with HTML, CSS & JavaScript</li>
-  <li><span class="dark-text">Looking for Help With</span>: Striving to enhance my public speaking skills.</li>
-  <li><span class="dark-text">Ask Me About</span>: Strength training</li>
-</ul>
+                <li><span class="dark-text">Currently Working On</span>: Nutrition and Exercises for achieving killer abs.</li>
+                <li><span class="dark-text">Currently Learning</span>: The Art of web development with HTML, CSS & JavaScript</li>
+                <li><span class="dark-text">Looking for Help With</span>: Striving to enhance my public speaking skills.</li>
+                <li><span class="dark-text">Ask Me About</span>: Strength training</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <style>
-  .dark-text {
-    font-weight: bold;
-    color: #333;
-    font-size: 14px; /* Adjust the font size to your preference */
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    margin-bottom: 10px; /* Add some spacing between list items */
-  }
+    .dark-text {
+        font-weight: bold;
+        color: #333;
+        font-size: 14px; /* Adjust the font size to your preference */
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 10px; /* Add some spacing between list items */
+    }
 </style>
+
 
             </ul>
         </div>
