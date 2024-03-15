@@ -9,15 +9,23 @@
 
     <!-- Add this style block to hide navigation links -->
     <style>
-        body {
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
-            overflow-x: hidden;
-        }
+/* Define background image only for screens larger than 600px */
+@media only screen and (min-width: 600px) {
+    body {
+        background-image: url('https://storage.googleapis.com/mohdasif/images/img10.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
 
-        #desktop-navigation,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
+    overflow-x: hidden;
+}
+
+       #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
