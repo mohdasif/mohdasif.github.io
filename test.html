@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Photos</title>
+    <title>Asif | Photos | Gym</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <!-- Add this style block to hide navigation links -->
@@ -132,16 +132,23 @@
             margin-right: 0; /* Remove margin from the last button for mobile */
         }
 
-        .custom-button:hover,
-        .custom-button.active {
-            background-color: black; /* Change to black for hover and active states */
-            color: white; /* Change text color to white */
-        }
+.custom-button:hover,
+.custom-button.active {
+    background-color: black; /* Change to black for hover and active states */
+    color: white; /* Change text color to white */
+}
 
-        .custom-button.red {
-            background-color: red;
-            color: white;
-            border: none; /* Remove border */
+/* Disable hover effect on mobile */
+@media only screen and (max-width: 600px) {
+    .custom-button:hover,
+    .custom-button.active {
+        background-color: transparent; /* Remove background color on hover for mobile */
+        color: black; /* Reset text color on hover for mobile */
+    }
+}
+
+        .custom-button. {
+
         }
 
         @media only screen and (max-width: 600px) {
@@ -218,7 +225,7 @@
             <!-- Your content goes here -->
             <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
             <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
-            <button class="custom-button red" onclick="window.location.href='/photos/gym'">Gym</button>
+            <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
             <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
         </div>
 
@@ -226,11 +233,13 @@
 
         <!-- Your content goes here -->
 
-<p><img src="https://storage.googleapis.com/mohdasif/gym/g1.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/gym/g2.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/gym/g3.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/gym/g4.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/gym/g5.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/photos/a1.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/photos/a2.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/photos/a3.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/photos/a4.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/photos/a5.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/photos/a6.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/photos/a7.JPG" /></p>
 
         </div>
     </div>
