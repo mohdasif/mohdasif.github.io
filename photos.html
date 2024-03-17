@@ -7,7 +7,6 @@
     <title>Asif | Photos</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
-    <!-- Add this style block to hide navigation links -->
     <style>
         body {
             background-color: #f4f4f4;
@@ -114,6 +113,24 @@
             margin-bottom: 20px; /* Add space between buttons and photos on small screens */
         }
 
+        .custom-button {
+            background-color: transparent;
+            color: black;
+            padding: 5px 6px;
+            border: none;
+            cursor: pointer;
+            border: 0.9px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 20px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+
 .custom-button:hover,
 .custom-button.active {
     background-color: black; /* Change to black for hover and active states */
@@ -169,9 +186,9 @@
         }
 
         img {
-            border-radius: 5%; /* This will make the border round */
+            border-radius: 4%; /* This will make the border round */
         }
-</style>
+    </style>
     <script>
         </script></body><script>var topButton = "sleek/circle-blue";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
     </script>
@@ -205,8 +222,11 @@
             <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
             <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
             <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
+        </div>
 
-</div>
+        <br>
+
+        <!-- Your content goes here -->
 
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a1.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a2.JPG" /></p>
@@ -215,14 +235,7 @@
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a5.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a6.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/photos/a7.JPG" /></p>
-
-</div>
-
-    </div>
-
-    <!-- Your post content goes here -->
-    <div class="content-container">
-        <!-- HTML post content -->
+        </div>
     </div>
 
 </body>
