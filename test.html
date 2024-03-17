@@ -114,10 +114,34 @@
             margin-bottom: 20px; /* Add space between buttons and photos on small screens */
         }
 
+        .custom-button {
+            background-color: transparent;
+            color: black;
+            padding: 5px 6px;
+            border: none;
+            cursor: pointer;
+            border: 0.9px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 20px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+
         .custom-button:hover,
         .custom-button.active {
             background-color: black; /* Change to black for hover and active states */
             color: white; /* Change text color to white */
+        }
+
+        .custom-button.red {
+            background-color: red;
+            color: white;
+            border: none; /* Remove border */
         }
 
         @media only screen and (max-width: 600px) {
@@ -160,9 +184,12 @@
         }
 
         img {
-            border-radius: 5%; /* This will make the border round */
+            border-radius: 4%; /* This will make the border round */
         }
     </style>
+    <script>
+        </script></body><script>var topButton = "sleek/circle-blue";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
+    </script>
 </head>
 
 <body>
@@ -191,21 +218,21 @@
             <!-- Your content goes here -->
             <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
             <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
-            <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
+            <button class="custom-button red" onclick="window.location.href='/photos/gym'">Gym</button>
             <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
+        </div>
 
-</div>
+        <br>
 
-<p><img src="https://storage.googleapis.com/mohdasif/photos/a1.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/photos/a2.JPG" /></p>
+        <!-- Your content goes here -->
 
-</div>
+<p><img src="https://storage.googleapis.com/mohdasif/gym/g1.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/gym/g2.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/gym/g3.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/gym/g4.JPG" /></p>
+<p><img src="https://storage.googleapis.com/mohdasif/gym/g5.JPG" /></p>
 
-    </div>
-
-    <!-- Your post content goes here -->
-    <div class="content-container">
-        <!-- HTML post content -->
+        </div>
     </div>
 
 </body>
