@@ -114,11 +114,20 @@
             margin-bottom: 20px; /* Add space between buttons and photos on small screens */
         }
 
-        .custom-button:hover,
-        .custom-button.active {
-            background-color: black; /* Change to black for hover and active states */
-            color: white; /* Change text color to white */
-        }
+.custom-button:hover,
+.custom-button.active {
+    background-color: black; /* Change to black for hover and active states */
+    color: white; /* Change text color to white */
+}
+
+/* Disable hover effect on mobile */
+@media only screen and (max-width: 600px) {
+    .custom-button:hover,
+    .custom-button.active {
+        background-color: transparent; /* Remove background color on hover for mobile */
+        color: black; /* Reset text color on hover for mobile */
+    }
+}
 
         @media only screen and (max-width: 600px) {
             /* ... (styles for small screens) ... */
@@ -162,7 +171,10 @@
         img {
             border-radius: 5%; /* This will make the border round */
         }
-    </style>
+</style>
+    <script>
+        </script></body><script>var topButton = "sleek/circle-blue";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
+    </script>
 </head>
 
 <body>
