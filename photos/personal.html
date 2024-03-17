@@ -15,9 +15,8 @@
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
             overflow-x: hidden;
-        }
 
-        #desktop-navigation,
+       #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -31,7 +30,7 @@
             color: #fff;
             padding: 7px;
             font-size: 18.7px; /* Increase font size for zoom effect */
-            padding: 7px; /* Padding for top and bottom */
+            padding:7px; /* Padding for top and bottom */
             padding-left: 5px; /* Additional padding for left */
             padding-right: 6px; /* Additional padding for right */
             padding: 6px 7px; /* Increase padding for more space */
@@ -115,78 +114,61 @@
         }
 
         .custom-button {
-            background-color: transparent;
-            color: black;
-            padding: 5px 6px;
-            border: none;
-            cursor: pointer;
-            border: 0.9px solid black;
-            border-radius: 20px;
-            transition: background-color 0.9s; /* Added transition effect */
-            margin-right: 20px; /* Add margin between buttons for mobile */
-            transform: translateX(7px); /* Move the custom button slightly to the right */
-            margin-top: 5px; /* Add margin between navigation and buttons */
-        }
+        background-color: #04AA6D;
+        color: #ffffff;
+        padding: 5px 8px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-color 0.9s; /* Added transition effect */
+    }
 
-        .custom-button:last-child {
-            margin-right: 0; /* Remove margin from the last button for mobile */
-        }
+.custom-button:hover,
+.custom-button.active {
+    background-color: black; /* Change to black for hover and active states */
+    color: white; /* Change text color to white */
+}
 
-        .custom-button:hover,
-        .custom-button.active {
-            background-color: black; /* Change to black for hover and active states */
-            color: white; /* Change text color to white */
-        }
-
-        .custom-button.blue {
-            background-color: #24a0ed;
-            color: white;
-            border: none; /* Remove border */
-        }
+/* Disable hover effect on mobile */
+@media only screen and (max-width: 600px) {
+    .custom-button:hover,
+    .custom-button.active {
+        background-color: transparent; /* Remove background color on hover for mobile */
+        color: black; /* Reset text color on hover for mobile */
+    }
+}
 
         @media only screen and (max-width: 600px) {
-            /* ... (styles for small screens) ... */
+        /* ... (styles for small screens) ... */
 
-            .custom-button {
-                background-color: transparent;
-                color: black;
-                padding: 5px 7px;
-                border: none;
-                cursor: pointer;
-                border: 0.9px solid black;
-                border-radius: 20px;
-                transition: background-color 0.9s; /* Added transition effect */
-                margin-right: -5px; /* Add margin between buttons for mobile */
-                transform: translateX(-3px); /* Move the custom button slightly to the right */
-                margin-top: 5px; /* Add margin between navigation and buttons */
-            }
-
-            .custom-button:last-child {
-                margin-right: 0; /* Remove margin from the last button for mobile */
-            }
-
-            /* ... (other styles for small screens) ... */
-
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-
-            .photos-container {
-                max-width: 100%; /* Adjusted max-width for mobile */
-                margin: 20px auto; /* Adjusted margin for mobile */
-                box-shadow: none; /* Remove box shadow on mobile */
-                border-radius: 0; /* Remove border radius on mobile */
-            }
+        .custom-button {
+            padding: 5px 5px;
+            margin: 1px 0; /* Adjust the margin to reduce space between buttons */
+            border-radius: 10px;
+            transition: background-color 0.9s;
         }
 
-        img {
-            border-radius: 4%; /* This will make the border round */
+        /* ... (other styles for small screens) ... */
+
+        #desktop-navigation {
+            display: none;
         }
-    </style>
+
+        #mobile-navigation {
+            display: block;
+        }
+
+        .photos-container {
+            max-width: 100%; /* Adjusted max-width for mobile */
+            margin: 20px auto; /* Adjusted margin for mobile */
+            box-shadow: none; /* Remove box shadow on mobile */
+            border-radius: 0; /* Remove border radius on mobile */
+        }
+    }
+    img {
+        border-radius: 5%; /* This will make the border round */
+    }
+</style>
     <script>
         </script></body><script>var topButton = "sleek/circle-blue";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
     </script>
@@ -197,7 +179,7 @@
     <div id="desktop-navigation">
         <a href="https://mohdasif.com/">Home</a>
         <a href="/about">About</a>
-        <a href="/blog">Blog</a>
+        <a href="/blog">Blog</a>    
         <a href="/gallery">Photos</a>
         <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
         <a href="/contact">Contact</a>
@@ -217,24 +199,17 @@
         <div class="content-container">
             <!-- Your content goes here -->
             <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
-            <button class="custom-button blue" onclick="window.location.href='/photos/personal'">Personal</button>
+            <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
             <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
             <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
-        </div>
 
-        <br>
-
-        <!-- Your content goes here -->
+</div>
 
 <p><img src="https://storage.googleapis.com/mohdasif/personal/p1.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/personal/p2.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/personal/p3.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/personal/p4.JPG" /></p>
 <p><img src="https://storage.googleapis.com/mohdasif/personal/p5.JPG" /></p>
-
-        </div>
-    </div>
-
 </body>
 
 </html>
