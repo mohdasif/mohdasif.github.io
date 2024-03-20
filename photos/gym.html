@@ -145,10 +145,20 @@
     margin-top: 5px; /* Add margin between navigation and buttons */
 }
 
+/* Define hover and active styles for custom buttons */
 .custom-button:hover,
 .custom-button.active {
     background-color: #333;
     color: #ffffff;
+}
+
+/* Media query to disable hover effect on mobile devices */
+@media only screen and (max-width: 767px) {
+    .custom-button:hover,
+    .custom-button.active {
+        background-color: inherit; /* or any other appropriate style */
+        color: inherit; /* or any other appropriate style */
+    }
 }
 
 .custom-button.red {
