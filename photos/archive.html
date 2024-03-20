@@ -8,81 +8,110 @@
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <!-- Add this style block to hide navigation links -->
-    <style>
-        body {
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
-            overflow-x: hidden;
-        }
+<style>
+    body {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+        font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
+        overflow-x: hidden;
+    }
 
-        #desktop-navigation,
-        #mobile-navigation {
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+    #desktop-navigation,
+    #mobile-navigation {
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
 
-        #desktop-navigation {
-            background-color: #333;
-            color: #fff;
-            padding: 7px;
-            font-size: 18.7px; /* Increase font size for zoom effect */
-            padding: 7px; /* Padding for top and bottom */
-            padding-left: 5px; /* Additional padding for left */
-            padding-right: 6px; /* Additional padding for right */
-            padding: 6px 7px; /* Increase padding for more space */
-            margin: 0px; /* Margin for top, right, bottom, and left */
-            font-weight: bold;
-            right: 8px; /* Position the navigation slightly away from the right side */
-            display: block; /* Ensure the desktop navigation is visible */
-        }
+    #desktop-navigation {
+        background-color: #333;
+        color: #fff;
+        padding: 7px;
+        font-size: 18.7px; /* Increase font size for zoom effect */
+        padding: 7px; /* Padding for top and bottom */
+        padding-left: 5px; /* Additional padding for left */
+        padding-right: 6px; /* Additional padding for right */
+        padding: 6px 7px; /* Increase padding for more space */
+        margin: 0px; /* Margin for top, right, bottom, and left */
+        font-weight: bold;
+        right: 8px; /* Position the navigation slightly away from the right side */
+        display: block; /* Ensure the desktop navigation is visible */
+    }
 
-        #desktop-navigation a,
-        #mobile-navigation a {
-            color: inherit;
-            margin: 0 16px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block; /* Make sure the links are on separate lines */
-        }
+    #desktop-navigation a,
+    #mobile-navigation a {
+        color: inherit;
+        margin: 0 16px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block; /* Make sure the links are on separate lines */
+    }
 
-        #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
-        }
+    #desktop-navigation a:last-child {
+        margin-right: 0; /* Remove margin from the last element */
+    }
 
-        #mobile-navigation {
-            background-color: #FDFCFA;
-            color: #000;
-            padding: 10px;
-            display: none;
-            font-size: 18px; /* Adjust the font size as needed */
-            left: 0; /* Align to the left edge */
-            transform: translateX(-12px); /* Move the navigation slightly to the left */
-        }
+    #mobile-navigation {
+        background-color: #FDFCFA;
+        color: #000;
+        padding: 10px;
+        display: none;
+        font-size: 18px; /* Adjust the font size as needed */
+        left: 0; /* Align to the left edge */
+        transform: translateX(-12px); /* Move the navigation slightly to the left */
+    }
 
-        .photos-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+        margin-top: 30px; /* Adjusted for the header height */
+    }
 
+    .image {
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .image:hover {
+        transform: scale(1.05);
+    }
+
+    .image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
         h1 {
             color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
+        }
+
+        p {
+            color: #666;
         }
 
         img {
             max-width: 100%;
             height: auto;
             margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
         }
 
         a {
@@ -91,91 +120,7 @@
             font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: none;
-        }
-
-        .view-more-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4285f4;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .content-container {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row; /* Adjusted to display buttons in a single line */
-            margin-bottom: 20px; /* Add space between buttons and photos on small screens */
-        }
-
-        .custom-button {
-            background-color: transparent;
-            color: black;
-            padding: 5px 6px;
-            border: none;
-            cursor: pointer;
-            border: 0.9px solid black;
-            border-radius: 20px;
-            transition: background-color 0.9s; /* Added transition effect */
-            margin-right: 20px; /* Add margin between buttons for mobile */
-            transform: translateX(7px); /* Move the custom button slightly to the right */
-            margin-top: 5px; /* Add margin between navigation and buttons */
-        }
-
-        .custom-button:last-child {
-            margin-right: 0; /* Remove margin from the last button for mobile */
-        }
-
-.custom-button:hover,
-.custom-button.active {
-    background-color: black; /* Change to black for hover and active states */
-    color: white; /* Change text color to white */
-}
-
-/* Disable hover effect on mobile */
-@media only screen and (max-width: 600px) {
-    .custom-button:hover,
-    .custom-button.active {
-        background-color: transparent; /* Remove background color on hover for mobile */
-        color: black; /* Reset text color on hover for mobile */
-    }
-}
-
-        .custom-button.black {
-            background-color: #333;
-            color: white;
-            border: none; /* Remove border */
-        }
-
         @media only screen and (max-width: 600px) {
-            /* ... (styles for small screens) ... */
-
-            .custom-button {
-                background-color: transparent;
-                color: black;
-                padding: 5px 7px;
-                border: none;
-                cursor: pointer;
-                border: 0.9px solid black;
-                border-radius: 20px;
-                transition: background-color 0.9s; /* Added transition effect */
-                margin-right: -5px; /* Add margin between buttons for mobile */
-                transform: translateX(-3px); /* Move the custom button slightly to the right */
-                margin-top: 5px; /* Add margin between navigation and buttons */
-            }
-
-            .custom-button:last-child {
-                margin-right: 0; /* Remove margin from the last button for mobile */
-            }
-
-            /* ... (other styles for small screens) ... */
-
             #desktop-navigation {
                 display: none;
             }
@@ -183,18 +128,66 @@
             #mobile-navigation {
                 display: block;
             }
-
-            .photos-container {
-                max-width: 100%; /* Adjusted max-width for mobile */
-                margin: 20px auto; /* Adjusted margin for mobile */
-                box-shadow: none; /* Remove box shadow on mobile */
-                border-radius: 0; /* Remove border radius on mobile */
-            }
         }
 
-        img {
-            border-radius: 4%; /* This will make the border round */
-        }
+/* Custom Button Styles */
+.custom-button {
+    background-color: transparent;
+    color: black;
+    padding: 6px 8px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: background-color 0.7s; /* Added transition effect */
+    margin-right: 20px; /* Add margin between buttons for desktop */
+    transform: translateX(7px); /* Move the custom button slightly to the right */
+    margin-top: 5px; /* Add margin between navigation and buttons */
+}
+
+.custom-button:hover,
+.custom-button.active {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.custom-button.black {
+    background-color: #333;
+    color: white;
+    border: none; /* Remove border */
+}
+
+/* Desktop-only class */
+.desktop-only {
+    display: block; /* Display on desktop only */
+}
+
+/* Mobile-only class */
+#mobile-buttons {
+    display: none; /* Hide on desktop */
+}
+
+@media only screen and (max-width: 600px) {
+    .image:hover {
+        transform: none; /* Remove hover effect for mobile */
+    }
+}
+    /* Hide desktop buttons */
+    .desktop-only {
+        display: none;
+    }
+
+    /* Show mobile buttons */
+    #mobile-buttons {
+        display: block;
+    }
+
+    /* Adjust margin for mobile buttons */
+    #mobile-buttons .custom-button {
+        margin-right: 18px;
+        margin-top: 13px;
+    }
+}
     </style>
     <script>
         </script></body><script>var topButton = "sleek/circle-blue";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
@@ -206,7 +199,7 @@
     <div id="desktop-navigation">
         <a href="https://mohdasif.com/">Home</a>
         <a href="/about">About</a>
-        <a href="/blog">Blog</a>
+        <a href="/blog">Blog</a>    
         <a href="/gallery">Photos</a>
         <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
         <a href="/contact">Contact</a>
@@ -221,33 +214,52 @@
         <a href="/contact">💬</a>
     </div>
 
-    <div class="photos-container">
-        <br><br>
-        <div class="content-container">
-            <!-- Your content goes here -->
-            <button class="custom-button black" onclick="window.location.href='/photos/archive'">Archive</button>
-            <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
-            <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
-            <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
-        </div>
+<!-- Desktop Buttons -->
+<div class="desktop-only" style="text-align: center; margin-top: 70px;">
+    <button class="custom-button black" onclick="window.location.href='/photos/archive'">Archive</button>
+    <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
+    <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
+    <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
+</div>
 
-        <br>
+<!-- Mobile Buttons -->
+<div id="mobile-buttons" style="text-align: center; margin-top: 70px;">
+    <button class="custom-button black" onclick="window.location.href='/photos/archive'">Archive</button>
+    <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
+    <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
+    <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
+</div>
 
-        <!-- Your content goes here -->
+<div class="gallery">
 
-<p><img src="https://storage.googleapis.com/mohdasif/archive/o1.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/archive/o2.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/archive/o3.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/archive/o4.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/archive/o5.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/archive/o6.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/archive/o7.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/archive/o8.JPG" /></p>
-<p><img src="https://storage.googleapis.com/mohdasif/archive/o9.JPG" /></p>
-
-
-        </div>
+    <div class="image">
+        <img src="https://storage.googleapis.com/mohdasif/archive/o2.JPG">
     </div>
+    <div class="image">
+        <img src="https://storage.googleapis.com/mohdasif/archive/o4.JPG">
+    </div>
+    <div class="image">
+        <img src="https://storage.googleapis.com/mohdasif/archive/o8.JPG">
+    </div>
+    <div class="image">
+        <img src="https://storage.googleapis.com/mohdasif/archive/o1.JPG">
+    </div>
+    <div class="image">
+        <img src="https://storage.googleapis.com/mohdasif/archive/o6.JPG">
+    </div>
+    <div class="image">
+        <img src="https://storage.googleapis.com/mohdasif/archive/o5.JPG">
+    </div>
+    <div class="image">
+        <img src="https://storage.googleapis.com/mohdasif/archive/o7.JPG">
+    </div>
+    <div class="image">
+        <img src="https://storage.googleapis.com/mohdasif/archive/o3.JPG">
+    </div>
+    <div class="image">
+        <img src="https://storage.googleapis.com/mohdasif/archive/o9.JPG">
+    </div>
+</div>
 
 </body>
 
