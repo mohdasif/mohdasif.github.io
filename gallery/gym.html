@@ -129,21 +129,25 @@
                 display: block;
             }
         }
+
         /* Custom Button Styles */
         .custom-button {
             background-color: transparent;
-            color: #000000;
-            padding: 6px 12px;
-            border: 1px solid black;
+            color: black;
+            padding: 6px 8px;
+            border: none;
             cursor: pointer;
-            border-radius: 10px;
-            transition: background-color 0.3s, color 0.3s;
-            margin: 0 10px; /* Add margin between buttons */
+            border: 1px solid black;
+            border-radius: 20px;
+            transition: background-color 0.7s; /* Added transition effect */
+            margin-right: 20px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
         }
 
         .custom-button:hover,
         .custom-button.active {
-            background-color: black;
+            background-color: #333;
             color: #ffffff;
         }
 
