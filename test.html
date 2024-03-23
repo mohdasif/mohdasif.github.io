@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles</title>
+    <title>Photos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <style>
         body {
@@ -31,13 +31,12 @@
             text-align: center;
             margin-bottom: 20px;
             padding: 10px 0;
-            white-space: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+            overflow-x: auto; /* Enable horizontal scrolling on small screens */
+            white-space: nowrap; /* Prevent categories from wrapping */
         }
 
         .category-link {
-            display: inline-block;
+            display: inline-block; /* Display categories in a row */
             margin-right: 10px;
             color: #333;
             text-decoration: none;
@@ -88,45 +87,77 @@
         .article-list a:hover {
             background-color: #f5f5f5;
         }
+
+        /* Mobile Styles */
+        @media only screen and (max-width: 600px) {
+            .categories {
+                overflow-x: auto; /* Enable horizontal scrolling */
+                white-space: nowrap; /* Prevent categories from wrapping */
+                padding-bottom: 10px; /* Add bottom padding to make room for scrollbar */
+            }
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+            margin-top: 30px; /* Adjusted for the header height */
+        }
+
+        .image {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+        }
+
+        .image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Articles</h1>
+        <h1>Photos</h1>
         <div class="categories">
-            <a href="#health" class="category-link">Health</a>
-            <a href="#technology" class="category-link">Technology</a>
-            <a href="#travel" class="category-link">Travel</a>
-            <a href="#food" class="category-link">Food</a>
-            <a href="#fashion" class="category-link">Fashion</a>
-            <a href="#sports" class="category-link">Sports</a>
-            <a href="#finance" class="category-link">Finance</a>
-            <a href="#entertainment" class="category-link">Entertainment</a>
+            <a href="/photos/archive" class="category-link">Archive</a>
+            <a href="/photos/personal" class="category-link">Personal</a>
+            <a href="/photos/gym" class="category-link red">Gym</a>
+            <a href="/photos/travel" class="category-link">Travel</a>
+            <a href="/photos/RJ" class="category-link">RJ</a>
+            <a href="/photos/delhi" class="category-link">Delhi</a>
+            <a href="/photos/mumbai" class="category-link red">Mumbai</a>
+            <a href="/photos/uk" class="category-link">UK</a>
         </div>
-        <div id="health" class="articles-section active">
-            <ul class="article-list">
-                <li><a href="#">10 Tips for Better Sleep</a></li>
-                <li><a href="#">How to Stay Productive While Working Remotely</a></li>
-                <li><a href="#">The Benefits of Meditation</a></li>
-            </ul>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <div class="image">
+            <img src="https://storage.googleapis.com/mohdasif/gym/g1.JPG">
         </div>
-        <div id="technology" class="articles-section">
-            <ul class="article-list">
-                <li><a href="#">Introduction to Machine Learning</a></li>
-            </ul>
+        <div class="image">
+            <img src="https://storage.googleapis.com/mohdasif/gym/g2.JPG">
         </div>
-        <div id="travel" class="articles-section">
-            <ul class="article-list">
-                <li><a href="#">Exploring National Parks: A Travel Guide</a></li>
-            </ul>
+        <div class="image">
+            <img src="https://storage.googleapis.com/mohdasif/gym/g3.JPG">
         </div>
-        <div id="food" class="articles-section">
-            <ul class="article-list">
-                <li><a href="#">5 Delicious Smoothie Recipes</a></li>
-            </ul>
+        <div class="image">
+            <img src="https://storage.googleapis.com/mohdasif/gym/g4.JPG">
         </div>
-        <!-- Add more sections as needed -->
+        <div class="image">
+            <img src="https://storage.googleapis.com/mohdasif/gym/g5.JPG">
+        </div>
     </div>
 </body>
 
