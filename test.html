@@ -148,6 +148,11 @@
 
         /* Mobile Styles */
         @media only screen and (max-width: 600px) {
+
+    .image:hover {
+        transform: none; /* Remove hover effect for mobile */
+    }
+}
             .categories {
                 overflow-x: auto; /* Enable horizontal scrolling */
                 white-space: nowrap; /* Prevent categories from wrapping */
@@ -181,7 +186,17 @@
             height: auto;
             border-radius: 20px;
         }
+/* Media query to disable hover effect on mobile devices */
+@media only screen and (max-width: 767px) {
+    .category-link:hover {
+        background-color: inherit; /* or any other appropriate style */
+        color: inherit; /* or any other appropriate style */
+    }
+}
     </style>
+    <script>
+        </script></body><script>var topButton = "sleek/circle-blue";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
+    </script>
 </head>
 
 <body>
