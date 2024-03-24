@@ -71,7 +71,11 @@
             display: block;
         }
 
-        .category-link:hover,
+        .category-link:hover {
+            background-color: initial; /* Resetting background color */
+            color: initial; /* Resetting text color */
+        }
+
         .image:hover {
             background-color: initial;
             transform: initial;
@@ -109,6 +113,11 @@
         cursor: pointer;
         border: 0.5px solid black;
         background-color: #fff;
+    }
+
+    .category-link:hover {
+        background-color: black; /* Black background on hover */
+        color: white; /* White text on hover */
     }
 
     .articles-section {
@@ -163,7 +172,7 @@
         margin-top: 30px; /* Adjusted for the header height */
     }
 
-    .image {
+    .gallery .image {
         overflow: hidden;
         border-radius: 8px;
         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
@@ -175,6 +184,10 @@
         width: 100%;
         height: auto;
         border-radius: 20px;
+    }
+
+    .gallery .image:hover {
+        transform: scale(1.05);
     }
 </style>
 
