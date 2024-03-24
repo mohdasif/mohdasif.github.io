@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Photos | Gym</title>
+    <title>Asif | Photos</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 <style>
@@ -100,8 +100,13 @@
         text-align: center;
         margin-bottom: 20px;
         padding: 10px 0;
-        overflow-x: auto; /* Enable horizontal scrolling on small screens */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
         white-space: nowrap; /* Prevent categories from wrapping */
+    }
+
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+        .categories::-webkit-scrollbar {
+        display: none;
     }
 
     .category-link {
@@ -240,43 +245,26 @@
     </div>
 
 <!-- Gallery -->
-<div class="gallery">
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym.jpg">
+    <div class="gallery">
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a1.JPG">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a2.JPG">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/gym/g3.JPG">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a4.JPG">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a5.JPG">
+        </div>
+        <div class="image">
+            <img src="https://mohdasif.blob.core.windows.net/photos/a6.JPG">
+        </div>
     </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym1.JPG">
-    </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym2.JPG">
-    </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym3.JPG">
-    </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym4.JPG">
-    </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym5.JPG">
-    </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym6.JPG">
-    </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym7.JPG">
-    </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym8.JPG">
-    </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym9.JPG">
-    </div>
-    <div class="image">
-        <img src="https://storage.googleapis.com/mohdasif/Gym/gym10.JPG">
-    </div>
-</div>
-
-
 
 </body>
 
