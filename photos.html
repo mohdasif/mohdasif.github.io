@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asif | Photos</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
-
-    <!-- Add this style block to hide navigation links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 <style>
     body {
-        background-color: #fff;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #fff; /* Set white background for the whole page */
         margin: 0;
         padding: 0;
-        font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
-        overflow-x: hidden;
     }
 
     #desktop-navigation,
@@ -30,15 +29,15 @@
         background-color: #333;
         color: #fff;
         padding: 7px;
-        font-size: 18.7px; /* Increase font size for zoom effect */
-        padding: 7px; /* Padding for top and bottom */
-        padding-left: 5px; /* Additional padding for left */
-        padding-right: 6px; /* Additional padding for right */
-        padding: 6px 7px; /* Increase padding for more space */
-        margin: 0px; /* Margin for top, right, bottom, and left */
+        font-size: 18.7px;
+        padding: 7px;
+        padding-left: 5px;
+        padding-right: 6px;
+        padding: 6px 7px;
+        margin: 0px;
         font-weight: bold;
-        right: 8px; /* Position the navigation slightly away from the right side */
-        display: block; /* Ensure the desktop navigation is visible */
+        right: 8px;
+        display: block;
     }
 
     #desktop-navigation a,
@@ -47,11 +46,11 @@
         margin: 0 16px;
         text-decoration: none;
         font-weight: bold;
-        display: inline-block; /* Make sure the links are on separate lines */
+        display: inline-block;
     }
 
     #desktop-navigation a:last-child {
-        margin-right: 0; /* Remove margin from the last element */
+        margin-right: 0;
     }
 
     #mobile-navigation {
@@ -59,11 +58,114 @@
         color: #000;
         padding: 10px;
         display: none;
-        font-size: 18px; /* Adjust the font size as needed */
-        left: 0; /* Align to the left edge */
-        transform: translateX(-12px); /* Move the navigation slightly to the left */
+        font-size: 18px;
+        left: 0;
+        transform: translateX(-12px);
     }
 
+    @media only screen and (max-width: 600px) {
+        #desktop-navigation {
+            display: none;
+        }
+
+        #mobile-navigation {
+            display: block;
+        }
+
+        .category-link:hover {
+            background-color: initial; /* Resetting background color */
+            color: initial; /* Resetting text color */
+        }
+
+        .image:hover {
+            background-color: initial;
+            transform: initial;
+            box-shadow: initial;
+        }
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .categories {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 10px 0;
+        overflow-x: auto; /* Enable horizontal scrolling on small screens */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
+
+    .category-link {
+        display: inline-block; /* Display categories in a row */
+        margin-right: 10px;
+        color: #333;
+        text-decoration: none;
+        padding: 2px 8px;
+        border-radius: 15px;
+        cursor: pointer;
+        border: 1px solid #ddd; /* 1 pixel border */
+        background-color: #fff;
+        transition: background-color 0.9s; /* Added transition effect */
+    }
+
+    .category-link:hover {
+        background-color: #04AA6D;
+        color: white; /* White text on hover */
+    }
+
+    .articles-section {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .articles-section.active {
+        display: block;
+    }
+
+    .article-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .article-list li {
+        background: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .article-list a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    .article-list a:hover {
+        background-color: #f5f5f5;
+    }
+
+    /* Mobile Styles */
+    @media only screen and (max-width: 600px) {
+        .categories {
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent categories from wrapping */
+            padding-bottom: 10px; /* Add bottom padding to make room for scrollbar */
+        }
+    }
+
+    /* Gallery Styles */
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -72,15 +174,11 @@
         margin-top: 30px; /* Adjusted for the header height */
     }
 
-    .image {
+    .gallery .image {
         overflow: hidden;
         border-radius: 8px;
         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
-    }
-
-    .image:hover {
-        transform: scale(1.05);
     }
 
     .image img {
@@ -89,119 +187,23 @@
         height: auto;
         border-radius: 20px;
     }
-        h1 {
-            color: #333;
-        }
 
-        p {
-            color: #666;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
-            font-weight: bold;
-        }
-
-        @media only screen and (max-width: 600px) {
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-        }
-
-/* Custom Button Styles */
-.custom-button {
-    background-color: transparent;
-    color: black;
-    padding: 6px 8px;
-    border: none;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 20px;
-    transition: background-color 0.7s; /* Added transition effect */
-    margin-right: 20px; /* Add margin between buttons for desktop */
-    transform: translateX(7px); /* Move the custom button slightly to the right */
-    margin-top: 5px; /* Add margin between navigation and buttons */
-}
-
-/* Define hover and active styles for custom buttons */
-.custom-button:hover,
-.custom-button.active {
-    background-color: #333;
-    color: #ffffff;
-}
-
-/* Media query to disable hover effect on mobile devices */
-@media only screen and (max-width: 767px) {
-    .custom-button:hover,
-    .custom-button.active {
-        background-color: inherit; /* or any other appropriate style */
-        color: inherit; /* or any other appropriate style */
+    .gallery .image:hover {
+        transform: scale(1.05);
     }
-}
-
-.custom-button. {
-    background-color: #;
-    color: white;
-    border: none; /* Remove border */
-}
-
-/* Desktop-only class */
-.desktop-only {
-    display: block; /* Display on desktop only */
-}
-
-/* Mobile-only class */
-#mobile-buttons {
-    display: none; /* Hide on desktop */
-}
-
-@media only screen and (max-width: 600px) {
-    .image:hover {
-        transform: none; /* Remove hover effect for mobile */
+    /* Mobile-specific styles */
+    @media only screen and (max-width: 600px) {
+        .category-link:hover {
+            background-color: initial; /* Disable background color change on hover */
+            color: initial; /* Reset text color on hover */
+        }
     }
-}
-    /* Hide desktop buttons */
-    .desktop-only {
-        display: none;
-    }
+</style>
 
-    /* Show mobile buttons */
-    #mobile-buttons {
-        display: block;
-    }
-
-    /* Adjust margin for mobile buttons */
-    #mobile-buttons .custom-button {
-        margin-right: 18px;
-        margin-top: 13px;
-    }
-}
-    </style>
     <script>
         </script></body><script>var topButton = "sleek/circle-blue";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
     </script>
+
 </head>
 
 <body>
@@ -209,7 +211,7 @@
     <div id="desktop-navigation">
         <a href="https://mohdasif.com/">Home</a>
         <a href="/about">About</a>
-        <a href="/blog">Blog</a>    
+        <a href="/blog">Blog</a>
         <a href="/photos">Photos</a>
         <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
         <a href="/contact">Contact</a>
@@ -224,22 +226,20 @@
         <a href="/contact">💬</a>
     </div>
 
-<!-- Desktop Buttons -->
-<div class="desktop-only" style="text-align: center; margin-top: 70px;">
-    <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
-    <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
-    <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
-    <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
-</div>
+    <div class="container">
+  <br><br>
+        <div class="categories">
+            <a href="/photos/personal" class="category-link">Personal</a>
+            <a href="/photos/gym" class="category-link red">Gym</a>
+            <a href="/photos/rajasthan" class="category-link">Rajasthan</a>
+            <a href="/photos/lucknow" class="category-link">Lucknow</a>
+            <a href="/photos/nepal" class="category-link">Nepal</a>
+            <a href="/photos/moradabad" class="category-link">Moradabad</a>
+            <a href="/photos/archive" class="category-link">Archive</a>
+        </div>
+    </div>
 
-<!-- Mobile Buttons -->
-<div id="mobile-buttons" style="text-align: center; margin-top: 70px;">
-    <button class="custom-button" onclick="window.location.href='/photos/archive'">Archive</button>
-    <button class="custom-button" onclick="window.location.href='/photos/personal'">Personal</button>
-    <button class="custom-button" onclick="window.location.href='/photos/gym'">Gym</button>
-    <button class="custom-button" onclick="window.location.href='/photos/travel'">Travel</button>
-</div>
-
+<!-- Gallery -->
     <div class="gallery">
         <div class="image">
             <img src="https://mohdasif.blob.core.windows.net/photos/a1.JPG">
@@ -260,7 +260,6 @@
             <img src="https://mohdasif.blob.core.windows.net/photos/a6.JPG">
         </div>
     </div>
-    <!-- Add more images as needed -->
 
 </body>
 
