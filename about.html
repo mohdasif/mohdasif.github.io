@@ -27,16 +27,20 @@
         }
 
 
-#desktop-navigation {
-    background-color: #333;
-    color: #fff;
-    padding: 4px 2px; /* Combined padding */
-    font-size: 18.7px;
-    margin: 0px;
-    font-weight: bold;
-    right: 8px;
-    display: block;
-}
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 7px;
+            font-size: 18.7px; /* Increase font size for zoom effect */
+            padding:7px; /* Padding for top and bottom */
+            padding-left: 5px; /* Additional padding for left */
+            padding-right: 6px; /* Additional padding for right */
+            padding: 6px 7px; /* Increase padding for more space */
+            margin: 0px; /* Margin for top, right, bottom, and left */
+            font-weight: bold;
+            right: 8px; /* Position the navigation slightly away from the right side */
+            display: block; /* Ensure the desktop navigation is visible */
+        }
 
 
         #desktop-navigation a,
@@ -161,7 +165,7 @@
 
 .center-section .link-button:not(.last-buttons) {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 9px 12px;
     background-color: #24a0ed;
     color: #ffffff;
     text-decoration: none;
@@ -174,7 +178,7 @@
 }
 .center-section .link-button.last-buttons {
     display: inline-block;
-    padding: 10px 12px;
+    padding: 8px 12px;
     background-color: #24a0ed;
     color: #ffffff;
     text-decoration: none;
@@ -202,17 +206,6 @@
         .link-button:hover {
             background-color: #000000;
         }
-        .category-link:hover {
-            background-color: initial; /* Resetting background color */
-            color: initial; /* Resetting text color */
-        }
-
-        .image:hover {
-            background-color: initial;
-            transform: initial;
-            box-shadow: initial;
-        }
-    }
 
 .container {
     max-width: 800px;
@@ -236,7 +229,7 @@
 .categories {
     text-align: center;
     margin-bottom: 20px;
-    padding: 10px 10px 10px 15px; /* Adjusted padding */
+    padding: 10px 10px 10px -5px; /* Adjusted padding */
     overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
     white-space: nowrap; /* Prevent categories from wrapping */
 }
@@ -247,10 +240,10 @@
 }
         .category-link {
         display: inline-block; /* Display categories in a row */
-        margin-right: 15px;
+        margin-right: 10px;
         color: #000;
         text-decoration: none;
-        padding: 2px 6px;
+        padding: 3px 6px;
         border-radius: 10px;
         cursor: pointer;
         border: 1px solid #ddd; /* 1 pixel border */
@@ -417,7 +410,7 @@
 <!-- Page Container -->
 <div class="page-container">
 
-<div class="container" style="margin-top: 30px;"> <!-- Added margin-top -->
+<div class="container" style="margin-top: 45px;"> <!-- Added margin-top -->
     <div class="categories">
             <a href="/me" class="category-link">About</a>
             <a href="/podcasts" class="category-link">Podcasts</a>
