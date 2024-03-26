@@ -332,7 +332,57 @@
 .categories::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the thumb color with opacity */
 }
-</style>
+    .footer {
+      background-color: #f8f8f8;
+      padding: 40px 0;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      flex: 1 0 100%;
+      padding-left: 20px; /* Add left padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+      margin-bottom: 20px;
+      text-align: left; /* Align text to the left */
+    }
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left; /* Align title to the left */
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .footer-section ul li a:hover {
+      color: #007bff;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .privacy-policy {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+    @media (min-width: 768px) {
+      .footer-section {
+        flex: 1 0 33.33%; /* Adjust width for desktop to fit three sections in a row */
+      }
+    }
+  </style>
 
 </head>
 
@@ -362,7 +412,7 @@
 
 <div class="container" style="margin-top: 30px;"> <!-- Added margin-top -->
     <div class="categories">
-            <a href="/about" class="category-link">About</a>
+            <a href="/me" class="category-link">About me</a>
             <a href="/podcasts" class="category-link">Podcasts</a>
             <a href="https://blog.mohdasif.com" class="category-link">Blog</a>
             <a href="/music" class="category-link">Music</a>
@@ -428,18 +478,44 @@
 
 </div>
 
-<div class="content-container" style="background-color: #003366; color: #fff; padding: 5px 10px; border-radius: 0px; font-size: 14px;">
-    <a href="/privacy" style="color: #fff; text-decoration: none; margin-right: 10px;">Privacy Policy</a> | 
-    <a href="/tos" style="color: #fff; text-decoration: none; margin-left: 10px; margin-right: 10px;">Terms of Service</a> | 
-    <a href="/sitemap" style="color: #fff; text-decoration: none; margin-left: 10px;">Sitemap</a>
-</div>
-
-
-
-
-        <!-- Your existing scripts or closing body/html tags -->
+    <div class="content-container">
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Pages</h3>
+      <ul>
+        <li><a href="/me">About me</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/workouts">Workouts</a></li>
+      </ul>
     </div>
+    <div class="footer-section">
+      <h3>Articles</h3>
+      <ul>
+        <li><a href="https://blog.mohdasif.com">Blog</a></li>
+        <li><a href="https://www.linkedin.com/in/mohdasif">Linkedin</a></li>
+        <li><a href="https://www.quora.com/mohdasif">Quora</a></li>
+        <li><a href="https://medium.com/@mohd.asif">Medium</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="https://www.amazon.in/shop/mohdasif/list/1DSMCDWBG5649?ref_=aip_sf_list_spv_ofs_mixed_d">Supplements</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif/list/330AGHCE4U9NB?ref_=aip_sf_list_spv_ons_mixed_d">Healthy Foods</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif/list/ZULLJSSHYLJO?ref_=aip_sf_list_spv_ons_mixed_d">Gym Accessories</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif/list/1MFAOSLSAQWKU?ref_=aip_sf_list_spv_ons_mixed_d">Gadgets</a></li>
+      </ul>
+    </div>
+  </div>
+<div class="privacy-policy">
+    <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> | 
+    <a href="/tos" style="font-weight: normal;">Terms of Use</a> | 
+    <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
+    <p>&copy; 2024 @mohdasif. All rights reserved.</p>
+</div>
+</footer>
 
 </body>
-
 </html>
