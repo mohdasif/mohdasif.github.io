@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Blog</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #desktop-navigation,
+        #mobile-navigation {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 7px;
+            font-size: 18.7px; /* Increase font size for zoom effect */
+            padding: 7px; /* Padding for top and bottom */
+            padding-left: 5px; /* Additional padding for left */
+            padding-right: 6px; /* Additional padding for right */
+            margin: 0px; /* Margin for top, right, bottom, and left */
+            font-weight: bold;
+            right: 8px; /* Position the navigation slightly away from the right side */
+            display: block; /* Ensure the desktop navigation is visible */
+        }
+
+
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 16px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
+
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
+        }
+
+        #mobile-navigation {
+            background-color: #FDFCFA;
+            color: #000;
+            padding: 10px;
+            display: none;
+            font-size: 18px; /* Adjust the font size as needed */
+            left: 0; /* Align to the left edge */
+            transform: translateX(-12px); /* Move the navigation slightly to the left */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: left;
+        }
+
+        .blog-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .blog-card {
+            flex: 1 1 calc(25% - 20px); /* Adjust width for three columns */
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+            margin-bottom: 10px;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .blog-card-content {
+            padding: 20px;
+        }
+
+        /* CSS for centering only the heading "Latest Blog Posts" */
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px; /* Add margin for spacing */
+        }
+
+        /* CSS for centering the feature section and setting up grid layout */
+        .featured-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns, each occupying 1/3 of the available space */
+            gap: 20px; /* Gap between grid items */
+            justify-content: center; /* Center the grid */
+            margin-top: 10px; /* Add margin for spacing */
+        }
+
+        .featured-post {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .featured-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .featured-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .featured-post-content {
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1 0 100%;
+            padding-left: 20px; /* Add left padding */
+            box-sizing: border-box; /* Include padding in width calculation */
+            margin-bottom: 20px;
+            text-align: left; /* Align text to the left */
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: left; /* Align title to the left */
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: normal; /* Change font weight to normal */
+        }
+
+        .footer-section ul li a:hover {
+            color: #007bff;
+            font-weight: normal; /* Change font weight to normal */
+        }
+
+        .privacy-policy {
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-section {
+                flex: 1;
+            }
+
+            .footer-section:first-child {
+                text-align: left;
+            }
+
+            .footer-section:last-child {
+                text-align: right;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .blog-card {
+                flex: 1 1 100%;
+            }
+
+            .featured-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .featured-post {
+                width: 100%;
+            }
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="https://mohdasif.com/">Home</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/gallery">Photos</a>
+        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-navigation">
+        <a href="https://mohdasif.com/">🏠</a>
+        <a href="/about">📝</a>
+        <a href="/photos">📷</a>
+        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
+        <a href="/contact">💬</a>
+    </div>
+
+    <section>
+        <h2>Latest Blog Posts</h2>
+
+        <div class="blog-cards">
+            <!-- Blog Post 1 -->
+            <div class="blog-card">
+                <a href="https://blog.mohdasif.com/2024/03/cracking-protein-code-what-dr-mike-and.html">
+                    <img src="https://storage.googleapis.com/mohdasif/web/deadlift.jpg" alt="Blog Post 1">
+                </a>
+                <div class="blog-card-content">
+                    <h3><a href="#">Cracking the Protein Code: What Dr. Mike and Menno Henselmans Have to Say</a></h3>
+                    <p>Dr. Mike and Menno Henselmans debunk common myths about protein requirements, emphasizing that natural athletes don’t need as much protein as often believed. The discussion includes a detailed analysis of scientific studies and practical recommendations for different groups.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="blog-card">
+                <a href="https://blog.mohdasif.com/2024/03/why-ive-switched-to-microsoft-copilot.html">
+                    <img src="https://storage.googleapis.com/mohdasif/web/copilot.jpg" alt="Blog Post 2">
+                </a>
+                <div class="blog-card-content">
+                    <h3><a href="#">Why I've Switched to Microsoft Copilot for My Daily AI Interactions</a></h3>
+                    <p>Hey there! I've been on the AI assistant bandwagon for a while now, and I've tried my fair share of them. But recently, I made the switch to Microsoft Copilot, and honestly, I haven't looked back. Let me tell you why.</p>
+                </div>
+            </div>
+
+
+    </section>
+
+
+
+    <footer class="footer">
+
+        <div class="privacy-policy">
+            <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> |
+            <a href="/terms" style="font-weight: normal;">Terms of Use</a> |
+            <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
+            <p>&copy; 2024 @mohdasif. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
