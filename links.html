@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | About</title>
+    <title>Asif | Links</title>
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
-    <!-- Add this style block to hide navigation links -->
     <style>
         body {
             background-color: #f4f4f4;
@@ -165,12 +164,12 @@
 
 .center-section .link-button:not(.last-buttons) {
     display: inline-block;
-    padding: 9px 20px 9px 15px; /* Adjust the padding-left to move the text to the left */
+    padding: 8px 15px;
     background-color: #24a0ed;
     color: #ffffff;
     text-decoration: none;
     border: 0px solid black;
-    border-radius: 20px;
+    border-radius: 30px;
     margin: 5px;
     width: 75px; /* Set a fixed width */
     height: 20px; /* Set a fixed height */
@@ -178,7 +177,7 @@
 }
 .center-section .link-button.last-buttons {
     display: inline-block;
-    padding: 8px 12px;
+    padding: 10px 12px;
     background-color: #24a0ed;
     color: #ffffff;
     text-decoration: none;
@@ -206,124 +205,35 @@
         .link-button:hover {
             background-color: #000000;
         }
+    </style>
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-    padding-bottom: 20px; /* Add space at the bottom */
-}
+    <!-- Additional styles -->
+    <style>
+        
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: transparent;
+            color: black;
+            padding: 5px 9px;
+            border: none;
+            cursor: pointer;
+            border: 0.9px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 17px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
 
-/* Media query for desktop screens */
-@media only screen and (max-width: 600px) {
-    .container {
-        padding-bottom: 0; /* Remove the space at the bottom on mobile */
-    }
-}
-    h1 {
-        text-align: center;
-        margin-bottom: 30px;
-        color: #333;
-    }
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
 
-.categories {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 15px 10px 10px =7px; /* Adjusted padding */
-    overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
-    white-space: nowrap; /* Prevent categories from wrapping */
-}
-
-/* Hide the scrollbar for webkit browsers (Chrome, Safari) */
-.categories::-webkit-scrollbar {
-    display: none;
-}
-        .category-link {
-        display: inline-block; /* Display categories in a row */
-        margin-right: 15px; /* Adjusted margin for space between category links */
-        color: #000;
-        text-decoration: none;
-        padding: 3px 8px;
-        border-radius: 10px;
-        cursor: pointer;
-        border: 1px solid #ddd; /* 1 pixel border */
-        background-color: #fff;
-        font-weight: normal; /* Set font weight to normal */
-    }
-
-    .category-link:hover {
-        background-color: #f4f4f4;
-        color: black; /* White text on hover */
-    }
-
-    .articles-section {
-        display: none;
-        margin-top: 0px;
-    }
-
-    .articles-section.active {
-        display: block;
-    }
-
-    .article-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .article-list li {
-        background: #fff;
-        border-radius: 5px;
-        margin-bottom: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .article-list a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        padding: 20px;
-    }
-
-    .article-list a:hover {
-        background-color: #f5f5f5;
-    }
-
-/* Mobile Styles */
-@media only screen and (max-width: 600px) {
-    .categories {
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent categories from wrapping */
-        padding-bottom: 10px; /* Add bottom padding to make room for scrollbar */
-    }
-
-    /* Disable background color change on hover for category links */
-    .category-link:hover {
-        background-color: initial;
-        color: initial;
-    }
-
-    /* Maintain background color for active category links */
-    .category-link.active {
-        background-color: #f4f4f4;
-        color: #000;
-    }
-    /* Disable active state for category links */
-    .category-link:active {
-        background-color: #f4f4f4; /* Set background color when category link is active (clicked/touched) */
-        color: #000; /* Set text color when category link is active (clicked/touched) */
-    }
-}
-    /* Adjust the opacity of the scrollbar/slider */
-.categories::-webkit-scrollbar {
-    opacity: 0.5; /* Adjust the opacity value (0.5 for 50% opacity) */
-}
-
-/* Optionally, you can adjust the appearance of the scrollbar thumb */
-.categories::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the thumb color with opacity */
-}
+            /* Apply margin to the desktop navigation */
+            #desktop-navigation {
+                margin-bottom: px; /* Adjust the margin as needed for desktop */
+            }
+        }
     .footer {
       background-color: #f8f8f8;
       padding: 40px 0;
@@ -383,7 +293,6 @@
             }
         }
     </style>
-
 </head>
 
 <body>
@@ -409,16 +318,17 @@
 
 <!-- Page Container -->
 <div class="page-container">
+    <br> <br> <!-- Add two <br> for mobile -->
 
-<div class="container" style="margin-top: 40px;"> <!-- Added margin-top -->
-    <div class="categories">
-            <a href="/me" class="category-link">About</a>
-            <a href="/podcasts" class="category-link">Podcasts</a>
-            <a href="/poetry" class="category-link">Poetry</a>
-            <a href="/workouts" class="category-link">Workouts</a>
-            <a href="/music" class="category-link">Music</a>
-        </div>
-    </div>
+    <!-- Your content goes here -->
+<button class="custom-button" onclick="window.location.href='/me'">About</button>       
+
+<button class="custom-button" onclick="window.location.href='/podcasts'">Podcasts</button>
+
+<button class="custom-button" onclick="window.location.href='/music'">Music</button>
+
+<button class="custom-button" onclick="window.location.href='/workouts'">Workout</button>
+
 
     <div class="content-container">
     <div class="center-section">
@@ -429,7 +339,7 @@
         <li><a href="https://quora.com/mohdasif" class="link-button">Quora</a></li>
         <li><a href="https://www.tumblr.com/mohdasif" class="link-button">Tumblr</a></li>
         <li><a href="https://flipboard.com/@mohdasif" class="link-button">Flipboard</a></li>
-     </ul>
+    </ul>
 </div>
 
 <!-- Add the JavaScript script here -->
@@ -447,8 +357,6 @@
     youtubeLink.href = 'https://www.youtube.com/@mohdasif';
   }
 </script>
-
-
 </div>
 
 <div class="privacy-policy">
