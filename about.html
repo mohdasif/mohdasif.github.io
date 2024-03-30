@@ -118,7 +118,7 @@
         a {
             text-decoration: none;
             color: #4285f4;
-            font-weight: bold;
+            font-weight: normal;
         }
 
         a:hover {
@@ -329,9 +329,9 @@
 
 /* Style the "View More" button */
 .more a {
-    padding: 3px 8px; /* Adjust padding to make the button smaller */
+    padding: 3px 6px; /* Adjust padding to make the button smaller */
     font-size: 12px; /* Adjust font size to make the button text smaller */
-    border: 2px solid #ddd; /* 1 pixel border */
+    border: 1px solid #ddd; /* 1 pixel border */
     border-radius: 20px; /* Make the button round */
     text-decoration: none; /* Remove underline */
     background-color: #fff; /* Add background color */
@@ -371,80 +371,61 @@
 
 <!-- Page Container -->
 <div class="page-container">
-    <!-- Your content goes here -->
-
-<!-- Content Container -->
-<div class="content-container">
-    <div class="links-container" style="text-align: left;">
-        <h2>About</h2>
-        <!-- About Text -->
-        <p class="profile-text">
-            Passionate about books, podcasts, and poetry. Dedicated to fitness, constant learning, and minimalist living. Join me as I share thoughts & experiences centered around these interests.
-        </p>
-<div class="more"> <!-- Add the "more" class to the parent container -->
-    <!-- View More Link -->
-    <a href="/me" class="more a">View More</a> <!-- Adjust the link's class to "more a" -->
-</div>
-    <!-- Rest of your content -->
-</div>
-
+    <!-- Content Container for About Section -->
     <div class="content-container">
-    <div class="center-section">
-    <p class="center-section"><strong>Links</strong></p>
-    <ul>
-        <li><a href="https://clubhouse.com/@mohdasif" class="link-button">Clubhouse</a></li>
-        <li><a href="https://www.youtube.com/@mohdasif" class="link-button" id="youtubeLink">YouTube</a></li>
-        <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin">LinkedIn</a></li>
-        <li><a href="https://reddit.com/user/mohdasif" class="link-button">Reddit</a></li>
-        <li><a href="https://pinterest.com/mohdasif" class="link-button">Pinterest</a></li>
-        <li><a href="/links" class="link-button last-buttons">⌵</a></li>
-    </ul>
-</div>
+        <div class="links-container" style="text-align: left;">
+            <h2>About</h2>
+            <!-- About Text -->
+            <p class="profile-text">
+                Passionate about books, podcasts, and poetry. Dedicated to fitness, constant learning, and minimalist living. Join me as I share thoughts & experiences centered around these interests.
+            </p>
+            <div class="more"> <!-- Add the "more" class to the parent container -->
+                <!-- View More Link -->
+                <a href="/me" class="more a">Get to Know Me</a> <!-- Adjust the link's class to "more a" -->
+            </div>
+        </div>
+    </div>
 
-<!-- Add the JavaScript script here -->
-<script>
-  // Check if the user is on a mobile device
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  // Get the YouTube link element by its ID
-  var youtubeLink = document.getElementById('youtubeLink');
-
-  // Set the href attribute based on the device type
-  if (isMobile) {
-    youtubeLink.href = 'https://m.youtube.com/@mohdasif';
-  } else {
-    youtubeLink.href = 'https://www.youtube.com/@mohdasif';
-  }
-</script>
-</div>
+    <!-- Content Container for Links Section -->
     <div class="content-container">
-<h3>Bookshelves</h3>
-<ul>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=currently-reading')">
-            Reading
-        </button>
-    </li>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=to-read')">
-            Want to Read
-        </button>
-    </li>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=read')">
-            Read
-        </button>
-    </li>
-</ul>
+        <div class="center-section">
+            <p class="center-section"><strong>Links</strong></p>
+            <ul>
+                <li><a href="https://clubhouse.com/@mohdasif" class="link-button">Clubhouse</a></li>
+                <li><a href="https://www.youtube.com/@mohdasif" class="link-button" id="youtubeLink">YouTube</a></li>
+                <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin">LinkedIn</a></li>
+                <li><a href="https://reddit.com/user/mohdasif" class="link-button">Reddit</a></li>
+                <li><a href="https://pinterest.com/mohdasif" class="link-button">Pinterest</a></li>
+                <li><a href="/links" class="link-button last-buttons">⌵</a></li>
+            </ul>
+        </div>
+    </div>
 
-<script>
-    function openGoodreads(url) {
-        window.open(url, '_blank');
-    }
-</script>
+    <!-- Content Container for Bookshelves Section -->
+    <div class="content-container">
+        <h3>Bookshelves</h3>
+        <ul>
+            <li>
+                <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=currently-reading')">
+                    Reading
+                </button>
+            </li>
+            <li>
+                <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=to-read')">
+                    Want to Read
+                </button>
+            </li>
+            <li>
+                <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=read')">
+                    Read
+                </button>
+            </li>
+        </ul>
+    </div>
 
-</div>
+</div> <!-- Close the page-container div here -->
 
+<!-- Add the footer section -->
 <div class="privacy-policy">
     <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> | 
     <a href="/terms" style="font-weight: normal;">Terms of Use</a> | 
@@ -452,6 +433,5 @@
     <p>&copy; 2024 @mohdasif. All rights reserved.</p>
 </div>
 </footer>
-
 </body>
 </html>
