@@ -1,3 +1,140 @@
-This is a test for articles page...
+<!DOCTYPE html>
+<html lang="en">
 
-ℹ️
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .categories {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .category-link {
+            margin-right: 10px;
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+        }
+
+        .category-link:hover {
+            background-color: #e0e0e0;
+        }
+
+        .articles-section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .articles-section.active {
+            display: block;
+        }
+
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .article-list li {
+            background: #fff;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .article-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-list a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        .article-list a:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Articles</h1>
+        <div class="categories">
+            <a href="#fitness" class="category-link">Fitness</a>
+            <a href="#tech" class="category-link">Tech</a>
+            <a href="#travel" class="category-link">Travel</a>
+            <a href="#food" class="category-link">Food</a>
+        </div>
+        <div id="fitness" class="articles-section active">
+            <ul class="article-list">
+                <li><a href="#">10 Tips for Better Sleep</a></li>
+            </ul>
+        </div>
+        <div id="tech" class="articles-section">
+            <ul class="article-list">
+                <li><a href="https://blog.mohdasif.com/2024/03/why-ive-switched-to-microsoft-copilot.html">Introduction to Machine Learning</a></li>
+            </ul>
+        </div>
+        <div id="travel" class="articles-section">
+            <ul class="article-list">
+                <li><a href="#">Exploring National Parks: A Travel Guide</a></li>
+            </ul>
+        </div>
+        <div id="food" class="articles-section">
+            <ul class="article-list">
+                <li><a href="#">5 Delicious Smoothie Recipes</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const categoryLinks = document.querySelectorAll('.category-link');
+        const articlesSections = document.querySelectorAll('.articles-section');
+
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const targetSectionId = link.getAttribute('href').substring(1);
+                articlesSections.forEach(section => {
+                    if (section.id === targetSectionId) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
