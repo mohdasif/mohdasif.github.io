@@ -27,16 +27,20 @@
         }
 
 
-#desktop-navigation {
-    background-color: #333;
-    color: #fff;
-    padding: 4px 2px; /* Combined padding */
-    font-size: 18.7px;
-    margin: 0px;
-    font-weight: bold;
-    right: 8px;
-    display: block;
-}
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 7px;
+            font-size: 18.7px; /* Increase font size for zoom effect */
+            padding:7px; /* Padding for top and bottom */
+            padding-left: 5px; /* Additional padding for left */
+            padding-right: 6px; /* Additional padding for right */
+            padding: 6px 7px; /* Increase padding for more space */
+            margin: 0px; /* Margin for top, right, bottom, and left */
+            font-weight: bold;
+            right: 8px; /* Position the navigation slightly away from the right side */
+            display: block; /* Ensure the desktop navigation is visible */
+        }
 
 
         #desktop-navigation a,
@@ -114,7 +118,7 @@
         a {
             text-decoration: none;
             color: #4285f4;
-            font-weight: bold;
+            font-weight: normal;
         }
 
         a:hover {
@@ -159,14 +163,15 @@
             text-align: center;
         }
 
+
 .center-section .link-button:not(.last-buttons) {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 9px 13px;
     background-color: #24a0ed;
     color: #ffffff;
     text-decoration: none;
     border: 0px solid black;
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 5px;
     width: 75px; /* Set a fixed width */
     height: 20px; /* Set a fixed height */
@@ -174,7 +179,7 @@
 }
 .center-section .link-button.last-buttons {
     display: inline-block;
-    padding: 10px 12px;
+    padding: 8px 12px;
     background-color: #24a0ed;
     color: #ffffff;
     text-decoration: none;
@@ -202,17 +207,6 @@
         .link-button:hover {
             background-color: #000000;
         }
-        .category-link:hover {
-            background-color: initial; /* Resetting background color */
-            color: initial; /* Resetting text color */
-        }
-
-        .image:hover {
-            background-color: initial;
-            transform: initial;
-            box-shadow: initial;
-        }
-    }
 
 .container {
     max-width: 800px;
@@ -233,104 +227,7 @@
         color: #333;
     }
 
-.categories {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 10px 10px 10px 15px; /* Adjusted padding */
-    overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
-    white-space: nowrap; /* Prevent categories from wrapping */
-}
 
-/* Hide the scrollbar for webkit browsers (Chrome, Safari) */
-.categories::-webkit-scrollbar {
-    display: none;
-}
-        .category-link {
-        display: inline-block; /* Display categories in a row */
-        margin-right: 15px;
-        color: #000;
-        text-decoration: none;
-        padding: 2px 6px;
-        border-radius: 10px;
-        cursor: pointer;
-        border: 1px solid #ddd; /* 1 pixel border */
-        background-color: #fff;
-        font-weight: normal; /* Set font weight to normal */
-    }
-
-    .category-link:hover {
-        background-color: #f4f4f4;
-        color: black; /* White text on hover */
-    }
-
-    .articles-section {
-        display: none;
-        margin-top: 0px;
-    }
-
-    .articles-section.active {
-        display: block;
-    }
-
-    .article-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .article-list li {
-        background: #fff;
-        border-radius: 5px;
-        margin-bottom: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .article-list a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        padding: 20px;
-    }
-
-    .article-list a:hover {
-        background-color: #f5f5f5;
-    }
-
-/* Mobile Styles */
-@media only screen and (max-width: 600px) {
-    .categories {
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent categories from wrapping */
-        padding-bottom: 10px; /* Add bottom padding to make room for scrollbar */
-    }
-
-    /* Disable background color change on hover for category links */
-    .category-link:hover {
-        background-color: initial;
-        color: initial;
-    }
-
-    /* Maintain background color for active category links */
-    .category-link.active {
-        background-color: #f4f4f4;
-        color: #000;
-    }
-    /* Disable active state for category links */
-    .category-link:active {
-        background-color: #f4f4f4; /* Set background color when category link is active (clicked/touched) */
-        color: #000; /* Set text color when category link is active (clicked/touched) */
-    }
-}
-    /* Adjust the opacity of the scrollbar/slider */
-.categories::-webkit-scrollbar {
-    opacity: 0.5; /* Adjust the opacity value (0.5 for 50% opacity) */
-}
-
-/* Optionally, you can adjust the appearance of the scrollbar thumb */
-.categories::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the thumb color with opacity */
-}
     .footer {
       background-color: #f8f8f8;
       padding: 40px 0;
@@ -391,6 +288,71 @@
         }
     </style>
 
+    <!-- Additional styles -->
+    <style>
+        
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: transparent;
+            color: black;
+            padding: 5px 9px;
+            border: none;
+            cursor: pointer;
+            border: 0.9px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 17px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+
+            /* Apply margin to the desktop navigation */
+            #desktop-navigation {
+                margin-bottom: px; /* Adjust the margin as needed for desktop */
+            }
+        }
+/* Adjust the size of the "View More" button */
+.more {
+    display: inline-block; /* Ensures the button takes up only necessary space */
+}
+
+/* Center the "View More" button */
+.more {
+    display: left; /* Use flexbox to center button */
+    justify-content: left; /* Center button horizontally */
+    align-items: left; /* Center button vertically */
+}
+
+/* Style the "View More" button */
+.more a {
+    padding: 3px 6px; /* Adjust padding to make the button smaller */
+    font-size: 12px; /* Adjust font size to make the button text smaller */
+    border: 1px solid black;
+    border-radius: 20px; /* Make the button round */
+    text-decoration: none; /* Remove underline */
+    background-color: #fff; /* Add background color */
+    color: black; /* Add text color */
+    transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+/* Hover effect for the "View More" button */
+.more a:hover {
+    background-color: #333; /* Darken background color on hover */
+    color: white; /* Change text color on hover */
+}
+#bookshelves-container {
+    background-image: url('https://storage.googleapis.com/mohdasif/web/books.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+    </style>
+
 </head>
 
 <body>
@@ -417,81 +379,70 @@
 <!-- Page Container -->
 <div class="page-container">
 
-<div class="container" style="margin-top: 30px;"> <!-- Added margin-top -->
-    <div class="categories">
-            <a href="/me" class="category-link">About</a>
-            <a href="/podcasts" class="category-link">Podcasts</a>
-            <a href="https://blog.mohdasif.com" class="category-link">Blog</a>
-            <a href="/music" class="category-link">Music</a>
-            <a href="/workouts" class="category-link">Workouts</a>
-            <a href="https://www.amazon.in/shop/mohdasif" class="category-link">Shop</a>
+    <!-- Content Container for Links Section -->
+    <div class="content-container">
+        <div class="center-section">
+            <p class="center-section"><strong>Links</strong></p>
+            <ul>
+                <li><a href="https://clubhouse.com/@mohdasif" class="link-button">Clubhouse</a></li>
+                <li><a href="https://www.youtube.com/@mohdasif" class="link-button" id="youtubeLink">YouTube</a></li>
+                <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin">LinkedIn</a></li>
+                <li><a href="https://reddit.com/user/mohdasif" class="link-button">Reddit</a></li>
+                <li><a href="https://pinterest.com/mohdasif" class="link-button">Pinterest</a></li>
+                <li><a href="/links" class="link-button last-buttons">⌵</a></li>
+            </ul>
         </div>
     </div>
 
-    <div class="content-container">
-    <div class="center-section">
-    <p class="center-section"><strong>Links</strong></p>
-    <ul>
-        <li><a href="https://clubhouse.com/@mohdasif" class="link-button">Clubhouse</a></li>
-        <li><a href="https://www.youtube.com/@mohdasif" class="link-button" id="youtubeLink">YouTube</a></li>
-        <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin">LinkedIn</a></li>
-        <li><a href="https://reddit.com/user/mohdasif" class="link-button">Reddit</a></li>
-        <li><a href="https://pinterest.com/mohdasif" class="link-button">Pinterest</a></li>
-        <li><a href="/links" class="link-button last-buttons">⌵</a></li>
-    </ul>
+<div class="page-container">
+    <!-- Content Container for About Section -->
+
+        <div class="links-container" style="text-align: left;">
+            <h3>About</h3>
+            <!-- About Text -->
+            <p class="profile-text">
+                Passionate about reading, poetry, fitness and minimalist living. 📚✒️🏋️‍♂️🌿            </p>
+            <div class="more"> <!-- Add the "more" class to the parent container -->
+                <!-- View More Link -->
+                <a href="/me" class="more a">View more</a> <!-- Adjust the link's class to "more a" -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Container for Bookshelves Section -->
+    <div class="content-container" id="bookshelves-container">
+        <h3>Bookshelves</h3>
+        <ul>
+            <li>
+                <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=currently-reading')">
+                    Reading
+                </button>
+            </li>
+            <li>
+                <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=to-read')">
+                    Want to Read
+                </button>
+            </li>
+            <li>
+                <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=read')">
+                    Read
+                </button>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <!-- Footer Section -->
+    <div class="privacy-policy">
+        <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> | 
+        <a href="/terms" style="font-weight: normal;">Terms of Use</a> | 
+        <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
+        <p>&copy; 2024 @mohdasif. All rights reserved.</p>
+    </div>
 </div>
 
-<!-- Add the JavaScript script here -->
-<script>
-  // Check if the user is on a mobile device
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  // Get the YouTube link element by its ID
-  var youtubeLink = document.getElementById('youtubeLink');
-
-  // Set the href attribute based on the device type
-  if (isMobile) {
-    youtubeLink.href = 'https://m.youtube.com/@mohdasif';
-  } else {
-    youtubeLink.href = 'https://www.youtube.com/@mohdasif';
-  }
-</script>
-</div>
-    <div class="content-container">
-<h3>Bookshelves</h3>
-<ul>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=currently-reading')">
-            Reading
-        </button>
-    </li>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=to-read')">
-            Want to Read
-        </button>
-    </li>
-    <li>
-        <button class="blank-button" style="padding: 8px 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 15px; cursor: pointer;" onclick="openGoodreads('https://www.goodreads.com/review/list/57681068-asif?shelf=read')">
-            Read
-        </button>
-    </li>
-</ul>
-
-<script>
-    function openGoodreads(url) {
-        window.open(url, '_blank');
-    }
-</script>
-
-</div>
-
-<div class="privacy-policy">
-    <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> | 
-    <a href="/tos" style="font-weight: normal;">Terms of Use</a> | 
-    <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
-    <p>&copy; 2024 @mohdasif. All rights reserved.</p>
-</div>
 </footer>
-
+</div> <!-- Close the page-container div here -->
 </body>
 </html>
