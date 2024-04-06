@@ -368,7 +368,6 @@
         <a href="/contact">💬</a>
     </div>
 
-
 <!-- Page Container -->
 <div class="page-container">
 
@@ -386,6 +385,23 @@
             </ul>
         </div>
     </div>
+
+    <!-- Add the JavaScript script here -->
+    <script>
+      // Check if the user is on a mobile device
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      // Get the YouTube link element by its ID
+      var youtubeLink = document.getElementById('youtubeLink');
+
+      // Set the href attribute based on the device type
+      if (isMobile) {
+        youtubeLink.href = 'https://m.youtube.com/@mohdasif';
+      } else {
+        youtubeLink.href = 'https://www.youtube.com/@mohdasif';
+      }
+    </script>
+</div>
 
 <div class="page-container">
     <!-- Content Container for About Section -->
