@@ -221,6 +221,7 @@
         padding-bottom: 0; /* Remove the space at the bottom on mobile */
     }
 }
+
     h1 {
         text-align: center;
         margin-bottom: 30px;
@@ -286,7 +287,32 @@
                 text-align: right; /* Align last section (Shop) to the right */
             }
         }
-    </style>
+        
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: transparent;
+            color: black;
+            padding: 5px 9px;
+            border: none;
+            cursor: pointer;
+            border: 0.9px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 17px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+
+    @media (max-width: 767px) {
+        .custom-button {
+            display: none; /* Hide the custom button on mobile screens */
+        }
+    }
+</style>
 
     <!-- Additional styles -->
     <style>
@@ -295,7 +321,7 @@
         .custom-button {
             background-color: transparent;
             color: black;
-            padding: 5px 9px;
+            padding: 4px 7px;
             border: none;
             cursor: pointer;
             border: 0.9px solid black;
@@ -370,6 +396,18 @@
 
 <!-- Page Container -->
 <div class="page-container">
+<br> <!-- Add two <br> for mobile -->
+
+    <!-- Your content goes here -->
+<button class="custom-button" onclick="window.location.href='/poetry'">Poetry</button>      
+
+<button class="custom-button" onclick="window.location.href='/podcasts'">Podcasts</button>
+
+<button class="custom-button" onclick="window.location.href='/music'">Music</button>
+
+<button class="custom-button" onclick="window.location.href='/workouts'">Workouts</button>
+
+<!-- Page Container -->
 
     <!-- Content Container for Links Section -->
     <div class="content-container">
@@ -452,6 +490,6 @@
 </div>
 
 </footer>
-</div> <!-- Close the page-container div here -->
+</div> <!-- Close the page-container div here. -->
 </body>
 </html>
