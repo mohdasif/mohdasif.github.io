@@ -221,6 +221,7 @@
         padding-bottom: 0; /* Remove the space at the bottom on mobile */
     }
 }
+
     h1 {
         text-align: center;
         margin-bottom: 30px;
@@ -286,7 +287,32 @@
                 text-align: right; /* Align last section (Shop) to the right */
             }
         }
-    </style>
+        
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: transparent;
+            color: black;
+            padding: 5px 9px;
+            border: none;
+            cursor: pointer;
+            border: 0.9px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 17px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+
+    @media (max-width: 767px) {
+        .custom-button {
+            display: none; /* Hide the custom button on mobile screens */
+        }
+    }
+</style>
 
     <!-- Additional styles -->
     <style>
@@ -344,13 +370,6 @@
     background-color: #333; /* Darken background color on hover */
     color: white; /* Change text color on hover */
 }
-#bookshelves-container {
-    background-image: url('https://storage.googleapis.com/mohdasif/web/books.webp');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-}
-
     </style>
 
 </head>
@@ -375,9 +394,21 @@
         <a href="/contact">💬</a>
     </div>
 
-
 <!-- Page Container -->
 <div class="page-container">
+<br> <!-- Add two <br> for mobile -->
+
+    <!-- Your content goes here -->
+<button class="custom-button" onclick="window.location.href='/me'">About</button>       
+
+<button class="custom-button" onclick="window.location.href='/poetry'">Poetry</button>
+
+<button class="custom-button" onclick="window.location.href='/music'">Music</button>
+
+<button class="custom-button" onclick="window.location.href='/workouts'">Workouts</button>
+
+
+<!-- Page Container -->
 
     <!-- Content Container for Links Section -->
     <div class="content-container">
@@ -394,6 +425,23 @@
         </div>
     </div>
 
+    <!-- Add the JavaScript script here -->
+    <script>
+      // Check if the user is on a mobile device
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      // Get the YouTube link element by its ID
+      var youtubeLink = document.getElementById('youtubeLink');
+
+      // Set the href attribute based on the device type
+      if (isMobile) {
+        youtubeLink.href = 'https://m.youtube.com/@mohdasif';
+      } else {
+        youtubeLink.href = 'https://www.youtube.com/@mohdasif';
+      }
+    </script>
+
+
 <div class="page-container">
     <!-- Content Container for About Section -->
 
@@ -401,7 +449,7 @@
             <h3>About</h3>
             <!-- About Text -->
             <p class="profile-text">
-                Passionate about reading, poetry, fitness and minimalist living. 📚✒️🏋️‍♂️🌿            </p>
+                Passionate about reading, poetry, fitness and minimalist living.            </p>
             <div class="more"> <!-- Add the "more" class to the parent container -->
                 <!-- View More Link -->
                 <a href="/me" class="more a">View more</a> <!-- Adjust the link's class to "more a" -->
@@ -410,7 +458,7 @@
     </div>
 
     <!-- Content Container for Bookshelves Section -->
-    <div class="content-container" id="bookshelves-container">
+    <div class="content-container">
         <h3>Bookshelves</h3>
         <ul>
             <li>
@@ -443,6 +491,6 @@
 </div>
 
 </footer>
-</div> <!-- Close the page-container div here -->
+</div> <!-- Close the page-container div here. -->
 </body>
 </html>
