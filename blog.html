@@ -121,13 +121,19 @@
 }
 
 /* Display one post per row on mobile */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .blog-card {
         flex: 0 1 calc(100% - 20px); /* Take full container width */
         max-width: calc(100% - 20px); /* Limit maximum width for one column */
     }
 }
 
+/* Increase spacing on the right side for larger screens */
+@media (min-width: 769px) {
+    .blog-card {
+        margin-right: 10px; /* Increase margin on the right side */
+    }
+}
         /* CSS for centering only the heading "Latest Blog Posts" */
         section h2 {
             text-align: center;
