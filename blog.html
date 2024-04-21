@@ -79,39 +79,36 @@
         }
 
         .blog-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Start from the beginning of the container */
-    gap: 20px;
-}
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.blog-card {
-    flex: 0 1 calc(33.33% - 20px); /* Take one-third of the container width */
-    min-width: 250px; /* Set a minimum width for each card */
-    max-width: calc(33.33% - 20px); /* Limit maximum width for three columns */
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease-in-out;
-    margin-bottom: 10px;
-}
+        .blog-card {
+            flex: 1 1 calc(25% - 20px); /* Adjust width for three columns */
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+            margin-bottom: 10px;
+        }
 
-.blog-card:hover {
-    transform: translateY(-5px);
-}
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
 
-.blog-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-}
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
 
-.blog-card-content {
-    padding: 20px;
-}
-
+        .blog-card-content {
+            padding: 20px;
+        }
 
         /* CSS for centering only the heading "Latest Blog Posts" */
         section h2 {
