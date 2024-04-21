@@ -112,28 +112,7 @@
     padding: 20px;
 }
 
-/* Adjust layout for smaller screens */
-@media (max-width: 768px) {
-    .blog-card {
-        flex: 0 1 calc(50% - 20px); /* Take half of the container width */
-        max-width: calc(50% - 20px); /* Limit maximum width for two columns */
-    }
-}
 
-/* Display one post per row on mobile */
-@media (max-width: 480px) {
-    .blog-card {
-        flex: 0 1 calc(100% - 20px); /* Take full container width */
-        max-width: calc(100% - 20px); /* Limit maximum width for one column */
-    }
-}
-
-/* Increase spacing on the right side for larger screens */
-@media (min-width: 769px) {
-    .blog-card {
-        margin-right: 10px; /* Increase margin on the right side */
-    }
-}
         /* CSS for centering only the heading "Latest Blog Posts" */
         section h2 {
             text-align: center;
