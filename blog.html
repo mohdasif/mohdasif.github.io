@@ -79,36 +79,54 @@
         }
 
         .blog-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Start from the beginning of the container */
+    gap: 20px;
+}
 
-        .blog-card {
-            flex: 1 1 calc(33.33% - 20px); /* Adjust width for three columns */
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s ease-in-out;
-            margin-bottom: 10px;
-        }
+.blog-card {
+    flex: 0 1 calc(33.33% - 20px); /* Take one-third of the container width */
+    min-width: 250px; /* Set a minimum width for each card */
+    max-width: calc(33.33% - 20px); /* Limit maximum width for three columns */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: 10px;
+}
 
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
+.blog-card:hover {
+    transform: translateY(-5px);
+}
 
-        .blog-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #ddd;
-        }
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
 
-        .blog-card-content {
-            padding: 20px;
-        }
+.blog-card-content {
+    padding: 20px;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .blog-card {
+        flex: 0 1 calc(50% - 20px); /* Take half of the container width */
+        max-width: calc(50% - 20px); /* Limit maximum width for two columns */
+    }
+}
+
+/* Display one post per row on mobile */
+@media (max-width: 480px) {
+    .blog-card {
+        flex: 0 1 calc(100% - 20px); /* Take full container width */
+        max-width: calc(100% - 20px); /* Limit maximum width for one column */
+    }
+}
 
         /* CSS for centering only the heading "Latest Blog Posts" */
         section h2 {
@@ -299,6 +317,17 @@
     <h2>Latest Blog Posts</h2>
 
     <div class="blog-cards">
+        <!-- Blog Post 4 -->
+        <div class="blog-card">
+            <a href="https://mohdasif.com/2024/04/the-myth-of-bulking-and-cutting.html">
+                <img src="https://photos.mohdasif.com/recompostion.webp" alt="Blog Post 1">
+                <div class="blog-card-content">
+                    <h3><a href="https://mohdasif.com/2024/04/the-myth-of-bulking-and-cutting.html">The Myth of Bulking and Cutting: A New Perspective on Body Recomposition</a></h3>
+                    <p>Explore the paradigm shift in fitness as we debunk the traditional bulking and cutting cycles, unveiling the promising concept of body recomposition—a sustainable approach to simultaneously build muscle and lose fat.</p>
+                </div>
+            </a>
+        </div>
+
         <!-- Blog Post 3 -->
         <div class="blog-card">
             <a href="https://mohdasif.com/2024/04/chatgpt-gemini-and-copilot.html">
