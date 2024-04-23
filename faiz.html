@@ -9,7 +9,7 @@
 
     <style>
         body {
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
@@ -30,10 +30,9 @@
             color: #fff;
             padding: 7px;
             font-size: 18.7px; /* Increase font size for zoom effect */
-            padding:7px; /* Padding for top and bottom */
+            padding: 6px; /* Padding for top and bottom */
             padding-left: 5px; /* Additional padding for left */
-            padding-right: 6px; /* Additional padding for right */
-            padding: 6px 7px; /* Increase padding for more space */
+            padding-right: 7px; /* Additional padding for right */
             margin: 0px; /* Margin for top, right, bottom, and left */
             font-weight: bold;
             right: 8px; /* Position the navigation slightly away from the right side */
@@ -185,46 +184,77 @@
             height: auto; /* Maintain aspect ratio */
             border-radius: 5px; /* Add border radius */
         }
+    .categories {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 10px 10px 10px 35px; /* Adjusted padding */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
 
-        .categories {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 10px 10px 10px 20px; /* Adjusted padding */
-            overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
-            white-space: nowrap; /* Prevent categories from wrapping */
-        }
-
-        /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
         .categories::-webkit-scrollbar {
-            display: none;
-        }
+        display: none;
+    }
 
         .category-link {
-            background-color: white;
-            color: black;
-            padding: 3px 4px;
-            border: none;
-            cursor: pointer;
-            border: 1px solid #ddd; /* 1 pixel border */
-            border-radius: 10px;
-            margin-right: 10px; /* Add margin between buttons for mobile */
-            transform: translateX(7px); /* Move the custom button slightly to the right */
-            font-weight: normal; /* Set font weight to normal */
-            margin-top: 5px; /* Add margin between navigation and buttons */
-            font-size: 14px; /* Adjust the font size as needed */
+        display: inline-block; /* Display categories in a row */
+        margin-right: 15px; /* Adjusted margin for space between category links */
+        color: #000;
+        text-decoration: none;
+        padding: 2px 6px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid #ddd; /* 1 pixel border */
+        background-color: #f5f5f5;
+        font-weight: normal; /* Set font weight to normal */
+    }
+
+        .category-link:hover {
+            background-color: #e0e0e0;
         }
 
-        .category-link:last-child {
-            margin-right: 0; /* Remove margin from the last button for mobile */
-        }
 
-        .custom-line-break {
-            display: block;
-            content: "";
-            margin-top: 1.3em; /* Adjust the margin as needed */
-        }
-        
-    </style>
+    .articles-section {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .articles-section.active {
+        display: block;
+    }
+
+    .article-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .article-list li {
+        background: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .article-list a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    .article-list a:hover {
+        background-color: #f5f5f5;
+    }
+
+    .category-link:hover {
+        background-color: initial; /* Disable background color change on hover */
+        color: initial; /* Reset text color on hover */
+    }
+}
+</style>
 
 </head>
 
