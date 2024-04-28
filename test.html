@@ -338,6 +338,14 @@
         .popup-next {
             right: 10px;
         }
+.popup-container {
+    /* Your existing styles here */
+    transition: transform 0.5s ease; /* Add transition for smoother sliding effect */
+}
+
+.slide-up {
+    transform: translateY(-100%);
+}
     </style>
 
     <!-- Add JavaScript for popup functionality -->
@@ -350,6 +358,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupPrev = document.querySelector(".popup-prev");
     const popupNext = document.querySelector(".popup-next");
     let currentIndex = 0;
+    let slideDirection = 'up';
 
     // Open popup
     function openPopup(index) {
@@ -357,27 +366,31 @@ document.addEventListener("DOMContentLoaded", function () {
         const imgUrl = galleryImages[index].src;
         popupImage.src = imgUrl;
         popupContainer.style.display = "flex";
+        popupContainer.classList.remove('slide-up');
     }
 
     // Close popup
     function closePopup() {
-        popupContainer.style.display = "none";
+        popupContainer.classList.add('slide-up');
+        setTimeout(() => {
+            popupContainer.style.display = "none";
+        }, 500); // Adjust the delay to match the animation duration
     }
 
     // Next image
     function nextImage(event) {
         event.stopPropagation(); // Prevent click event from bubbling up
         currentIndex = (currentIndex + 1) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
+        slideDirection = 'up';
+        popupImage.src = galleryImages[currentIndex].src;
     }
 
     // Previous image
     function prevImage(event) {
         event.stopPropagation(); // Prevent click event from bubbling up
         currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
+        slideDirection = 'down';
+        popupImage.src = galleryImages[currentIndex].src;
     }
 
     // Close popup when clicking outside the image
@@ -395,7 +408,15 @@ document.addEventListener("DOMContentLoaded", function () {
     popupClose.addEventListener("click", closePopup);
     popupPrev.addEventListener("click", prevImage);
     popupNext.addEventListener("click", nextImage);
+
+    // Animation end event listener
+    popupContainer.addEventListener('animationend', function() {
+        if (popupContainer.classList.contains('slide-up')) {
+            popupImage.src = ''; // Reset image source after animation
+        }
+    });
 });
+
     </script>
 </head>
 
