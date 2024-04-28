@@ -327,13 +327,45 @@
         }
     /* Existing styles */
 
+/* Default styles for navigation arrows */
+.popup-navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.popup-prev {
+    left: 10px; /* Default position for the previous arrow */
+}
+
+.popup-next {
+    right: 10px; /* Default position for the next arrow */
+}
+
+/* Adjusted styles for mobile */
+@media only screen and (max-width: 600px) {
     .popup-prev {
-        left: 5px; /* Adjusted position for the previous arrow */
+        left: 2px; /* Adjusted position for the previous arrow */
     }
 
     .popup-next {
-        right: 5px; /* Adjusted position for the next arrow */
+        right: 2px; /* Adjusted position for the next arrow */
     }
+}
+
+/* Adjusted styles for desktop */
+@media only screen and (min-width: 768px) {
+    .popup-prev {
+        left: 400px; /* Adjusted position for the previous arrow */
+    }
+
+    .popup-next {
+        right: 400px; /* Adjusted position for the next arrow */
+    }
+}
     </style>
 
     <!-- Add JavaScript for popup functionality -->
