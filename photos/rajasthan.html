@@ -327,13 +327,45 @@
         }
     /* Existing styles */
 
+/* Default styles for navigation arrows */
+.popup-navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.popup-prev {
+    left: 10px; /* Default position for the previous arrow */
+}
+
+.popup-next {
+    right: 10px; /* Default position for the next arrow */
+}
+
+/* Adjusted styles for mobile */
+@media only screen and (max-width: 600px) {
     .popup-prev {
-        left: 5px; /* Adjusted position for the previous arrow */
+        left: 2px; /* Adjusted position for the previous arrow */
     }
 
     .popup-next {
-        right: 5px; /* Adjusted position for the next arrow */
+        right: 2px; /* Adjusted position for the next arrow */
     }
+}
+
+/* Adjusted styles for desktop */
+@media only screen and (min-width: 768px) {
+    .popup-prev {
+        left: 400px; /* Adjusted position for the previous arrow */
+    }
+
+    .popup-next {
+        right: 400px; /* Adjusted position for the next arrow */
+    }
+}
     </style>
 
     <!-- Add JavaScript for popup functionality -->
@@ -468,13 +500,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="container" style="margin-top: 70px;"> <!-- Added margin-top -->
     <div class="categories">
+        <a href="/photos/rajasthan" class="category-link">Rajasthan</a>
         <a href="/photos/moradabad" class="category-link">Moradabad</a>
         <a href="/photos/personal" class="category-link">Personal</a>
         <a href="/photos/archive" class="category-link">Archive</a>
         <a href="/photos/gym" class="category-link red">Gym</a>
         <a href="/photos/lucknow" class="category-link">Lucknow</a>
         <a href="/photos/nepal" class="category-link">Nepal</a>
-        <a href="/photos/rajasthan" class="category-link">Rajasthan</a>
     </div>
 </div>
 
