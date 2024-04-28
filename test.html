@@ -329,60 +329,90 @@
 
     <!-- Add JavaScript for popup functionality -->
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const galleryImages = document.querySelectorAll(".gallery .image img");
-    const popupContainer = document.querySelector(".popup-container");
-    const popupImage = document.querySelector(".popup-image");
-    const popupClose = document.querySelector(".popup-close");
-    const popupPrev = document.querySelector(".popup-prev");
-    const popupNext = document.querySelector(".popup-next");
-    let currentIndex = 0;
+    document.addEventListener("DOMContentLoaded", function () {
+        const galleryImages = document.querySelectorAll(".gallery .image img");
+        const popupContainer = document.querySelector(".popup-container");
+        const popupImage = document.querySelector(".popup-image");
+        const popupClose = document.querySelector(".popup-close");
+        const popupPrev = document.querySelector(".popup-prev");
+        const popupNext = document.querySelector(".popup-next");
+        const popupNavigation = document.querySelector(".popup-navigation");
+        let currentIndex = 0;
+        let arrowsVisible = true; // Flag to track visibility of navigation arrows
 
-    // Open popup
-    function openPopup(index) {
-        currentIndex = index;
-        const imgUrl = galleryImages[index].src;
-        popupImage.src = imgUrl;
-        popupContainer.style.display = "flex";
-    }
+        // Open popup
+        function openPopup(index) {
+            currentIndex = index;
+            const imgUrl = galleryImages[index].src;
+            popupImage.src = imgUrl;
+            popupContainer.style.display = "flex";
 
-    // Close popup
-    function closePopup() {
-        popupContainer.style.display = "none";
-    }
-
-    // Next image
-    function nextImage(event) {
-        event.stopPropagation(); // Prevent click event from bubbling up
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
-    }
-
-    // Previous image
-    function prevImage(event) {
-        event.stopPropagation(); // Prevent click event from bubbling up
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
-    }
-
-    // Close popup when clicking outside the image
-    popupContainer.addEventListener("click", function(event) {
-        if (event.target === popupContainer) {
-            closePopup();
+            // Show navigation arrows initially
+            showArrows();
         }
-    });
 
-    // Event listeners
-    galleryImages.forEach((image, index) => {
-        image.addEventListener("click", () => openPopup(index));
-    });
+        // Close popup
+        function closePopup() {
+            popupContainer.style.display = "none";
+            arrowsVisible = true; // Reset flag when closing popup
+        }
 
-    popupClose.addEventListener("click", closePopup);
-    popupPrev.addEventListener("click", prevImage);
-    popupNext.addEventListener("click", nextImage);
-});
+        // Show navigation arrows
+        function showArrows() {
+            popupNavigation.style.display = "block";
+            arrowsVisible = true;
+        }
+
+        // Hide navigation arrows
+        function hideArrows() {
+            popupNavigation.style.display = "none";
+            arrowsVisible = false;
+        }
+
+        // Toggle navigation arrows visibility
+        function toggleArrows() {
+            if (arrowsVisible) {
+                hideArrows();
+            } else {
+                showArrows();
+            }
+        }
+
+        // Next image
+        function nextImage(event) {
+            event.stopPropagation(); // Prevent click event from bubbling up
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            const imgUrl = galleryImages[currentIndex].src;
+            popupImage.src = imgUrl;
+        }
+
+        // Previous image
+        function prevImage(event) {
+            event.stopPropagation(); // Prevent click event from bubbling up
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            const imgUrl = galleryImages[currentIndex].src;
+            popupImage.src = imgUrl;
+        }
+
+        // Close popup when clicking outside the image
+        popupContainer.addEventListener("click", function(event) {
+            if (event.target === popupContainer) {
+                closePopup();
+            }
+        });
+
+        // Event listeners
+        galleryImages.forEach((image, index) => {
+            image.addEventListener("click", () => {
+                openPopup(index);
+                toggleArrows(); // Toggle arrows visibility when tapping on image
+            });
+        });
+
+        popupClose.addEventListener("click", closePopup);
+        popupPrev.addEventListener("click", prevImage);
+        popupNext.addEventListener("click", nextImage);
+    });
     </script>
 </head>
 
