@@ -336,7 +336,6 @@
         const popupClose = document.querySelector(".popup-close");
         const popupPrev = document.querySelector(".popup-prev");
         const popupNext = document.querySelector(".popup-next");
-        const popupNavigation = document.querySelector(".popup-navigation");
         let currentIndex = 0;
         let arrowsVisible = true; // Flag to track visibility of navigation arrows
 
@@ -347,34 +346,25 @@
             popupImage.src = imgUrl;
             popupContainer.style.display = "flex";
 
-            // Show navigation arrows initially
-            showArrows();
+            // Toggle navigation arrows visibility
+            toggleArrows();
         }
 
         // Close popup
         function closePopup() {
             popupContainer.style.display = "none";
-            arrowsVisible = true; // Reset flag when closing popup
-        }
-
-        // Show navigation arrows
-        function showArrows() {
-            popupNavigation.style.display = "block";
-            arrowsVisible = true;
-        }
-
-        // Hide navigation arrows
-        function hideArrows() {
-            popupNavigation.style.display = "none";
-            arrowsVisible = false;
         }
 
         // Toggle navigation arrows visibility
         function toggleArrows() {
             if (arrowsVisible) {
-                hideArrows();
+                popupPrev.style.display = "none";
+                popupNext.style.display = "none";
+                arrowsVisible = false;
             } else {
-                showArrows();
+                popupPrev.style.display = "block";
+                popupNext.style.display = "block";
+                arrowsVisible = true;
             }
         }
 
