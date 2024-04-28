@@ -338,91 +338,80 @@
 
     <!-- Add JavaScript for popup functionality -->
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const galleryImages = document.querySelectorAll(".gallery .image img");
-    const popupContainer = document.querySelector(".popup-container");
-    const popupImage = document.querySelector(".popup-image");
-    const popupClose = document.querySelector(".popup-close");
-    const popupPrev = document.querySelector(".popup-prev");
-    const popupNext = document.querySelector(".popup-next");
-    let currentIndex = 0;
-    let startX, startY, endX, endY;
+    document.addEventListener("DOMContentLoaded", function () {
+        const galleryImages = document.querySelectorAll(".gallery .image img");
+        const popupContainer = document.querySelector(".popup-container");
+        const popupImage = document.querySelector(".popup-image");
+        const popupClose = document.querySelector(".popup-close");
+        const popupPrev = document.querySelector(".popup-prev");
+        const popupNext = document.querySelector(".popup-next");
+        let currentIndex = 0;
+        let arrowsVisible = true; // Flag to track visibility of navigation arrows
 
-    // Open popup
-    function openPopup(index) {
-        currentIndex = index;
-        const imgUrl = galleryImages[index].src;
-        popupImage.src = imgUrl;
-        popupContainer.style.display = "flex";
-    }
+        // Open popup
+        function openPopup(index) {
+            currentIndex = index;
+            const imgUrl = galleryImages[index].src;
+            popupImage.src = imgUrl;
+            popupContainer.style.display = "flex";
 
-    // Close popup
-    function closePopup() {
-        popupContainer.style.display = "none";
-    }
+            // Toggle navigation arrows visibility
+            toggleArrows();
+        }
 
-    // Next image
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
-    }
+        // Close popup
+        function closePopup() {
+            popupContainer.style.display = "none";
+        }
 
-    // Previous image
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
-    }
-
-    // Swipe gesture handler
-    function handleSwipe() {
-        const diffX = endX - startX;
-        const diffY = endY - startY;
-        const threshold = 100; // Minimum swipe distance
-
-        if (Math.abs(diffX) > Math.abs(diffY)) {
-            // Horizontal swipe
-            if (diffX > threshold) {
-                // Swipe right
-                prevImage();
-            } else if (diffX < -threshold) {
-                // Swipe left
-                nextImage();
-            }
-        } else {
-            // Vertical swipe
-            if (diffY > threshold) {
-                // Swipe down
-                closePopup();
-            } else if (diffY < -threshold) {
-                // Swipe up
-                nextImage();
+        // Toggle navigation arrows visibility
+        function toggleArrows() {
+            if (arrowsVisible) {
+                popupPrev.style.display = "none";
+                popupNext.style.display = "none";
+                arrowsVisible = false;
+            } else {
+                popupPrev.style.display = "block";
+                popupNext.style.display = "block";
+                arrowsVisible = true;
             }
         }
-    }
 
-    // Touch event handlers
-    popupContainer.addEventListener("touchstart", function(event) {
-        startX = event.touches[0].clientX;
-        startY = event.touches[0].clientY;
+        // Next image
+        function nextImage(event) {
+            event.stopPropagation(); // Prevent click event from bubbling up
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            const imgUrl = galleryImages[currentIndex].src;
+            popupImage.src = imgUrl;
+        }
+
+        // Previous image
+        function prevImage(event) {
+            event.stopPropagation(); // Prevent click event from bubbling up
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            const imgUrl = galleryImages[currentIndex].src;
+            popupImage.src = imgUrl;
+        }
+
+        // Close popup when clicking outside the image
+        popupContainer.addEventListener("click", function(event) {
+            if (event.target === popupContainer) {
+                closePopup();
+            }
+        });
+
+        // Event listeners
+        galleryImages.forEach((image, index) => {
+            image.addEventListener("click", () => {
+                openPopup(index);
+                toggleArrows(); // Toggle arrows visibility when tapping on image
+            });
+        });
+
+        popupClose.addEventListener("click", closePopup);
+        popupPrev.addEventListener("click", prevImage);
+        popupNext.addEventListener("click", nextImage);
     });
-
-    popupContainer.addEventListener("touchend", function(event) {
-        endX = event.changedTouches[0].clientX;
-        endY = event.changedTouches[0].clientY;
-        handleSwipe();
-    });
-
-    // Event listeners
-    galleryImages.forEach((image, index) => {
-        image.addEventListener("click", () => openPopup(index));
-    });
-
-    popupClose.addEventListener("click", closePopup);
-    popupPrev.addEventListener("click", prevImage);
-    popupNext.addEventListener("click", nextImage);
-});
     </script>
 </head>
 
