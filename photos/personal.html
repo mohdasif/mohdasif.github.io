@@ -194,7 +194,6 @@
     }
 
 
-
     .articles-section {
         display: none;
         margin-top: 20px;
@@ -249,7 +248,7 @@
 
 .gallery .image {
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* Leave the transition for desktop */
 }
@@ -280,7 +279,164 @@
         color: initial; /* Reset text color on hover */
     }
 }
-</style>
+        /* Your existing CSS styles here */
+
+        .popup-container {
+            position: fixed;
+            top: 20px; /* Add a 20px gap from the top */
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-image {
+            max-width: 90%;
+            max-height: 90%;
+            margin: 20px auto; /* Add margin to create space */
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .popup-navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 36px;
+            cursor: pointer;
+        }
+
+        .popup-prev {
+            left: 10px;
+        }
+
+        .popup-next {
+            right: 10px;
+        }
+    /* Existing styles */
+
+    .popup-prev {
+        left: 5px; /* Adjusted position for the previous arrow */
+    }
+
+    .popup-next {
+        right: 5px; /* Adjusted position for the next arrow */
+    }
+    </style>
+
+    <!-- Add JavaScript for popup functionality -->
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const galleryImages = document.querySelectorAll(".gallery .image img");
+    const popupContainer = document.querySelector(".popup-container");
+    const popupImage = document.querySelector(".popup-image");
+    const popupClose = document.querySelector(".popup-close");
+    const popupPrev = document.querySelector(".popup-prev");
+    const popupNext = document.querySelector(".popup-next");
+    let currentIndex = 0;
+    let arrowsVisible = true; // Flag to track visibility of navigation arrows
+
+    // Open popup
+    function openPopup(index) {
+        currentIndex = index;
+        const imgUrl = galleryImages[index].src;
+        popupImage.src = imgUrl;
+        popupContainer.style.display = "flex";
+
+        // Toggle navigation arrows visibility
+        toggleArrows();
+    }
+
+    // Close popup
+    function closePopup() {
+        popupContainer.style.display = "none";
+    }
+
+    // Toggle navigation arrows visibility
+    function toggleArrows() {
+        if (arrowsVisible) {
+            popupPrev.style.display = "none";
+            popupNext.style.display = "none";
+            arrowsVisible = false;
+        } else {
+            popupPrev.style.display = "block";
+            popupNext.style.display = "block";
+            arrowsVisible = true;
+        }
+    }
+
+    // Next image
+    function nextImage(event) {
+        event.stopPropagation(); // Prevent click event from bubbling up
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        const imgUrl = galleryImages[currentIndex].src;
+        popupImage.src = imgUrl;
+    }
+
+    // Previous image
+    function prevImage(event) {
+        event.stopPropagation(); // Prevent click event from bubbling up
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        const imgUrl = galleryImages[currentIndex].src;
+        popupImage.src = imgUrl;
+    }
+
+    // Close popup when clicking outside the image
+    popupContainer.addEventListener("click", function(event) {
+        if (event.target === popupContainer) {
+            closePopup();
+        }
+    });
+
+    // Event listeners
+    galleryImages.forEach((image, index) => {
+        image.addEventListener("click", () => {
+            openPopup(index);
+            toggleArrows(); // Toggle arrows visibility when tapping on image
+        });
+    });
+
+    popupClose.addEventListener("click", closePopup);
+    popupPrev.addEventListener("click", prevImage);
+    popupNext.addEventListener("click", nextImage);
+
+    // Scroll wheel navigation
+    popupContainer.addEventListener("wheel", function(event) {
+        event.preventDefault(); // Prevent default scrolling behavior
+        const delta = Math.sign(event.deltaY); // Get the direction of the scroll
+        if (delta > 0) {
+            nextImage(event); // Scroll down (next image)
+        } else {
+            prevImage(event); // Scroll up (previous image)
+        }
+    });
+});
+    </script>
+</head>
+
+<body>
+    <!-- Your existing HTML code -->
+
+    <!-- Popup Container -->
+    <div class="popup-container">
+        <span class="popup-close">&times;</span>
+        <span class="popup-navigation popup-prev">&#10094;</span>
+        <img class="popup-image" src="" alt="">
+        <span class="popup-navigation popup-next">&#10095;</span>
+    </div>
+</body>
 
     <script>
         </script></body><script>var topButton = "sleek/circle-light";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
