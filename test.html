@@ -329,51 +329,60 @@
 
     <!-- Add JavaScript for popup functionality -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const galleryImages = document.querySelectorAll(".gallery .image img");
-            const popupContainer = document.querySelector(".popup-container");
-            const popupImage = document.querySelector(".popup-image");
-            const popupClose = document.querySelector(".popup-close");
-            const popupPrev = document.querySelector(".popup-prev");
-            const popupNext = document.querySelector(".popup-next");
-            let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+    const galleryImages = document.querySelectorAll(".gallery .image img");
+    const popupContainer = document.querySelector(".popup-container");
+    const popupImage = document.querySelector(".popup-image");
+    const popupClose = document.querySelector(".popup-close");
+    const popupPrev = document.querySelector(".popup-prev");
+    const popupNext = document.querySelector(".popup-next");
+    let currentIndex = 0;
 
-            // Open popup
-            function openPopup(index) {
-                currentIndex = index;
-                const imgUrl = galleryImages[index].src;
-                popupImage.src = imgUrl;
-                popupContainer.style.display = "flex";
-            }
+    // Open popup
+    function openPopup(index) {
+        currentIndex = index;
+        const imgUrl = galleryImages[index].src;
+        popupImage.src = imgUrl;
+        popupContainer.style.display = "flex";
+    }
 
-            // Close popup
-            function closePopup() {
-                popupContainer.style.display = "none";
-            }
+    // Close popup
+    function closePopup() {
+        popupContainer.style.display = "none";
+    }
 
-            // Next image
-            function nextImage() {
-                currentIndex = (currentIndex + 1) % galleryImages.length;
-                const imgUrl = galleryImages[currentIndex].src;
-                popupImage.src = imgUrl;
-            }
+    // Next image
+    function nextImage(event) {
+        event.stopPropagation(); // Prevent click event from bubbling up
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        const imgUrl = galleryImages[currentIndex].src;
+        popupImage.src = imgUrl;
+    }
 
-            // Previous image
-            function prevImage() {
-                currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-                const imgUrl = galleryImages[currentIndex].src;
-                popupImage.src = imgUrl;
-            }
+    // Previous image
+    function prevImage(event) {
+        event.stopPropagation(); // Prevent click event from bubbling up
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        const imgUrl = galleryImages[currentIndex].src;
+        popupImage.src = imgUrl;
+    }
 
-            // Event listeners
-            galleryImages.forEach((image, index) => {
-                image.addEventListener("click", () => openPopup(index));
-            });
+    // Close popup when clicking outside the image
+    popupContainer.addEventListener("click", function(event) {
+        if (event.target === popupContainer) {
+            closePopup();
+        }
+    });
 
-            popupClose.addEventListener("click", closePopup);
-            popupPrev.addEventListener("click", prevImage);
-            popupNext.addEventListener("click", nextImage);
-        });
+    // Event listeners
+    galleryImages.forEach((image, index) => {
+        image.addEventListener("click", () => openPopup(index));
+    });
+
+    popupClose.addEventListener("click", closePopup);
+    popupPrev.addEventListener("click", prevImage);
+    popupNext.addEventListener("click", nextImage);
+});
     </script>
 </head>
 
