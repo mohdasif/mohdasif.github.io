@@ -196,37 +196,40 @@
     <br>    <br>
         <div class="categories">
             <a href="#fitness" class="category-link">Fitness</a>
-            <a href="#/tech" class="category-link">Tech</a>
+            <a href="#tech" class="category-link">Tech</a>
             <a href="#travel" class="category-link">Travel</a>
             <a href="#food" class="category-link">Food</a>
         </div>
 
-<ul class="article-list">
-    <li data-category="fitness"><a href="https://mohdasif.com/2024/05/Conventional-to-Sumo.html">From Conventional to Sumo: How I Beat Back Pain and Revitalized My Deadlifts</a></li>
-    <li data-category="fitness"><a href="https://mohdasif.com/2024/04/the-myth-of-bulking-and-cutting.html">The Myth of Bulking and Cutting: A New Perspective on Body Recomposition</a></li>
-    <li data-category="tech"><a href="https://mohdasif.com/2024/04/chatgpt-gemini-and-copilot.html">ChatGPT, Gemini, and Copilot: Which AI Chatbot is Right for You?</a></li>
-    <li data-category="fitness"><a href="https://mohdasif.com/2024/03/cracking-protein-code.html">Cracking the Protein Code: What Dr. Mike and Menno Henselmans Have to Say</a></li>
-    <li data-category="tech"><a href="https://mohdasif.com/2024/03/why-ive-switched-to-microsoft-copilot.html">Why I've Switched to Microsoft Copilot for My Daily AI Interactions</a></li>
-</ul>
+<div class="container">
+    <div class="articles-section active">
+        <ul class="article-list">
+            <li><a href="https://mohdasif.com/2024/05/Conventional-to-Sumo.html">From Conventional to Sumo: How I Beat Back Pain and Revitalized My Deadlifts</a></li>
+            <li><a href="https://mohdasif.com/2024/04/the-myth-of-bulking-and-cutting.html">The Myth of Bulking and Cutting: A New Perspective on Body Recomposition</a></li>
+            <li><a href="https://mohdasif.com/2024/04/chatgpt-gemini-and-copilot.html">ChatGPT, Gemini, and Copilot: Which AI Chatbot is Right for You?</a></li>
+            <li><a href="https://mohdasif.com/2024/03/cracking-protein-code.html">Cracking the Protein Code: What Dr. Mike and Menno Henselmans Have to Say</a></li>
+            <li><a href="https://mohdasif.com/2024/03/why-ive-switched-to-microsoft-copilot.html">Why I've Switched to Microsoft Copilot for My Daily AI Interactions</a></li>
+        </ul>
+    </div>
+</div>
 
-<script>
-    const categoryLinks = document.querySelectorAll('.category-link');
-    const articles = document.querySelectorAll('.article-list li');
+    <script>
+        const categoryLinks = document.querySelectorAll('.category-link');
+        const articlesSections = document.querySelectorAll('.articles-section');
 
-    categoryLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            const targetCategory = link.getAttribute('href').substring(1);
-            articles.forEach(article => {
-                const articleCategory = article.dataset.category;
-                if (articleCategory === targetCategory || targetCategory === 'all') {
-                    article.style.display = 'block';
-                } else {
-                    article.style.display = 'none';
-                }
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const targetSectionId = link.getAttribute('href').substring(1);
+                articlesSections.forEach(section => {
+                    if (section.id === targetSectionId) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>
