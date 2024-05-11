@@ -350,16 +350,18 @@
 
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('menu-open');
-        });
+    document.querySelector('nav').classList.toggle('menu-open');
+});
 
-        function openNav() {
-            document.querySelector(".sidebar").style.width = "250px";
+document.querySelector('.menu-toggle').addEventListener('touchstart', function(e) {
+    var startX = e.changedTouches[0].pageX;
+    document.querySelector('.menu-toggle').addEventListener('touchend', function(e) {
+        var endX = e.changedTouches[0].pageX;
+        if (endX - startX > 50) {
+            document.querySelector('nav').classList.add('menu-open');
         }
-
-        function closeNav() {
-            document.querySelector(".sidebar").style.width = "0";
-        }
+    });
+});
     </script>
 </body>
 </html>
