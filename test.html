@@ -16,6 +16,9 @@
             padding: 10px;
             text-align: center;
         }
+        .menu-toggle {
+            display: none;
+        }
         nav {
             float: left;
             width: 25%;
@@ -24,6 +27,8 @@
             height: 100vh;
             position: fixed;
             overflow: auto;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
         }
         nav ul {
             list-style-type: none;
@@ -45,12 +50,29 @@
             bottom: 0;
             width: 100%;
         }
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+                z-index: 999;
+            }
+            nav {
+                width: 80%;
+            }
+            .menu-open nav {
+                transform: translateX(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Your Blog Title</h1>
     </header>
+    <div class="menu-toggle">&#9776;</div>
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -66,5 +88,10 @@
     <footer>
         <p>Copyright © 2024 Your Blog. All rights reserved.</p>
     </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('menu-open');
+        });
+    </script>
 </body>
 </html>
