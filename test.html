@@ -29,6 +29,10 @@
             overflow: auto;
             transition: transform 0.3s ease;
             transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
         }
         nav ul {
             list-style-type: none;
@@ -57,13 +61,10 @@
                 top: 10px;
                 right: 10px;
                 cursor: pointer;
-                z-index: 999;
+                z-index: 1000; /* Ensure the menu icon is on top */
             }
             nav {
                 width: 80%;
-            }
-            .menu-open nav {
-                transform: translateX(0);
             }
         }
     </style>
