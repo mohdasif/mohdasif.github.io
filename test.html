@@ -1,497 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Photos</title>
-    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
-
+    <title>Your Blog Title</title>
     <style>
         body {
-            background-color: #fff;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
-            overflow-x: hidden;
         }
-
-        #desktop-navigation,
-        #mobile-navigation {
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        #desktop-navigation {
+        header {
             background-color: #333;
             color: #fff;
-            padding: 7px;
-            font-size: 18.7px; /* Increase font size for zoom effect */
-            padding: 7px; /* Padding for top and bottom */
-            padding-left: 5px; /* Additional padding for left */
-            padding-right: 6px; /* Additional padding for right */
-            padding: 6px 7px; /* Increase padding for more space */
-            margin: 0px; /* Margin for top, right, bottom, and left */
-            font-weight: bold;
-            right: 8px; /* Position the navigation slightly away from the right side */
-            display: block; /* Ensure the desktop navigation is visible */
-        }
-
-        #desktop-navigation a,
-        #mobile-navigation a {
-            color: inherit;
-            margin: 0 16px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block; /* Make sure the links are on separate lines */
-        }
-
-        #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
-        }
-
-        #mobile-navigation {
-            background-color: #FDFCFA;
-            color: #000;
             padding: 10px;
-            display: none;
-            font-size: 18px; /* Adjust the font size as needed */
-            left: 0; /* Align to the left edge */
-            transform: translateX(-12px); /* Move the navigation slightly to the left */
-        }
-
-        .page-container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
-        .content-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .content-container {
-            padding: 20px; /* Adjust padding as needed */
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
-        }
-
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
-        }
-
-        /* New style for left-aligning specific sections */
-        .left-align {
-            text-align: left;
-        }
-
-        /* Center-align the about.me link */
-        .about-me {
-            text-align: center;
-        }
-
-        /* Center-align Links */
-        .center-section {
-            text-align: center;
-        }
-
-        @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-        }
-
-        .categories {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 10px 10px 10px 35px; /* Adjusted padding */
-            overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
-            white-space: nowrap; /* Prevent categories from wrapping */
-        }
-
-        /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
-        .categories::-webkit-scrollbar {
+        .menu-toggle {
             display: none;
         }
-
-        .category-link {
-            display: inline-block; /* Display categories in a row */
-            margin-right: 15px; /* Adjusted margin for space between category links */
-            color: #000;
-            text-decoration: none;
-            padding: 3px 5px;
-            border-radius: 10px;
-            cursor: pointer;
-            background-color: #f5f5f5;
-            font-weight: normal; /* Set font weight to normal */
-        }
-
-        .category-link:hover {
-            background-color: #e0e0e0;
-        }
-
-        .articles-section {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .articles-section.active {
-            display: block;
-        }
-
-        .article-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .article-list li {
-            background: #fff;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .article-list a {
-            display: block;
-            color: #333;
-            text-decoration: none;
+        nav {
+            float: left;
+            width: 25%;
+            background-color: #f4f4f4;
             padding: 20px;
-        }
-
-        .article-list a:hover {
-            background-color: #f5f5f5;
-        }
-
-        /* Gallery Styles */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            grid-gap: 20px;
-            padding: 20px;
-            margin-top: 10px; /* Adjusted for the header height */
-        }
-
-        .gallery .image {
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease; /* Leave the transition for desktop */
-        }
-
-        .image img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-        }
-
-        .gallery .image:hover {
-            transform: scale(1.05); /* Leave the hover effect for desktop */
-        }
-
-        /* Mobile-specific styles */
-        @media only screen and (max-width: 600px) {
-            .gallery .image {
-                transition: none; /* Disable transition on mobile */
-            }
-
-            .gallery .image:hover {
-                transform: none; /* Disable hover effect on mobile */
-            }
-
-            .category-link:hover {
-                background-color: initial; /* Disable background color change on hover */
-                color: initial; /* Reset text color on hover */
-            }
-        }
-
-        /* Popup Container */
-        .popup-container {
+            height: 100vh;
             position: fixed;
-            top: 0; /* Add a 20px gap from the top */
-            left: 0;
+            overflow: auto;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        .content {
+            margin-left: 25%;
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            display: none;
-            justify-content: center;
-            align-items: center;
         }
-
-        .popup-image {
-            max-width: 90%;
-            max-height: 90%;
-            margin: 20px auto; /* Add margin to create space */
-        }
-
-        .popup-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #fff;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        /* Navigation arrows */
-        .popup-navigation {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #fff;
-            font-size: 36px;
-            cursor: pointer;
-            display: none; /* Initially hide arrows */
-        }
-
-        .popup-prev {
-            left: 10px;
-        }
-
-        .popup-next {
-            right: 10px;
-        }
-
-        /* Adjusted styles for mobile */
-        @media only screen and (max-width: 600px) {
-            .popup-prev {
-                left: 2px; /* Adjusted position for the previous arrow */
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+                z-index: 1000; /* Ensure the menu icon is on top */
             }
-
-            .popup-next {
-                right: 2px; /* Adjusted position for the next arrow */
-            }
-        }
-
-        /* Adjusted styles for desktop */
-        @media only screen and (min-width: 768px) {
-            .popup-prev {
-                left: 400px; /* Adjusted position for the previous arrow */
-            }
-
-            .popup-next {
-                right: 400px; /* Adjusted position for the next arrow */
+            nav {
+                width: 80%;
             }
         }
     </style>
-
-    <!-- Add Hammer.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-
-    <!-- Add JavaScript for popup functionality -->
+</head>
+<body>
+    <header>
+    </header>
+    <div class="menu-toggle">&#9776;</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Welcome to My Blog!</h2>
+        <p>This is where you can write your blog posts.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales orci ac nisi sodales blandit. Phasellus id nisl id libero lacinia placerat.</p>
+    </div>
+    <footer>
+        <p>Copyright © 2024 Your Blog. All rights reserved.</p>
+    </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const galleryImages = document.querySelectorAll(".gallery .image img");
-            const popupContainer = document.querySelector(".popup-container");
-            const popupImage = document.querySelector(".popup-image");
-            const popupClose = document.querySelector(".popup-close");
-            const popupPrev = document.querySelector(".popup-prev");
-            const popupNext = document.querySelector(".popup-next");
-            let currentIndex = 0;
-            let arrowsVisible = true; // Flag to track visibility of navigation arrows
-
-            // Initialize Hammer.js instance
-            const hammer = new Hammer(popupImage);
-
-            // Enable swipe gestures
-            hammer.on("swipeleft", nextImage);
-            hammer.on("swiperight", prevImage);
-
-            // Open popup
-            function openPopup(index) {
-                currentIndex = index;
-                const imgUrl = galleryImages[index].src;
-                popupImage.src = imgUrl;
-                popupContainer.style.display = "flex";
-
-                // Toggle navigation arrows visibility
-                toggleArrows();
-            }
-
-            // Close popup
-            function closePopup() {
-                popupContainer.style.display = "none";
-            }
-
-            // Toggle navigation arrows visibility
-            function toggleArrows() {
-                if (arrowsVisible) {
-                    popupPrev.style.display = "none";
-                    popupNext.style.display = "none";
-                    arrowsVisible = false;
-                } else {
-                    popupPrev.style.display = "block";
-                    popupNext.style.display = "block";
-                    arrowsVisible = true;
-                }
-            }
-
-            // Next image
-            function nextImage(event) {
-                event.stopPropagation(); // Prevent click event from bubbling up
-                currentIndex = (currentIndex + 1) % galleryImages.length;
-                const imgUrl = galleryImages[currentIndex].src;
-                popupImage.src = imgUrl;
-            }
-
-            // Previous image
-            function prevImage(event) {
-                event.stopPropagation(); // Prevent click event from bubbling up
-                currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-                const imgUrl = galleryImages[currentIndex].src;
-                popupImage.src = imgUrl;
-            }
-
-            // Close popup when clicking outside the image
-            popupContainer.addEventListener("click", function (event) {
-                if (event.target === popupContainer) {
-                    closePopup();
-                }
-            });
-
-            // Event listeners
-            galleryImages.forEach((image, index) => {
-                image.addEventListener("click", () => {
-                    openPopup(index);
-                    toggleArrows(); // Toggle arrows visibility when tapping on image
-                });
-            });
-
-            popupClose.addEventListener("click", closePopup);
-            popupPrev.addEventListener("click", prevImage);
-            popupNext.addEventListener("click", nextImage);
-
-            // Scroll wheel navigation
-            popupContainer.addEventListener("wheel", function (event) {
-                event.preventDefault(); // Prevent default scrolling behavior
-                const delta = Math.sign(event.deltaY); // Get the direction of the scroll
-                if (delta > 0) {
-                    nextImage(event); // Scroll down (next image)
-                } else {
-                    prevImage(event); // Scroll up (previous image)
-                }
-            });
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('menu-open');
         });
     </script>
-</head>
-
-<body>
-    <!-- Desktop Navigation -->
-    <div id="desktop-navigation">
-        <a href="https://mohdasif.com/">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/about">About</a>
-        <a href="/photos">Photos</a>
-        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
-        <a href="/contact">Contact</a>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <div id="mobile-navigation">
-        <a href="https://mohdasif.com/">🏠</a>
-        <a href="/blog">📝</a>
-        <a href="/photos">📷</a>
-        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
-        <a href="/contact">💬</a>
-    </div>
-
-    <div class="container">
-        <div class="container" style="margin-top: 70px;"> <!-- Added margin-top -->
-            <div class="categories">
-                <a href="/photos/gym" class="category-link red">Gym</a>
-                <a href="/photos/lucknow" class="category-link">Lucknow</a>
-                <a href="/photos/nepal" class="category-link">Nepal</a>
-                <a href="/photos/rajasthan" class="category-link">Rajasthan</a>
-                <a href="/photos/moradabad" class="category-link">Moradabad</a>
-                <a href="/photos/personal" class="category-link">Personal</a>
-                <a href="/photos/archive" class="category-link">Archive</a>
-            </div>
-        </div>
-
-        <!-- Gallery for Photos -->
-        <div class="gallery">
-            <div class="image">
-                <img src="https://images.mohdasif.com/photos/a1.jpg">
-            </div>
-            <div class="image">
-                <img src="https://images.mohdasif.com/photos/a2.JPG">
-            </div>
-            <div class="image">
-                <img src="https://images.mohdasif.com/photos/a3.JPG">
-            </div>
-            <div class="image">
-                <img src="https://images.mohdasif.com/photos/a4.JPG">
-            </div>
-            <div class="image">
-                <img src="https://images.mohdasif.com/photos/a5.JPG">
-            </div>
-            <div class="image">
-                <img src="https://images.mohdasif.com/photos/a6.JPG">
-            </div>
-            <div class="image">
-                <img src="https://images.mohdasif.com/photos/a7.JPG">
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Popup Container -->
-    <div class="popup-container">
-        <span class="popup-close">&times;</span>
-        <span class="popup-navigation popup-prev">&#10094;</span>
-        <img class="popup-image" src="" alt="">
-        <span class="popup-navigation popup-next">&#10095;</span>
-    </div>
 </body>
-
 </html>
