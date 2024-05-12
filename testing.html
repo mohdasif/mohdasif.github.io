@@ -319,22 +319,6 @@
             cursor: pointer;
             z-index: 1000; /* Ensure the menu icon is on top */
         }
-
-@media only screen and (max-width: 768px) {
-    /* For iOS devices */
-    @supports (-webkit-touch-callout: none) {
-        .menu-toggle {
-            top: 10px !important; /* Adjust the top position for iOS */
-        }
-    }
-
-    /* For Android devices */
-    @media not all and (hover: none) and (pointer: coarse) {
-        .menu-toggle {
-            font-size: 18px !important; /* Adjust font size for Android */
-        }
-    }
-}
     </style>
 </head>
 <body>
