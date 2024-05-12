@@ -261,13 +261,13 @@
         }
         nav {
             float: left;
-            width: 25%;
-            background-color: #f4f4f4;
-            padding: 20px;
+            width: 20%;
+            background-color: #fff;
+            padding: 40px;
             height: 100vh;
             position: fixed;
             overflow: auto;
-            transition: transform 0.3s ease;
+            transition: transform 0.9s ease;
             transform: translateX(-100%);
             z-index: 999; /* Ensure the sidebar is on top */
         }
@@ -307,28 +307,6 @@
                 width: 80%;
             }
         }
-        /* Existing styles... */
-
-        /* Updated styles for menu-toggle */
-        .menu-toggle {
-            display: block;
-            position: fixed;
-            top: 7px; /* Default top position for other devices */
-            right: 10px;
-            font-size: 22px; /* Increase the font size */
-            cursor: pointer;
-            z-index: 1000; /* Ensure the menu icon is on top */
-        }
-
-@media only screen and (max-width: 768px) {
-    /* For iOS devices */
-    @supports (-webkit-touch-callout: none) {
-        .menu-toggle {
-            top: 10px !important; /* Adjust the top position for iOS */
-            font-size: 26px !important; /* Increase the font size */
-        }
-    }
-
     </style>
 </head>
 <body>
