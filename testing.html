@@ -17,17 +17,37 @@
             text-align: center;
         }
         .menu-toggle {
-            display: none;
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 3px;
+            right: 10px;
+            font-size: 22px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+        @media only screen and (min-width: 769px) {
+            .menu-toggle {
+                color: #fff; /* Set color to white on desktop */
+            }
+            .menu-toggle {
+                left: 10px; /* Align to the left on desktop */
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .menu-toggle {
+                top: 8px;
+                color: #000; /* Set color to black on mobile */
+            }
         }
         nav {
             float: left;
             width: 25%;
-            background-color: #f4f4f4;
-            padding: 20px;
+            background-color: #f1f1f1;
+            padding: 30px;
             height: 100vh;
             position: fixed;
             overflow: auto;
-            transition: transform 0.3s ease;
+            transition: transform 0.9s ease;
             transform: translateX(-100%);
             z-index: 999; /* Ensure the sidebar is on top */
         }
@@ -43,7 +63,7 @@
         }
         .content {
             margin-left: 25%;
-            padding: 20px;
+            padding: 30px;
         }
         footer {
             background-color: #333;
@@ -100,31 +120,6 @@
             display: none;
         }
 
-        @media only screen and (max-width: 768px) {
-            /* Desktop Navigation */
-            #desktop-navigation {
-                display: none;
-            }
-
-            /* Mobile Navigation */
-            #mobile-navigation {
-                display: block;
-            }
-
-            .menu-toggle {
-                display: block;
-                position: fixed;
-                top: 7px !important; /* Adjust the value to move the toggle button up */
-                right: 10px;
-                font-size: 22px; /* Increase the font size */
-                cursor: pointer;
-                z-index: 1000; /* Ensure the menu icon is on top */
-            }
-
-            nav {
-                width: 80%;
-            }
-        }
         body {
             background-color: #f4f4f4;
             margin: 0;
@@ -254,57 +249,6 @@
 
             #mobile-navigation {
                 display: block;
-            }
-        }
-        .menu-toggle {
-            display: none;
-        }
-        nav {
-            float: left;
-            width: 20%;
-            background-color: #fff;
-            padding: 40px;
-            height: 100vh;
-            position: fixed;
-            overflow: auto;
-            transition: transform 0.9s ease;
-            transform: translateX(-100%);
-            z-index: 999; /* Ensure the sidebar is on top */
-        }
-        nav.menu-open {
-            transform: translateX(0);
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            margin-bottom: 10px;
-        }
-        .content {
-            margin-left: 25%;
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        @media screen and (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-                position: fixed;
-                top: 10px;
-                right: 10px;
-                cursor: pointer;
-                z-index: 1000; /* Ensure the menu icon is on top */
-            }
-            nav {
-                width: 80%;
             }
         }
     </style>
