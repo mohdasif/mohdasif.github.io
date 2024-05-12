@@ -112,7 +112,6 @@
             }
 
             .menu-toggle {
-<<<<<<< HEAD
                 display: block;
                 position: fixed;
                 top: 7px !important; /* Adjust the value to move the toggle button up */
@@ -121,16 +120,6 @@
                 cursor: pointer;
                 z-index: 1000; /* Ensure the menu icon is on top */
             }
-=======
-    display: block;
-    position: fixed;
-    top: 10px;
-    left: 10px; /* Change 'right' to 'left' */
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 1000;
-}
->>>>>>> 82b428ca424312d12cba3cc8b4e8e7c4a9f0ab86
 
             nav {
                 width: 80%;
@@ -360,19 +349,17 @@
     </footer>
 
     <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('#mobile-navigation').classList.toggle('menu-open');
-    });
-
-    document.querySelector('.menu-toggle').addEventListener('touchstart', function(e) {
-        var startX = e.changedTouches[0].pageX;
-        document.querySelector('.menu-toggle').addEventListener('touchend', function(e) {
-            var endX = e.changedTouches[0].pageX;
-            if (endX - startX > 50) {
-                document.querySelector('#mobile-navigation').classList.add('menu-open');
-            }
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('menu-open');
         });
-    });
-</script>
+
+        function openNav() {
+            document.querySelector(".sidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.querySelector(".sidebar").style.width = "0";
+        }
+    </script>
 </body>
 </html>
