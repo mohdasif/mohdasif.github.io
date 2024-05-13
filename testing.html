@@ -5,40 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Blog Title</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
+
         .menu-toggle {
             display: block; /* Show the menu toggle by default */
             position: fixed;
-            top: 3px;
+            top: 7px;
             right: 10px;
             font-size: 22px; /* Increase the font size */
             cursor: pointer;
             z-index: 1000; /* Ensure the menu icon is on top */
         }
-        @media only screen and (min-width: 769px) {
-            .menu-toggle {
-                color: #fff; /* Set color to white on desktop */
-            }
-            .menu-toggle {
-                left: 10px; /* Align to the left on desktop */
-            }
-        }
-        @media only screen and (max-width: 768px) {
-            .menu-toggle {
-                top: 8px;
-                color: #000; /* Set color to black on mobile */
-            }
-        }
+
         nav {
             float: left;
             width: 25%;
@@ -61,54 +38,7 @@
         nav ul li {
             margin-bottom: 10px;
         }
-        .content {
-            margin-left: 25%;
-            padding: 30px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        /* Sidebar Styles */
-        .sidebar {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            padding-top: 60px;
-            transition: 0.5s;
-            z-index: 999; /* Ensure the sidebar is on top */
-        }
-        .sidebar a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-        .sidebar a:hover {
-            color: #f1f1f1;
-        }
-        .sidebar .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-        @media screen and (max-height: 450px) {
-            .sidebar {padding-top: 15px;}
-            .sidebar a {font-size: 18px;}
-        }
+
 
         /* Desktop Navigation */
         #desktop-navigation {
@@ -120,13 +50,6 @@
             display: none;
         }
 
-        body {
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
-            overflow-x: hidden;
-        }
 
        #desktop-navigation,
         #mobile-navigation {
@@ -176,26 +99,6 @@
             transform: translateX(-12px); /* Move the navigation slightly to the left */
         }
 
-        .contact-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: transparent;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
-               .content-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
         h1 {
             color: #333;
         }
@@ -227,20 +130,7 @@
             font-weight: bold;
         }
 
-        button {
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
-            border: none;
-            border-radius: 15px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 15px; /* Increase the font size */
-        }
 
-        button:hover {
-            background-color: #000000 !important; /* Change the hover background color */
-        }
 
         @media only screen and (max-width: 600px) {
             #desktop-navigation {
