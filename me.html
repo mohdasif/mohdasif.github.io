@@ -118,7 +118,7 @@
         a {
             text-decoration: none;
             color: #4285f4;
-            font-weight: bold;
+            font-weight: normal;
         }
 
         a:hover {
@@ -140,56 +140,29 @@
             text-align: center;
         }
 
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 15px; /* Increase the font size */
+        }
+
+        button:hover {
+            background-color: #000000 !important; /* Change the hover background color */
+        }
+
         @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
                 display: none;
             }
 
             #mobile-navigation {
                 display: block;
-            }
-        }
-
-        /* New styles for the about.me link container and button */
-        .about-me-container {
-            text-align: center;
-        }
-}
-
-
-        /* New styles for the about.me link container and button */
-        .about-me-container {
-            text-align: center;
-        }
-
-    </style>
-
-    <!-- Additional styles -->
-    <style>
-        
-        /* Apply margin to the buttons for mobile */
-        .custom-button {
-            background-color: transparent;
-            color: black;
-            padding: 4px 6px;
-            border: none;
-            cursor: pointer;
-            border: 0.9px solid black;
-            border-radius: 20px;
-            transition: background-color 0.9s; /* Added transition effect */
-            margin-right: 14px; /* Add margin between buttons for mobile */
-            transform: translateX(7px); /* Move the custom button slightly to the right */
-            margin-top: 5px; /* Add margin between navigation and buttons */
-        }
-
-        .custom-button:last-child {
-            margin-right: 0; /* Remove margin from the last button for mobile */
-        }
-
-            /* Apply margin to the desktop navigation */
-            #desktop-navigation {
-                margin-bottom: px; /* Adjust the margin as needed for desktop */
             }
         }
         /* Sidebar styles */
@@ -307,6 +280,24 @@
 #sidebar::-webkit-scrollbar-corner {
     background-color: transparent; /* Color of the scrollbar corner */
 }
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: #24a0ed;
+            color: white;
+            padding: 4px 6px;
+            border: none;
+            cursor: pointer;
+            border: 0px solid black;
+            border-radius: 20px;
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 14px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
     </style>
 </head>
 
