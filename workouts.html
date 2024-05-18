@@ -63,7 +63,7 @@
             display: none;
             font-size: 18px; /* Adjust the font size as needed */
             left: 0; /* Align to the left edge */
-            transform: translateX(-12px); /* Move the navigation slightly to the left */
+            transform: translateX(8px); /* Move the navigation slightly to the left */
         }
 
         .page-container {
@@ -257,15 +257,155 @@
             margin-top: 1.3em; /* Adjust the margin as needed */
         }
         
-</style>
+        /* Sidebar styles */
+        #sidebar {
+            height: 100%;
+            width: 140px; /* Adjusted width for the sidebar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #FFF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 30px;
+        }
+        
+        /* Style sidebar section headings */
+.sidebar-section h4 {
+    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+    margin-bottom: 5px; /* Add space below the heading */
+    padding: 10px; /* Add padding to the heading */
+    font-size: 16px; /* Adjust the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the color of the heading */
+}
+
+        #sidebar a {
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+    background-color: #f9f9f9; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 8px;
+            left: 32px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    </style>
 </head>
 
 <body>
+<!-- Sidebar -->
+<div id="sidebar">
+    <div class="sidebar-section">
+        <h4>Pages</h4>
+        <a href="/articles">Articles</a>
+        <a href="/poetry">Poetry</a>
+        <a href="/podcasts">Podcasts</a>
+        <a href="/me">About me</a>
+        <a href="/music">Music</a>
+        <a href="/workouts">Workouts</a>
+    </div>
+
+    <div class="sidebar-section">
+        <h4>Blog</h4>
+        <a href="https://www.mohdasif.com">Tech</a>
+        <a href="https://www.mohdasif.in">Fitness</a>
+    </div>
+
+    <div class="sidebar-section">
+        <h4>Links</h4>
+        <a href="https://linktr.ee/mohdasif">Linktree</a>
+        <a href="https://www.amazon.in/shop/mohdasif">Shop</a>
+    </div>
+</div>
+
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
         <a href="https://mohdasif.com/">Home</a>
         <a href="/blog">Blog</a>
-        <a href="/about">About</a>    
+        <a href="/about">About</a>
         <a href="/photos">Photos</a>
         <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
         <a href="/contact">Contact</a>
@@ -273,13 +413,33 @@
 
     <!-- Mobile Navigation -->
     <div id="mobile-navigation">
-        <a href="https://mohdasif.com">🏠</a>
+        <a href="https://mohdasif.com/">🏠</a>
         <a href="/blog">📝</a>
         <a href="/photos">📷</a>
         <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
         <a href="/contact">💬</a>
     </div>
 
+<div class="menu-toggle">&#9776;</div>
+<nav>
+    <ul>
+        <li><h4>Pages</h4></li>
+        <li><a href="/articles">Articles</a></li>
+        <li><a href="/poetry">Poetry</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/me">About me</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/workouts">Workouts</a></li>
+        
+        <li><h4>Blog</h4></li>
+        <li><a href="https://www.mohdasif.com">Tech</a></li>
+        <li><a href="https://www.mohdasif.in">Fitness</a></li>
+        
+        <li><h4>Links</h4></li>
+        <li><a href="https://linktr.ee/mohdasif">Linktree</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif">Shop</a></li>
+    </ul>
+</nav>
 
 <!-- Page Container -->
 <div class="page-container">
@@ -326,6 +486,21 @@
         <p>&copy; 2024 @mohdasif. All rights reserved.</p>
     </div>
 </footer>
+
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('menu-open');
+    });
+
+    function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+    }
+</script>
 
 </body>
 </html>
