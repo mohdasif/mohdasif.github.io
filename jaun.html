@@ -63,30 +63,33 @@
             transform: translateX(-12px); /* Move the navigation slightly to the left */
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-        }
-        .post {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        .post p {
-            margin: 0;
-            line-height: 1.5;
-            font-size: 16px;
-        }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 56px; /* Adjust this if necessary to clear the navigation */
+    }
 
+    .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        margin-top: 60px; /* Add top margin to create space below navigation */
+    }
 
+    .post {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    .post p {
+        margin: 0;
+        line-height: 1.5;
+        font-size: 16px;
+    }
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
@@ -124,7 +127,7 @@
         /* Sidebar styles */
         #sidebar {
             height: 100%;
-            width: 130px; /* Adjusted width for the sidebar */
+            width: 140px; /* Adjusted width for the sidebar */
             position: fixed;
             top: 0;
             left: 0;
@@ -179,9 +182,10 @@
             float: left;
             width: 25%;
             background-color: #f1f1f1;
-            padding: 30px 30px 30px; /* Add more padding on top */
+            padding: 16px;
             height: 100vh;
             position: fixed;
+            top: 30px; /* Position at the top */
             overflow: auto;
             transition: transform 0.9s ease;
             transform: translateX(-100%);
@@ -273,8 +277,6 @@
         <a href="/contact">💬</a>
     </div>
 
-    <header>
-    </header>
 <div class="menu-toggle">&#9776;</div>
 <nav>
     <ul>
