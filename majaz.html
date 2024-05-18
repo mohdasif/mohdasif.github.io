@@ -86,55 +86,7 @@
             font-size: 16px;
         }
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
-        }
 
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
-            font-weight: normal;
-        }
-
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
-        }
-
-        /* New style for left-aligning specific sections */
-        .left-align {
-            text-align: left;
-        }
-
-        /* Center-align the about.me link */
-        .about-me {
-            text-align: center;
-        }
-
-        /* Center-align Links */
-        .center-section {
-            text-align: center;
-        }
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
@@ -150,22 +102,6 @@
         /* New styles for the about.me link container and button */
         .about-me-container {
             text-align: center;
-        }
-
-        .about-me-button,
-        .link-button {
-            display: inline-block;
-            padding: 7px 8px;
-            background-color: #24a0ed;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 40px;
-            margin: 1px;
-        }
-
-        .about-me-button:hover,
-        .link-button:hover {
-            background-color: #000000;
         }
 
         p {
@@ -184,81 +120,140 @@
             height: auto; /* Maintain aspect ratio */
             border-radius: 5px; /* Add border radius */
         }
-    .categories {
-        text-align: center;
-        margin-bottom: 20px;
-        padding: 10px 10px 10px 35px; /* Adjusted padding */
-        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
-        white-space: nowrap; /* Prevent categories from wrapping */
-    }
 
-    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
-        .categories::-webkit-scrollbar {
-        display: none;
-    }
+        /* Sidebar styles */
+        #sidebar {
+            height: 100%;
+            width: 130px; /* Adjusted width for the sidebar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #FFF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 30px;
+        }
+        
+        /* Style sidebar section headings */
+.sidebar-section h4 {
+    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+    margin-bottom: 5px; /* Add space below the heading */
+    padding: 10px; /* Add padding to the heading */
+    font-size: 16px; /* Adjust the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the color of the heading */
+}
 
-        .category-link {
-        display: inline-block; /* Display categories in a row */
-        margin-right: 15px; /* Adjusted margin for space between category links */
-        color: #000;
-        text-decoration: none;
-        padding: 2px 5px;
-        border-radius: 20px;
-        cursor: pointer;
-        border: 0px solid #ddd; /* 1 pixel border */
-        background-color: #fff;
-        font-weight: normal; /* Set font weight to normal */
-    }
-
-        .category-link:hover {
-            background-color: #e0e0e0;
+        #sidebar a {
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
         }
 
-
-    .articles-section {
-        display: none;
-        margin-top: 20px;
-    }
-
-    .articles-section.active {
-        display: block;
-    }
-
-    .article-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .article-list li {
-        background: #fff;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .article-list a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        padding: 20px;
-    }
-
-    .article-list a:hover {
-        background-color: #f5f5f5;
-    }
-
-    .category-link:hover {
-        background-color: initial; /* Disable background color change on hover */
-        color: initial; /* Reset text color on hover */
-    }
+        #sidebar a:hover {
+    background-color: #f9f9f9; /* Background color on hover */
+    color: #333; /* Text color on hover */
 }
-</style>
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+                .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 7px;
+            right: 20px;
+            font-size: 22px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding: 30px 30px 30px; /* Add more padding on top */
+            height: 100vh;
+            position: fixed;
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    </style>
 
 </head>
 
 <body>
+
+<div id="sidebar">
+    <div class="sidebar-section">
+        <h4>Posts</h4>
+        <a href="/ghalib" class="category-link">Mirza Ghalib</a>
+        <a href="/faiz" class="category-link">Faiz Ahmad</a>
+        <a href="/mir" class="category-link">Mir Taqi Mir</a>
+        <a href="/daagh" class="category-link">Daagh</a>
+        <a href="/jaun" class="category-link">Jaun Elia</a>
+        <a href="/majaz" class="category-link">Majaz</a>
+    </div>
+</div>
+
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
         <a href="https://mohdasif.com/">Home</a>
@@ -271,24 +266,27 @@
 
     <!-- Mobile Navigation -->
     <div id="mobile-navigation">
-        <a href="https://mohdasif.com/poetry">🏠</a>
+        <a href="https://mohdasif.com/">🏠</a>
         <a href="/blog">📝</a>
         <a href="/photos">📷</a>
         <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
         <a href="/contact">💬</a>
     </div>
-<br><br><br>
 
-<div class="categories">
-    <br> <!-- Line break added here -->  
-    <a href="https://mohdasif.com/majaz" class="category-link">Majaz</a>
-    <a href="https://mohdasif.com/ghalib" class="category-link">Mirza Ghalib</a>
-    <a href="https://mohdasif.com/faiz" class="category-link">Faiz Ahmad</a>
-    <a href="https://mohdasif.com/mir" class="category-link">Mir Taqi Mir</a>
-    <a href="https://mohdasif.com/daagh" class="category-link">Daagh</a>
-    <a href="https://mohdasif.com/jaun" class="category-link">Jaun Elia</a>
-
-</div>
+    <header>
+    </header>
+<div class="menu-toggle">&#9776;</div>
+<nav>
+    <ul>
+        <li><h4>Posts</h4></li>
+        <li><a href="/ghalib" class="category-link">Mirza Ghalib</a></li>
+        <li><a href="/faiz" class="category-link">Faiz Ahmad</a></li>
+        <li><a href="/mir" class="category-link">Mir Taqi Mir</a></li>
+        <li><a href="/daagh" class="category-link">Daagh</a></li>
+        <li><a href="/jaun" class="category-link">Jaun Elia</a></li>
+        <li><a href="/majaz" class="category-link">Majaz</a></li>
+    </ul>
+</nav>
 
 <div class="container">
     <div class="post">
@@ -308,6 +306,20 @@
         <p>हुस्न ख़ुद बे-ताब है जल्वा दिखाने के लिए</p>
     </div>
 </div>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('menu-open');
+    });
+
+    function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+    }
+</script>
 
 </body>
 </html>
