@@ -172,7 +172,7 @@
         .menu-toggle {
             display: block; /* Show the menu toggle by default */
             position: fixed;
-            top: 10px;
+            top: 9px;
             left: 35px;
             font-size: 21px; /* Increase the font size */
             cursor: pointer;
@@ -290,6 +290,12 @@
 #sidebar::-webkit-scrollbar-corner {
     background-color: transparent; /* Color of the scrollbar corner */
 }
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
     </style>
 </head>
 

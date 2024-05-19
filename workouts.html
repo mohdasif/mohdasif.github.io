@@ -388,6 +388,12 @@
 #sidebar::-webkit-scrollbar-corner {
     background-color: transparent; /* Color of the scrollbar corner */
 }
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
     </style>
 </head>
 
