@@ -62,7 +62,7 @@
             display: none;
             font-size: 18px; /* Adjust the font size as needed */
             left: 0; /* Align to the left edge */
-            transform: translateX(-12px); /* Move the navigation slightly to the left */
+            transform: translateX(8px); /* Move the navigation slightly to the left */
         }
 
         .page-container {
@@ -364,6 +364,39 @@
         right: 400px; /* Adjusted position for the next arrow */
     }
 }
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 8px;
+            left: 32px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+top: 30; /* Position at the top */
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
     </style>
 
     <!-- Add JavaScript for popup functionality -->
@@ -494,6 +527,27 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/contact">💬</a>
     </div>
 
+<div class="menu-toggle">&#9776;</div>
+<nav>
+    <ul>
+        <li><h4>Pages</h4></li>
+        <li><a href="/articles">Articles</a></li>
+        <li><a href="/poetry">Poetry</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/me">About me</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/workouts">Workouts</a></li>
+        
+        <li><h4>Blog</h4></li>
+        <li><a href="https://www.mohdasif.com">Tech</a></li>
+        <li><a href="https://www.mohdasif.in">Fitness</a></li>
+        
+        <li><h4>Links</h4></li>
+        <li><a href="https://linktr.ee/mohdasif">Linktree</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif">Shop</a></li>
+    </ul>
+</nav>
+
     <div class="container">
 
 <div class="container" style="margin-top: 70px;"> <!-- Added margin-top -->
@@ -532,6 +586,20 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="https://images.mohdasif.com/photos/a7.JPG">
     </div>
 </div>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('menu-open');
+    });
+
+    function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+    }
+</script>
 
 </body>
 
