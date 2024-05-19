@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asif | Photos | Nepal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <style>
@@ -62,7 +63,7 @@
             display: none;
             font-size: 18px; /* Adjust the font size as needed */
             left: 0; /* Align to the left edge */
-            transform: translateX(-12px); /* Move the navigation slightly to the left */
+            transform: translateX(8px); /* Move the navigation slightly to the left */
         }
 
         .page-container {
@@ -89,78 +90,7 @@
             padding: 20px; /* Adjust padding as needed */
         }
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
-        }
 
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
-        }
-
-        /* New style for left-aligning specific sections */
-        .left-align {
-            text-align: left;
-        }
-
-        /* Center-align the about.me link */
-        .about-me {
-            text-align: center;
-        }
-
-        /* Center-align Links */
-        .center-section {
-            text-align: center;
-        }
-
-        @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-        }
-
-        /* New styles for the about.me link container and button */
-        .about-me-container {
-            text-align: center;
-        }
-}
-
-
-        /* New styles for the about.me link container and button */
-        .about-me-container {
-            text-align: center;
-        }
 
     .categories {
         text-align: center;
@@ -364,6 +294,202 @@
         right: 400px; /* Adjusted position for the next arrow */
     }
 }
+        h1 {
+            color: #333;
+            margin-bottom: 20px; /* Add space between title and content */
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: normal;
+        }
+
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
+
+        /* Center-align Links */
+        .center-section {
+            text-align: center;
+        }
+
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 15px; /* Increase the font size */
+        }
+
+        button:hover {
+            background-color: #000000 !important; /* Change the hover background color */
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
+        /* Sidebar styles */
+        #sidebar {
+            height: 100%;
+            width: 140px; /* Adjusted width for the sidebar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #FFF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 30px;
+        }
+        
+        /* Style sidebar section headings */
+.sidebar-section h4 {
+    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+    margin-bottom: 5px; /* Add space below the heading */
+    padding: 10px; /* Add padding to the heading */
+    font-size: 16px; /* Adjust the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the color of the heading */
+}
+
+        #sidebar a {
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+    background-color: #f9f9f9; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 9px;
+            left: 35px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
     </style>
 
     <!-- Add JavaScript for popup functionality -->
@@ -487,24 +613,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- Mobile Navigation -->
     <div id="mobile-navigation">
-        <a href="https://mohdasif.com/">🏠</a>
-        <a href="/blog">📝</a>
-        <a href="/photos">📷</a>
-        <a href="https://m.youtube.com/@mohdasif/shorts">🎬</a>
-        <a href="/contact">💬</a>
+        <a href="https://mohdasif.com/"><i class="fa-solid fa-house" style="color: #343a40;"></i></a>
+        <a href="/blog"><i class="fa-regular fa-pen-to-square" style="color: #343a40;"></i></a>
+        <a href="/photos"><i class="fa-solid fa-image" style="color: #20c997;"></i></a>
+        <a href="https://m.youtube.com/@mohdasif/shorts"><i class="fa-brands fa-youtube " style="color: #FF0000;"></i></a>
+        <a href="/contact"><i class="fa-regular fa-comment " style="color: #343a40;"></i></a>
     </div>
+
+
+<div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+<nav>
+    <ul>
+        <li><h4>Pages</h4></li>
+        <li><a href="/articles">Articles</a></li>
+        <li><a href="/poetry">Poetry</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/me">About me</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/workouts">Workouts</a></li>
+        
+        <li><h4>Blog</h4></li>
+        <li><a href="https://www.mohdasif.com">Tech</a></li>
+        <li><a href="https://www.mohdasif.in">Fitness</a></li>
+        
+        <li><h4>Links</h4></li>
+        <li><a href="https://linktr.ee/mohdasif">Linktree</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif">Shop</a></li>
+    </ul>
+</nav>
 
     <div class="container">
 
 <div class="container" style="margin-top: 70px;"> <!-- Added margin-top -->
     <div class="categories">
-        <a href="/photos/nepal" class="category-link">Nepal</a>
-        <a href="/photos/gym" class="category-link red">Gym</a>
-        <a href="/photos/lucknow" class="category-link">Lucknow</a>
-        <a href="/photos/rajasthan" class="category-link">Rajasthan</a>
+        <a href="/photos/archive" class="category-link">Archive</a>
         <a href="/photos/moradabad" class="category-link">Moradabad</a>
         <a href="/photos/personal" class="category-link">Personal</a>
-        <a href="/photos/archive" class="category-link">Archive</a>
+        <a href="/photos/gym" class="category-link red">Gym</a>
+        <a href="/photos/lucknow" class="category-link">Lucknow</a>
+        <a href="/photos/nepal" class="category-link">Nepal</a>
+        <a href="/photos/rajasthan" class="category-link">Rajasthan</a>
     </div>
 </div>
 
@@ -526,6 +674,20 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="https://images.mohdasif.com/nepal/a5.JPG">
     </div>
 </div>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('menu-open');
+    });
+
+    function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+    }
+</script>
 
 </body>
 
