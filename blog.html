@@ -397,6 +397,7 @@
             padding: 32px;
             height: 100vh;
             position: fixed;
+            top: 0; /* Position at the top */
             overflow: auto;
             transition: transform 0.9s ease;
             transform: translateX(-100%);
@@ -412,6 +413,17 @@
         nav ul li {
             margin-bottom: 10px;
         }
+nav ul li:first-child {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-top: 20px; /* Add space above all h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 40px; /* Add additional space above the first h4 */
+}
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
