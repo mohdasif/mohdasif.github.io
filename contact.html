@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Contact</title>
+    <title>Asif | Contact us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+
     <style>
         body {
             background-color: #f4f4f4;
@@ -24,6 +25,7 @@
             top: 0;
             z-index: 1000;
         }
+
 
         #desktop-navigation {
             background-color: #333;
@@ -65,13 +67,13 @@
         }
 
         .contact-container {
-            max-width: 600px;
-            margin: 30px auto;
+            max-width: 500px;
+            margin: 10px auto;
             background-color: transparent;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left;
         }
         
                .content-container {
@@ -81,11 +83,121 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left;
         }
         .content-container {
             padding: 20px; /* Adjust padding as needed */
         }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    .categories {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 10px 10px 10px 10px; /* Adjusted padding */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
+
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+        .categories::-webkit-scrollbar {
+        display: none;
+    }
+
+        .category-link {
+        display: inline-block; /* Display categories in a row */
+        margin-right: 15px; /* Adjusted margin for space between category links */
+        color: #000;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        font-weight: normal; /* Set font weight to normal */
+    }
+
+    .category-link:hover {
+        background-color: #e0e0e0;
+    }
+
+
+    .articles-section {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .articles-section.active {
+        display: block;
+    }
+
+    .article-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .article-list li {
+        background: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .article-list a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    .article-list a:hover {
+        background-color: #f5f5f5;
+    }
+
+    /* Mobile Styles */
+    @media only screen and (max-width: 600px) {
+        .categories {
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent categories from wrapping */
+            padding-bottom: 10px; /* Add bottom padding to make room for scrollbar */
+        }
+    }
 
         h1 {
             color: #333;
@@ -135,22 +247,6 @@
         /* Center-align Links */
         .center-section {
             text-align: center;
-        }
-
-
-        button {
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
-            border: none;
-            border-radius: 15px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 15px; /* Increase the font size */
-        }
-
-        button:hover {
-            background-color: #000000 !important; /* Change the hover background color */
         }
 
         @media only screen and (max-width: 600px) {
@@ -223,6 +319,7 @@
             padding: 32px;
             height: 100vh;
             position: fixed;
+            top: 0; /* Position at the top */
             overflow: auto;
             transition: transform 0.9s ease;
             transform: translateX(-100%);
@@ -238,6 +335,17 @@
         nav ul li {
             margin-bottom: 10px;
         }
+nav ul li:first-child {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-top: 20px; /* Add space above all h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 40px; /* Add additional space above the first h4 */
+}
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
@@ -286,33 +394,7 @@
     </style>
 
 </head>
-
 <body>
-<!-- Sidebar -->
-<div id="sidebar">
-    <div class="sidebar-section">
-        <h4>Pages</h4>
-        <a href="/articles">Articles</a>
-        <a href="/poetry">Poetry</a>
-        <a href="/podcasts">Podcasts</a>
-        <a href="/me">About me</a>
-        <a href="/music">Music</a>
-        <a href="/workouts">Workouts</a>
-    </div>
-
-    <div class="sidebar-section">
-        <h4>Blog</h4>
-        <a href="https://www.mohdasif.com">Tech</a>
-        <a href="https://www.mohdasif.in">Fitness</a>
-    </div>
-
-    <div class="sidebar-section">
-        <h4>Links</h4>
-        <a href="https://linktr.ee/mohdasif">Linktree</a>
-        <a href="https://www.amazon.in/shop/mohdasif">Shop</a>
-    </div>
-</div>
-
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
         <a href="https://mohdasif.com/">Home</a>
@@ -354,25 +436,32 @@
     </ul>
 </nav>
 
+    <div class="container">
     <div class="content-container">
-    <div class="contact-container" style="text-align: center;">
+<div class="container" style="margin-top: 10px;"> <!-- Added margin-top -->
+    <div class="categories">
+        <a href="mailto:mail@mohdasif.com" class="category-link">Email</a>
+        <a href="https://telegram.me/mohdasif" class="category-link">Telegram</a>
+        <a href="sms:mohdasif@pm.me" class="category-link">iMessage</a>
+        <a href="https://x.com/messages/compose?recipient_id=1483985376" class="category-link red">X</a>
+        <a href="https://linkedin.com/in/mohdasif" class="category-link">Linkedin</a>
+    </div>
+</div>
+
+    <div class="contact-container">
         <h2>Contact</h2>
-        <p>Have a question or just want to say hello? Feel free to reach out to me:</p>
+        <form id="contact-form" action="https://formspree.io/f/xayrzngr" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
 
-<ul>
-    <li><button style="width: 100px; background-color: #24a0ed; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;"
-            onclick="window.location.href='mailto:mail@mohdasif.com'">Email</button></li>
-    <li><button style="width: 100px; background-color: #24a0ed; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;"
-            onclick="window.location.href='https://telegram.me/mohdasif'">Telegram</button></li>
-    <li><button style="width: 100px; background-color: #24a0ed; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;"
-            onclick="window.location.href='sms:mohdasif@pm.me'">iMessage</button></li>
-    <li><button style="width: 100px; background-color: #24a0ed; color: #ffffff; padding: 12px 22px; border: none; cursor: pointer; border-radius: 15px;"
-            onclick="window.open('https://x.com/messages/compose?recipient_id=1483985376', '_blank')">X</button></li>
-</ul>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-        
-</div>
-</div>
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
     </div>
 
 <script>
@@ -390,5 +479,4 @@
 </script>
 
 </body>
-
 </html>
