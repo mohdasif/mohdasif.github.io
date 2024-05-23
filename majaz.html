@@ -75,7 +75,7 @@
         max-width: 600px;
         margin: auto;
         padding: 20px;
-        margin-top: 60px; /* Add top margin to create space below navigation */
+        margin-top: 10px; /* Add top margin to create space below navigation */
     }
 
     .post {
@@ -83,7 +83,8 @@
         padding: 20px;
         margin-bottom: 20px;
         border-radius: 5px;
-    }
+}
+
 
     .post p {
         margin: 0;
@@ -296,20 +297,68 @@
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
+.categories {
+    text-align: center;
+    margin-bottom: -15px;
+    padding: 10px 20px 10px 5px; /* Adjusted padding */
+    overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+    white-space: nowrap; /* Prevent categories from wrapping */
+}
+
+/* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.category-link {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 3px 7px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-right: 10px; /* Add margin between buttons for mobile */
+    transform: translateX(7px); /* Move the custom button slightly to the right */
+    font-weight: normal; /* Set font weight to normal */
+    margin-top: 5px; /* Add margin between navigation and buttons */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.category-link:last-child {
+    margin-right: 0; /* Remove margin from the last button for mobile */
+}
+/* Hide the categories on desktop screens */
+@media only screen and (min-width: 601px) {
+    .categories {
+        display: none;
+    }
+}
     </style>
 </head>
 
 <body>
-
+<!-- Sidebar -->
 <div id="sidebar">
     <div class="sidebar-section">
-        <h4>Posts</h4>
-        <a href="/ghalib" class="category-link">Mirza Ghalib</a>
-        <a href="/faiz" class="category-link">Faiz Ahmad</a>
-        <a href="/mir" class="category-link">Mir Taqi Mir</a>
-        <a href="/daagh" class="category-link">Daagh Dehlvi</a>
-        <a href="/jaun" class="category-link">Jaun Elia</a>
-        <a href="/majaz" class="category-link">Majaz</a>
+        <h4>Pages</h4>
+        <a href="/articles">Articles</a>
+        <a href="/poetry">Poetry</a>
+        <a href="/podcasts">Podcasts</a>
+        <a href="/me">About me</a>
+        <a href="/music">Music</a>
+        <a href="/workouts">Workouts</a>
+    </div>
+
+    <div class="sidebar-section">
+        <h4>Blog</h4>
+        <a href="https://www.mohdasif.com">Tech</a>
+        <a href="https://www.mohdasif.in">Fitness</a>
+    </div>
+
+    <div class="sidebar-section">
+        <h4>Links</h4>
+        <a href="https://linktr.ee/mohdasif">Linktree</a>
+        <a href="https://www.amazon.in/shop/mohdasif">Shop</a>
     </div>
 </div>
 
@@ -317,7 +366,7 @@
     <div id="desktop-navigation">
         <a href="https://mohdasif.com/">Home</a>
         <a href="/blog">Blog</a>
-        <a href="/about">About</a>    
+        <a href="/about">About</a>
         <a href="/photos">Photos</a>
         <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
         <a href="/contact">Contact</a>
@@ -336,15 +385,39 @@
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
-        <li><h4>Posts</h4></li>
-        <li><a href="/ghalib" class="category-link">Mirza Ghalib</a></li>
-        <li><a href="/faiz" class="category-link">Faiz Ahmad</a></li>
-        <li><a href="/mir" class="category-link">Mir Taqi Mir</a></li>
-        <li><a href="/daagh" class="category-link">Daagh Dehlvi</a></li>
-        <li><a href="/jaun" class="category-link">Jaun Elia</a></li>
-        <li><a href="/majaz" class="category-link">Majaz</a></li>
+        <li><h4>Pages</h4></li>
+        <li><a href="/articles">Articles</a></li>
+        <li><a href="/poetry">Poetry</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/me">About me</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/workouts">Workouts</a></li>
+        
+        <li><h4>Blog</h4></li>
+        <li><a href="https://www.mohdasif.com">Tech</a></li>
+        <li><a href="https://www.mohdasif.in">Fitness</a></li>
+        
+        <li><h4>Links</h4></li>
+        <li><a href="https://linktr.ee/mohdasif">Linktree</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif">Shop</a></li>
     </ul>
 </nav>
+
+<!-- Page Container -->
+<div class="page-container">
+
+<div class="container" id="container" style="margin-top: 25px">
+    <!-- Your content here -->
+    <div class="categories">
+          <br> <!-- Line break added here -->
+        <a href="https://mohdasif.com/majaz" class="category-link">Majaz</a>
+        <a href="https://mohdasif.com/mir" class="category-link">Mir Taqi Mir</a>
+        <a href="https://mohdasif.com/daagh" class="category-link">Daagh</a>  
+        <a href="https://mohdasif.com/faiz" class="category-link">Faiz Ahmad</a>
+        <a href="https://mohdasif.com/ghalib" class="category-link">Mirza Ghalib</a>
+        <a href="https://mohdasif.com/jaun" class="category-link">Jaun Elia</a>
+    </div>
+</div>
 
 <div class="container">
     <div class="post">
