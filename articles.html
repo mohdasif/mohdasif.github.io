@@ -337,6 +337,11 @@
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
+/* Active link styles */
+#sidebar a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #007bff; /* Background color for active link */
+}
     </style>
 
 </head>
@@ -347,7 +352,7 @@
 <div id="sidebar">
     <div class="sidebar-section">
         <h4>Pages</h4>
-        <a href="/articles">Articles</a>
+        <a href="/articles" class="active">Articles</a>
         <a href="/poetry">Poetry</a>
         <a href="/podcasts">Podcasts</a>
         <a href="/music">Music</a>
