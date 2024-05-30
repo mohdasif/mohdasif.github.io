@@ -313,10 +313,10 @@
 .category-link {
     background-color: #f5f5f5;
     color: #333;
-    padding: 3px 7px;
+    padding: 3px 10px;
     border: none;
     cursor: pointer;
-    border-radius: 7px;
+    border-radius: 15px;
     margin-right: 10px; /* Add margin between buttons for mobile */
     transform: translateX(7px); /* Move the custom button slightly to the right */
     font-weight: normal; /* Set font weight to normal */
@@ -337,6 +337,13 @@
 #sidebar a.active {
   color: #fff; /* Text color for active link */
   background-color: #007bff; /* Background color for active link */
+}
+/* Active link styles */
+.categories a.active {
+  color: #000; /* Text color for active link */
+  background-color: #DADEDF; /* Background color for active link */
+  border-radius: 10px; /* Rounded corners */
+  padding: 3px 6px; /* Increase the size of the background color */
 }
     </style>
 </head>
@@ -392,8 +399,7 @@
         <li><a href="/workouts">Workouts</a></li>
         
         <li><h4>Blog</h4></li>
-        <li><a href="https://www.mohdasif.com">Tech</a></li>
-        <li><a href="https://www.mohdasif.in">Fitness</a></li>
+        <li><a href="https://www.mohdasif.com">Fitness</a></li>
         
         <li><h4>Links</h4></li>
         <li><a href="https://linktr.ee/mohdasif">Linktree</a></li>
@@ -408,7 +414,7 @@
     <!-- Your content here -->
     <div class="categories">
           <br> <!-- Line break added here -->
-        <a href="https://mohdasif.com/ghalib" class="category-link">Mirza Ghalib</a>
+        <a href="/ghalib" class="active">Mirza Ghalib</a>
         <a href="https://mohdasif.com/faiz" class="category-link">Faiz Ahmad</a>
         <a href="https://mohdasif.com/daagh" class="category-link">Daagh</a>  
         <a href="https://mohdasif.com/mir" class="category-link">Mir Taqi Mir</a>
