@@ -4,40 +4,694 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif</title>
+    <title>Asif | Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
-    <!-- Add this style block to hide navigation links -->
     <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
+            overflow-x: hidden;
+        }
+
         #desktop-navigation,
         #mobile-navigation {
-            display: none;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
+
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 7px;
+            font-size: 18.7px; /* Increase font size for zoom effect */
+            padding: 6px; /* Padding for top and bottom */
+            padding-left: 5px; /* Additional padding for left */
+            padding-right: 7px; /* Additional padding for right */
+            margin: 0px 0 10px 0; /* Margin for top, right, bottom, and left */
+            font-weight: bold;
+            right: 8px; /* Position the navigation slightly away from the right side */
+            display: block; /* Ensure the desktop navigation is visible */
+        }
+
+
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 16px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
+
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
+        }
+
+        #mobile-navigation {
+            background-color: #FDFCFA;
+            color: #000;
+            padding: 10px;
+            display: none;
+            font-size: 18px; /* Adjust the font size as needed */
+            left: 0; /* Align to the left edge */
+            transform: translateX(8px); /* Move the navigation slightly to the left */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+section {
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid with minimum item width of 250px */
+    gap: 20px; /* Gap between grid items */
+    grid-auto-flow: dense; /* Dense packing of grid items */
+}
+
+.blog-card {
+    flex: 1 1 calc(25% - 20px); /* Adjust width for three columns */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-card-content {
+    padding: 10px; /* Reduced padding */
+}
+
+.blog-card-content h3 {
+    margin: 5px 0 0; /* Reduced margin around the title */
+}
+
+/* CSS for centering only the heading "Latest Blog Posts" */
+section h2 {
+    text-align: center;
+margin-top: 10px; /* Add margin for spacing */
+    margin-bottom: 50px; /* Add margin for spacing */
+}
+        /* CSS for centering the feature section and setting up grid layout */
+        .featured-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns, each occupying 1/3 of the available space */
+            gap: 20px; /* Gap between grid items */
+            justify-content: center; /* Center the grid */
+            margin-top: 10px; /* Add margin for spacing */
+        }
+
+        .featured-post {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .featured-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .featured-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .featured-post-content {
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1 0 100%;
+            padding-left: 20px; /* Add left padding */
+            box-sizing: border-box; /* Include padding in width calculation */
+            margin-bottom: 20px;
+            text-align: left; /* Align text to the left */
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: left; /* Align title to the left */
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: normal; /* Change font weight to normal */
+        }
+
+        .footer-section ul li a:hover {
+            color: #007bff;
+            font-weight: normal; /* Change font weight to normal */
+        }
+
+        .privacy-policy {
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-section {
+                flex: 1;
+            }
+
+            .footer-section:first-child {
+                text-align: left;
+            }
+
+            .footer-section:last-child {
+                text-align: right;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .blog-card {
+                flex: 1 1 100%;
+            }
+
+            .featured-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .featured-post {
+                width: 100%;
+            }
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
+
+        /* Center-align Links */
+        .center-section {
+            text-align: center;
+        }
+
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 15px; /* Increase the font size */
+        }
+
+        button:hover {
+            background-color: #000000 !important; /* Change the hover background color */
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
+        /* Sidebar styles */
+        #sidebar {
+            height: 100%;
+            width: 140px; /* Adjusted width for the sidebar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #FFF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 30px;
+        }
+        
+        /* Style sidebar section headings */
+.sidebar-section h4 {
+    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+    margin-bottom: 5px; /* Add space below the heading */
+    padding: 10px; /* Add padding to the heading */
+    font-size: 16px; /* Adjust the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the color of the heading */
+}
+
+        #sidebar a {
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+    background-color: #f9f9f9; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 9px;
+            left: 35px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+            top: 0; /* Position at the top */
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+nav ul li:first-child {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-top: 20px; /* Add space above all h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 40px; /* Add additional space above the first h4 */
+}
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+
     </style>
 
-    <script>
-        // Redirect from mohdasif.in to www.mohdasif.in
-        if (window.location.hostname === "mohdasif.in") {
-            window.location.href = "https://www.mohdasif.in";
-        }
-
-        var pageTitle = "Asif"; // Default title
-        var path = window.location.pathname.toLowerCase();
-
-        if (path.includes("/about")) {
-            pageTitle = "Asif | About";
-        } else if (path.includes("/contact")) {
-            pageTitle = "Asif | Contact";
-        }
-
-        document.title = pageTitle;
-    </script>
 </head>
 
-<body>
-    <!-- Your existing content or additional sections can be added here -->
 
-    <!-- Your existing scripts or closing body/html tags -->
+<body>
+
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="https://mohdasif.com/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/photos">Photos</a>
+        <a href="https://www.youtube.com/@mohdasif/shorts">Videos</a>
+        <a href="/contact">Contact</a>
+        <a href="https://www.amazon.in/shop/mohdasif" style="position: absolute; right: 190px;"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a href="https://www.youtube.com/@mohdasif/shorts" style="position: absolute; right: 150px;"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.buymeacoffee.com/mohdasif" style="position: absolute; right: 125px;"><i class="fa-solid fa-money-check-dollar"></i></a>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-navigation">
+        <a href="https://mohdasif.com/"><i class="fa-solid fa-house" style="color: #343a40;"></i></a>
+        <a href="/about"><i class="fa-regular fa-pen-to-square" style="color: #343a40;"></i></a>
+        <a href="/photos"><i class="fa-solid fa-image" style="color: #20c997;"></i></a>
+        <a href="https://m.youtube.com/@mohdasif/shorts"><i class="fa-brands fa-youtube " style="color: #FF0000;"></i></a>
+        <a href="/contact"><i class="fa-regular fa-comment " style="color: #343a40;"></i></a>
+    </div>
+
+
+<div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+<nav>
+    <ul>
+        <li><h4>Pages</h4></li>
+        <li><a href="/articles">Articles</a></li>
+        <li><a href="/poetry">Poetry</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/me">About me</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/workouts">Workouts</a></li>
+        
+        <li><h4>Blog</h4></li>
+        <li><a href="https://www.mohdasif.com">Tech</a></li>
+        <li><a href="https://www.mohdasif.in">Fitness</a></li>
+        
+        <li><h4>Links</h4></li>
+        <li><a href="https://linktr.ee/mohdasif">Linktree</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif">Shop</a></li>
+    </ul>
+</nav>
+
+<section>
+    <h2>Supplements</h2>
+
+    <div class="blog-cards">
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/3KqzQmS">
+        <img src="https://photos.mohdasif.com/41bCZ4N2pdL._SX300_SY300_QL70_FMwebp_%20(1).webp" alt="Conventional to Sumo">
+        <div class="blog-card-content">
+            <h3><a href="https://amzn.to/3KqzQmS">Optimum Nutrition (ON) Micronized Creatine Powder</a></h3>
+        </div>
+    </a>
+</div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/4bFrsvI">
+                <img src="https://photos.mohdasif.com/protien.jpg" alt="Blog Post 1">
+                <div class="blog-card-content">
+                    <h3><a href="https://amzn.to/4bFrsvI">Optimum Nutrition (ON) Gold Standard 100% Whey Protein Powder</a></h3>
+                </div>
+            </a>
+        </div>
+
+
+
+        <!-- Blog Post 1 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/4bBVQqE">
+                <img src="https://photos.mohdasif.com/coffee.webp" alt="Blog Post 3">
+                <div class="blog-card-content">
+                    <h3><a href="https://amzn.to/4bBVQqE">Nescafe Classic Instant Coffee Powder Jar</a></h3>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Accessories</h2>
+
+    <div class="blog-cards">
+
+        <!-- Blog Post 4 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/4bXr0sm">
+        <img src="https://photos.mohdasif.com/belt.jpg" alt="Conventional to Sumo">
+        <div class="blog-card-content">
+            <h3><a href="https://amzn.to/4bXr0sm">Gym Leather Weight lifting Belts</a></h3>
+        </div>
+    </a>
+</div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/3V7veH9">
+        <img src="https://photos.mohdasif.com/straps.jpg" alt="Conventional to Sumo">
+        <div class="blog-card-content">
+            <h3><a href="https://amzn.to/3V7veH9">Leather Lifting Wrist Straps for Men and Women Wrist Support</a></h3>
+        </div>
+    </a>
+</div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/3Vk2E6G">
+                <img src="https://photos.mohdasif.com/bag.jpg" alt="Blog Post 1">
+                <div class="blog-card-content">
+                    <h3><a href="https://amzn.to/3Vk2E6G">NIVIA Polyester Gym Bag Sports/Travel Bag</a></h3>
+                </div>
+            </a>
+        </div>
+
+
+
+        <!-- Blog Post 1 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/4bVLbH4">
+                <img src="https://photos.mohdasif.com/towel.jpg" alt="Blog Post 3">
+                <div class="blog-card-content">
+                    <h3><a href="https://amzn.to/4bVLbH4">Super Soft Microfiber Hand Towels, Gym & Workout Towels</a></h3>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Food</h2>
+
+    <div class="blog-cards">
+
+        <!-- Blog Post 8 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/453I7q2">
+        <img src="https://photos.mohdasif.com/peanuts.jpg">
+        <div class="blog-card-content">
+            <h3><a href="https://amzn.to/453I7q2">Unsalted roasted PEANUT -1kg [skin removed]</a></h3>
+        </div>
+    </a>
+</div>
+
+
+        <!-- Blog Post 7 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/4c0k39V">
+        <img src="https://photos.mohdasif.com/quinoa.jpg">
+        <div class="blog-card-content">
+            <h3><a href="https://amzn.to/4c0k39V">Quinoa 4kg - 100% Wholegrain | Rich in Fibre | Quinoa Seeds for Weight Management
+</a></h3>
+        </div>
+    </a>
+</div>
+
+        <!-- Blog Post 6 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/4bFYKea">
+        <img src="https://photos.mohdasif.com/skimmed.jpg">
+        <div class="blog-card-content">
+            <h3><a href="https://amzn.to/4bFYKea">all-natural skimmed milk powder - 100% pure, non-fat dry milk – 1 kg pack</a></h3>
+        </div>
+    </a>
+</div>
+
+
+        <!-- Blog Post 5 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/4bVxmcl">
+        <img src="https://photos.mohdasif.com/walnuts.jpg">
+        <div class="blog-card-content">
+            <h3><a href="https://amzn.to/4bVxmcl">Kashmiri Walnut Without Shell, Akhrot Giri,raw,400grams</a></h3>
+        </div>
+    </a>
+</div>
+
+        <!-- Blog Post 4 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/3Vmm3Uv">
+        <img src="https://photos.mohdasif.com/rolled%20oats.jpg">
+        <div class="blog-card-content">
+            <h3><a href="https://amzn.to/3Vmm3Uv">Rolled Oats 4kg - Protein Rolled Oats | 100% Wholegrain | Rolled Oats for Breakfast | High Fibre Cereals</a></h3>
+        </div>
+    </a>
+</div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card">
+            <a href="https://amzn.to/3KpcbmF">
+        <img src="https://photos.mohdasif.com/almonds.jpg">
+        <div class="blog-card-content">
+            <h3><a href="https://amzn.to/3KpcbmF">Dried California Almonds, Without any artificial color, Natural Badam Giri, 1kg</a></h3>
+        </div>
+    </a>
+</div>
+
+
+</section>
+
+    <footer class="footer">
+
+        <div class="privacy-policy">
+            <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> |
+            <a href="/terms" style="font-weight: normal;">Terms of Use</a> |
+            <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
+            <p>&copy; 2024 @mohdasif. All rights reserved.</p>
+        </div>
+    </footer>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('menu-open');
+    });
+
+    function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+    }
+</script>
+
+
 </body>
 
 </html>
