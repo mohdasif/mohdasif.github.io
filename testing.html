@@ -210,138 +210,7 @@
         /* Sidebar styles */
         #sidebar {
             height: 100%;
-            width: 140px; /* Adjusted width for the sidebar */
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #FFF;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 30px;
-        }
-
-        /* Style sidebar section headings */
-        .sidebar-section h4 {
-            margin: 20px 0; /* Adjust top and bottom margin to create a gap */
-            margin-bottom: 5px; /* Add space below the heading */
-            padding: 10px; /* Add padding to the heading */
-            font-size: 16px; /* Adjust the font size of the heading */
-            font-weight: bold; /* Make the heading bold */
-            color: #333; /* Set the color of the heading */
-        }
-
-        #sidebar a {
-            padding: 10px 25px;
-            text-decoration: none;
-            font-size: 15px;
-            color: #333;
-            display: block;
-            transition: 0.3s;
-        }
-
-        #sidebar a:hover {
-            background-color: #f9f9f9; /* Background color on hover */
-            color: #333; /* Text color on hover */
-        }
-
-        #sidebar .close-btn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-
-        .menu-toggle {
-            display: block; /* Show the menu toggle by default */
-            position: fixed;
-            top: 10px;
-            left: 35px;
-            font-size: 20px; /* Increase the font size */
-            cursor: pointer;
-            z-index: 1000; /* Ensure the menu icon is on top */
-        }
-
-        nav {
-            float: left;
-            width: 25%;
-            background-color: #f1f1f1;
-            padding: 32px;
-            height: 100vh;
-            position: fixed;
-            overflow: auto;
-            transition: transform 0.9s ease;
-            transform: translateX(-100%);
-            z-index: 999; /* Ensure the sidebar is on top */
-        }
-        nav.menu-open {
-            transform: translateX(0);
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            margin-bottom: 10px;
-        }
-
-        @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-
-            .content-container {
-                margin-left: 0; /* Reset margin for small screens */
-            }
-
-            #sidebar {
-                display: none; /* Hide sidebar on small screens */
-            }
-        }
-        /* Reduce the size of the scrollbar */
-        #sidebar::-webkit-scrollbar {
-            width: 3px; /* Adjust the width as needed */
-        }
-
-        /* Handle for the scrollbar */
-        #sidebar::-webkit-scrollbar-thumb {
-            background-color: #ccc; /* Color of the scrollbar handle */
-            border-radius: 2px; /* Rounded corners for the scrollbar handle */
-        }
-
-        /* Track for the scrollbar */
-        #sidebar::-webkit-scrollbar-track {
-            background-color: transparent; /* Color of the scrollbar track */
-        }
-
-        /* Corner of the scrollbar */
-        #sidebar::-webkit-scrollbar-corner {
-            background-color: transparent; /* Color of the scrollbar corner */
-        }
-
-        /* Track piece for the scrollbar */
-        #sidebar::-webkit-scrollbar-track-piece {
-            background-color: transparent; /* Color of the scrollbar track piece */
-        }
-
-        .content-container {
-            margin-left: 180px; /* Adjusted left margin for the content */
-            padding: 20px; /* Add padding for the content */
-            max-width: 1200px; /* Adjust the maximum width for the content */
-            background-color: #fff; /* Background color for the content */
-            border-radius: 10px; /* Add border radius for rounded corners */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
-            overflow: hidden; /* Hide any overflowing content */
-        }
-        /* Sidebar styles */
-        #sidebar {
-            height: 100%;
-            width: 140px; /* Adjusted width for the sidebar */
+            width: 150px; /* Adjusted width for the sidebar */
             position: fixed;
             top: 0;
             left: 0;
@@ -416,15 +285,16 @@
             margin-bottom: 10px;
         }
 nav ul li:first-child {
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 10px; /* Adjust the margin as needed */
 }
 
 nav ul h4 {
-    margin-top: 20px; /* Add space above all h4 elements */
+    margin-top: 10px; /* Add space above all h4 elements */
 }
 
 nav ul h4:first-of-type {
     margin-top: 40px; /* Add additional space above the first h4 */
+    margin-bottom: 15px; /* Add additional space above the first h4 */
 }
 
         @media only screen and (max-width: 600px) {
@@ -471,12 +341,36 @@ nav ul h4:first-of-type {
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+/* Adjust the gap between menu items */
+nav ul {
+    padding: 0; /* Remove padding from the unordered list */
+    margin: 0; /* Remove margin from the unordered list */
+}
+
+nav li {
+    margin: 0; /* Remove margin from list items */
+    padding: 0; /* Remove padding from list items */
+    list-style: none; /* Remove default list styling */
+}
+/* Reduce margin and padding for list items */
+nav ul li {
+    margin-bottom: 1px; /* Adjust the value as needed */
+    padding: 0; /* Remove any padding */
+}
+/* Reduce margin and padding for the heading */
+nav ul li h4 {
+    margin-top: 5px;
+}
+
 /* Active link styles */
 #sidebar a.active {
   color: #fff; /* Text color for active link */
   background-color: #007bff; /* Background color for active link */
 }
-
 /* Increase font size for list items */
 nav ul li {
     font-size: 16px; /* Adjust the value as needed */
