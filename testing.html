@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Contact us</title>
+    <title>Asif | Music</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
-
     <style>
         body {
             background-color: #f4f4f4;
@@ -71,159 +70,85 @@
 #mobile-navigation a:first-child {
     margin-left: 33px; /* Adjust this value as needed to create the desired space */
 }
-
-        .contact-container {
-            max-width: 500px;
-            margin: 10px auto;
-            background-color: transparent;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        
-               .content-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        .content-container {
-            padding: 20px; /* Adjust padding as needed */
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        input, textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        button {
-            padding: 10px;
-            border: none;
-            background-color: #007bff;
+        header {
+            background-color: #333;
             color: white;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
 
-        button:hover {
-            background-color: #218838;
+        section {
+            padding: 60px 20px;
+            text-align: left;
         }
-    .categories {
-        text-align: center;
-        margin-bottom: 28px;
-        padding: 10px 10px 10px 10px; /* Adjusted padding */
-        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
-        white-space: nowrap; /* Prevent categories from wrapping */
-    }
 
-    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
-        .categories::-webkit-scrollbar {
-        display: none;
-    }
-
-        .category-link {
-        display: inline-block; /* Display categories in a row */
-        margin-right: 15px; /* Adjusted margin for space between category links */
-        color: #000;
-        text-decoration: none;
-        padding: 3px 10px;
-        border-radius: 10px;
-        cursor: pointer;
-        background-color: #f5f5f5;
-        font-weight: normal; /* Set font weight to normal */
-    }
-
-    .category-link:hover {
-        background-color: #e0e0e0;
-    }
-
-
-    .articles-section {
-        display: none;
-        margin-top: 20px;
-    }
-
-    .articles-section.active {
-        display: block;
-    }
-
-    .article-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .article-list li {
-        background: #fff;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .article-list a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        padding: 20px;
-    }
-
-    .article-list a:hover {
-        background-color: #f5f5f5;
-    }
-
-    /* Mobile Styles */
-    @media only screen and (max-width: 600px) {
-        .categories {
-            overflow-x: auto; /* Enable horizontal scrolling */
-            white-space: nowrap; /* Prevent categories from wrapping */
-            padding-bottom: 10px; /* Add bottom padding to make room for scrollbar */
+        .blog-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns, each taking up one-third of the available space */
+            gap: 20px; /* Gap between grid items */
+            grid-auto-flow: dense; /* Dense packing of grid items */
         }
-    }
 
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+            margin-bottom: 10px;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card iframe {
+            width: 100%;
+            height: 230px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* CSS for centering only the heading "Latest Blog Posts" */
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px; /* Add margin for spacing */
+        }
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .blog-cards {
+                grid-template-columns: 1fr; /* Single column layout on mobile */
+            }
+
+            .blog-card iframe {
+                height: 190px; /* Adjusted height for mobile */
+            }
+
+            section {
+                padding: 40px 5px; /* Adjust padding for mobile */
+            }
+        }
         h1 {
             color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
-        }
-
-        h2 {
-            color: #333;
-            margin-top: 20px;
         }
 
         p {
-            color: #555;
-            margin-bottom: 20px;
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin-top: 20px;
         }
 
         li {
@@ -233,11 +158,7 @@
         a {
             text-decoration: none;
             color: #4285f4;
-            font-weight: normal;
-        }
-
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
+            font-weight: bold;
         }
 
         /* New style for left-aligning specific sections */
@@ -253,6 +174,22 @@
         /* Center-align Links */
         .center-section {
             text-align: center;
+        }
+
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 15px; /* Increase the font size */
+        }
+
+        button:hover {
+            background-color: #000000 !important; /* Change the hover background color */
         }
 
         @media only screen and (max-width: 600px) {
@@ -397,19 +334,9 @@ nav ul h4:first-of-type {
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
-/* Active link styles */
-#sidebar a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #007bff; /* Background color for active link */
-}
-/* Increase font size for list items */
-nav ul li {
-    font-size: 16px; /* Adjust the value as needed */
-}
 
-/* Increase font size for anchor links */
-nav ul li a {
-    font-size: 18px; /* Adjust the value as needed */
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
 }
     </style>
 
@@ -417,28 +344,14 @@ nav ul li a {
 
 <body>
 
-<!-- Sidebar -->
-<div id="sidebar">
-    <div class="sidebar-section">
-        <h4>Pages</h4>
-        <a href="/contact" class="active">Contact</a>
-        <a href="/podcasts">Podcasts</a>
-        <a href="/videos">Videos</a> 
-        <a href="/music">Music</a>
-        <a href="/workouts">Workouts</a>
-        <a href="https://mohdasif.in">Store</a>    
-    </div>
-
-</div>
-
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
         <a href="https://mohdasif.com/">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/about">About</a>
-        <a href="/photos">Photos</a>
-        <a href="/videos">Videos</a>
-        <a href="/contact">Contact</a>
+        <a href="https://mohdasif.com/blog">Blog</a>
+        <a href="https://mohdasif.com/about">About</a>
+        <a href="https://mohdasif.com/photos">Photos</a>
+        <a href="https://mohdasif.com/videos">Videos</a>
+        <a href="https://mohdasif.com/contact">Contact</a>
         <a href="https://mohdasif.in" style="position: absolute; right: 190px;"><i class="fa-solid fa-bag-shopping"></i></a>
         <a href="https://www.youtube.com/@mohdasif/shorts" style="position: absolute; right: 150px;"><i class="fab fa-youtube"></i></a>
         <a href="https://www.buymeacoffee.com/mohdasif" style="position: absolute; right: 125px;"><i class="fa-solid fa-money-check-dollar"></i></a>
@@ -447,10 +360,10 @@ nav ul li a {
     <!-- Mobile Navigation -->
     <div id="mobile-navigation">
         <a href="https://mohdasif.com/"><i class="fa-solid fa-house" style="color: #343a40;"></i></a>
-        <a href="/videos"><i class="fa-solid fa-play" style="color: #74c0f5;"></i></a>
-        <a href="/photos"><i class="fa-solid fa-image" style="color: #20c997;"></i></a>
+        <a href="https://mohdasif.com/videos"><i class="fa-solid fa-play" style="color: #74c0f5;"></i></a>
+        <a href="https://mohdasif.com/photos"><i class="fa-solid fa-image" style="color: #20c997;"></i></a>
         <a href="https://m.youtube.com/@mohdasif/shorts"><i class="fa-brands fa-youtube " style="color: #FF0000;"></i></a>
-        <a href="/contact"><i class="fa-regular fa-comment " style="color: #343a40;"></i></a>
+        <a href="https://mohdasif.com/contact"><i class="fa-regular fa-comment " style="color: #343a40;"></i></a>
     </div>
 
 
@@ -458,43 +371,42 @@ nav ul li a {
 <nav>
     <ul>
         <li><h4>Pages</h4></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="https://mohdasif.in">Store</a></li>
-        <li><a href="/podcasts">Podcasts</a></li>
-        <li><a href="/videos">Videos</a></li>
-        <li><a href="/music">Music</a></li>
-        <li><a href="/workouts">Workouts</a></li>        
+        <li><a href="/articles">Articles</a></li>
         <li><a href="/poetry">Poetry</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/me">About me</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/workouts">Workouts</a></li>
+        
+        <li><h4>Blog</h4></li>
+        <li><a href="https://www.mohdasif.com">Tech</a></li>
+        <li><a href="https://www.mohdasif.in">Fitness</a></li>
+        
+        <li><h4>Links</h4></li>
+        <li><a href="https://linktr.ee/mohdasif">Linktree</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif">Shop</a></li>
     </ul>
 </nav>
-
-    <div class="container">
-    <div class="content-container">
-<div class="container" style="margin-top: 12px;"> <!-- Added margin-top -->
-    <div class="categories">
-        <a href="mailto:mail@mohdasif.com" class="category-link">Email</a>
-        <a href="sms:mohdasif@pm.me" class="category-link">iMessage</a>
-        <a href="https://telegram.me/mohdasif" class="category-link">Telegram</a>
-        <a href="https://x.com/messages/compose?recipient_id=1483985376" class="category-link red">X</a>
-         
-    </div>
-</div>
-
-    <div class="contact-container">
-        <h2>Contact</h2>
-        <form id="contact-form" action="https://formspree.io/f/xayrzngr" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="description">Description</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-    </div>
+<br>
+    <section>
+        <div class="blog-cards">
+            <div class="blog-card">
+                <iframe src="https://www.youtube.com/embed/laBUVn1eRBs" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="blog-card">
+                <iframe src="https://www.youtube.com/embed/ulmZfLN8ufU" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="blog-card">
+                <iframe src="https://www.youtube.com/embed/gy8asvu_I0U" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="blog-card">
+                <iframe src="https://www.youtube.com/embed/V-Eu-O56WWU" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="blog-card">
+                <iframe src="https://www.youtube.com/embed/yHFwOd_5eps" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -509,6 +421,8 @@ nav ul li a {
         document.querySelector(".sidebar").style.width = "0";
     }
 </script>
-  <br>
+
 </body>
+
 </html>
+
