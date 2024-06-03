@@ -4,29 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Privacy Policy</title>
+    <title>Asif | Contact us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        .tweet-container {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px; /* Add padding here */
-        }
-
         body {
             background-color: #f4f4f4;
             margin: 0;
@@ -35,7 +17,7 @@
             overflow-x: hidden;
         }
 
-        #desktop-navigation,
+       #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -44,12 +26,13 @@
             z-index: 1000;
         }
 
+
         #desktop-navigation {
             background-color: #333;
             color: #fff;
             padding: 7px;
             font-size: 18.7px; /* Increase font size for zoom effect */
-            padding: 7px; /* Padding for top and bottom */
+            padding:7px; /* Padding for top and bottom */
             padding-left: 5px; /* Additional padding for left */
             padding-right: 6px; /* Additional padding for right */
             padding: 6px 7px; /* Increase padding for more space */
@@ -58,6 +41,7 @@
             right: 8px; /* Position the navigation slightly away from the right side */
             display: block; /* Ensure the desktop navigation is visible */
         }
+
 
         #desktop-navigation a,
         #mobile-navigation a {
@@ -72,33 +56,33 @@
             margin-right: 0; /* Remove margin from the last element */
         }
 
-        #mobile-navigation {
-            background-color: #FDFCFA;
-            color: #000;
-            padding: 10px;
-            display: none;
-            font-size: 18px; /* Adjust the font size as needed */
-            position: fixed; /* Ensure it stays fixed on the screen */
-            top: 0; /* Align to the top edge */
-            left: 0; /* Align to the left edge */
-            width: 100%; /* Make it full width */
-        }
+#mobile-navigation {
+    background-color: #FDFCFA;
+    color: #000;
+    padding: 10px;
+    display: none;
+    font-size: 18px; /* Adjust the font size as needed */
+    position: fixed; /* Ensure it stays fixed on the screen */
+    top: 0; /* Align to the top edge */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Make it full width */
+}
 
-        #mobile-navigation a:first-child {
-            margin-left: 33px; /* Adjust this value as needed to create the desired space */
-        }
+#mobile-navigation a:first-child {
+    margin-left: 33px; /* Adjust this value as needed to create the desired space */
+}
 
         .contact-container {
-            max-width: 600px;
-            margin: 30px auto;
+            max-width: 500px;
+            margin: 10px auto;
             background-color: transparent;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
-
-        .content-container {
+        
+               .content-container {
             max-width: 600px;
             margin: 30px auto;
             background-color: #fff;
@@ -107,61 +91,119 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
-
-        h1 {
-            color: #333;
+        .content-container {
+            padding: 20px; /* Adjust padding as needed */
         }
 
-        p {
-            color: #666;
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
+        form {
+            display: flex;
+            flex-direction: column;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
         }
 
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
         }
 
         button {
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
+            padding: 10px;
             border: none;
-            border-radius: 15px;
-            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
             cursor: pointer;
-            font-size: 12px; /* Increase the font size */
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #000000 !important; /* Change the hover background color */
+            background-color: #218838;
         }
+    .categories {
+        text-align: center;
+        margin-bottom: 28px;
+        padding: 10px 10px 10px 10px; /* Adjusted padding */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
 
-        @media only screen and (max-width: 600px) {
-            #desktop-navigation {
-                display: none;
-            }
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+        .categories::-webkit-scrollbar {
+        display: none;
+    }
 
-            #mobile-navigation {
-                display: block;
-            }
+        .category-link {
+        display: inline-block; /* Display categories in a row */
+        margin-right: 15px; /* Adjusted margin for space between category links */
+        color: #000;
+        text-decoration: none;
+        padding: 3px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        font-weight: normal; /* Set font weight to normal */
+    }
+
+    .category-link:hover {
+        background-color: #e0e0e0;
+    }
+
+
+    .articles-section {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .articles-section.active {
+        display: block;
+    }
+
+    .article-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .article-list li {
+        background: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .article-list a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    .article-list a:hover {
+        background-color: #f5f5f5;
+    }
+
+    /* Mobile Styles */
+    @media only screen and (max-width: 600px) {
+        .categories {
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent categories from wrapping */
+            padding-bottom: 10px; /* Add bottom padding to make room for scrollbar */
         }
+    }
 
         h1 {
             color: #333;
@@ -188,8 +230,32 @@
             margin: 10px 0;
         }
 
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: normal;
+        }
+
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
+
+        /* Center-align Links */
+        .center-section {
+            text-align: center;
+        }
+
         @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
                 display: none;
             }
@@ -197,20 +263,11 @@
             #mobile-navigation {
                 display: block;
             }
-
-            .content-container {
-                margin-left: 0; /* Reset margin for small screens */
-            }
-
-            #sidebar {
-                display: none; /* Hide sidebar on small screens */
-            }
         }
-
         /* Sidebar styles */
         #sidebar {
             height: 100%;
-            width: 150px; /* Adjusted width for the sidebar */
+            width: 140px; /* Adjusted width for the sidebar */
             position: fixed;
             top: 0;
             left: 0;
@@ -285,16 +342,15 @@
             margin-bottom: 10px;
         }
 nav ul li:first-child {
-    margin-top: 10px; /* Adjust the margin as needed */
+    margin-top: 20px; /* Adjust the margin as needed */
 }
 
 nav ul h4 {
-    margin-top: 10px; /* Add space above all h4 elements */
+    margin-top: 20px; /* Add space above all h4 elements */
 }
 
 nav ul h4:first-of-type {
     margin-top: 40px; /* Add additional space above the first h4 */
-    margin-bottom: 15px; /* Add additional space above the first h4 */
 }
 
         @media only screen and (max-width: 600px) {
@@ -341,31 +397,6 @@ nav ul h4:first-of-type {
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
-
-nav, nav ul, nav li, nav a, nav h4 {
-    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
-}
-/* Adjust the gap between menu items */
-nav ul {
-    padding: 0; /* Remove padding from the unordered list */
-    margin: 0; /* Remove margin from the unordered list */
-}
-
-nav li {
-    margin: 0; /* Remove margin from list items */
-    padding: 0; /* Remove padding from list items */
-    list-style: none; /* Remove default list styling */
-}
-/* Reduce margin and padding for list items */
-nav ul li {
-    margin-bottom: 1px; /* Adjust the value as needed */
-    padding: 0; /* Remove any padding */
-}
-/* Reduce margin and padding for the heading */
-nav ul li h4 {
-    margin-top: 5px;
-}
-
 /* Active link styles */
 #sidebar a.active {
   color: #fff; /* Text color for active link */
@@ -381,6 +412,7 @@ nav ul li a {
     font-size: 18px; /* Adjust the value as needed */
 }
     </style>
+
 </head>
 
 <body>
@@ -389,11 +421,12 @@ nav ul li a {
 <div id="sidebar">
     <div class="sidebar-section">
         <h4>Pages</h4>
+        <a href="/contact" class="active">Contact</a>
         <a href="/podcasts">Podcasts</a>
-        <a href="/videos" class="active">Videos</a>
+        <a href="/videos">Videos</a> 
         <a href="/music">Music</a>
         <a href="/workouts">Workouts</a>
-        <a href="https://mohdasif.in">Store</a>         
+        <a href="https://mohdasif.in">Store</a>    
     </div>
 
 </div>
@@ -435,60 +468,47 @@ nav ul li a {
     </ul>
 </nav>
 
-<br> <br>
-<!-- Tweet container -->
-<div id="tweetContainer" class="tweet-container"></div>
+    <div class="container">
+    <div class="content-container">
+<div class="container" style="margin-top: 12px;"> <!-- Added margin-top -->
+    <div class="categories">
+        <a href="mailto:mail@mohdasif.com" class="category-link">Email</a>
+        <a href="sms:mohdasif@pm.me" class="category-link">iMessage</a>
+        <a href="https://telegram.me/mohdasif" class="category-link">Telegram</a>
+        <a href="https://x.com/messages/compose?recipient_id=1483985376" class="category-link red">X</a>
+         
+    </div>
+</div>
+
+    <div class="contact-container">
+        <h2>Contact</h2>
+        <form id="contact-form" action="https://formspree.io/f/xayrzngr" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
 
 <script>
-    const tweetUrls = [
-        'https://twitter.com/AamAadmiParty/status/1797212311943340461',
-    ];
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('menu-open');
+    });
 
-    const youtubeUrls = [
-        'https://www.youtube.com/watch?v=3JZ_D3ELwOQ'
-    ];
-
-    function embedTweetsAndVideos() {
-        const tweetContainer = document.getElementById('tweetContainer');
-
-        // Clear the tweet container
-        tweetContainer.innerHTML = '';
-
-        tweetUrls.forEach(url => {
-            const blockquote = document.createElement('blockquote');
-            blockquote.className = 'twitter-tweet';
-            blockquote.setAttribute('data-show-replies', 'false'); // Add this line
-            const a = document.createElement('a');
-            a.href = url;
-            blockquote.appendChild(a);
-            tweetContainer.appendChild(blockquote);
-        });
-
-        // Load Twitter widgets script
-        const script = document.createElement('script');
-        script.src = 'https://platform.twitter.com/widgets.js';
-        script.async = true;
-        document.body.appendChild(script);
+    function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
     }
 
-    // Embed tweets and videos on page load
-    window.onload = embedTweetsAndVideos;
+    function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+    }
 </script>
-
-
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('nav').classList.toggle('menu-open');
-        });
-
-        function openNav() {
-            document.querySelector(".sidebar").style.width = "250px";
-        }
-
-        function closeNav() {
-            document.querySelector(".sidebar").style.width = "0";
-        }
-    </script>
+  <br>
 </body>
-
 </html>
