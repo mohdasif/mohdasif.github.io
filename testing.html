@@ -110,6 +110,36 @@
             height: 230px;
             border-bottom: 1px solid #ddd;
         }
+        .categories {
+            text-align: center;
+            margin-bottom: 12px;
+            padding: 10px 20px 10px 5px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .categories::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-link {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 3px 7px;
+            border: none;
+            cursor: pointer;
+            border-radius: 7px;
+            margin-right: 10px;
+            transform: translateX(7px);
+            font-weight: normal;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        .category-link:last-child {
+            margin-right: 0;
+        }
+
 
         /* CSS for centering only the heading "Latest Blog Posts" */
         section h2 {
@@ -125,9 +155,7 @@
             .blog-card iframe {
                 height: 190px; /* Adjusted height for mobile */
             }
-    .blog-card {
-        margin-bottom: 30px; /* Add space between each blog card */
-    }
+
             section {
                 padding: 40px 5px; /* Adjust padding for mobile */
             }
@@ -340,6 +368,10 @@ nav ul h4:first-of-type {
 nav, nav ul, nav li, nav a, nav h4 {
     font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
 }
+
+section {
+    margin-top: 10px; /* Adjust the value as needed */
+}
     </style>
 
 </head>
@@ -368,21 +400,35 @@ nav, nav ul, nav li, nav a, nav h4 {
         <a href="https://mohdasif.com/contact"><i class="fa-regular fa-comment " style="color: #343a40;"></i></a>
     </div>
 
+    <section>
+        <div class="categories">
+            <button class="category-link">All</button>
+            <button class="category-link">Category 1</button>
+            <button class="category-link">Category 2</button>
+            <button class="category-link">Category 3</button>
+        </div>
 
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
         <li><h4>Pages</h4></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="https://mohdasif.in">Store</a></li>
-        <li><a href="/podcasts">Podcasts</a></li>
-        <li><a href="/videos">Videos</a></li>
-        <li><a href="/music">Music</a></li>
-        <li><a href="/workouts">Workouts</a></li>        
+        <li><a href="/articles">Articles</a></li>
         <li><a href="/poetry">Poetry</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/me">About me</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/workouts">Workouts</a></li>
+        
+        <li><h4>Blog</h4></li>
+        <li><a href="https://www.mohdasif.com">Tech</a></li>
+        <li><a href="https://www.mohdasif.in">Fitness</a></li>
+        
+        <li><h4>Links</h4></li>
+        <li><a href="https://linktr.ee/mohdasif">Linktree</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif">Shop</a></li>
     </ul>
 </nav>
-<br><br>
+
     <section>
         <div class="blog-cards">
             <div class="blog-card">
