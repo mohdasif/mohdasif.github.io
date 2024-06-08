@@ -508,6 +508,19 @@ nav ul h4:first-of-type {
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
+/* Active link styles */
+#sidebar a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #04AA6D; /* Background color for active link */
+}
+/* Active link styles */
+.categories a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #04AA6D; /* Background color for active link */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2px 6px; /* Increase the size of the background color */
+  margin-right: 10px; /* Move the active button slightly to the right */
+}
     </style>
 
     <!-- Add JavaScript for popup functionality -->
@@ -661,8 +674,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="container" style="margin-top: 60px;"> <!-- Added margin-top -->
     <div class="categories">
-        <a href="/photos/archive" class="category-link">Archive</a>
-        <a href="/photos/gym" class="category-link red">Gym</a>
+        <a href="/photos/archive" class="category-link active">Archive</a>
+        <a href="/photos/gym" class="category-link">Gym</a>
         <a href="/photos/lucknow" class="category-link">Lucknow</a>
         <a href="/photos/nepal" class="category-link">Nepal</a>
         <a href="/photos/personal" class="category-link">Personal</a>
