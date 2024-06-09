@@ -15,6 +15,7 @@
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
             overflow-x: hidden;
+        }
 
        #desktop-navigation,
         #mobile-navigation {
@@ -24,6 +25,7 @@
             top: 0;
             z-index: 1000;
         }
+
 
         #desktop-navigation {
             background-color: #333;
@@ -69,14 +71,29 @@
 #mobile-navigation a:first-child {
     margin-left: 33px; /* Adjust this value as needed to create the desired space */
 }
-        .content-container {
+
+        .page-container {
             max-width: 600px;
-            margin: 10px auto;
+            margin: 20px auto;
             background-color: #fff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
+            text-align: center;
+        }
+        
+               .content-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .content-container {
+            padding: 20px; /* Adjust padding as needed */
         }
 
         h1 {
@@ -107,7 +124,7 @@
         a {
             text-decoration: none;
             color: #4285f4;
-            font-weight: bold;
+            font-weight: normal;
         }
 
         a:hover {
@@ -129,6 +146,108 @@
             text-align: center;
         }
 
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 15px; /* Increase the font size */
+        }
+
+        button:hover {
+            background-color: #000000 !important; /* Change the hover background color */
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
+        /* Sidebar styles */
+        #sidebar {
+            height: 100%;
+            width: 140px; /* Adjusted width for the sidebar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #FFF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 30px;
+        }
+        
+        /* Style sidebar section headings */
+.sidebar-section h4 {
+    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+    margin-bottom: 5px; /* Add space below the heading */
+    padding: 10px; /* Add padding to the heading */
+    font-size: 16px; /* Adjust the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the color of the heading */
+}
+
+        #sidebar a {
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+    background-color: #f9f9f9; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 9px;
+            left: 35px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
@@ -138,28 +257,42 @@
             #mobile-navigation {
                 display: block;
             }
-        }
 
-        /* New styles for the about.me link container and button */
-        .about-me-container {
-            text-align: center;
-        }
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
 
-        .about-me-button,
-        .link-button {
-            display: inline-block;
-            padding: 7px 8px;
-            background-color: #24a0ed;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 40px;
-            margin: 1px;
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
         }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
 
-        .about-me-button:hover,
-        .link-button:hover {
-            background-color: #000000;
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
         }
+    }
     </style>
 
 </head>
@@ -237,7 +370,21 @@
     // JavaScript for redirecting to the home page after 3 seconds
     setTimeout(function() {
         window.location.href = "https://mohdasif.com"; // Redirect to your home page
-    }, 4000); // 4000 milliseconds = 4 seconds
+    }, 40000); // 40000 milliseconds = 4 seconds
+</script>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('menu-open');
+    });
+
+    function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+    }
 </script>
 
 </body>
