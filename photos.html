@@ -227,6 +227,7 @@
             display: none;
             justify-content: center;
             align-items: center;
+            overflow: hidden; /* Add this line */
         }
 
         /* Popup image */
@@ -300,6 +301,13 @@
     .popup-next {
         right: 2px; /* Adjusted position for the next arrow */
     }
+
+.popup-container.active {
+    overflow: hidden; /* Prevent scrolling on the popup container */
+}
+
+.popup-container.active body {
+    overflow: hidden; /* Prevent scrolling on the body when the popup is open */
 }
 
 /* Adjusted styles for desktop */
