@@ -236,7 +236,7 @@
 
         .popup-close {
             position: absolute;
-            top: 10px;
+            top: 20px;
             right: 10px;
             color: #fff;
             font-size: 24px;
@@ -521,6 +521,14 @@ nav ul h4:first-of-type {
   padding: 2px 6px; /* Increase the size of the background color */
   margin-right: 10px; /* Move the active button slightly to the right */
 }
+.popup-container.active {
+    overflow: hidden; /* Prevent scrolling on the popup container */
+}
+
+.popup-container.active body {
+    overflow: hidden; /* Prevent scrolling on the body when the popup is open */
+}
+
     </style>
 
     <!-- Add JavaScript for popup functionality -->
@@ -544,11 +552,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Toggle navigation arrows visibility
         toggleArrows();
+
+        // Add the active class to the popup container and body
+        popupContainer.classList.add('active');
+        document.body.classList.add('active');
     }
 
     // Close popup
     function closePopup() {
         popupContainer.style.display = "none";
+
+        // Remove the active class from the popup container and body
+        popupContainer.classList.remove('active');
+        document.body.classList.remove('active');
     }
 
     // Toggle navigation arrows visibility
