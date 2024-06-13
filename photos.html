@@ -215,10 +215,9 @@
 }
         /* Your existing CSS styles here */
 
-        /* Popup container */
         .popup-container {
             position: fixed;
-            top: 0;
+            top: 20px; /* Add a 20px gap from the top */
             left: 0;
             width: 100%;
             height: 100%;
@@ -227,17 +226,14 @@
             display: none;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Add this line */
         }
 
-        /* Popup image */
         .popup-image {
             max-width: 90%;
-            max-height: 100%;
-            margin: 10px auto;
+            max-height: 90%;
+            margin: 20px auto; /* Add margin to create space */
         }
 
-        /* Popup close button */
         .popup-close {
             position: absolute;
             top: 20px;
@@ -247,7 +243,6 @@
             cursor: pointer;
         }
 
-        /* Popup navigation arrows */
         .popup-navigation {
             position: absolute;
             top: 50%;
@@ -264,15 +259,7 @@
         .popup-next {
             right: 10px;
         }
-
-        /* Active class for preventing background scrolling */
-        .popup-container.active {
-            overflow: hidden; /* Prevent scrolling on the popup container */
-        }
-
-        .popup-container.active body {
-            overflow: hidden; /* Prevent scrolling on the body when the popup is open */
-        }
+    /* Existing styles */
 
 /* Default styles for navigation arrows */
 .popup-navigation {
@@ -301,13 +288,6 @@
     .popup-next {
         right: 2px; /* Adjusted position for the next arrow */
     }
-
-.popup-container.active {
-    overflow: hidden; /* Prevent scrolling on the popup container */
-}
-
-.popup-container.active body {
-    overflow: hidden; /* Prevent scrolling on the body when the popup is open */
 }
 
 /* Adjusted styles for desktop */
@@ -541,22 +521,9 @@ nav ul h4:first-of-type {
   padding: 2px 6px; /* Increase the size of the background color */
   margin-right: 10px; /* Move the active button slightly to the right */
 }
-.popup-container.active {
-    overflow: hidden; /* Prevent scrolling on the popup container */
-}
-
-.popup-container.active body {
-    overflow: hidden; /* Prevent scrolling on the body when the popup is open */
-}
-
     </style>
 
     <!-- Add JavaScript for popup functionality -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Your existing JavaScript code for the popup functionality
-        });
-    </script>
     <script>
 document.addEventListener("DOMContentLoaded", function () {
     const galleryImages = document.querySelectorAll(".gallery .image img");
@@ -577,19 +544,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Toggle navigation arrows visibility
         toggleArrows();
-
-        // Add the active class to the popup container and body
-        popupContainer.classList.add('active');
-        document.body.classList.add('active');
     }
 
     // Close popup
     function closePopup() {
         popupContainer.style.display = "none";
-
-        // Remove the active class from the popup container and body
-        popupContainer.classList.remove('active');
-        document.body.classList.remove('active');
     }
 
     // Toggle navigation arrows visibility
@@ -693,7 +652,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </head>
 
 <body>
-
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
         <a href="https://mohdasif.com/">Home</a>
@@ -716,6 +674,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/contact"><i class="fa-regular fa-comment " style="color: #343a40;"></i></a>
     </div>
 
+
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
@@ -735,17 +694,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="container" style="margin-top: 60px;"> <!-- Added margin-top -->
     <div class="categories">
+        <a href="/photos/archive" class="category-link active">Archive</a>
         <a href="/photos/gym" class="category-link">Gym</a>
         <a href="/photos/lucknow" class="category-link">Lucknow</a>
         <a href="/photos/nepal" class="category-link">Nepal</a>
-        <a href="/photos/rajasthan" class="category-link red">Rajasthan</a>
         <a href="/photos/personal" class="category-link">Personal</a>
+        <a href="/photos/rajasthan" class="category-link">Rajasthan</a>
         <a href="/photos/moradabad" class="category-link">Moradabad</a>
-        <a href="/photos/archive" class="category-link">Archive</a>
     </div>
 </div>
 
-<!-- Gallery for Photos -->
+<!-- Gallery for Archive -->
 <div class="gallery">
     <div class="image">
         <img src="https://images.mohdasif.com/photos/a1.jpg">
