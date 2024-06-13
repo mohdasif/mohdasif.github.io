@@ -236,7 +236,7 @@
 
         .popup-close {
             position: absolute;
-            top: 10px;
+            top: 20px;
             right: 10px;
             color: #fff;
             font-size: 24px;
@@ -521,6 +521,14 @@ nav ul h4:first-of-type {
   padding: 2px 6px; /* Increase the size of the background color */
   margin-right: 10px; /* Move the active button slightly to the right */
 }
+.popup-container.active {
+    overflow: hidden; /* Prevent scrolling on the popup container */
+}
+
+.popup-container.active body {
+    overflow: hidden; /* Prevent scrolling on the body when the popup is open */
+}
+
     </style>
 
     <!-- Add JavaScript for popup functionality -->
@@ -544,11 +552,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Toggle navigation arrows visibility
         toggleArrows();
+
+        // Add the active class to the popup container and body
+        popupContainer.classList.add('active');
+        document.body.classList.add('active');
     }
 
     // Close popup
     function closePopup() {
         popupContainer.style.display = "none";
+
+        // Remove the active class from the popup container and body
+        popupContainer.classList.remove('active');
+        document.body.classList.remove('active');
     }
 
     // Toggle navigation arrows visibility
@@ -565,23 +581,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Next image
-    function nextImage(event) {
-        event.stopPropagation(); // Prevent click event from bubbling up
+    function nextImage() {
         currentIndex = (currentIndex + 1) % galleryImages.length;
         const imgUrl = galleryImages[currentIndex].src;
         popupImage.src = imgUrl;
     }
 
     // Previous image
-    function prevImage(event) {
-        event.stopPropagation(); // Prevent click event from bubbling up
+    function prevImage() {
         currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
         const imgUrl = galleryImages[currentIndex].src;
         popupImage.src = imgUrl;
     }
 
+    // Swipe gesture detection
+    let startX = null;
+
+    popupContainer.addEventListener("touchstart", function (event) {
+        startX = event.touches[0].clientX;
+    });
+
+    popupContainer.addEventListener("touchmove", function (event) {
+        if (!startX) return;
+
+        const currentX = event.touches[0].clientX;
+        const diff = startX - currentX;
+
+        if (diff > 0) {
+            nextImage();
+        } else {
+            prevImage();
+        }
+
+        startX = null;
+    });
+
     // Close popup when clicking outside the image
-    popupContainer.addEventListener("click", function(event) {
+    popupContainer.addEventListener("click", function (event) {
         if (event.target === popupContainer) {
             closePopup();
         }
@@ -600,13 +636,13 @@ document.addEventListener("DOMContentLoaded", function () {
     popupNext.addEventListener("click", nextImage);
 
     // Scroll wheel navigation
-    popupContainer.addEventListener("wheel", function(event) {
+    popupContainer.addEventListener("wheel", function (event) {
         event.preventDefault(); // Prevent default scrolling behavior
         const delta = Math.sign(event.deltaY); // Get the direction of the scroll
         if (delta > 0) {
-            nextImage(event); // Scroll down (next image)
+            nextImage(); // Scroll down (next image)
         } else {
-            prevImage(event); // Scroll up (previous image)
+            prevImage(); // Scroll up (previous image)
         }
     });
 });
