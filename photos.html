@@ -215,9 +215,10 @@
 }
         /* Your existing CSS styles here */
 
+        /* Popup container */
         .popup-container {
             position: fixed;
-            top: 20px; /* Add a 20px gap from the top */
+            top: 0;
             left: 0;
             width: 100%;
             height: 100%;
@@ -228,12 +229,14 @@
             align-items: center;
         }
 
+        /* Popup image */
         .popup-image {
             max-width: 90%;
             max-height: 100%;
-            margin: 20px auto; /* Add margin to create space */
+            margin: 10px auto;
         }
 
+        /* Popup close button */
         .popup-close {
             position: absolute;
             top: 20px;
@@ -243,6 +246,7 @@
             cursor: pointer;
         }
 
+        /* Popup navigation arrows */
         .popup-navigation {
             position: absolute;
             top: 50%;
@@ -259,7 +263,15 @@
         .popup-next {
             right: 10px;
         }
-    /* Existing styles */
+
+        /* Active class for preventing background scrolling */
+        .popup-container.active {
+            overflow: hidden; /* Prevent scrolling on the popup container */
+        }
+
+        .popup-container.active body {
+            overflow: hidden; /* Prevent scrolling on the body when the popup is open */
+        }
 
 /* Default styles for navigation arrows */
 .popup-navigation {
@@ -532,6 +544,11 @@ nav ul h4:first-of-type {
     </style>
 
     <!-- Add JavaScript for popup functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Your existing JavaScript code for the popup functionality
+        });
+    </script>
     <script>
 document.addEventListener("DOMContentLoaded", function () {
     const galleryImages = document.querySelectorAll(".gallery .image img");
