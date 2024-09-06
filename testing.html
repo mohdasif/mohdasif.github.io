@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Photos</title>
+    <title>Asif | Privacy Policy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+
+    <!-- Add this style block to hide navigation links -->
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <style>
         body {
-            background-color: #fff;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
@@ -25,7 +28,6 @@
             top: 0;
             z-index: 1000;
         }
-
 
         #desktop-navigation {
             background-color: #333;
@@ -72,14 +74,14 @@
     margin-left: 33px; /* Adjust this value as needed to create the desired space */
 }
 
-        .page-container {
+        .contact-container {
             max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
+            margin: 30px auto;
+            background-color: transparent;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left;
         }
         
                .content-container {
@@ -89,217 +91,63 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left;
         }
 
-        .content-container {
-            padding: 20px; /* Adjust padding as needed */
+        h1 {
+            color: #333;
         }
 
-
-
-    .categories {
-        text-align: center;
-        margin-bottom: 20px;
-        padding: 10px 10px 10px 30px; /* Adjusted padding */
-        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
-        white-space: nowrap; /* Prevent categories from wrapping */
-    }
-
-    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
-        .categories::-webkit-scrollbar {
-        display: none;
-    }
-
-        .category-link {
-        display: inline-block; /* Display categories in a row */
-        margin-right: 15px; /* Adjusted margin for space between category links */
-        color: #000;
-        text-decoration: none;
-        padding: 3px 5px;
-        border-radius: 10px;
-        cursor: pointer;
-        background-color: #f5f5f5;
-        font-weight: normal; /* Set font weight to normal */
-    }
-
-    .category-link:hover {
-        background-color: #e0e0e0;
-    }
-
-
-    .articles-section {
-        display: none;
-        margin-top: 20px;
-    }
-
-    .articles-section.active {
-        display: block;
-    }
-
-    .article-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .article-list li {
-        background: #fff;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .article-list a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        padding: 20px;
-    }
-
-    .article-list a:hover {
-        background-color: #f5f5f5;
-    }
-
-    /* Mobile Styles */
-    @media only screen and (max-width: 600px) {
-        .categories {
-            overflow-x: auto; /* Enable horizontal scrolling */
-            white-space: nowrap; /* Prevent categories from wrapping */
-            padding-bottom: 10px; /* Add bottom padding to make room for scrollbar */
-        }
-    }
-
-/* Gallery Styles */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-    padding: 20px;
-    margin-top: 10px; /* Adjusted for the header height */
-}
-
-.gallery .image {
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Leave the transition for desktop */
-}
-
-.image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-
-.gallery .image:hover {
-    transform: scale(1.05); /* Leave the hover effect for desktop */
-}
-
-/* Mobile-specific styles */
-@media only screen and (max-width: 600px) {
-    .gallery .image {
-        transition: none; /* Disable transition on mobile */
-    }
-
-    .gallery .image:hover {
-        transform: none; /* Disable hover effect on mobile */
-    }
-
-    .category-link:hover {
-        background-color: initial; /* Disable background color change on hover */
-        color: initial; /* Reset text color on hover */
-    }
-}
-        /* Your existing CSS styles here */
-
-        .popup-container {
-            position: fixed;
-            top: 20px; /* Add a 20px gap from the top */
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            display: none;
-            justify-content: center;
-            align-items: center;
+        p {
+            color: #666;
         }
 
-        .popup-image {
-            max-width: 90%;
-            max-height: 90%;
-            margin: 20px auto; /* Add margin to create space */
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
         }
 
-        .popup-close {
-            position: absolute;
-            top: 20px;
-            right: 10px;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
             color: #fff;
-            font-size: 24px;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
             cursor: pointer;
+            font-size: 12px; /* Increase the font size */
         }
 
-        .popup-navigation {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #fff;
-            font-size: 36px;
-            cursor: pointer;
+        button:hover {
+            background-color: #000000 !important; /* Change the hover background color */
         }
 
-        .popup-prev {
-            left: 10px;
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
         }
-
-        .popup-next {
-            right: 10px;
-        }
-    /* Existing styles */
-
-/* Default styles for navigation arrows */
-.popup-navigation {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 36px;
-    cursor: pointer;
-}
-
-.popup-prev {
-    left: 10px; /* Default position for the previous arrow */
-}
-
-.popup-next {
-    right: 10px; /* Default position for the next arrow */
-}
-
-/* Adjusted styles for mobile */
-@media only screen and (max-width: 600px) {
-    .popup-prev {
-        left: 2px; /* Adjusted position for the previous arrow */
-    }
-
-    .popup-next {
-        right: 2px; /* Adjusted position for the next arrow */
-    }
-}
-
-/* Adjusted styles for desktop */
-@media only screen and (min-width: 768px) {
-    .popup-prev {
-        left: 400px; /* Adjusted position for the previous arrow */
-    }
-
-    .popup-next {
-        right: 400px; /* Adjusted position for the next arrow */
-    }
-}
         h1 {
             color: #333;
             margin-bottom: 20px; /* Add space between title and content */
@@ -325,48 +173,8 @@
             margin: 10px 0;
         }
 
-        a {
-            text-decoration: none;
-            color: #4285f4;
-            font-weight: normal;
-        }
-
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
-        }
-
-        /* New style for left-aligning specific sections */
-        .left-align {
-            text-align: left;
-        }
-
-        /* Center-align the about.me link */
-        .about-me {
-            text-align: center;
-        }
-
-        /* Center-align Links */
-        .center-section {
-            text-align: center;
-        }
-
-
-        button {
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
-            border: none;
-            border-radius: 15px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 15px; /* Increase the font size */
-        }
-
-        button:hover {
-            background-color: #000000 !important; /* Change the hover background color */
-        }
-
         @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
                 display: none;
             }
@@ -375,6 +183,7 @@
                 display: block;
             }
         }
+
         /* Sidebar styles */
         #sidebar {
             height: 100%;
@@ -436,7 +245,6 @@
             padding: 32px;
             height: 100vh;
             position: fixed;
-            top: 0; /* Position at the top */
             overflow: auto;
             transition: transform 0.9s ease;
             transform: translateX(-100%);
@@ -452,17 +260,6 @@
         nav ul li {
             margin-bottom: 10px;
         }
-nav ul li:first-child {
-    margin-top: 20px; /* Adjust the margin as needed */
-}
-
-nav ul h4 {
-    margin-top: 20px; /* Add space above all h4 elements */
-}
-
-nav ul h4:first-of-type {
-    margin-top: 40px; /* Add additional space above the first h4 */
-}
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
@@ -511,163 +308,13 @@ nav ul h4:first-of-type {
 /* Active link styles */
 #sidebar a.active {
   color: #fff; /* Text color for active link */
-  background-color: #04AA6D; /* Background color for active link */
+  background-color: #007bff; /* Background color for active link */
 }
-/* Active link styles */
-.categories a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #04AA6D; /* Background color for active link */
-  border-radius: 10px; /* Rounded corners */
-  padding: 2px 6px; /* Increase the size of the background color */
-  margin-right: 10px; /* Move the active button slightly to the right */
-}
-.popup-container.active {
-    overflow: hidden; /* Prevent scrolling on the popup container */
-}
-
-.popup-container.active body {
-    overflow: hidden; /* Prevent scrolling on the body when the popup is open */
-}
-
     </style>
-
-    <!-- Add JavaScript for popup functionality -->
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const galleryImages = document.querySelectorAll(".gallery .image img");
-    const popupContainer = document.querySelector(".popup-container");
-    const popupImage = document.querySelector(".popup-image");
-    const popupClose = document.querySelector(".popup-close");
-    const popupPrev = document.querySelector(".popup-prev");
-    const popupNext = document.querySelector(".popup-next");
-    let currentIndex = 0;
-    let arrowsVisible = true; // Flag to track visibility of navigation arrows
-
-    // Open popup
-    function openPopup(index) {
-        currentIndex = index;
-        const imgUrl = galleryImages[index].src;
-        popupImage.src = imgUrl;
-        popupContainer.style.display = "flex";
-
-        // Toggle navigation arrows visibility
-        toggleArrows();
-
-        // Add the active class to the popup container and body
-        popupContainer.classList.add('active');
-        document.body.classList.add('active');
-    }
-
-    // Close popup
-    function closePopup() {
-        popupContainer.style.display = "none";
-
-        // Remove the active class from the popup container and body
-        popupContainer.classList.remove('active');
-        document.body.classList.remove('active');
-    }
-
-    // Toggle navigation arrows visibility
-    function toggleArrows() {
-        if (arrowsVisible) {
-            popupPrev.style.display = "none";
-            popupNext.style.display = "none";
-            arrowsVisible = false;
-        } else {
-            popupPrev.style.display = "block";
-            popupNext.style.display = "block";
-            arrowsVisible = true;
-        }
-    }
-
-    // Next image
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
-    }
-
-    // Previous image
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
-    }
-
-    // Swipe gesture detection
-    let startX = null;
-
-    popupContainer.addEventListener("touchstart", function (event) {
-        startX = event.touches[0].clientX;
-    });
-
-    popupContainer.addEventListener("touchmove", function (event) {
-        if (!startX) return;
-
-        const currentX = event.touches[0].clientX;
-        const diff = startX - currentX;
-
-        if (diff > 0) {
-            nextImage();
-        } else {
-            prevImage();
-        }
-
-        startX = null;
-    });
-
-    // Close popup when clicking outside the image
-    popupContainer.addEventListener("click", function (event) {
-        if (event.target === popupContainer) {
-            closePopup();
-        }
-    });
-
-    // Event listeners
-    galleryImages.forEach((image, index) => {
-        image.addEventListener("click", () => {
-            openPopup(index);
-            toggleArrows(); // Toggle arrows visibility when tapping on image
-        });
-    });
-
-    popupClose.addEventListener("click", closePopup);
-    popupPrev.addEventListener("click", prevImage);
-    popupNext.addEventListener("click", nextImage);
-
-    // Scroll wheel navigation
-    popupContainer.addEventListener("wheel", function (event) {
-        event.preventDefault(); // Prevent default scrolling behavior
-        const delta = Math.sign(event.deltaY); // Get the direction of the scroll
-        if (delta > 0) {
-            nextImage(); // Scroll down (next image)
-        } else {
-            prevImage(); // Scroll up (previous image)
-        }
-    });
-});
-    </script>
 </head>
 
 <body>
-    <!-- Your existing HTML code -->
 
-    <!-- Popup Container -->
-    <div class="popup-container">
-        <span class="popup-close">&times;</span>
-        <span class="popup-navigation popup-prev">&#10094;</span>
-        <img class="popup-image" src="" alt="">
-        <span class="popup-navigation popup-next">&#10095;</span>
-    </div>
-</body>
-
-    <script>
-        </script></body><script>var topButton = "sleek/circle-light";</script><script src="//backtotopbutton.com/script/toTop.js"></script>
-    </script>
-
-</head>
-
-<body>
 
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
@@ -691,74 +338,55 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/contact"><i class="fa-regular fa-comment " style="color: #343a40;"></i></a>
     </div>
 
+
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
-        <li><h4>Photos</h4></li>
-
-        <li><a href="/photos/gym">Gym</a></li>
-        <li><a href="/photos/lucknow">Lucknow</a></li>
-        <li><a href="/photos/nepal">Nepal</a></li>
-        <li><a href="/photos/rajasthan">Rajasthan</a></li>
-        <li><a href="/photos/moradabad">Moradabad</a></li>
-        <li><a href="/photos/personal">Personal</a></li>
-        <li><a href="/photos/archive">Archive</a></li>
+        <li><h4>Pages</h4></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="https://mohdasif.in">Store</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/videos">Videos</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/workouts">Workouts</a></li>        
+        <li><a href="/poetry">Poetry</a></li>
     </ul>
 </nav>
 
-    <div class="container">
+        <!-- Container for the privacy policy content -->
+        <div class="content-container">
+    <br> <!-- Add two <br> for mobile -->
 
-<div class="container" style="margin-top: 60px;"> <!-- Added margin-top -->
-    <div class="categories">
-        <a href="/photos/gym" class="category-link">Gym</a>
-        <a href="/photos/lucknow" class="category-link">Lucknow</a>
-        <a href="/photos/nepal" class="category-link">Nepal</a>
-        <a href="/photos/rajasthan" class="category-link red">Rajasthan</a>
-        <a href="/photos/personal" class="category-link">Personal</a>
-        <a href="/photos/moradabad" class="category-link">Moradabad</a>
-        <a href="/photos/archive" class="category-link">Archive</a>
-    </div>
-</div>
-
-<!-- Gallery for Photos -->
-<div class="gallery">
-    <div class="image">
-        <img src="https://images.mohdasif.com/photos/a1.jpg">
-    </div>
-    <div class="image">
-        <img src="https://images.mohdasif.com/photos/a2.JPG">
-    </div>
-    <div class="image">
-        <img src="https://images.mohdasif.com/photos/a3.JPG">
-    </div>
-    <div class="image">
-        <img src="https://images.mohdasif.com/photos/a4.JPG">
-    </div>
-    <div class="image">
-        <img src="https://images.mohdasif.com/photos/a5.JPG">
-    </div>
-    <div class="image">
-        <img src="https://images.mohdasif.com/photos/a6.JPG">
-    </div>
-    <div class="image">
-        <img src="https://images.mohdasif.com/photos/a7.JPG">
-    </div>
-</div>
-
-<script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('nav').classList.toggle('menu-open');
-    });
-
-    function openNav() {
-        document.querySelector(".sidebar").style.width = "250px";
-    }
-
-    function closeNav() {
-        document.querySelector(".sidebar").style.width = "0";
-    }
-</script>
-
-</body>
-
-</html>
+<h2>Glute exercises:</h2>
+    <br> 
+<p><b> 1. Barbell Hip Thrust</b></p>
+<p>- Why: One of the best exercises for directly targeting the glutes with a full range of motion.</p>
+<p>- Tip: Squeeze the glutes hard at the top and pause for maximum activation.</p>
+<p><b> 2. Bulgarian Split Squat (Glute Focus)</b></p>
+<p>- Why: Works each glute individually with a deep stretch, helping to build size and strength.</p>
+<p>- Tip: Lean slightly forward and take a longer step to emphasize the glutes more than the quads.</p>
+<p><b> 3. Romanian Deadlift (Glute Focus)</b></p>
+<p>- Why: Targets both the glutes and hamstrings, with an emphasis on the glutes at the top of the movement.</p>
+<p>- Tip: Push your hips back deeply and thrust them forward explosively at the top.</p>
+<p><b> 4. Sumo Deadlift</b></p>
+<p>- Why: Great for hitting the glutes due to the wide stance and hip-dominant movement pattern.</p>
+<p>- Tip: Keep your hips lower and push through the heels to engage the glutes more.</p>
+<p><b> 5. Walking Lunges (Glute Focus)</b></p>
+<p>- Why: Builds glute strength and size through unilateral movement.</p>
+<p>- Tip: Take longer strides and focus on pushing up through the heel of your front foot.</p>
+<p><b> 6. Cable Kickbacks</b></p>
+<p>- Why: Isolates the glutes, allowing for targeted hypertrophy with continuous tension.</p>
+<p>- Tip: Use slow, controlled reps and focus on squeezing the glutes at the top of the movement.</p>
+<p><b> 7. Step-Ups (With Weights)</b></p>
+<p>- Why: Great for unilateral glute activation while also working on balance.</p>
+<p>- Tip: Step onto a high surface and drive through your heel for maximum glute engagement.</p>
+<p><b> 8. Kettlebell Swings</b></p>
+<p>- Why: Builds explosive power in the glutes with dynamic hip thrusts.</p>
+<p>- Tip: Use your hips to drive the kettlebell up, rather than relying on your arms or back.</p>
+<p><b> 9. Reverse Hyperextension</b></p>
+<p>- Why: Targets the glutes in a different way, focusing on the contraction at the top of the movement.</p>
+<p>- Tip: Control the lowering phase to maximize tension on the glutes.</p>
+<p><b> 10. Glute Bridge</b></p>
+<p>- Why: A great bodyweight alternative to hip thrusts, providing isolation for the glutes.</p>
+<p>- Tip: Add weight for progression and ensure you fully extend your hips at the top.</p>
+<p>These exercises cover a mix of compound and isolation movements, ensuring comprehensive glute development when used in a balanced routine.</p>
