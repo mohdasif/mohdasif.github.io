@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Not Found</title>
+    <title>Asif | Privacy Policy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
 
     <!-- Add this style block to hide navigation links -->
+    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" type="image/png">
+
     <style>
         body {
             background-color: #f4f4f4;
@@ -25,7 +28,6 @@
             top: 0;
             z-index: 1000;
         }
-
 
         #desktop-navigation {
             background-color: #333;
@@ -72,14 +74,14 @@
     margin-left: 33px; /* Adjust this value as needed to create the desired space */
 }
 
-        .page-container {
+        .contact-container {
             max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
+            margin: 30px auto;
+            background-color: transparent;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left;
         }
         
                .content-container {
@@ -89,13 +91,63 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left;
         }
 
-        .content-container {
-            padding: 20px; /* Adjust padding as needed */
+        h1 {
+            color: #333;
         }
 
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 12px; /* Increase the font size */
+        }
+
+        button:hover {
+            background-color: #000000 !important; /* Change the hover background color */
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
         h1 {
             color: #333;
             margin-bottom: 20px; /* Add space between title and content */
@@ -121,48 +173,8 @@
             margin: 10px 0;
         }
 
-        a {
-            text-decoration: none;
-            color: #4285f4;
-            font-weight: normal;
-        }
-
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
-        }
-
-        /* New style for left-aligning specific sections */
-        .left-align {
-            text-align: left;
-        }
-
-        /* Center-align the about.me link */
-        .about-me {
-            text-align: center;
-        }
-
-        /* Center-align Links */
-        .center-section {
-            text-align: center;
-        }
-
-
-        button {
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
-            border: none;
-            border-radius: 15px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 15px; /* Increase the font size */
-        }
-
-        button:hover {
-            background-color: #000000 !important; /* Change the hover background color */
-        }
-
         @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
                 display: none;
             }
@@ -171,6 +183,7 @@
                 display: block;
             }
         }
+
         /* Sidebar styles */
         #sidebar {
             height: 100%;
@@ -286,15 +299,18 @@
 #sidebar::-webkit-scrollbar-corner {
     background-color: transparent; /* Color of the scrollbar corner */
 }
-
     /* Media query to hide the menu toggle on desktop view */
     @media (min-width: 768px) {
         .menu-toggle {
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
+/* Active link styles */
+#sidebar a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #007bff; /* Background color for active link */
+}
     </style>
-
 </head>
 
 <body>
@@ -302,13 +318,15 @@
 <div id="sidebar">
     <div class="sidebar-section">
         <h4>Pages</h4>
-        <a href="https://mohdasif.in">Store</a>
+        <a href="https://mohdasif.com" class="active">Home</a>        
         <a href="/podcasts">Podcasts</a>
+        <a href="/videos">Videos</a>        
         <a href="/music">Music</a>
         <a href="/workouts">Workouts</a>
-        <a href="/poetry">Poetry</a>        
+        <a href="https://mohdasif.in">Store</a> 
+        <a href="/poetry">Poetry</a>
     </div>
-
+    
 </div>
 
     <!-- Desktop Navigation -->
@@ -332,6 +350,7 @@
         <a href="https://m.youtube.com/@mohdasif/shorts"><i class="fa-brands fa-youtube " style="color: #FF0000;"></i></a>
         <a href="/contact"><i class="fa-regular fa-comment " style="color: #343a40;"></i></a>
     </div>
+
 
 
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
@@ -370,7 +389,7 @@
     // JavaScript for redirecting to the home page after 3 seconds
     setTimeout(function() {
         window.location.href = "https://mohdasif.com"; // Redirect to your home page
-    }, 40000); // 40000 milliseconds = 4 seconds
+    }, 5000); // 5000 milliseconds = 5 seconds
 </script>
 
 <script>
