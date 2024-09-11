@@ -359,24 +359,28 @@
         border-bottom: 1px solid #e0e0e0; /* Light line */
         transition: background 0.3s;
     }
-
-    #sidebar .sidebar-section a:first-child {
+    /* Line above the first <a> element */
+    #sidebar .sidebar-section a:first-of-type {
         border-top: 1px solid #e0e0e0; /* Light line above the first link */
     }
 
+    /* Remove the line after the last item */
     #sidebar .sidebar-section a:last-child {
-        border-bottom: none; /* Remove line after the last item */
+        border-bottom: none;
     }
 
+    /* Hover effect */
     #sidebar .sidebar-section a:hover {
         background-color: #f5f5f5; /* Optional hover effect */
     }
-        /* Active link styling */
+
+    /* Active link styling */
     #sidebar .sidebar-section a.active {
         background-color: #04AA6D; /* Background for active item */
         color: white; /* White text for active link */
     }
-    </style>
+</style>
+
 </head>
 
 <body>
