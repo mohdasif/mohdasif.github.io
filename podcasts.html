@@ -161,11 +161,74 @@
             text-align: center;
         }
 
+    .categories {
+        text-align: center;
+        margin-bottom: 68px;
+        padding: 10px 10px 10px 25px; /* Adjusted padding */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
 
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+        .categories::-webkit-scrollbar {
+        display: none;
+    }
+
+        .category-link {
+        display: inline-block; /* Display categories in a row */
+        margin-right: 15px; /* Adjusted margin for space between category links */
+        color: #000;
+        text-decoration: none;
+        padding: 3px 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        font-weight: normal; /* Set font weight to normal */
+    }
+
+    .category-link:hover {
+        background-color: #e0e0e0;
+    }
+
+
+
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .blog-cards {
+                grid-template-columns: 1fr; /* Single column layout on mobile */
+            }
+
+            .blog-card iframe {
+                height: 205px; /* Adjusted height for mobile */
+            }
+
+            section {
+                padding: 10px 10px; /* Adjust padding for mobile */
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: normal;
+        }
+
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
         /* Sidebar styles */
         #sidebar {
             height: 100%;
-            width: 140px; /* Adjusted width for the sidebar */
+            width: 150px; /* Adjusted width for the sidebar */
             position: fixed;
             top: 0;
             left: 0;
@@ -209,7 +272,7 @@
         .menu-toggle {
             display: block; /* Show the menu toggle by default */
             position: fixed;
-            top: 10px;
+            top: 9px;
             left: 35px;
             font-size: 21px; /* Increase the font size */
             cursor: pointer;
@@ -218,11 +281,12 @@
 
         nav {
             float: left;
-            width: 25%;
+            width: 37%;
             background-color: #f1f1f1;
-            padding: 32px;
+            padding: 25px;
             height: 100vh;
             position: fixed;
+            top: 0; /* Position at the top */
             overflow: auto;
             transition: transform 0.9s ease;
             transform: translateX(-100%);
@@ -236,8 +300,21 @@
             padding: 0;
         }
         nav ul li {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
+nav ul li:first-child {
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-top: 10px; /* Add space above all h4 elements */
+    font-size: 18px; /* Increase the font size of h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 50px; /* Add additional space above the first h4 */
+    margin-bottom: 15px; /* Add additional space above the first h4 */
+}
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
@@ -277,6 +354,40 @@
 #sidebar::-webkit-scrollbar-corner {
     background-color: transparent; /* Color of the scrollbar corner */
 }
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+/* Adjust the gap between menu items */
+nav ul {
+    padding: 0; /* Remove padding from the unordered list */
+    margin: 0; /* Remove margin from the unordered list */
+}
+
+nav li {
+    margin: 10px; /* Remove margin from list items */
+    padding: 0; /* Remove padding from list items */
+    list-style: none; /* Remove default list styling */
+}
+/* Reduce margin and padding for list items */
+nav ul li {
+    margin-bottom: 1px; /* Adjust the value as needed */
+    padding: 0; /* Remove any padding */
+}
+/* Reduce margin and padding for the heading */
+nav ul li h4 {
+    margin-top: 5px;
+}
+/* Increase the font size for list items under "Pages" */
+nav ul li a {
+    font-size: 18px; /* Increase the font size as needed */
+}
 /* Active link styles */
 #sidebar a.active {
   color: #fff; /* Text color for active link */
@@ -309,7 +420,31 @@
         background-color: #007bff; /* Background for active item */
         color: white; /* White text for active link */
     }
+    #sidebar .sidebar-section a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #e0e0e0; /* Light line */
+        transition: background 0.3s;
+    }
+    /* Line above the first <a> element */
+    #sidebar .sidebar-section a:first-of-type {
+        border-top: 1px solid #e0e0e0; /* Light line above the first link */
+    }
+
+    /* Remove the line after the last item */
+    #sidebar .sidebar-section a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hover effect */
+    #sidebar .sidebar-section a:hover {
+        background-color: #f5f5f5; /* Optional hover effect */
+    }
+
+
 </style>
+
 
 </head>
 
