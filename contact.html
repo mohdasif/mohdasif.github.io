@@ -287,6 +287,29 @@
     color: #333; /* Set the color of the heading */
 }
 
+        /* Sidebar styles */
+        #sidebar {
+            height: 100%;
+            width: 150px; /* Adjusted width for the sidebar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #FFF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 30px;
+        }
+        
+        /* Style sidebar section headings */
+.sidebar-section h4 {
+    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+    margin-bottom: 5px; /* Add space below the heading */
+    padding: 10px; /* Add padding to the heading */
+    font-size: 16px; /* Adjust the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the color of the heading */
+}
+
         #sidebar a {
             padding: 10px 25px;
             text-decoration: none;
@@ -318,47 +341,43 @@
             z-index: 1000; /* Ensure the menu icon is on top */
         }
 
-nav {
-    float: left;
-    width: 33%;
-    background-color: #f1f1f1;
-    padding: 32px;
-    height: 100vh;
-    position: fixed;
-    top: 0; /* Position at the top */
-    overflow: auto;
-    transition: transform 0.9s ease;
-    transform: translateX(-100%);
-    z-index: 999; /* Ensure the sidebar is on top */
-}
-
-nav.menu-open {
-    transform: translateX(0);
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin-bottom: -4px;
-    font-size: 18px; /* Increase the font size for the list items */
-}
-
+        nav {
+            float: left;
+            width: 37%;
+            background-color: #f1f1f1;
+            padding: 25px;
+            height: 100vh;
+            position: fixed;
+            top: 0; /* Position at the top */
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 5px;
+        }
 nav ul li:first-child {
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 10px; /* Adjust the margin as needed */
 }
 
 nav ul h4 {
-    font-size: 16px; /* Set the font size for h4 titles */
-    font-weight: 400; /* Make the titles less bold */
-    margin-top: 20px; /* Add space above all h4 elements */
+    margin-top: 10px; /* Add space above all h4 elements */
+    font-size: 18px; /* Increase the font size of h4 elements */
 }
 
 nav ul h4:first-of-type {
-    margin-top: 45px; /* Add additional space above the first h4 */
+    margin-top: 50px; /* Add additional space above the first h4 */
+    margin-bottom: 15px; /* Add additional space above the first h4 */
 }
+
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
@@ -403,12 +422,90 @@ nav ul h4:first-of-type {
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+/* Adjust the gap between menu items */
+nav ul {
+    padding: 0; /* Remove padding from the unordered list */
+    margin: 0; /* Remove margin from the unordered list */
+}
+
+nav li {
+    margin: 10px; /* Remove margin from list items */
+    padding: 0; /* Remove padding from list items */
+    list-style: none; /* Remove default list styling */
+}
+/* Reduce margin and padding for list items */
+nav ul li {
+    margin-bottom: 1px; /* Adjust the value as needed */
+    padding: 0; /* Remove any padding */
+}
+/* Reduce margin and padding for the heading */
+nav ul li h4 {
+    margin-top: 5px;
+}
+/* Increase the font size for list items under "Pages" */
+nav ul li a {
+    font-size: 18px; /* Increase the font size as needed */
+}
 /* Active link styles */
 #sidebar a.active {
   color: #fff; /* Text color for active link */
   background-color: #007bff; /* Background color for active link */
 }
-    </style>
+    #sidebar .sidebar-section a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #e0e0e0; /* Light line */
+        transition: background 0.3s;
+    }
+    /* Line above the first <a> element */
+    #sidebar .sidebar-section a:first-of-type {
+        border-top: 1px solid #e0e0e0; /* Light line above the first link */
+    }
+
+    /* Remove the line after the last item */
+    #sidebar .sidebar-section a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hover effect */
+    #sidebar .sidebar-section a:hover {
+        background-color: #f5f5f5; /* Optional hover effect */
+    }
+
+    /* Active link styling */
+    #sidebar .sidebar-section a.active {
+        background-color: #00aaee; /* Background for active item */
+        color: white; /* White text for active link */
+    }
+    #sidebar .sidebar-section a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #e0e0e0; /* Light line */
+        transition: background 0.3s;
+    }
+    /* Line above the first <a> element */
+    #sidebar .sidebar-section a:first-of-type {
+        border-top: 1px solid #e0e0e0; /* Light line above the first link */
+    }
+
+    /* Remove the line after the last item */
+    #sidebar .sidebar-section a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hover effect */
+    #sidebar .sidebar-section a:hover {
+        background-color: #; /* Optional hover effect */
+    }
+
+
+</style>
 
 </head>
 
