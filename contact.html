@@ -27,20 +27,22 @@
         }
 
 
-        #desktop-navigation {
-            background-color: #333;
-            color: #fff;
-            padding: 7px;
-            font-size: 18.7px; /* Increase font size for zoom effect */
-            padding:7px; /* Padding for top and bottom */
-            padding-left: 5px; /* Additional padding for left */
-            padding-right: 6px; /* Additional padding for right */
-            padding: 6px 7px; /* Increase padding for more space */
-            margin: 0px; /* Margin for top, right, bottom, and left */
-            font-weight: bold;
-            right: 1px; /* Position the navigation slightly away from the right side */
-            display: block; /* Ensure the desktop navigation is visible */
-        }
+#desktop-navigation {
+    background-color: #333;
+    color: #fff;
+    padding: 7px;
+    font-size: 18.7px; /* Increase font size for zoom effect */
+    padding: 6px; /* Padding for top and bottom */
+    padding-left: 0px; /* Additional padding for left */
+    padding-right: 0px; /* Additional padding for right */
+    margin: 0px; /* Remove margin */
+    font-weight: bold;
+    position: fixed; /* Fixed positioning to keep it in view when scrolling */
+    right: 0px; /* Position it 8px from the right side */
+    top: 0px; /* Align it to the top of the page */
+    display: block; /* Ensure the desktop navigation is visible */
+    z-index: 1000; /* Optional: Adjust z-index if you want it above other elements */
+}
 
 
         #desktop-navigation a,
@@ -533,9 +535,9 @@ nav ul li a {
         <a href="/photos">Photos</a>
         <a href="/videos">Videos</a>
 
-        <a href="https://www.youtube.com/@mohdasif/shorts" style="position: absolute; right: 197px;"><i class="fab fa-youtube"></i></a>
-        <a href="https://x.com/mohdasif" style="position: absolute; right: 157px;"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://mohdasif.in" style="position: absolute; right: 132px;"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a href="https://www.youtube.com/@mohdasif/shorts" style="position: absolute; right: 190px;"><i class="fab fa-youtube"></i></a>
+        <a href="https://x.com/mohdasif" style="position: absolute; right: 150px;"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://mohdasif.in" style="position: absolute; right: 125px;"><i class="fa-solid fa-bag-shopping"></i></a>
         
     </div>
 
