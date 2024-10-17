@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asif | Mirza Ghalib</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="https://images.mohdasif.com/icons/favicon.png">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #desktop-navigation,
+        #mobile-navigation {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 7px;
+            font-size: 18.7px; /* Increase font size for zoom effect */
+            padding: 6px; /* Padding for top and bottom */
+            padding-left: 5px; /* Additional padding for left */
+            padding-right: 7px; /* Additional padding for right */
+            margin: 0px; /* Margin for top, right, bottom, and left */
+            font-weight: bold;
+            right: 1px; /* Position the navigation slightly away from the right side */
+            display: block; /* Ensure the desktop navigation is visible */
+        }
+
+
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 16px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
+
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
+        }
+
+#mobile-navigation {
+    background-color: #FDFCFA;
+    color: #000;
+    padding: 10px;
+    display: none;
+    font-size: 18px; /* Adjust the font size as needed */
+    position: fixed; /* Ensure it stays fixed on the screen */
+    top: 0; /* Align to the top edge */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Make it full width */
+}
+
+#mobile-navigation a:first-child {
+    margin-left: 33px; /* Adjust this value as needed to create the desired space */
+}
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 56px; /* Adjust this if necessary to clear the navigation */
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        margin-top: 10px; /* Add top margin to create space below navigation */
+    }
+
+    .post {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+}
+
+
+    .post p {
+        margin: 0;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
+
+        /* New styles for the about.me link container and button */
+        .about-me-container {
+            text-align: center;
+        }
+
+        p {
+            color: #222; /* Darker font color */
+            margin-bottom: 20px;
+        }
+
+        /* Reduce font size for span text */
+        .post span {
+            font-size: 11px;
+        }
+
+        /* Set max-width for images in posts */
+        .post img {
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        /* Sidebar styles */
+        #sidebar {
+            height: 100%;
+            width: 140px; /* Adjusted width for the sidebar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #e7e7e7;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 30px;
+        }
+        
+        /* Style sidebar section headings */
+.sidebar-section h4 {
+    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+    margin-bottom: 5px; /* Add space below the heading */
+    padding: 10px; /* Add padding to the heading */
+    font-size: 16px; /* Adjust the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the color of the heading */
+}
+
+        #sidebar a {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Add a shadow */
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+    background-color: #f9f9f9; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 9px;
+            left: 35px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 33%;
+            background-color: #f1f1f1;
+            padding: 25px;
+            height: 100vh;
+            position: fixed;
+            top: 30px; /* Position at the top */
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        h1 {
+            color: #333;
+            margin-bottom: 20px; /* Add space between title and content */
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: normal;
+        }
+
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
+
+        /* Center-align Links */
+        .center-section {
+            text-align: center;
+        }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+
+    .categories {
+        text-align: center;
+        margin-bottom: -15px;
+        padding: 10px 20px 10px 10px; /* Adjusted padding */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
+
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+        .categories::-webkit-scrollbar {
+        display: none;
+    }
+
+        .category-link {
+        display: inline-block; /* Display categories in a row */
+        margin-right: 15px; /* Adjusted margin for space between category links */
+        color: #000;
+        text-decoration: none;
+        padding: 3px 4px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        font-weight: normal; /* Set font weight to normal */
+    }
+
+    .category-link:hover {
+        background-color: #e0e0e0;
+    }
+
+
+
+/* Hide the categories on desktop screens */
+@media only screen and (min-width: 601px) {
+    .categories {
+        display: none;
+    }
+}
+/* Active link styles */
+#sidebar a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #04AA6D; /* Background color for active link */
+}
+/* Active link styles */
+.categories a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #04AA6D; /* Background color for active link */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2px 6px; /* Increase the size of the background color */
+  margin-right: 10px; /* Move the active button slightly to the right */
+}
+    #sidebar .sidebar-section a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #e0e0e0; /* Light line */
+        transition: background 0.3s;
+    }
+
+    /* Line above the first <a> element */
+    #sidebar .sidebar-section a:first-of-type {
+        border-top: 1px solid #e0e0e0; /* Light line above the first link */
+    }
+
+    /* Remove the line after the last item */
+    #sidebar .sidebar-section a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hover effect */
+    #sidebar .sidebar-section a:hover {
+        background-color: #f5f5f5; /* Optional hover effect */
+    }
+
+    /* Active link styling */
+    #sidebar .sidebar-section a.active {
+        background-color: #04AA6D; /* Background for active item */
+        color: white; /* White text for active link */
+    }
+</style>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar">
+    <div class="sidebar-section">
+        <h4>Poetry</h4>
+        <a href="https://mohdasif.net">Home</a>
+        <a href="https://mohdasif.com/poetry/mirza-ghalib" class="active">Mirza Ghalib</a>
+        <a href="https://mohdasif.com/poetry/mir-taqi-mir">Mir Taqi Mir</a>
+        <a href="https://mohdasif.com/poetry/jaun-elia">Jaun Elia</a>
+        <a href="https://mohdasif.com/poetry/faiz-ahmad">Faiz Ahmad</a>
+        <a href="https://mohdasif.com/poetry/daagh-dehlvi">Daagh Dehlvi</a>
+    </div>
+</div>
+
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="https://mohdasif.net">Home</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/photos">Photos</a>
+        <a href="/videos">Videos</a>
+
+        <a href="https://www.youtube.com/@mohdasif/shorts" style="position: absolute; right: 197px;"><i class="fab fa-youtube"></i></a>
+        <a href="https://x.com/mohdasif" style="position: absolute; right: 157px;"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://mohdasif.in" style="position: absolute; right: 132px;"><i class="fa-solid fa-bag-shopping"></i></a>
+        
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-navigation">
+        <a href="https://mohdasif.net"><i class="fa-solid fa-house" style="color: #343a40;"></i></a>
+        <a href="/videos"><i class="fa-solid fa-play" style="color: #74c0f5;"></i></a>
+        <a href="/photos"><i class="fa-solid fa-camera" style="color: #20C997;"></i></a>
+        <a href="https://m.youtube.com/@mohdasif/shorts"><i class="fa-brands fa-youtube " style="color: #FF0000;"></i></a>
+        <a href="/contact"><i class="fa-regular fa-comment-dots"></i></a>
+    </div>
+
+
+<div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+<nav>
+    <ul>
+        <li><h4>Poets</h4></li>
+        <li><a href="/poetry/mirza-ghalib">Mirza Ghalib</a></li>
+        <li><a href="/poetry/mir-taqi-mir">Mir Taqi Mir</a></li>
+        <li><a href="/poetry/jaun-elia">Jaun Elia</a></li>
+        <li><a href="/poetry/faiz-ahmad">Faiz Ahmad</a></li>
+        <li><a href="/poetry/daagh-dehlvi">Daagh Dehlvi</a></li>
+    </ul>
+</nav>
+
+<!-- Page Container -->
+<div class="page-container">
+
+<div class="container" id="container" style="margin-top: 25px">
+    <!-- Your content here -->
+    <div class="categories">
+          <br> <!-- Line break added here -->  
+        <a href="/poetry/mirza-ghalib" class="active">Mirza Ghalib</a>
+        <a href="/poetry/mir-taqi-mir" class="category-link">Mir Taqi Mir</a>
+        <a href="/poetry/jaun-elia" class="category-link">Jaun Elia</a>
+        <a href="/poetry/faiz-ahmad" class="category-link">Faiz Ahmad</a>
+        <a href="/poetry/daagh-dehlvi" class="category-link">Daagh Dehlvi</a> 
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="post">
+        <p>मिलना तिरा अगर नहीं आसाँ तो सहल है</p>
+        <p>दुश्वार तो यही है कि दुश्वार भी नहीं</p>
+    </div>
+    <div class="post">
+        <p>रात दिन गर्दिश में हैं सात आसमाँ</p>
+        <p>हो रहेगा कुछ न कुछ घबराएँ क्या</p>
+    </div>
+    <div class="post">
+        <p>ग़ालिब’-ए-ख़स्ता के बग़ैर कौन से काम बंद हैं</p>
+        <p>रोइए ज़ार ज़ार क्या कीजिए हाए हाए क्यूँ</p>
+    </div>
+    <div class="post">
+        <p>ख़त लिखेंगे गरचे मतलब कुछ न हो</p>
+        <p>हम तो आशिक़ हैं तुम्हारे नाम के</p>
+    </div>
+    <div class="post">
+        <p>राह में हम मिलें कहाँ</p>
+        <p>बज़्म में वो बुलाए क्यूँ</p>
+    </div>
+    <div class="post">
+        <p>तुम जानो तुम को ग़ैर से जो रस्म-ओ-राह हो</p>
+        <p>मुझ को भी पूछते रहो तो क्या गुनाह हो</p>
+    </div>
+    <div class="post">
+        <p>दैर नहीं हरम नहीं दर नहीं आस्ताँ नहीं</p>
+        <p>बैठे हैं रहगुज़र पे हम ग़ैर हमें उठाए क्यूँ</p>
+    </div>
+    <div class="post">
+        <p>जाना पड़ा रक़ीब के दर पर हज़ार बार</p>
+        <p>ऐ काश जानता न तिरे रह-गुज़र को मैं</p>
+    </div>
+    <div class="post">
+        <p>यही है आज़माना तो सताना किस को कहते हैं</p>
+        <p>अदू के हो लिए जब तुम तो मेरा इम्तिहाँ क्यूँ हो</p>
+    </div>
+    <div class="post">
+        <p>ग़ालिब बुरा न मान जो वाइज़ बुरा कहे,</p>
+        <p>ऐसा भी कोई है कि सब अच्छा कहें जिसे।</p>
+    </div>
+    <div class="post">
+        <p>या रब वो न समझे हैं, न समझेंगे मेरी बात</p>
+        <p>दे और दिल उनको, जो न दे मुझको ज़बान और</p>
+    </div>
+    <div class="post">
+        <p>तुझ से तो कुछ कलाम नहीं लेकिन ऐ नदीम</p>
+        <p>मेरा सलाम कहियो अगर नामा-बर मिले</p>
+    </div>
+    <div class="post">
+        <p>छोड़ा न रश्क ने कि तिरे घर का नाम लूँ</p>
+        <p>हर इक से पूछता हूँ कि जाऊँ किधर को मैं</p>
+    </div>
+    <div class="post">
+        <p>मुझ तक कब उन की बज़्म में आता था दौर-ए-जाम</p>
+        <p>साक़ी ने कुछ मिला न दिया हो शराब में</p>
+    </div>
+    <div class="post">
+        <p>अपनी गली में मुझ को न कर दफ़्न बाद-ए-क़त्ल</p>
+        <p>मेरे पते से ख़ल्क़ को क्यूँ तेरा घर मिले</p>
+    </div>
+    <div class="post">
+        <p>जब कि तुझ बिन नहीं कोई मौजूद</p>
+        <p>फिर ये हंगामा ऐ ख़ुदा क्या है</p>
+    </div>
+    <div class="post">
+        <p>जाते हुए कहते हो क़यामत को मिलेंगे</p>
+        <p>क्या ख़ूब क़यामत का है गोया कोई दिन और</p>
+    </div>
+    <div class="post">
+        <p>होगा कोई ऐसा भी कि ‘ग़ालिब’ को न जाने</p>
+        <p>शाइर तो वो अच्छा है प बदनाम बहुत है</p>
+    </div>
+    <div class="post">
+        <p>बाज़ीचा-ए-अतफ़ाल है दुनिया मिरे आगे</p>
+        <p>होता है शब-ओ-रोज़ तमाशा मिरे आगे</p>
+    </div>
+    <div class="post">
+        <p>हैं और भी दुनिया में सुख़न-वर बहुत अच्छे</p>
+        <p>कहते हैं कि ‘ग़ालिब’ का है अंदाज़-ए-बयाँ और</p>
+    </div>
+    <div class="post">
+        <p>बे-ख़ुदी बे-सबब नहीं ‘ग़ालिब’</p>
+        <p>कुछ तो है जिस की पर्दा-दारी है</p>
+    </div>
+    <div class="post">
+        <p>हर एक बात पे कहते हो तुम कि तू क्या है,</p>
+        <p>तुम्हीं कहो कि ये अंदाज-ए-गुफ़्तगू क्या है !</p>
+    </div>
+    <div class="post">
+        <p>हम को मालूम है जन्नत की हक़ीक़त लेकिन</p>
+        <p>दिल के ख़ुश रखने को ‘ग़ालिब’ ये ख़याल अच्छा है</p>
+    </div>
+    <div class="post">
+        <p>वफ़ा कैसी कहाँ का इश्क़ जब सर फोड़ना ठहरा</p>
+        <p>तो फिर ऐ संग-दिल तेरा ही संग-ए-आस्ताँ क्यूँ हो</p>
+    </div>
+    <div class="post">
+        <p>आया है बेकसी-ए-इश्क पे रोना ग़ालिब,</p>
+        <p>किसके घर जायेगा सैलाब-ए-बला मेरे बाद !</p>
+    </div>
+    <div class="post">
+        <p>बना कर फ़क़ीरों का हम भेस ‘ग़ालिब’</p>
+        <p>तमाशा-ए-अहल-ए-करम देखते हैं</p>
+    </div>
+    <div class="post">
+        <p>क़ैद-ए-हयात ओ बंद-ए-ग़म अस्ल में दोनों एक हैं</p>
+        <p>मौत से पहले आदमी ग़म से नजात पाए क्यूँ</p>
+    </div>
+    <div class="post">
+        <p>ईमाँ मुझे रोके है जो खींचे है मुझे कुफ़्र</p>
+        <p>काबा मिरे पीछे है कलीसा मिरे आगे</p>
+    </div>
+    <div class="post">
+        <p>हाँ वो नहीं ख़ुदा-परस्त जाओ वो बेवफ़ा सही</p>
+        <p>जिस को हो दीन ओ दिल अज़ीज़ उस की गली में जाए क्यूँ</p>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('menu-open');
+    });
+
+    function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+    }
+</script>
+
+</body>
+</html>
