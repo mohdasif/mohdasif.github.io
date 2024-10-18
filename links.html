@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Links</title>
+    <title>Asif | About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="https://images.mohdasif.com/icons/favicon.png">
+
+    <!-- Add this style block to hide navigation links -->
     <style>
         body {
             background-color: #f4f4f4;
@@ -44,7 +46,8 @@
             font-size: 18px; /* Font size */
             position: fixed;
             top: 0;
-            left: 5px;
+            left: 0px;
+            right: 10px;
             width: 100%;
         }
 
@@ -75,7 +78,6 @@
                 display: none;
             }
         }
-
 
         .page-container {
             max-width: 600px;
@@ -174,14 +176,15 @@
             text-align: center;
         }
 
+
 .center-section .link-button:not(.last-buttons) {
     display: inline-block;
-    padding: 8px 15px;
+    padding: 9px 13px;
     background-color: #24a0ed;
     color: #ffffff;
     text-decoration: none;
     border: 0px solid black;
-    border-radius: 30px;
+    border-radius: 15px;
     margin: 5px;
     width: 75px; /* Set a fixed width */
     height: 20px; /* Set a fixed height */
@@ -189,7 +192,7 @@
 }
 .center-section .link-button.last-buttons {
     display: inline-block;
-    padding: 10px 12px;
+    padding: 8px 12px;
     background-color: #24a0ed;
     color: #ffffff;
     text-decoration: none;
@@ -217,34 +220,28 @@
         .link-button:hover {
             background-color: #000000;
         }
-    </style>
 
-    <!-- Additional styles -->
-    <style>
-        
-        /* Apply margin to the buttons for mobile */
-        .custom-button {
-            background-color: transparent;
-            color: black;
-            padding: 4px 6px;
-            border: none;
-            cursor: pointer;
-            border: 0.9px solid black;
-            border-radius: 20px;
-            transition: background-color 0.9s; /* Added transition effect */
-            margin-right: 14px; /* Add margin between buttons for mobile */
-            transform: translateX(7px); /* Move the custom button slightly to the right */
-            margin-top: 5px; /* Add margin between navigation and buttons */
-        }
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    padding-bottom: 20px; /* Add space at the bottom */
+}
 
-        .custom-button:last-child {
-            margin-right: 0; /* Remove margin from the last button for mobile */
-        }
-            /* Apply margin to the desktop navigation */
-            #desktop-navigation {
-                margin-bottom: px; /* Adjust the margin as needed for desktop */
-            }
-        }
+/* Media query for desktop screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding-bottom: 0; /* Remove the space at the bottom on mobile */
+    }
+}
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+
     .footer {
       background-color: #f8f8f8;
       padding: 40px 0;
@@ -303,6 +300,69 @@
                 text-align: right; /* Align last section (Shop) to the right */
             }
         }
+        
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: #f5f5f5;
+            color: black;
+            padding: 3px 7px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 15px; /* Adjust font size as needed */
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 17px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+
+    @media (max-width: 767px) {
+        .custom-button {
+            display: none; /* Hide the custom button on mobile screens */
+        }
+    }
+
+            /* Apply margin to the desktop navigation */
+            #desktop-navigation {
+                margin-bottom: px; /* Adjust the margin as needed for desktop */
+            }
+        }
+/* Adjust the size of the "View More" button */
+.more {
+    display: inline-block; /* Ensures the button takes up only necessary space */
+}
+
+/* Center the "View More" button */
+.more {
+    display: left; /* Use flexbox to center button */
+    justify-content: left; /* Center button horizontally */
+    align-items: left; /* Center button vertically */
+}
+
+/* Style the "View More" button */
+.more a {
+    padding: 3px 6px; /* Adjust padding to make the button smaller */
+    font-size: 12px; /* Adjust font size to make the button text smaller */
+    border: 1px solid black;
+    border-radius: 20px; /* Make the button round */
+    text-decoration: none; /* Remove underline */
+    background-color: #fff; /* Add background color */
+    color: black; /* Add text color */
+    transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+/* Hover effect for the "View More" button */
+.more a:hover {
+    background-color: #333; /* Darken background color on hover */
+    color: white; /* Change text color on hover */
+}
+.custom-br {
+    height: 2em; /* Adjust as needed */
+}
         /* Sidebar styles */
         #sidebar {
             height: 100%;
@@ -459,6 +519,7 @@
     </div>
 
 
+
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
@@ -488,42 +549,75 @@
 <!-- Page Container -->
 <div class="page-container">
 
+    <!-- Your content goes here -->
+
+<!-- Page Container -->
+
+    <!-- Content Container for Links Section -->
     <div class="content-container">
-    <div class="center-section">
-    <p class="center-section"><strong>Links</strong></p>
-    <ul>
-        <li><a href="https://github.com/mohdasif" class="link-button">Github</a></li>
-        <li><a href="https://goodreads.com/mohdasif" class="link-button">Goodreads</a></li>
-        <li><a href="https://quora.com/mohdasif" class="link-button">Quora</a></li>
-        <li><a href="https://www.tumblr.com/mohdasif" class="link-button">Tumblr</a></li>
-        <li><a href="https://linktr.ee/mohdasif" class="link-button">Linktree</a></li>
-    </ul>
+        <div class="center-section">
+            <p class="center-section"><strong>Links</strong></p>
+            <ul>        
+                <li><a href="https://x.com/mohdasif" class="link-button">X</a></li>
+                <li><a href="https://clubhouse.com/@mohdasif" class="link-button">Clubhouse</a></li>
+                <li><a href="https://linkedin.com/in/mohdasif" class="link-button" title="Linkedin">LinkedIn</a></li>
+                <li><a href="https://reddit.com/user/mohdasif" class="link-button">Reddit</a></li>
+                <li><a href="https://pinterest.com/mohdasif" class="link-button">Pinterest</a></li>
+                <li><a href="https://github.com/mohdasif" class="link-button">Github</a></li>
+                <li><a href="https://goodreads.com/mohdasif" class="link-button">Goodreads</a></li>
+                <li><a href="https://quora.com/mohdasif" class="link-button">Quora</a></li>
+                <li><a href="https://www.tumblr.com/mohdasif" class="link-button">Tumblr</a></li>
+                <li><a href="https://linktr.ee/mohdasif" class="link-button">Linktree</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Add the JavaScript script here -->
+    <script>
+      // Check if the user is on a mobile device
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      // Get the YouTube link element by its ID
+      var youtubeLink = document.getElementById('youtubeLink');
+
+      // Set the href attribute based on the device type
+      if (isMobile) {
+        youtubeLink.href = 'https://m.youtube.com/@mohdasif';
+      } else {
+        youtubeLink.href = 'https://www.youtube.com/@mohdasif';
+      }
+    </script>
+
+
+<style>
+    .dark-text {
+        font-weight: bold;
+        color: #333;
+        font-size: 14px; /* Adjust the font size to your preference */
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 15px; /* Add some spacing between list items */
+    }
+</style>
+
+    <!-- Footer Section -->
+    <div class="privacy-policy">
+        <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> | 
+        <a href="/terms" style="font-weight: normal;">Terms of Use</a> | 
+        <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
+        <p>&copy; 2024 @mohdasif. All rights reserved.</p>
+    </div>
 </div>
 
-<!-- Add the JavaScript script here -->
-<script>
-  // Check if the user is on a mobile device
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  // Get the YouTube link element by its ID
-  var youtubeLink = document.getElementById('youtubeLink');
-
-  // Set the href attribute based on the device type
-  if (isMobile) {
-    youtubeLink.href = 'https://m.youtube.com/@mohdasif';
-  } else {
-    youtubeLink.href = 'https://www.youtube.com/@mohdasif';
-  }
-</script>
-</div>
-
-<div class="privacy-policy">
-    <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> | 
-    <a href="/terms" style="font-weight: normal;">Terms of Use</a> | 
-    <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
-    <p>&copy; 2024 @mohdasif. All rights reserved.</p>
-</div>
 </footer>
+</div> <!-- Close the page-container div here. -->
 
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -540,5 +634,4 @@
 </script>
 
 </body>
-
 </html>
