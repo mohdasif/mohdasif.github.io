@@ -18,8 +18,6 @@
             overflow-x: hidden;
         }
 
-       #desktop-navigation,
-        #mobile-navigation {
             text-align: center;
             position: fixed;
             width: 100%;
@@ -28,24 +26,6 @@
         }
 
 
-        #desktop-navigation {
-            background-color: #333;
-            color: #fff;
-            padding: 7px;
-            font-size: 18.7px; /* Increase font size for zoom effect */
-            padding:7px; /* Padding for top and bottom */
-            padding-left: 5px; /* Additional padding for left */
-            padding-right: 10px; /* Additional padding for right */
-            padding: 6px 7px; /* Increase padding for more space */
-            margin: 0px 0px 20px 20px; /* Set top, right, bottom to 0px, left to 5px */
-            font-weight: bold;
-            right: 0px; /* Position the navigation slightly away from the right side */
-            display: block; /* Ensure the desktop navigation is visible */
-        }
-
-
-        #desktop-navigation a,
-        #mobile-navigation a {
             color: inherit;
             margin: 0 16px;
             text-decoration: none;
@@ -53,11 +33,6 @@
             display: inline-block; /* Make sure the links are on separate lines */
         }
 
-        #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
-        }
-
-#mobile-navigation {
     background-color: #FDFCFA;
     color: #000;
     padding: 10px;
@@ -149,11 +124,6 @@
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
                 display: block;
             }
         }
@@ -321,126 +291,6 @@
     }
 
             /* Apply margin to the desktop navigation */
-            #desktop-navigation {
-                margin-bottom: px; /* Adjust the margin as needed for desktop */
-            }
-        }
-/* Adjust the size of the "View More" button */
-.more {
-    display: inline-block; /* Ensures the button takes up only necessary space */
-}
-
-/* Center the "View More" button */
-.more {
-    display: left; /* Use flexbox to center button */
-    justify-content: left; /* Center button horizontally */
-    align-items: left; /* Center button vertically */
-}
-
-/* Style the "View More" button */
-.more a {
-    padding: 3px 6px; /* Adjust padding to make the button smaller */
-    font-size: 12px; /* Adjust font size to make the button text smaller */
-    border: 1px solid black;
-    border-radius: 20px; /* Make the button round */
-    text-decoration: none; /* Remove underline */
-    background-color: #fff; /* Add background color */
-    color: black; /* Add text color */
-    transition: background-color 0.3s, color 0.3s; /* Add transition effect */
-}
-
-/* Hover effect for the "View More" button */
-.more a:hover {
-    background-color: #333; /* Darken background color on hover */
-    color: white; /* Change text color on hover */
-}
-.custom-br {
-    height: 2em; /* Adjust as needed */
-}
-        /* Sidebar styles */
-        #sidebar {
-            height: 100%;
-            width: 140px; /* Adjusted width for the sidebar */
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #FFF;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 30px;
-        }
-        
-        /* Style sidebar section headings */
-.sidebar-section h4 {
-    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
-    margin-bottom: 5px; /* Add space below the heading */
-    padding: 10px; /* Add padding to the heading */
-    font-size: 16px; /* Adjust the font size of the heading */
-    font-weight: bold; /* Make the heading bold */
-    color: #333; /* Set the color of the heading */
-}
-
-        #sidebar a {
-            padding: 10px 25px;
-            text-decoration: none;
-            font-size: 15px;
-            color: #333;
-            display: block;
-            transition: 0.3s;
-        }
-
-        #sidebar a:hover {
-    background-color: #f9f9f9; /* Background color on hover */
-    color: #333; /* Text color on hover */
-}
-
-        #sidebar .close-btn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-        .menu-toggle {
-            display: block; /* Show the menu toggle by default */
-            position: fixed;
-            top: 9px;
-            left: 35px;
-            font-size: 21px; /* Increase the font size */
-            cursor: pointer;
-            z-index: 1000; /* Ensure the menu icon is on top */
-        }
-
-        nav {
-            float: left;
-            width: 33%;
-            background-color: #f1f1f1;
-            padding: 32px;
-            height: 100vh;
-            position: fixed;
-            overflow: auto;
-            transition: transform 0.9s ease;
-            transform: translateX(-100%);
-            z-index: 999; /* Ensure the sidebar is on top */
-        }
-        nav.menu-open {
-            transform: translateX(0);
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            margin-bottom: 10px;
-        }
-
-        @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
                 display: block;
             }
 

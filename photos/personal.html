@@ -17,8 +17,6 @@
             overflow-x: hidden;
         }
 
-       #desktop-navigation,
-        #mobile-navigation {
             text-align: center;
             position: fixed;
             width: 100%;
@@ -27,24 +25,6 @@
         }
 
 
-        #desktop-navigation {
-            background-color: #333;
-            color: #fff;
-            padding: 7px;
-            font-size: 18.7px; /* Increase font size for zoom effect */
-            padding:7px; /* Padding for top and bottom */
-            padding-left: 5px; /* Additional padding for left */
-            padding-right: 6px; /* Additional padding for right */
-            padding: 6px 7px; /* Increase padding for more space */
-            margin: 0px; /* Margin for top, right, bottom, and left */
-            font-weight: bold;
-            right: 0px; /* Position the navigation slightly away from the right side */
-            display: block; /* Ensure the desktop navigation is visible */
-        }
-
-
-        #desktop-navigation a,
-        #mobile-navigation a {
             color: inherit;
             margin: 0 16px;
             text-decoration: none;
@@ -52,11 +32,6 @@
             display: inline-block; /* Make sure the links are on separate lines */
         }
 
-        #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
-        }
-
-#mobile-navigation {
     background-color: #FDFCFA;
     color: #000;
     padding: 10px;
@@ -365,11 +340,6 @@
         }
 
         @media only screen and (max-width: 600px) {
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
                 display: block;
             }
         }
@@ -463,11 +433,6 @@ nav ul h4:first-of-type {
 }
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
                 display: block;
             }
 
