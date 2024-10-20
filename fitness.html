@@ -35,48 +35,34 @@
             display: block; /* Ensure visibility */
         }
 
-        /* Styles for mobile navigation */
-        #mobile-navigation {
-            background-color: #FDFCFA;
-            color: #000;
-            padding: 10px;
-            display: none; /* Hide by default */
-            font-size: 18px; /* Font size */
-            position: fixed;
-            top: 0;
-            left: 0px;
-            right: 10px;
-            width: 100%;
-        }
-
-        /* Common link styles for both desktop and mobile */
         #desktop-navigation a,
         #mobile-navigation a {
             color: inherit;
             margin: 0 16px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block; /* Ensure proper spacing */
+            display: inline-block; /* Make sure the links are on separate lines */
         }
 
-        /* Remove margin from the last link */
-        #desktop-navigation a:last-child,
-        #mobile-navigation a:last-child {
-            margin-right: 0;
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
         }
 
+#mobile-navigation {
+    background-color: #FDFCFA;
+    color: #000;
+    padding: 10px;
+    display: none;
+    font-size: 18px; /* Adjust the font size as needed */
+    position: fixed; /* Ensure it stays fixed on the screen */
+    top: 0; /* Align to the top edge */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Make it full width */
+}
 
-        @media only screen and (min-width: 601px) {
-            /* Show desktop navigation on larger screens */
-            #desktop-navigation {
-                display: block;
-            }
-            /* Hide mobile navigation on larger screens */
-            #mobile-navigation {
-                display: none;
-            }
-        }
-
+#mobile-navigation a:first-child {
+    margin-left: 33px; /* Adjust this value as needed to create the desired space */
+}
         header {
             background-color: #333;
             color: white;
@@ -422,16 +408,15 @@ nav ul li a {
         <li><h4>Pages</h4></li>
         <li><a href="/fitness/exercises">Exercise</a></li>
         <li><a href="/fitness/motivation">Motivation</a></li>
-        <li><a href="/fitness/epic">Epic</a></li>  
+        <li><a href="/fitness/epic">Epic</a></li>     
     </ul>
 </nav>
-
     <div class="container">
         <div class="categories">
         <a href="/fitness" class="active">Fitness</a>
+        <a href="/fitness/muscles" class="category-link">Muscles</a>
+        <a href="/fitness/cutting" class="category-link">Cutting</a>
         <a href="/fitness/exercises" class="category-link">Exercises</a>
-        <a href="/fitness/motivation" class="category-link">Motivation</a>
-        <a href="/fitness/epic" class="category-link">Epic</a>
     </div>
         </div>
 
@@ -454,6 +439,7 @@ nav ul li a {
             <iframe src="https://www.youtube.com/embed/OH53ZTTLPJM" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
+
 
 
 <script>
