@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Music </title>
+    <title>Asif | Fitness | Exercises</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="https://images.mohdasif.com/icons/favicon.png">
     <style>
@@ -35,48 +35,34 @@
             display: block; /* Ensure visibility */
         }
 
-        /* Styles for mobile navigation */
-        #mobile-navigation {
-            background-color: #FDFCFA;
-            color: #000;
-            padding: 10px;
-            display: none; /* Hide by default */
-            font-size: 18px; /* Font size */
-            position: fixed;
-            top: 0;
-            left: 0px;
-            right: 10px;
-            width: 100%;
-        }
-
-        /* Common link styles for both desktop and mobile */
         #desktop-navigation a,
         #mobile-navigation a {
             color: inherit;
             margin: 0 16px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block; /* Ensure proper spacing */
+            display: inline-block; /* Make sure the links are on separate lines */
         }
 
-        /* Remove margin from the last link */
-        #desktop-navigation a:last-child,
-        #mobile-navigation a:last-child {
-            margin-right: 0;
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
         }
 
+#mobile-navigation {
+    background-color: #FDFCFA;
+    color: #000;
+    padding: 10px;
+    display: none;
+    font-size: 18px; /* Adjust the font size as needed */
+    position: fixed; /* Ensure it stays fixed on the screen */
+    top: 0; /* Align to the top edge */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Make it full width */
+}
 
-        @media only screen and (min-width: 601px) {
-            /* Show desktop navigation on larger screens */
-            #desktop-navigation {
-                display: block;
-            }
-            /* Hide mobile navigation on larger screens */
-            #mobile-navigation {
-                display: none;
-            }
-        }
-
+#mobile-navigation a:first-child {
+    margin-left: 33px; /* Adjust this value as needed to create the desired space */
+}
         header {
             background-color: #333;
             color: white;
@@ -126,7 +112,7 @@
     .categories {
         text-align: center;
         margin-bottom: 68px;
-        padding: 10px 0px 10px 10px; /* Adjusted padding */
+        padding: 10px 10px 10px 10px; /* Adjusted padding */
         overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
         white-space: nowrap; /* Prevent categories from wrapping */
     }
@@ -138,7 +124,7 @@
 
         .category-link {
         display: inline-block; /* Display categories in a row */
-        margin-right: 25px; /* Adjusted margin for space between category links */
+        margin-right: 8px; /* Adjusted margin for space between category links */
         color: #000;
         text-decoration: none;
         padding: 3px 7px;
@@ -370,6 +356,22 @@ nav ul li a {
     margin-top: 60px; /* Adjust as needed */
     margin-bottom: -40px; /* Adjust as needed */
 }
+
+/* Active link styles */
+#sidebar a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #f44336; /* Background color for active link */
+}
+
+/* Active link styles */
+.categories a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #f44336; /* Background color for active link */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2px 5px; /* Increase the size of the background color */
+  margin-right: 10px; /* Move the active button slightly to the right */
+  text-decoration: none;
+}
     </style>
 
 </head>
@@ -403,65 +405,61 @@ nav ul li a {
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
-        <!-- General Pages -->
         <li><h4>Pages</h4></li>
-        <li><a href="/about">About</a></li> <!-- General introductory page -->
-        <li><a href="/blog">Blog</a></li> <!-- Important content section -->
-        <li><a href="/posts">Posts</a></li> <!-- Related to blog, keeps content together -->
-        <li><a href="/poetry">Poetry</a></li> <!-- More specific content section -->
-        <li><a href="https://mohdasif.in">Store</a></li> <!-- Store, placed after content for logical flow -->
-        
-        <!-- Media Section -->
-        <li><h4>Media</h4></li>
-        <li><a href="/videos">Videos</a></li>
-        <li><a href="/podcasts">Podcasts</a></li>
-        <li><a href="/fitness">Fitness</a></li>
-        <li><a href="/photos">Photos</a></li>
-        <li><a href="/music">Music</a></li>
-        
-        <!-- Policies Section -->
-        <li><h4>Policies</h4></li>
-        <li><a href="/privacy">Privacy</a></li>
-        <li><a href="/tos">Terms</a></li>
+        <li><a href="/fitness/exercises">Exercise</a></li>
+        <li><a href="/fitness/motivation">Motivation</a></li>
+        <li><a href="/fitness/epic">Epic</a></li>     
     </ul>
 </nav>
-
     <div class="container">
         <div class="categories">
-        <a href="/music" class="active">Soundtrack</a>
-        <a href="/music/mashup" class="category-link">Mashup</a>
-        <a href="https://music.apple.com/in/playlist/listening/pl.u-EdAVzEYFD3PZ5VR" class="category-link">Listening</a>
-
+        <a href="/fitness" class="category-link">Fitness</a>
+        <a href="/fitness/exercises" class="active">Exercises</a>
+        <a href="/fitness/motivation" class="category-link">Motivation</a>
+        <a href="/fitness/epic" class="category-link">Epic</a>
     </div>
         </div>
+
 
     <section>
 <div class="blog-cards">
-    <div class="blog-card">
-        <iframe src="https://www.youtube.com/embed/fA7JYUu-gcw" frameborder="0" allowfullscreen></iframe>
+        <div class="blog-card">
+        <iframe src="https://www.youtube.com/embed/SuNzfzUkWDI" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="blog-card">
-        <iframe src="https://www.youtube.com/embed/YDn1Qi5hwvk" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/XHsEUJso6zk" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="blog-card">
-        <iframe src="https://www.youtube.com/embed/GY5-_lo3oJ4" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/9UKRwMxjPbQ" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="blog-card">
-        <iframe src="https://www.youtube.com/embed/L40AuvPuzY8" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/aYMJwuhAflQ" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="blog-card">
-        <iframe src="https://www.youtube.com/embed/406xhly0nHY" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/SMncQDAE9A0" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="blog-card">
-        <iframe src="https://www.youtube.com/embed/edTfwM27KyU" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/SODSQXeP5Rs" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="blog-card">
-        <iframe src="https://www.youtube.com/embed/TZE9gVF1QbA" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Aex-1IOdvyM" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="blog-card">
-        <iframe src="https://www.youtube.com/embed/yU5ZtylE21o" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/dp29jsIrOZA" frameborder="0" allowfullscreen></iframe>
     </div>
-        </div>
+    <div class="blog-card">
+        <iframe src="https://www.youtube.com/embed/FAprLejFj2c" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="blog-card">
+        <iframe src="https://www.youtube.com/embed/BcTJ6IStY6A" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="blog-card">
+        <iframe src="https://www.youtube.com/embed/Qf-QyAR59mM" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="blog-card">
+        <iframe src="https://www.youtube.com/embed/UbETLQHHdJg" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
     </section>
 
 
@@ -482,3 +480,4 @@ nav ul li a {
 </body>
 
 </html>
+
