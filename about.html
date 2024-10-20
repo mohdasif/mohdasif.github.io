@@ -489,6 +489,29 @@
   color: #fff; /* Text color for active link */
   background-color: #007bff; /* Background color for active link */
 }
+.link-button {
+    display: inline-block; /* Makes the link behave like a button */
+    padding: 7px 7px; /* Adds padding around the text */
+    background-color: #007bff; /* Button background color */
+    color: #ffffff; /* Text color */
+    border-radius: 15px; /* Rounded corners */
+    text-decoration: none; /* Removes the underline */
+    font-weight: normal; /* Makes the text bold */
+    transition: background-color 0s, transform 0s; /* Smooth transition */
+}
+
+.link-button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    transform: scale(0); /* Slightly enlarge the button on hover */
+}
+
+.link-button.last-buttons {
+    margin-top: 15px; /* Adds some space above the button */
+}
+
+.links-container {
+    margin-top: 15px; /* Adds space around the links container */
+}
     </style>
 
 </head>
@@ -594,55 +617,14 @@
         <p class="profile-text">
             Passionate about reading books, listening to poetry, dedicated to fitness, committed to constant learning, and embracing minimalist living.
         </p>
+        <ul>
+            <li><a href="/about-me" class="link-button last-buttons">View more</a></li>
+        </ul>
     </div>
     <!-- Rest of your content -->
 </div>
 
-<!-- Content Container -->
-<div class="content-container" style="text-align: left;">
-    <h2>Personal Information</h2>
-    <ul>
-        <li><strong>Name:</strong> Mohd Asif</li>
-        <li><strong>Date of Birth:</strong> 9th July</li>
-        <li><strong>Height:</strong> 5'9"</li>
-        <li><strong>Weight:</strong> 72 kg</li>
-        <li><strong>Nationality:</strong> Indian</li>
-        <li><strong>Marital Status:</strong> Unmarried</li>
-    </ul>
 
-    <br>
-    <h2>Additional Information</h2>
-    <div class="workout-stats">
-        <br>
-        <h3>Workout Stats</h3>
-        <ul>
-            <li><strong>Deadlift - Sumo:</strong> 180 Kg</li>
-            <li><strong>Squat:</strong> 160 Kg</li>
-            <li><strong>Bench Press:</strong> 130 Kg</li>
-            <li><strong>Incline Bench Press:</strong> 110 Kg</li>
-            <li><strong>Hip Thrust:</strong> 100 Kg</li>
-
-        </ul>
-        <br>
-        <h3>Body Measurement</h3>
-        <ul>
-            <li><strong>Chest:</strong> 42 Inches</li>
-            <li><strong>Biceps:</strong> 16 Inches</li>
-            <li><strong>Thigh:</strong> 24 Inches</li>
-        </ul>
-        <br>
-        <!-- Content for the Fun Fact  -->
-        <div class="fun-facts-section left-align">
-            <h3>Fun Facts</h3>
-            <ul>
-                <li><span class="dark-text">Currently Working On</span>: Nutrition and Exercises for achieving killer abs.</li>
-                <li><span class="dark-text">Currently Learning</span>: The Art of web development with HTML, CSS & JavaScript</li>
-                <li><span class="dark-text">Looking for Help With</span>: Striving to enhance my public speaking skills.</li>
-                <li><span class="dark-text">Ask Me About</span>: Strength training</li>
-            </ul>
-        </div>
-    </div>
-</div>
 
 <style>
     .dark-text {
