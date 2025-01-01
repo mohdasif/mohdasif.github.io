@@ -17,7 +17,7 @@
             overflow-x: hidden;
         }
 
-       #desktop-navigation,
+        #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -25,7 +25,6 @@
             top: 0;
             z-index: 1000;
         }
-
 
         /* Styles for desktop navigation */
         #desktop-navigation {
@@ -37,34 +36,47 @@
             display: block; /* Ensure visibility */
         }
 
+        /* Styles for mobile navigation */
+        #mobile-navigation {
+            background-color: #FDFCFA;
+            color: #000;
+            padding: 10px;
+            display: none; /* Hide by default */
+            font-size: 18px; /* Font size */
+            position: fixed;
+            top: 0;
+            left: 0px;
+            right: 10px;
+            width: 100%;
+        }
+
+        /* Common link styles for both desktop and mobile */
         #desktop-navigation a,
         #mobile-navigation a {
             color: inherit;
             margin: 0 16px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block; /* Make sure the links are on separate lines */
+            display: inline-block; /* Ensure proper spacing */
         }
 
-        #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
+        /* Remove margin from the last link */
+        #desktop-navigation a:last-child,
+        #mobile-navigation a:last-child {
+            margin-right: 0;
         }
 
-#mobile-navigation {
-    background-color: #FDFCFA;
-    color: #000;
-    padding: 10px;
-    display: none;
-    font-size: 18px; /* Adjust the font size as needed */
-    position: fixed; /* Ensure it stays fixed on the screen */
-    top: 0; /* Align to the top edge */
-    left: 0; /* Align to the left edge */
-    width: 100%; /* Make it full width */
-}
 
-#mobile-navigation a:first-child {
-    margin-left: 33px; /* Adjust this value as needed to create the desired space */
-}
+        @media only screen and (min-width: 601px) {
+            /* Show desktop navigation on larger screens */
+            #desktop-navigation {
+                display: block;
+            }
+            /* Hide mobile navigation on larger screens */
+            #mobile-navigation {
+                display: none;
+            }
+        }
 
         .page-container {
             max-width: 600px;
@@ -91,13 +103,14 @@
         }
 
 
+
     .categories {
-        text-align: center;
-        margin-bottom: 30px;
-        padding: 10px 20px 10px 32px; /* Adjusted padding */
-        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
-        white-space: nowrap; /* Prevent categories from wrapping */
-    }
+    text-align: center;
+    margin-bottom: 25px; /* Reduced space */
+    padding: 10px 10px 2px 12px; /* Adjusted padding */
+    overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+    white-space: nowrap; /* Prevent categories from wrapping */
+}
 
     /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
         .categories::-webkit-scrollbar {
@@ -119,8 +132,6 @@
     .category-link:hover {
         background-color: #e0e0e0;
     }
-
-
     .articles-section {
         display: none;
         margin-top: 20px;
@@ -160,7 +171,7 @@
         .categories {
             overflow-x: auto; /* Enable horizontal scrolling */
             white-space: nowrap; /* Prevent categories from wrapping */
-            padding-bottom: 10px; /* Add bottom padding to make room for scrollbar */
+            padding-bottom: 0px; /* Add bottom padding to make room for scrollbar */
         }
     }
 
@@ -168,7 +179,7 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 30px;
     padding: 20px;
     margin-top: 10px; /* Adjusted for the header height */
 }
@@ -456,6 +467,7 @@ nav ul h4 {
 nav ul h4:first-of-type {
     margin-top: 40px; /* Add additional space above the first h4 */
 }
+
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
