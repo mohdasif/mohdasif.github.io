@@ -124,20 +124,22 @@
             font-size: 16px;
         }
 
-        button {
-            padding: 10px;
-            border: none;
-            background-color: #04AA6D;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #007BFF; /* Blue color */
+    color: white; /* Text color */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
 
-        button:hover {
-            background-color: #218838;
-        }
+button:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
     .categories {
         text-align: center;
         margin-bottom: 28px;
