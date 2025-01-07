@@ -331,6 +331,64 @@ nav ul h4:first-of-type {
   color: #fff; /* Text color for active link */
   background-color: #007bff; /* Background color for active link */
 }
+    .footer {
+      background-color: #f8f8f8;
+      padding: 40px 0;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      flex: 1 0 100%;
+      padding-left: 20px; /* Add left padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+      margin-bottom: 20px;
+      text-align: left; /* Align text to the left */
+    }
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left; /* Align title to the left */
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .footer-section ul li a:hover {
+      color: #007bff;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .privacy-policy {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+        @media (min-width: 768px) {
+            .footer-section {
+                flex: 1; /* Adjust width for desktop to allow sections to grow */
+            }
+
+            .footer-section:first-child {
+                text-align: left; /* Align first section (Pages) to the left */
+            }
+
+            .footer-section:last-child {
+                text-align: right; /* Align last section (Shop) to the right */
+            }
+        }
     </style>
 </head>
 
@@ -415,9 +473,19 @@ nav ul h4:first-of-type {
 
 <h2>6. Contact Us</h2>
 <p>If you have any questions about this Privacy Policy, please contact us via email at <a href="mailto:privacy@mohdasif.com">privacy@mohdasif.com</a>.</p>
-
-<p><em>Please note that while we do not collect personal data, the platforms hosting our websites may collect data according to their policies. It's important to review and understand their terms and ensure your privacy policy is compliant with their requirements. Additionally, if our circumstances change and we begin to collect personal data, we will update our privacy policy accordingly.</em></p>
     </div>
+
+    <!-- Footer Section -->
+    <div class="privacy-policy">
+        <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> | 
+        <a href="/terms" style="font-weight: normal;">Terms of Use</a> | 
+        <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
+        <p>&copy; 2024 @mohdasif. All rights reserved.</p>
+    </div>
+</div>
+
+</footer>
+</div> <!-- Close the page-container div here. -->
 
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
