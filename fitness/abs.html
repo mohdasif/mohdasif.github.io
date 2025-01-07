@@ -382,13 +382,13 @@ nav ul li a {
     <div id="desktop-navigation">
         <a href="https://mohdasif.com">Home</a>
         <a href="/blog">Blog</a>
+        <a href="https://mohdasif.in">Poetry</a>
         <a href="/photos">Photos</a>
         <a href="/videos">Videos</a>
-        <a href="https://mohdasif.in">Poetry</a>
 
         <a href="https://www.youtube.com/@mohdasif/shorts" style="position: absolute; right: 190px;"><i class="fab fa-youtube"></i></a>
         <a href="https://x.com/mohdasif" style="position: absolute; right: 150px;"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="mailto:mail@mohdasif.com" style="position: absolute; right: 125px;"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://www.amazon.in/shop/mohdasif" style="position: absolute; right: 125px;"><i class="fa-brands fa-amazon"></i></a>
         
     </div>
 
@@ -396,7 +396,7 @@ nav ul li a {
     <div id="mobile-navigation">
         <a href="https://mohdasif.com/"><i class="fa-solid fa-house" style="color: #343a40;"></i></a>
         <a href="https://mohdasif.in"><i class="fa-solid fa-feather" style="color: #007E8F;"></i></a>
-        <a href="/photos"><i class="fa-solid fa-camera" style="color: #20C997;"></i></a>
+        <a href="https://mohdasif.net"><i class="fa-solid fa-camera" style="color: #20C997;"></i></a>
         <a href="/videos"><i class="fa-solid fa-play" style="color: #74c0f5;"></i></a>
         <a href="/contact"><i class="fa-regular fa-comment-dots"></i></a>
     </div>
@@ -414,9 +414,9 @@ nav ul li a {
     <div class="container">
         <div class="categories">
         <a href="/fitness/exercises" class="category-link">Exercises</a>
+        <a href="/fitness/motivation" class="category-link">Motivation</a>
         <a href="/fitness/glutes" class="category-link">Glutes</a>
         <a href="/fitness/abs" class="active">Abs</a>
-        <a href="/fitness/hindi" class="category-link">Other</a>
     </div>
         </div>
 
@@ -450,79 +450,7 @@ nav ul li a {
     }
 </script>
 
-    <!-- Other existing content -->
-
-    <!-- Move to Top Button -->
-    <div id="moveToTop" class="move-to-top">
-        <i class="fa-solid fa-chevron-up" style="color: #808080;"></i>
-    </div>
-
-    <style>
-        /* Move to Top Button */
-        .move-to-top {
-            position: fixed;
-            bottom: 10px; /* Distance from the bottom */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Adjust for button width */
-            font-size: 20px; /* Icon size */
-            color: #333333; /* Black arrow color */
-            background-color: #ffffff; /* Slightly off-white background */
-            border: 1px solid #808080; /* Thin light gray border */
-            border-radius: 50%; /* Circle shape */
-            width: 40px; /* Circle size */
-            height: 40px; /* Circle size */
-            display: flex; /* Flexbox for centering the icon */
-            justify-content: center; /* Center horizontally inside the button */
-            align-items: center; /* Center vertically inside the button */
-            cursor: pointer; /* Pointer on hover */
-            z-index: 1000; /* Ensure it's above other elements */
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.3s, color 0.3s, transform 0.3s; /* Smooth effects */
-        }
-
-        /* Show button when visible */
-        .move-to-top.visible {
-            opacity: 1; /* Fully visible */
-        }
-
-        /* Adjust the button for larger screens (desktop) */
-        @media (min-width: 768px) {
-            .move-to-top {
-                left: auto; /* Remove left positioning */
-                right: 20px; /* Fixed to the right side */
-            }
-        }
-    </style>
-
-    <script>
-        // Move to Top Button Functionality
-        const moveToTopButton = document.getElementById('moveToTop');
-        let lastScrollY = 0; // Keep track of the last scroll position
-
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-
-            // Check if scrolling up and past the threshold
-            if (currentScrollY < lastScrollY && currentScrollY > 300) {
-                moveToTopButton.classList.add('visible');
-            } else {
-                moveToTopButton.classList.remove('visible');
-            }
-
-            // Update the last scroll position
-            lastScrollY = currentScrollY;
-        });
-
-        // Scroll to the top when the button is clicked
-        moveToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-
 </body>
-</html>
 
+</html>
 
