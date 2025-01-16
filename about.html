@@ -222,7 +222,7 @@
         }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
     padding-bottom: 20px; /* Add space at the bottom */
@@ -363,6 +363,43 @@
 .custom-br {
     height: 2em; /* Adjust as needed */
 }
+
+    .categories {
+        text-align: center;
+        margin-bottom: 28px;
+        margin-left: -10px; /* Negative margin to shift content to the left */
+        padding: 10px 10px 10px 0px; /* Adjusted padding */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
+
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+        .categories::-webkit-scrollbar {
+        display: none;
+    }
+
+        .category-link {
+        display: inline-block; /* Display categories in a row */
+        margin-right: 6px; /* Adjusted margin for space between category links */
+        color: #000;
+        text-decoration: none;
+        padding: 3px 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        font-weight: normal; /* Set font weight to normal */
+    }
+
+    .category-link:hover {
+        background-color: #e0e0e0;
+    }
+/* Hide .categories on desktop views */
+@media (min-width: 768px) {
+    .categories {
+        display: none;
+    }
+}
+
         /* Sidebar styles */
         #sidebar {
             height: 100%;
@@ -576,9 +613,22 @@
     </ul>
 </nav>
 
+    <div class="content-container">
+<div class="container" style="margin-top: 12px;"> <!-- Added margin-top -->
+    <div class="categories">
+        <a href="https://bsky.app/profile/mohdasif.com" class="category-link">Blue Sky</a>
+        <a href="https://linkedin.com/in/mohdasif" class="category-link">Linkedin</a>
+        <a href="https://clubhouse.com/@mohdasif" class="category-link">Clubhouse</a>
+        <a href="https://github.com/mohdasif" class="category-link">Github</a>
+        <a href="https://pinterest.com/mohdasif" class="category-link">Pinterest</a>
+        <a href="https://reddit.com/user/mohdasif" class="category-link">Reddit</a>
+        <a href="https://goodreads.com/mohdasif" class="category-link">Goodreads</a>
+        <a href="https://quora.com/mohdasif" class="category-link">Quora</a>     
+    </div>
+</div>
 
 <!-- Page Container -->
-<div class="page-container">
+
 
     <!-- Your content goes here -->
 
@@ -602,10 +652,9 @@
   }
 </script>
 
-
 <div class="content-container">
     <div class="links-container" style="text-align: left;">
-        <h2>About me</h2>
+        <h2>About</h2>
         <!-- About Text -->
         <p class="profile-text">
             Passionate about reading books, poetry, fitness, constant learning and embracing minimalist living.
@@ -613,18 +662,6 @@
     </div>
 </div>
 
-<div class="content-container">
-    <div class="center-section">
-        <p><strong>Links</strong></p>
-        <ul>
-            <li><a href="https://telegram.me/mohdasif" class="link-button">Telegram</a></li>
-            <li><a href="https://youtube.com/@mohdasif/shorts" class="link-button">Youtube</a></li>
-            <li><a href="https://clubhouse.com/@mohdasif" class="link-button">Clubhouse</a></li>
-            <li><a href="https://bsky.app/profile/mohdasif.com" class="link-button">Blue Sky</a></li>
-            <li><a href="https://linkedin.com/in/mohdasif" class="link-button">Linkedin</a></li>
-        </ul>
-    </div>
-</div>
 
 <style>
     .dark-text {
@@ -668,10 +705,10 @@
 
     <!-- Footer Section -->
     <div class="privacy-policy">
-        <a href="/privacy" style="font-weight: normal;">Privacy Policy</a> | 
-        <a href="/terms" style="font-weight: normal;">Terms of Use</a> | 
-        <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
-        <p>&copy; 2024 @mohdasif. All rights reserved.</p>
+        <a href="/about-me" style="font-weight: normal;">about me</a> | 
+        <a href="https://buymeacoffee.com/mohdasif" style="font-weight: normal;">buy me a coffee</a> | 
+        <a href="https://linktr.ee/mohdasif" style="font-weight: normal;">linktree</a>
+        <p>&copy; 2025 @mohdasif. All rights reserved.</p>
     </div>
 </div>
 
