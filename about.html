@@ -368,7 +368,7 @@
         text-align: center;
         margin-bottom: 28px;
         margin-left: -7px; /* Negative margin to shift content to the left */
-        padding: 10px 10px 10px 0px; /* Adjusted padding */
+        padding: 10px 10px 0px 0px; /* Adjusted padding */
         overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
         white-space: nowrap; /* Prevent categories from wrapping */
     }
@@ -403,11 +403,11 @@
         /* Sidebar styles */
         #sidebar {
             height: 100%;
-            width: 150px; /* Adjusted width for the sidebar */
+            width: 140px; /* Adjusted width for the sidebar */
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #ededed;
+            background-color: #FFF;
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 30px;
@@ -426,11 +426,10 @@
         #sidebar a {
             padding: 10px 25px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;
             color: #333;
             display: block;
             transition: 0.3s;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Add a shadow */
         }
 
         #sidebar a:hover {
@@ -445,7 +444,6 @@
             font-size: 36px;
             margin-left: 50px;
         }
-
         .menu-toggle {
             display: block; /* Show the menu toggle by default */
             position: fixed;
@@ -463,6 +461,7 @@
             padding: 32px;
             height: 100vh;
             position: fixed;
+            top: 0; /* Position at the top */
             overflow: auto;
             transition: transform 0.9s ease;
             transform: translateX(-100%);
@@ -476,8 +475,70 @@
             padding: 0;
         }
         nav ul li {
-            margin-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Adjust the size as needed */
+}
+nav ul li:first-child {
+    margin-top: 15px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-top: 15px; /* Add space above all h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 40px; /* Add additional space above the first h4 */
+}
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
         }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
@@ -614,16 +675,8 @@
 </nav>
 
     <div class="content-container">
-<div class="container" style="margin-top: 12px;"> <!-- Added margin-top -->
-    <div class="categories">
-        <a href="https://linkedin.com/in/mohdasif" class="category-link">Linkedin</a>
-        <a href="https://clubhouse.com/@mohdasif" class="category-link">Clubhouse</a>
-        <a href="https://bsky.app/profile/mohdasif.com" class="category-link">Blue Sky</a>
-        <a href="https://github.com/mohdasif" class="category-link">Github</a>
-        <a href="https://pinterest.com/mohdasif" class="category-link">Pinterest</a>
-        <a href="https://reddit.com/user/mohdasif" class="category-link">Reddit</a>
-        <a href="https://goodreads.com/mohdasif" class="category-link">Goodreads</a>
-        <a href="https://quora.com/mohdasif" class="category-link">Quora</a>     
+<div class="container" style="margin-top: 0px;"> <!-- Added margin-top -->
+    <div class="categories"> 
     </div>
 </div>
 
@@ -706,7 +759,7 @@
     <!-- Footer Section -->
     <div class="privacy-policy">
         <a href="/about-me" style="font-weight: normal;">about me</a> | 
-        <a href="https://buymeacoffee.com/mohdasif" style="font-weight: normal;">buy me a coffee</a> | 
+        <a href="/contact" style="font-weight: normal;">contact</a> | 
         <a href="https://linktr.ee/mohdasif" style="font-weight: normal;">linktree</a>
         <p>&copy; 2025 @mohdasif. All rights reserved.</p>
     </div>
