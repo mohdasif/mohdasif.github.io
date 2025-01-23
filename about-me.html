@@ -197,7 +197,6 @@
     margin-bottom: 5px; /* Add space below the heading */
     padding: 10px; /* Add padding to the heading */
     font-size: 16px; /* Adjust the font size of the heading */
-    font-weight: bold; /* Make the heading bold */
     color: #333; /* Set the color of the heading */
 }
 
@@ -313,6 +312,54 @@ nav ul h4:first-of-type {
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
+    .footer {
+      background-color: #f8f8f8;
+      padding: 40px 0;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      flex: 1 0 100%;
+      padding-left: 20px; /* Add left padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+      margin-bottom: 20px;
+      text-align: left; /* Align text to the left */
+    }
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left; /* Align title to the left */
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .footer-section ul li a:hover {
+      color: #007bff;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .privacy-policy {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+nav h4 {
+  font-weight: normal; /* Sets font weight to normal */
+}
     </style>
 </head>
 
@@ -344,25 +391,17 @@ nav ul h4:first-of-type {
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
-        <!-- General Pages -->
-        <li><h4>Pages</h4></li>
-        <li><a href="/blog">Blog</a></li> <!-- General introductory page -->
-        <li><a href="https://mohdasif.in">Poetry</a></li> <!-- Important content section -->
-        <li><a href="https://mohdasif.in">Poetry</a></li> <!-- More specific content section -->
-        <li><a href="/store">Store</a></li> <!-- Store, placed after content for logical flow -->
-        
-        <!-- Media Section -->
-        <li><h4>Media</h4></li>
-        <li><a href="/videos">Videos</a></li>
-        <li><a href="/podcasts">Podcasts</a></li>
-        <li><a href="/fitness">Fitness</a></li>
-        <li><a href="/photos">Photos</a></li>
-        <li><a href="/music">Music</a></li>
-        
-        <!-- Policies Section -->
-        <li><h4>Policies</h4></li>
-        <li><a href="/privacy">Privacy</a></li>
-        <li><a href="/terms">Terms</a></li>
+        <li><h4>Links</h4></li>
+        <li><a href="https://www.youtube.com/@mohdasif/shorts">YouTube</a></li>
+        <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
+        <li><a href="https://linkedin.com/in/mohdasif" title="LinkedIn">LinkedIn</a></li>
+        <li><a href="https://bsky.app/profile/mohdasif.com">BlueSky</a></li>
+        <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
+        <li><a href="https://reddit.com/user/mohdasif">Reddit</a></li>
+        <li><a href="https://www.tumblr.com/mohdasif">Tumblr</a></li>
+        <li><a href="https://github.com/mohdasif">GitHub</a></li>
+        <li><a href="https://goodreads.com/mohdasif">Goodreads</a></li>
+        <li><a href="https://quora.com/mohdasif">Quora</a></li>
     </ul>
 </nav>
 
@@ -447,7 +486,19 @@ nav ul h4:first-of-type {
 
 
             </ul>
-        </div>
+
+
+    <!-- Footer Section -->
+    <div class="privacy-policy">
+        <a href="/about" style="font-weight: normal;">about</a> | 
+        <a href="/contact" style="font-weight: normal;">contact</a> | 
+        <a href="https://linktr.ee/mohdasif" style="font-weight: normal;">linktree</a>
+        <p>&copy; 2025 @mohdasif. All rights reserved.</p>
+    </div>
+</div>
+
+</footer>
+</div> <!-- Close the page-container div here. -->
 
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -464,5 +515,4 @@ nav ul h4:first-of-type {
 </script>
 
 </body>
-
 </html>
