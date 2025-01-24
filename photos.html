@@ -569,7 +569,7 @@ nav ul h4:first-of-type {
       font-size: 12px;
       text-align: center;
       width: 100%;
-      margin-top: 20px;
+      margin-top: 10px;
     }
         @media (min-width: 768px) {
             .footer-section {
@@ -817,7 +817,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .move-to-top {
             position: fixed;
             bottom: 10px; /* Distance from the bottom */
-            left: 22px; /* Distance from the left */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for button width */
             font-size: 20px; /* Icon size */
             color: #333333; /* Black arrow color */
             background-color: #ffffff; /* Slightly off-white background */
