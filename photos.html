@@ -454,14 +454,15 @@
             padding: 0;
         }
         nav ul li {
-            margin-bottom: 10px;
-        }
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Adjust the size as needed */
+}
 nav ul li:first-child {
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 15px; /* Adjust the margin as needed */
 }
 
 nav ul h4 {
-    margin-top: 20px; /* Add space above all h4 elements */
+    margin-top: 15px; /* Add space above all h4 elements */
 }
 
 nav ul h4:first-of-type {
@@ -849,31 +850,31 @@ document.addEventListener("DOMContentLoaded", function () {
     </style>
 
     <script>
-        // Move to Top Button Functionality
-        const moveToTopButton = document.getElementById('moveToTop');
-        let lastScrollY = 0; // Keep track of the last scroll position
+// Move to Top Button Functionality
+const moveToTopButton = document.getElementById('moveToTop');
+let lastScrollY = 0; // Keep track of the last scroll position
 
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
 
-            // Check if scrolling up and past the threshold
-            if (currentScrollY < lastScrollY && currentScrollY > 300) {
-                moveToTopButton.classList.add('visible');
-            } else {
-                moveToTopButton.classList.remove('visible');
-            }
+    // Show the button only when scrolling up and past a threshold
+    if (currentScrollY > 300 && currentScrollY < lastScrollY) {
+        moveToTopButton.classList.add('visible');
+    } else {
+        moveToTopButton.classList.remove('visible');
+    }
 
-            // Update the last scroll position
-            lastScrollY = currentScrollY;
-        });
+    // Update the last scroll position
+    lastScrollY = currentScrollY;
+});
 
-        // Scroll to the top when the button is clicked
-        moveToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+// Scroll to the top when the button is clicked
+moveToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});
     </script>
 
     <!-- Footer Section -->
