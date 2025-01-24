@@ -106,9 +106,8 @@
 
     .categories {
     text-align: center;
-    margin-left: -6px; /* Negative margin to shift content to the left */
     margin-bottom: 25px; /* Reduced space */
-    padding: 10px 10px 2px 12px; /* Adjusted padding */
+    padding: 10px 12px 2px 10px; /* Adjusted padding */
     overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
     white-space: nowrap; /* Prevent categories from wrapping */
 }
@@ -120,7 +119,7 @@
 
         .category-link {
         display: inline-block; /* Display categories in a row */
-        margin-right: 18px; /* Adjusted margin for space between category links */
+        margin-right: 12px; /* Adjusted margin for space between category links */
         color: #000;
         text-decoration: none;
         padding: 3px 7px;
@@ -398,7 +397,7 @@
     margin: 20px 0; /* Adjust top and bottom margin to create a gap */
     margin-bottom: 5px; /* Add space below the heading */
     padding: 10px; /* Add padding to the heading */
-    font-size: 16px; /* Adjust the font size of the heading */
+    font-size: 15px; /* Adjust the font size of the heading */
     font-weight: bold; /* Make the heading bold */
     color: #333; /* Set the color of the heading */
 }
@@ -455,14 +454,15 @@
             padding: 0;
         }
         nav ul li {
-            margin-bottom: 10px;
-        }
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Adjust the size as needed */
+}
 nav ul li:first-child {
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 15px; /* Adjust the margin as needed */
 }
 
 nav ul h4 {
-    margin-top: 20px; /* Add space above all h4 elements */
+    margin-top: 15px; /* Add space above all h4 elements */
 }
 
 nav ul h4:first-of-type {
@@ -526,6 +526,65 @@ nav ul h4:first-of-type {
   padding: 2px 6px; /* Increase the size of the background color */
   margin-right: 20px; /* Move the active button slightly to the right */
 }
+    .footer {
+      background-color: #f8f8f8;
+      padding: 40px 0;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      flex: 1 0 100%;
+      padding-left: 20px; /* Add left padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+      margin-bottom: 20px;
+      text-align: left; /* Align text to the left */
+    }
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left; /* Align title to the left */
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .footer-section ul li a:hover {
+      color: #007bff;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .privacy-policy {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+        @media (min-width: 768px) {
+            .footer-section {
+                flex: 1; /* Adjust width for desktop to allow sections to grow */
+            }
+
+            .footer-section:first-child {
+                text-align: left; /* Align first section (Pages) to the left */
+            }
+
+            .footer-section:last-child {
+                text-align: right; /* Align last section (Shop) to the right */
+            }
+        }
+        
     </style>
 
     <!-- Add JavaScript for popup functionality -->
@@ -685,18 +744,10 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
-        <li><h4>Photos</h4></li>
-        <li><a href="/photos">Photos</a></li>
+        <li><h4 style="font-weight: normal;">Photos</h4></li>
         <li><a href="/photos/gym">Gym</a></li>
+        <li><a href="/photos/travel">Travel</a></li>
         <li><a href="/photos/personal">Personal</a></li>
-
-        <li><h4>Travel</h4></li>
-        <li><a href="/photos/lucknow">Lucknow</a></li>
-        <li><a href="/photos/nepal">Nepal</a></li>
-        <li><a href="/photos/rajasthan">Rajasthan</a></li>
-        <li><a href="/photos/moradabad">Moradabad</a></li>
-
-        <li><h4>Other</h4></li>
         <li><a href="/photos/archive">Archive</a></li>
     </ul>
 </nav>
@@ -768,9 +819,8 @@ document.addEventListener("DOMContentLoaded", function () {
         /* Move to Top Button */
         .move-to-top {
             position: fixed;
-            bottom: 10px; /* Distance from the bottom */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Adjust for button width */
+            bottom: 20px; /* Distance from the bottom */
+            right: 20px; /* Distance from the right side */
             font-size: 20px; /* Icon size */
             color: #333333; /* Black arrow color */
             background-color: #ffffff; /* Slightly off-white background */
