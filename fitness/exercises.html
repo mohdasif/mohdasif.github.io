@@ -109,7 +109,7 @@
             text-align: center;
             margin-bottom: 30px; /* Add margin for spacing */
         }
-    .categories {
+        .categories {
         text-align: center;
         margin-bottom: 68px;
         padding: 10px 10px 10px 10px; /* Adjusted padding */
@@ -520,7 +520,91 @@ nav ul li a {
     }
 </script>
 
-</body>
+    <!-- Other existing content -->
 
+    <!-- Move to Top Button -->
+    <div id="moveToTop" class="move-to-top">
+        <i class="fa-solid fa-chevron-up" style="color: #808080;"></i>
+    </div>
+
+    <style>
+        /* Move to Top Button */
+        .move-to-top {
+            position: fixed;
+            bottom: 20px; /* Distance from the bottom */
+            right: 30px; /* Distance from the right side */
+            font-size: 20px; /* Icon size */
+            color: #333333; /* Black arrow color */
+            background-color: #ffffff; /* Slightly off-white background */
+            border: 1px solid #808080; /* Thin light gray border */
+            border-radius: 50%; /* Circle shape */
+            width: 40px; /* Circle size */
+            height: 40px; /* Circle size */
+            display: flex; /* Flexbox for centering the icon */
+            justify-content: center; /* Center horizontally inside the button */
+            align-items: center; /* Center vertically inside the button */
+            cursor: pointer; /* Pointer on hover */
+            z-index: 1000; /* Ensure it's above other elements */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s, color 0.3s, transform 0.3s; /* Smooth effects */
+        }
+
+        /* Show button when visible */
+        .move-to-top.visible {
+            opacity: 1; /* Fully visible */
+        }
+
+        /* Adjust the button for larger screens (desktop) */
+        @media (min-width: 768px) {
+            .move-to-top {
+                left: auto; /* Remove left positioning */
+                right: 20px; /* Fixed to the right side */
+            }
+        }
+    </style>
+
+    <script>
+// Move to Top Button Functionality
+const moveToTopButton = document.getElementById('moveToTop');
+let lastScrollY = 0; // Keep track of the last scroll position
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    // Show the button only when scrolling up and past a threshold
+    if (currentScrollY > 300 && currentScrollY < lastScrollY) {
+        moveToTopButton.classList.add('visible');
+    } else {
+        moveToTopButton.classList.remove('visible');
+    }
+
+    // Update the last scroll position
+    lastScrollY = currentScrollY;
+});
+
+// Scroll to the top when the button is clicked
+moveToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});
+    </script>
+
+    <!-- Footer Section -->
+    <div class="privacy-policy">
+        <a href="/photos/lucknow" style="font-weight: normal;">Lucknow</a> |
+        <a href="/photos/nepal" style="font-weight: normal;">Nepal</a> | 
+        <a href="/photos/rajasthan" style="font-weight: normal;">Rajasthan</a> | 
+        <a href="/photos/moradabad" style="font-weight: normal;">Moradabad</a>
+        <p>&copy; 2025 @mohdasif. Let's explore together!</p>
+    </div>
+</div>
+
+</footer>
+</div> <!-- Close the page-container div here. -->
+
+
+</body>
 </html>
 

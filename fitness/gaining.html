@@ -109,7 +109,7 @@
             text-align: center;
             margin-bottom: 30px; /* Add margin for spacing */
         }
-    .categories {
+        .categories {
         text-align: center;
         margin-bottom: 68px;
         padding: 10px 10px 10px 10px; /* Adjusted padding */
@@ -132,10 +132,6 @@
         cursor: pointer;
         background-color: #f5f5f5;
         font-weight: normal; /* Set font weight to normal */
-    }
-
-    .category-link:hover {
-        background-color: #e0e0e0;
     }
 
 
@@ -372,6 +368,65 @@ nav ul li a {
   margin-right: 10px; /* Move the active button slightly to the right */
   text-decoration: none;
 }
+.footer {
+      background-color: #f8f8f8;
+      padding: 40px 0;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      flex: 1 0 100%;
+      padding-left: 20px; /* Add left padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+      margin-bottom: 20px;
+      text-align: left; /* Align text to the left */
+    }
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left; /* Align title to the left */
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .footer-section ul li a:hover {
+      color: #007bff;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .privacy-policy {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+        @media (min-width: 768px) {
+            .footer-section {
+                flex: 1; /* Adjust width for desktop to allow sections to grow */
+            }
+
+            .footer-section:first-child {
+                text-align: left; /* Align first section (Pages) to the left */
+            }
+
+            .footer-section:last-child {
+                text-align: right; /* Align last section (Shop) to the right */
+            }
+        }
+        
     </style>
 
 </head>
@@ -416,14 +471,14 @@ nav ul li a {
 </nav>
 
 
-    <div class="container">
-        <div class="categories">
-        <a href="/fitness" class="category-link">Fitness</a>
-        <a href="/fitness/gaining" class="active">Gaining</a>
-        <a href="/fitness/cutting" class="category-link">Cutting</a>
-        <a href="/fitness/exercises" class="category-link">Exercises</a>
+<div class="container">
+    <div class="categories">
+    <a href="/fitness" class="active">Fitness</a>
+    <a href="/fitness/gaining" class="category-link">Gaining</a>
+    <a href="/fitness/cutting" class="category-link">Cutting</a>
+    <a href="/fitness/exercises" class="category-link">Execises</a>
+</div>
     </div>
-        </div>
 
 
     <section>
@@ -515,7 +570,90 @@ nav ul li a {
     }
 </script>
 
-</body>
+    <!-- Other existing content -->
 
+    <!-- Move to Top Button -->
+    <div id="moveToTop" class="move-to-top">
+        <i class="fa-solid fa-chevron-up" style="color: #808080;"></i>
+    </div>
+
+    <style>
+        /* Move to Top Button */
+        .move-to-top {
+            position: fixed;
+            bottom: 20px; /* Distance from the bottom */
+            right: 30px; /* Distance from the right side */
+            font-size: 20px; /* Icon size */
+            color: #333333; /* Black arrow color */
+            background-color: #ffffff; /* Slightly off-white background */
+            border: 1px solid #808080; /* Thin light gray border */
+            border-radius: 50%; /* Circle shape */
+            width: 40px; /* Circle size */
+            height: 40px; /* Circle size */
+            display: flex; /* Flexbox for centering the icon */
+            justify-content: center; /* Center horizontally inside the button */
+            align-items: center; /* Center vertically inside the button */
+            cursor: pointer; /* Pointer on hover */
+            z-index: 1000; /* Ensure it's above other elements */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s, color 0.3s, transform 0.3s; /* Smooth effects */
+        }
+
+        /* Show button when visible */
+        .move-to-top.visible {
+            opacity: 1; /* Fully visible */
+        }
+
+        /* Adjust the button for larger screens (desktop) */
+        @media (min-width: 768px) {
+            .move-to-top {
+                left: auto; /* Remove left positioning */
+                right: 20px; /* Fixed to the right side */
+            }
+        }
+    </style>
+
+    <script>
+// Move to Top Button Functionality
+const moveToTopButton = document.getElementById('moveToTop');
+let lastScrollY = 0; // Keep track of the last scroll position
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    // Show the button only when scrolling up and past a threshold
+    if (currentScrollY > 300 && currentScrollY < lastScrollY) {
+        moveToTopButton.classList.add('visible');
+    } else {
+        moveToTopButton.classList.remove('visible');
+    }
+
+    // Update the last scroll position
+    lastScrollY = currentScrollY;
+});
+
+// Scroll to the top when the button is clicked
+moveToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});
+    </script>
+
+    <!-- Footer Section -->
+    <div class="privacy-policy"> 
+        <a href="/fitness/cutting" style="font-weight: normal;">Cutting</a> |
+        <a href="/fitness/motivation" style="font-weight: normal;">Motivation</a> |
+        <a href="/fitness" style="font-weight: normal;">Fitness</a>
+        <p>@mohdasif. Redefine Your Limits.</p>
+    </div>
+</div>
+
+</footer>
+</div> <!-- Close the page-container div here. -->
+
+
+</body>
 </html>
 
