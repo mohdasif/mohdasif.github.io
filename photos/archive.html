@@ -304,229 +304,7 @@
         right: 400px; /* Adjusted position for the next arrow */
     }
 }
-        h1 {
-            color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
-        }
-
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
-            font-weight: normal;
-        }
-
-        a:hover {
-            text-decoration: none; /* Remove underline on hover */
-        }
-
-        /* New style for left-aligning specific sections */
-        .left-align {
-            text-align: left;
-        }
-
-        /* Center-align the about.me link */
-        .about-me {
-            text-align: center;
-        }
-
-        /* Center-align Links */
-        .center-section {
-            text-align: center;
-        }
-
-
-        button {
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
-            border: none;
-            border-radius: 15px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 15px; /* Increase the font size */
-        }
-
-        button:hover {
-            background-color: #000000 !important; /* Change the hover background color */
-        }
-
-        @media only screen and (max-width: 600px) {
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-        }
-        /* Sidebar styles */
-        #sidebar {
-            height: 100%;
-            width: 140px; /* Adjusted width for the sidebar */
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #FFF;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 30px;
-        }
-        
-        /* Style sidebar section headings */
-.sidebar-section h4 {
-    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
-    margin-bottom: 5px; /* Add space below the heading */
-    padding: 10px; /* Add padding to the heading */
-    font-size: 15px; /* Adjust the font size of the heading */
-    font-weight: bold; /* Make the heading bold */
-    color: #333; /* Set the color of the heading */
-}
-
-        #sidebar a {
-            padding: 10px 25px;
-            text-decoration: none;
-            font-size: 15px;
-            color: #333;
-            display: block;
-            transition: 0.3s;
-        }
-
-        #sidebar a:hover {
-    background-color: #f9f9f9; /* Background color on hover */
-    color: #333; /* Text color on hover */
-}
-
-        #sidebar .close-btn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-        .menu-toggle {
-            display: block; /* Show the menu toggle by default */
-            position: fixed;
-            top: 9px;
-            left: 33px;
-            font-size: 21px; /* Increase the font size */
-            cursor: pointer;
-            z-index: 1000; /* Ensure the menu icon is on top */
-        }
-
-        nav {
-            float: left;
-            width: 33%;
-            background-color: #f1f1f1;
-            padding: 32px;
-            height: 100vh;
-            position: fixed;
-            top: 0; /* Position at the top */
-            overflow: auto;
-            transition: transform 0.9s ease;
-            transform: translateX(-100%);
-            z-index: 999; /* Ensure the sidebar is on top */
-        }
-        nav.menu-open {
-            transform: translateX(0);
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-    margin-bottom: 10px;
-    font-size: 1.2em; /* Adjust the size as needed */
-}
-nav ul li:first-child {
-    margin-top: 15px; /* Adjust the margin as needed */
-}
-
-nav ul h4 {
-    margin-top: 15px; /* Add space above all h4 elements */
-}
-
-nav ul h4:first-of-type {
-    margin-top: 40px; /* Add additional space above the first h4 */
-}
-
-        @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-
-            .content-container {
-                margin-left: 0; /* Reset margin for small screens */
-            }
-
-            #sidebar {
-                display: none; /* Hide sidebar on small screens */
-            }
-        }
-        /* Reduce the size of the scrollbar */
-#sidebar::-webkit-scrollbar {
-    width: 3px; /* Adjust the width as needed */
-}
-
-/* Handle for the scrollbar */
-#sidebar::-webkit-scrollbar-thumb {
-    background-color: #ccc; /* Color of the scrollbar handle */
-    border-radius: 2px; /* Rounded corners for the scrollbar handle */
-}
-
-/* Track for the scrollbar */
-#sidebar::-webkit-scrollbar-track {
-    background-color: transparent; /* Color of the scrollbar track */
-}
-
-/* Corner of the scrollbar */
-#sidebar::-webkit-scrollbar-corner {
-    background-color: transparent; /* Color of the scrollbar corner */
-}
-    /* Media query to hide the menu toggle on desktop view */
-    @media (min-width: 768px) {
-        .menu-toggle {
-            display: none; /* Hide the menu toggle on larger screens */
-        }
-    }
-/* Active link styles */
-#sidebar a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #04AA6D; /* Background color for active link */
-}
-/* Active link styles */
-.categories a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #04AA6D; /* Background color for active link */
-  border-radius: 10px; /* Rounded corners */
-  padding: 2px 6px; /* Increase the size of the background color */
-  margin-right: 20px; /* Move the active button slightly to the right */
-}
-    .footer {
+     .footer {
       background-color: #f8f8f8;
       padding: 40px 0;
     }
@@ -585,7 +363,233 @@ nav ul h4:first-of-type {
             }
         }
         
-    </style>
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 9px;
+            left: 33px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 33%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+            top: 0; /* Position at the top */
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+    margin-bottom: 3px;
+
+}
+nav ul li:first-child {
+    margin-top: 15px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-bottom: 10px; /* Add space above all h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 35px; /* Add additional space above the first h4 */
+margin-bottom: 20px; /* Add additional space above the first h4 */
+}
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+/* Active link styles */
+#sidebar a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #04AA6D; /* Background color for active link */
+}
+/* Active link styles */
+.categories a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #04AA6D; /* Background color for active link */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2px 6px; /* Increase the size of the background color */
+  margin-right: 10px; /* Move the active button slightly to the right */
+}
+    #sidebar .sidebar-section a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #e0e0e0; /* Light line */
+        transition: background 0.3s;
+    }
+
+    /* Line above the first <a> element */
+    #sidebar .sidebar-section a:first-of-type {
+        border-top: 1px solid #e0e0e0; /* Light line above the first link */
+    }
+
+    /* Remove the line after the last item */
+    #sidebar .sidebar-section a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hover effect */
+    #sidebar .sidebar-section a:hover {
+        background-color: #f5f5f5; /* Optional hover effect */
+    }
+
+    /* Active link styling */
+    #sidebar .sidebar-section a.active {
+        background-color: #04AA6D; /* Background for active item */
+        color: white; /* White text for active link */
+    }
+/* Target all links inside the navigation */
+nav li a {
+    border: 1px solid grey;  /* Add a grey border */
+    padding: 5px 10px;  /* 0px for top & bottom, 10px for left & right */
+    border-radius: 10px;  /* Optional: rounded corners */
+    background-color: white;  /* Set white background */
+    color: grey;  /* Set grey text color */
+    text-decoration: none;  /* Remove underline */
+    font-family: 'Arial', sans-serif;  /* Set font family */
+    font-size: 15px;  /* Set font size */
+    font-weight: normal;  /* Set normal font weight */
+    margin-bottom: 7px; /* Adds space below the buttons */
+    display: inline-block; /* Ensures margin-bottom works */
+}
+/* Specific styling for About link */
+nav ul li a[href='https://mohdasif.com/about'] {
+  background-color: #808080;  /* Grey background */
+  color: white;               /* White text */
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Specific styling for Blog link */
+nav ul li a[href='/blog'] {
+  background-color: #808080;  /* Grey background */
+  color: white;               /* White text */
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Specific styling for Amazon Shop link */
+nav ul li a[href='https://www.amazon.in/shop/mohdasif'] {
+  background-color: #808080;  /* Grey background */
+  color: white;               /* White text */
+  padding: 5px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+</style>
 
     <!-- Add JavaScript for popup functionality -->
     <script>
@@ -743,13 +747,18 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
-        <li><h4 style="font-weight: normal;">Photos</h4></li>
+        <li><h4 style="margin-bottom: 50px;"></h4></li> 
+        <li><a href="https://mohdasif.com/about">About</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif">Store</a></li>
+        
+        <li><h4 style="margin-bottom: 15px;">Photos</h4></li> <!-- Adding gap -->
         <li><a href="/photos/gym">Gym</a></li>
         <li><a href="/photos/travel">Travel</a></li>
         <li><a href="/photos/personal">Personal</a></li>
         <li><a href="/photos/archive">Archive</a></li>
     </ul>
 </nav>
+
 
     <div class="container">
 

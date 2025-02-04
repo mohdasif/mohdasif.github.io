@@ -229,9 +229,9 @@
 
         nav {
             float: left;
-            width: 37%;
+            width: 33%;
             background-color: #f1f1f1;
-            padding: 25px;
+            padding: 32px;
             height: 100vh;
             position: fixed;
             top: 0; /* Position at the top */
@@ -248,20 +248,20 @@
             padding: 0;
         }
         nav ul li {
-            margin-bottom: 5px;
-        }
+    margin-bottom: 3px;
+
+}
 nav ul li:first-child {
-    margin-top: 10px; /* Adjust the margin as needed */
+    margin-top: 15px; /* Adjust the margin as needed */
 }
 
 nav ul h4 {
-    margin-top: 10px; /* Add space above all h4 elements */
-    font-size: 18px; /* Increase the font size of h4 elements */
+    margin-bottom: 10px; /* Add space above all h4 elements */
 }
 
 nav ul h4:first-of-type {
-    margin-top: 50px; /* Add additional space above the first h4 */
-    margin-bottom: 15px; /* Add additional space above the first h4 */
+    margin-top: 35px; /* Add additional space above the first h4 */
+margin-bottom: 20px; /* Add additional space above the first h4 */
 }
 
         @media only screen and (max-width: 600px) {
@@ -312,35 +312,52 @@ nav ul h4:first-of-type {
 nav, nav ul, nav li, nav a, nav h4 {
     font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
 }
-/* Adjust the gap between menu items */
-nav ul {
-    padding: 0; /* Remove padding from the unordered list */
-    margin: 0; /* Remove margin from the unordered list */
+
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
 }
 
-nav li {
-    margin: 10px; /* Remove margin from list items */
-    padding: 0; /* Remove padding from list items */
-    list-style: none; /* Remove default list styling */
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
 }
-/* Reduce margin and padding for list items */
-nav ul li {
-    margin-bottom: 1px; /* Adjust the value as needed */
-    padding: 0; /* Remove any padding */
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
 }
-/* Reduce margin and padding for the heading */
-nav ul li h4 {
-    margin-top: 5px;
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
 }
-/* Increase the font size for list items under "Pages" */
-nav ul li a {
-    font-size: 18px; /* Increase the font size as needed */
-}
-/* Active link styles */
-#sidebar a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #f44336; /* Background color for active link */
-}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
 
 /* Active link styles */
 .categories a.active {
@@ -415,7 +432,50 @@ nav ul li a {
             }
         }
         
-    </style>
+/* Target all links inside the navigation */
+nav li a {
+    border: 1px solid grey;  /* Add a grey border */
+    padding: 5px 10px;  /* 0px for top & bottom, 10px for left & right */
+    border-radius: 10px;  /* Optional: rounded corners */
+    background-color: white;  /* Set white background */
+    color: grey;  /* Set grey text color */
+    text-decoration: none;  /* Remove underline */
+    font-family: 'Arial', sans-serif;  /* Set font family */
+    font-size: 15px;  /* Set font size */
+    font-weight: normal;  /* Set normal font weight */
+    margin-bottom: 7px; /* Adds space below the buttons */
+    display: inline-block; /* Ensures margin-bottom works */
+}
+/* Specific styling for About link */
+nav ul li a[href='https://mohdasif.com/about'] {
+  background-color: #808080;  /* Grey background */
+  color: white;               /* White text */
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Specific styling for Blog link */
+nav ul li a[href='/blog'] {
+  background-color: #808080;  /* Grey background */
+  color: white;               /* White text */
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Specific styling for Amazon Shop link */
+nav ul li a[href='https://www.amazon.in/shop/mohdasif'] {
+  background-color: #808080;  /* Grey background */
+  color: white;               /* White text */
+  padding: 5px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+</style>
 
 </head>
 
@@ -444,17 +504,20 @@ nav ul li a {
     </div>
 
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-<div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
-    <ul>      
-        <!-- Fitness Section -->
-        <li><h4>Fitness</h4></li>
-        <li><a href="/fitness">Fitness</a></li>
-        <li><a href="/fitness/gaining">Gaining</a></li>
-        <li><a href="/fitness/cutting">Cutting</a></li>
-        <li><a href="/fitness/workouts">Workouts</a></li>
+    <ul>
+        <li><h4 style="margin-bottom: 50px;"></h4></li> 
+        <li><a href="https://mohdasif.com/about">About</a></li>
+        <li><a href="https://www.amazon.in/shop/mohdasif">Store</a></li>
         
-     </ul>
+        
+        <li><h4 style="margin-bottom: 15px;">Links</h4></li> <!-- Adding gap below the heading -->
+        <li><a href="https://mohdasif.com/fitness">Fitness</a></li>
+        <li><a href="https://mohdasif.com/poetry">Poetry</a></li>
+        <li><a href="https://mohdasif.com/ted">TED</a></li>
+        <li><a href="https://mohdasif.com/podcasts">Podcasts</a></li>
+        
+    </ul>
 </nav>
 
     <div class="container">
