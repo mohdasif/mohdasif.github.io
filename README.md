@@ -1,1 +1,0 @@
-Passionate about books, podcasts, and poetry. Dedicated to fitness, constant learning, and minimalist living. Join me as I share thoughts & experiences centered around these interests.
