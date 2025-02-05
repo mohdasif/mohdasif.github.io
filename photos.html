@@ -590,14 +590,15 @@ nav ul li a[href='https://www.amazon.in/shop/mohdasif'] {
   border-radius: 5px;
   text-decoration: none;
 }
-a {
-    color: #007bff; /* Set default link color */
-    text-decoration: none; /* Optional: remove underline */
-}
+    .privacy-policy a {
+        color: #007bff; /* Set default link color */
+        text-decoration: none; /* Optional: remove underline */
+        font-weight: normal; /* Ensure normal font weight */
+    }
 
-a:visited {
-    color: #007bff; /* Ensure visited links remain the same color */
-}
+    .privacy-policy a:visited {
+        color: #007bff; /* Ensure visited links remain the same color */
+    }
 </style>
 
     <!-- Add JavaScript for popup functionality -->
@@ -773,7 +774,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="container" style="margin-top: 60px;"> <!-- Added margin-top -->
     <div class="categories">
         <a href="/photos" class="active">Photos</a>
-        <a href="/photos/gym" class="category-link">  Gym</a>
+        <a href="/photos/gym" class="category-link">Gym</a>
         <a href="/photos/personal" class="category-link">Personal</a>
         <a href="/photos/travel" class="category-link">Travel</a>
     </div>
