@@ -400,50 +400,55 @@
     }
 }
 
-        /* Sidebar styles */
-        #sidebar {
-            height: 100%;
-            width: 140px; /* Adjusted width for the sidebar */
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #FFF;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 30px;
-        }
+    /* Sidebar styles */
+    #sidebar {
+        height: 100%;
+        width: 125px; /* Adjusted width for the sidebar */
+        position: fixed;
+        top: 0;
+        left: 5px;
+        background-color: #f5f5f5;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 30px;
+    }
+
+    /* Style sidebar section headings */
+    .sidebar-section h4 {
+        margin: 20px 0; /* Adjust top and bottom margin to create a gap */
         
-        /* Style sidebar section headings */
-.sidebar-section h4 {
-    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
-    margin-bottom: 5px; /* Add space below the heading */
-    padding: 10px; /* Add padding to the heading */
-    font-size: 16px; /* Adjust the font size of the heading */
-    font-weight: bold; /* Make the heading bold */
-    color: #333; /* Set the color of the heading */
-}
+        margin-bottom: 5px; /* Add space below the heading */
+        padding: 10px; /* Add padding to the heading */
+        font-size: 16px; /* Adjust the font size of the heading */
+        font-weight: bold; /* Make the heading bold */
+        color: #333; /* Set the color of the heading */
+    }
 
-        #sidebar a {
-            padding: 10px 25px;
-            text-decoration: none;
-            font-size: 15px;
-            color: #333;
-            display: block;
-            transition: 0.3s;
-        }
+    #sidebar a {
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #FAF9F6;
+        border-radius: 20px;
+        font-size: 16px;
+        color: #333;
+        display: block;
+        transition: 0.3s;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Add a shadow */
+        margin-bottom: 5px; /* Add space between links */
+    }
 
-        #sidebar a:hover {
-    background-color: #f9f9f9; /* Background color on hover */
-    color: #333; /* Text color on hover */
-}
+    #sidebar a:hover {
+        background-color: #03c04a; /* Background color on hover */
+        color: #fff; /* Text color on hover */
+    }
 
-        #sidebar .close-btn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
+    #sidebar .close-btn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
         .menu-toggle {
             display: block; /* Show the menu toggle by default */
             position: fixed;
@@ -667,12 +672,51 @@ nav ul li a[href='https://www.amazon.in/shop/mohdasif'] {
   border-radius: 5px;
   text-decoration: none;
 }
+    #sidebar .sidebar-section a.active {
+    margin-top: 40px; /* Adjust the value as needed for the desired gap */
+    display: block;   /* Ensures the margin works effectively */
+}
+#sidebar .spacer {
+    background-color: #F5F5F5;  /* Light gray background */
+    height: 35px;                /* Increased height */
+    margin: 0px 0;              /* Space above and below */
+    display: block;              /* Block-level element */
+    width: 100%;                 /* Full width */
+}
 
+/* Adding border-top before X link */
+#sidebar .sidebar-section .x-link {
+    border-top: 2px solid #e0e0e0; /* Light line above the X link */
+}
+#sidebar .sidebar-section::after {
+    content: ""; /* Create an empty content block */
+    display: block;
+    height: 80px; /* Adjust height as needed */
+    background-color: #F5F5F5; /* Set background color */
+}
 </style>
 
 </head>
 
 <body>
+
+<!-- Sidebar -->
+<div id="sidebar">
+    <div class="sidebar-section">
+        <a href="/about" class="active">About</a>
+        <div class="spacer"></div>
+        <a href="https://www.youtube.com/@mohdasif/shorts">YouTube</a>
+        <a href="https://linkedin.com/in/mohdasif">LinkedIn</a>
+        <a href="https://www.reddit.com/user/mohdasif">Reddit</a>
+        <a href="https://github.com/mohdasif">GitHub</a>
+        <a href="https://quora.com/mohdasif">Quora</a>
+        <a href="https://goodreads.com/mohdasif">Goodreads</a>
+        <a href="https://www.tumblr.com/mohdasif">Tumblr</a>
+    </div>
+</div>
+
+    
+</div>
 
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
