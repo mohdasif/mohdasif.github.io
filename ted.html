@@ -505,7 +505,7 @@ a {
 }
     .video-title {
         position: absolute;
-        bottom: 20px;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         background: rgba(0, 0, 0, 0.7);
@@ -517,6 +517,12 @@ a {
         border-radius: 15px;
         transition: opacity 0.3s ease-in-out;
     }
+    /* For screens 600px or smaller (mobile) */
+@media (max-width: 600px) {
+    .video-title {
+        bottom: 20px; /* Adjust for mobile */
+    }
+}
 
 </style>
 
@@ -577,25 +583,56 @@ a {
     <div class="blog-cards">
         <!-- TED Video 1 -->
         <div class="blog-card">
-            <div class="video-title">The Growing Megafire Crisis and How to Contain It</div>
-            <iframe src="https://embed.ted.com/talks/george_t_whitesides_the_growing_megafire_crisis_and_how_to_contain_it" allowfullscreen></iframe>
+            <div class="video-title">Your Body Language May Shape Who You Are</div>
+            <iframe src="https://embed.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are" allowfullscreen></iframe>
         </div>
         
         <!-- TED Video 2 -->
         <div class="blog-card">
-            <div class="video-title">The Tipping Points of Climate Change and Where We Stand</div>
-            <iframe src="https://embed.ted.com/talks/johan_rockstrom_the_tipping_points_of_climate_change_and_where_we_stand" allowfullscreen></iframe>
-        </div>
-        <!-- TED Video 1 -->
-        <div class="blog-card">
-            <div class="video-title">The Growing Megafire Crisis and How to Contain It</div>
-            <iframe src="https://embed.ted.com/talks/george_t_whitesides_the_growing_megafire_crisis_and_how_to_contain_it" allowfullscreen></iframe>
+            <div class="video-title">The Power of Vulnerability</div>
+            <iframe src="https://embed.ted.com/talks/brene_brown_the_power_of_vulnerability" allowfullscreen></iframe>
         </div>
         
-        <!-- TED Video 2 -->
+        <!-- TED Video 3 -->
         <div class="blog-card">
-            <div class="video-title">The Tipping Points of Climate Change and Where We Stand</div>
-            <iframe src="https://embed.ted.com/talks/johan_rockstrom_the_tipping_points_of_climate_change_and_where_we_stand" allowfullscreen></iframe>
+            <div class="video-title">How to Speak So That People Want to Listen</div>
+            <iframe src="https://embed.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen" allowfullscreen></iframe>
+        </div>
+        
+        <!-- TED Video 4 -->
+        <div class="blog-card">
+            <div class="video-title">10 Things You Didn't Know About Orgasm</div>
+            <iframe src="https://embed.ted.com/talks/mary_roach_10_things_you_didn_t_know_about_orgasm" allowfullscreen></iframe>
+        </div>
+        
+        <!-- TED Video 5 -->
+        <div class="blog-card">
+            <div class="video-title">Looks Aren't Everything. Believe Me, I'm a Model.</div>
+            <iframe src="https://embed.ted.com/talks/cameron_russell_looks_aren_t_everything_believe_me_i_m_a_model" allowfullscreen></iframe>
+        </div>
+        
+        <!-- TED Video 6 -->
+        <div class="blog-card">
+            <div class="video-title">The Power of Introverts</div>
+            <iframe src="https://embed.ted.com/talks/susan_cain_the_power_of_introverts" allowfullscreen></iframe>
+        </div>
+        
+        <!-- TED Video 7 -->
+        <div class="blog-card">
+            <div class="video-title">How to Stop Screwing Yourself Over</div>
+            <iframe src="https://embed.ted.com/talks/mel_robbins_how_to_stop_screwing_yourself_over" allowfullscreen></iframe>
+        </div>
+        
+        <!-- TED Video 8 -->
+        <div class="blog-card">
+            <div class="video-title">How to Spot a Liar</div>
+            <iframe src="https://embed.ted.com/talks/pamela_meyer_how_to_spot_a_liar" allowfullscreen></iframe>
+        </div>
+        
+        <!-- TED Video 9 -->
+        <div class="blog-card">
+            <div class="video-title">10 Ways to Have a Better Conversation</div>
+            <iframe src="https://embed.ted.com/talks/celeste_headlee_10_ways_to_have_a_better_conversation" allowfullscreen></iframe>
         </div>
     </div>
 </section>
