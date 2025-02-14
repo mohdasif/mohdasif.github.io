@@ -648,29 +648,44 @@ nav li a {
 }
 /* Specific styling for About link */
 nav ul li a[href='/about'] {
-  background-color: #808080;  /* Grey background */
-  color: white;               /* White text */
-  padding: 5px 20px;
-  border-radius: 5px;
+  background-color: #808080; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
   text-decoration: none;
+  line-height: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
 }
+
 
 /* Specific styling for Blog link */
 nav ul li a[href='/blog'] {
   background-color: #808080;  /* Grey background */
   color: white;               /* White text */
-  padding: 5px 15px;
+  padding: 0px 15px;
   border-radius: 5px;
   text-decoration: none;
 }
 
 /* Specific styling for Tumblr link */
 nav ul li a[href='https://www.tumblr.com/mohdasif'] {
-  background-color: #808080;  /* Grey background */
-  color: white;               /* White text */
-  padding: 5px 24px;
-  border-radius: 5px;
+  background-color: #808080; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
   text-decoration: none;
+  line-height: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
 }
     #sidebar .sidebar-section a.active {
     margin-top: 40px; /* Adjust the value as needed for the desired gap */
@@ -694,7 +709,28 @@ nav ul li a[href='https://www.tumblr.com/mohdasif'] {
     height: 80px; /* Adjust height as needed */
     background-color: #F5F5F5; /* Set background color */
 }
+/**** STYLE FOR ALL NAV LINKS BUT SKIP FIRST TWO ****/
 
+/* Style only the links AFTER "Links" heading */
+nav ul li:nth-child(n+5) a {
+  background-color: #fff; /* White background */
+  color: grey;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 14px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+/* Optional: Remove bullet points from all <li> */
+nav ul li {
+  list-style-type: none;
+}
 </style>
 
 </head>
