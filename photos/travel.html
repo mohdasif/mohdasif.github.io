@@ -759,7 +759,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <ul>
         <li><h4 style="margin-bottom: 50px;"></h4></li> 
         <li><a href="/about">About</a></li>
-        <li><a href="https://www.amazon.in/shop/mohdasif">Store</a></li>
+        <li><a href="https://mohdasif.in">Poetry</a></li>
         
         <li><h4 style="margin-bottom: 15px;">Photos</h4></li> <!-- Adding gap -->
         <li><a href="/photos/gym">Gym</a></li>
@@ -768,6 +768,48 @@ document.addEventListener("DOMContentLoaded", function () {
         <li><a href="/photos/archive">Archive</a></li>
     </ul>
 </nav>
+
+<!-- Place this script at the bottom of the page -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const isAndroid = /android/i.test(navigator.userAgent);
+
+  if (isAndroid) {
+    const intentMap = {
+      'youtube.com': 'intent://www.youtube.com/@mohdasif/shorts#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=https%3A%2F%2Fwww.youtube.com%2F@mohdasif%2Fshorts;end;',
+      'm.youtube.com': 'intent://www.youtube.com/@mohdasif/shorts#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=https%3A%2F%2Fwww.youtube.com%2F@mohdasif%2Fshorts;end;',
+      'pinterest.com': 'intent://user/mohdasif#Intent;scheme=pinterest;package=com.pinterest;S.browser_fallback_url=https%3A%2F%2Fpinterest.com%2Fmohdasif;end;',
+      'tumblr.com': 'intent://mohdasif.tumblr.com#Intent;scheme=https;package=com.tumblr;S.browser_fallback_url=https%3A%2F%2Fwww.tumblr.com%2Fmohdasif;end;',
+      'twitter.com': 'intent://user?screen_name=mohdasif#Intent;scheme=twitter;package=com.twitter.android;S.browser_fallback_url=https%3A%2F%2Fx.com%2Fmohdasif;end;',
+      'x.com': 'intent://user?screen_name=mohdasif#Intent;scheme=twitter;package=com.twitter.android;S.browser_fallback_url=https%3A%2F%2Fx.com%2Fmohdasif;end;',
+    };
+
+    document.querySelectorAll('a[href^="http"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        const url = new URL(link.href);
+        const host = url.hostname.replace('www.', '');
+
+        // Special handling for Telegram
+        if (host === 'telegram.me' || host === 't.me') {
+          e.preventDefault();
+
+          // First try tg://
+          window.location.href = 'tg://resolve?domain=mohdasif';
+
+          // Fallback to intent:// after 1s if tg:// fails
+          setTimeout(function () {
+            window.location.href =
+              'intent://resolve?domain=mohdasif#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=https%3A%2F%2Ftelegram.me%2Fmohdasif;end;';
+          }, 1000);
+        } else if (intentMap[host]) {
+          e.preventDefault();
+          window.location.href = intentMap[host];
+        }
+      });
+    });
+  }
+});
+</script>
 
 
 
