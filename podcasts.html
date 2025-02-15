@@ -539,6 +539,95 @@ a {
     text-decoration: none;
 }
 
+/* Target all links inside the navigation */
+nav li a {
+    border: 1px solid grey;  /* Add a grey border */
+    padding: 0px 10px;  /* 0px for top & bottom, 10px for left & right */
+    border-radius: 10px;  /* Optional: rounded corners */
+    background-color: white;  /* Set white background */
+    color: grey;  /* Set grey text color */
+    text-decoration: none;  /* Remove underline */
+    font-family: 'Arial', sans-serif;  /* Set font family */
+    font-size: 15px;  /* Set font size */
+    font-weight: normal;  /* Set normal font weight */
+    margin-bottom: 10px; /* Adds space below the buttons */
+    display: inline-block; /* Ensures margin-bottom works */
+}
+/* Specific styling for About link */
+nav ul li a[href='/about'] {
+  background-color: #808080; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+
+/* Specific styling for Poetry link */
+nav ul li a[href='https://mohdasif.in'] {
+  background-color: #808080; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+
+/* Specific styling for Tumblr link */
+nav ul li a[href='https://www.tumblr.com/mohdasif'] {
+  background-color: #808080; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+
+/**** STYLE FOR ALL NAV LINKS BUT SKIP FIRST TWO ****/
+
+/* Style only the links AFTER "Links" heading */
+nav ul li:nth-child(n+5) a {
+  background-color: #fff; /* White background */
+  color: grey;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 14px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+/* Optional: Remove bullet points from all <li> */
+nav ul li {
+  list-style-type: none;
+}
+
+
 </style>
 
 
