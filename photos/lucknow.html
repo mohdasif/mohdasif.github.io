@@ -225,29 +225,30 @@
 
         .popup-container {
             position: fixed;
-            top: 20px; /* Add a 20px gap from the top */
+            top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
             display: none;
             justify-content: center;
             align-items: center;
         }
 
-        .popup-image {
-            max-width: 90%;
-            max-height: 90%;
-            margin: 20px auto; /* Add margin to create space */
-        }
+       .popup-image {
+    max-width: 100%;  /* Ensures image is not too wide */
+    max-height: 95vh; /* Limits height to 90% of viewport height */
+    object-fit: contain; /* Ensures the image maintains aspect ratio */
+    margin: 10px 0; /* Adds slight padding (20px) from top and bottom */
+}
 
         .popup-close {
             position: absolute;
-            top: 20px;
-            right: 10px;
+            top: 0px;
+            left: 25px;
             color: #fff;
-            font-size: 24px;
+            font-size: 30px;
             cursor: pointer;
         }
 
@@ -309,11 +310,11 @@
 /* Adjusted styles for desktop */
 @media only screen and (min-width: 768px) {
     .popup-prev {
-        left: 400px; /* Adjusted position for the previous arrow */
+        left: 200px; /* Adjusted position for the previous arrow */
     }
 
     .popup-next {
-        right: 400px; /* Adjusted position for the next arrow */
+        right: 200px; /* Adjusted position for the next arrow */
     }
 }
      .footer {
@@ -676,17 +677,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupPrev = document.querySelector(".popup-prev");
     const popupNext = document.querySelector(".popup-next");
     let currentIndex = 0;
-    let arrowsVisible = true; // Flag to track visibility of navigation arrows
 
     // Open popup
     function openPopup(index) {
         currentIndex = index;
-        const imgUrl = galleryImages[index].src;
-        popupImage.src = imgUrl;
+        popupImage.src = galleryImages[index].src;
         popupContainer.style.display = "flex";
-
-        // Toggle navigation arrows visibility
-        toggleArrows();
     }
 
     // Close popup
@@ -694,83 +690,62 @@ document.addEventListener("DOMContentLoaded", function () {
         popupContainer.style.display = "none";
     }
 
-    // Toggle navigation arrows visibility
-    function toggleArrows() {
-        if (arrowsVisible) {
-            popupPrev.style.display = "none";
-            popupNext.style.display = "none";
-            arrowsVisible = false;
-        } else {
-            popupPrev.style.display = "block";
-            popupNext.style.display = "block";
-            arrowsVisible = true;
-        }
-    }
-
     // Next image
     function nextImage() {
         currentIndex = (currentIndex + 1) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
+        popupImage.src = galleryImages[currentIndex].src;
     }
 
     // Previous image
     function prevImage() {
         currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        const imgUrl = galleryImages[currentIndex].src;
-        popupImage.src = imgUrl;
+        popupImage.src = galleryImages[currentIndex].src;
     }
 
-    // Swipe gesture detection
-    let startX = null;
+    // Open popup on image click
+    galleryImages.forEach((image, index) => {
+        image.addEventListener("click", () => openPopup(index));
+    });
 
+    // Close popup when clicking anywhere inside popupContainer (including the image)
+    popupContainer.addEventListener("click", closePopup);
+
+    // Prevent event bubbling when clicking on navigation arrows (so they don’t trigger close)
+    popupPrev.addEventListener("click", function (event) {
+        event.stopPropagation();
+        prevImage();
+    });
+
+    popupNext.addEventListener("click", function (event) {
+        event.stopPropagation();
+        nextImage();
+    });
+
+    // Close popup when clicking close button
+    popupClose.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent event from reaching the container
+        closePopup();
+    });
+
+    // Scroll wheel navigation
+    popupContainer.addEventListener("wheel", function (event) {
+        event.preventDefault();
+        if (event.deltaY > 0) nextImage();
+        else prevImage();
+    });
+
+    // Swipe gesture detection (for mobile)
+    let startX = null;
     popupContainer.addEventListener("touchstart", function (event) {
         startX = event.touches[0].clientX;
     });
 
     popupContainer.addEventListener("touchmove", function (event) {
         if (!startX) return;
-
-        const currentX = event.touches[0].clientX;
-        const diff = startX - currentX;
-
-        if (diff > 0) {
-            nextImage();
-        } else {
-            prevImage();
-        }
-
+        let diff = startX - event.touches[0].clientX;
+        if (diff > 0) nextImage();
+        else prevImage();
         startX = null;
-    });
-
-    // Close popup when clicking outside the image
-    popupContainer.addEventListener("click", function (event) {
-        if (event.target === popupContainer) {
-            closePopup();
-        }
-    });
-
-    // Event listeners
-    galleryImages.forEach((image, index) => {
-        image.addEventListener("click", () => {
-            openPopup(index);
-            toggleArrows(); // Toggle arrows visibility when tapping on image
-        });
-    });
-
-    popupClose.addEventListener("click", closePopup);
-    popupPrev.addEventListener("click", prevImage);
-    popupNext.addEventListener("click", nextImage);
-
-    // Scroll wheel navigation
-    popupContainer.addEventListener("wheel", function (event) {
-        event.preventDefault(); // Prevent default scrolling behavior
-        const delta = Math.sign(event.deltaY); // Get the direction of the scroll
-        if (delta > 0) {
-            nextImage(); // Scroll down (next image)
-        } else {
-            prevImage(); // Scroll up (previous image)
-        }
     });
 });
     </script>
