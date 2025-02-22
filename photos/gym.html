@@ -37,19 +37,19 @@
             display: block; /* Ensure visibility */
         }
 
-        /* Styles for mobile navigation */
-        #mobile-navigation {
-            background-color: #FDFCFA;
-            color: #000;
-            padding: 10px;
-            display: none; /* Hide by default */
-            font-size: 18px; /* Font size */
-            position: fixed;
-            top: 0;
-            left: 0px;
-            right: 10px;
-            width: 100%;
-        }
+    /* Styles for mobile navigation */
+    #mobile-navigation {
+        background-color: #222;
+        color: #000;
+        padding: 10px 10px 10px 30px; /* Adjust the padding for left space (20px left padding) */
+        display: none; /* Hide by default */
+        font-size: 18px; /* Font size */
+        position: fixed;
+        top: 0;
+        left: 0; /* No gap on the left side */
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
 
         /* Common link styles for both desktop and mobile */
         #desktop-navigation a,
@@ -376,29 +376,31 @@
             }
         }
         
-        .menu-toggle {
-            display: block; /* Show the menu toggle by default */
-            position: fixed;
-            top: 9px;
-            left: 33px;
-            font-size: 21px; /* Increase the font size */
-            cursor: pointer;
-            z-index: 1000; /* Ensure the menu icon is on top */
-        }
+    .menu-toggle {
+        display: block; /* Show the menu toggle by default */
+        position: fixed;
+        color: white;
 
-        nav {
-            float: left;
-            width: 33%;
-            background-color: #f1f1f1;
-            padding: 32px;
-            height: 100vh;
-            position: fixed;
-            top: 0; /* Position at the top */
-            overflow: auto;
-            transition: transform 0.9s ease;
-            transform: translateX(-100%);
-            z-index: 999; /* Ensure the sidebar is on top */
-        }
+        top: 9px;
+        left: 33px;
+        font-size: 21px; /* Increase the font size */
+        cursor: pointer;
+        z-index: 1000; /* Ensure the menu icon is on top */
+    }
+
+    nav {
+        float: left;
+        width: 50%;
+        background-color: #f1f1f1;
+        padding: 30px;
+        height: 100vh;
+        position: fixed;
+        top: 0; /* Position at the top */
+        overflow: auto;
+        transition: transform 1s ease;
+        transform: translateX(-100%);
+        z-index: 999; /* Ensure the sidebar is on top */
+    }
         nav.menu-open {
             transform: translateX(0);
         }
@@ -809,12 +811,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- Mobile Navigation -->  
     <div id="mobile-navigation">  
-        <a href="/"><i class="fa-solid fa-house" style="font-size: 18px; color: #343a40;"></i></a>
-        <a href="https://mohdasif.in"><i class="fa-solid fa-feather" style="font-size: 18px; color: #007E8F;"></i></a>
-        <a href="https://mohdasif.net"><i class="fa-solid fa-camera" style="font-size: 18px; color: #1ABC9C;"></i></a>
-        <a href="https://m.youtube.com/@mohdasif/shorts"><i class="fa-brands fa-youtube" style="font-size: 18px; color: #ff0000;"></i></a>
-        <a href="https://telegram.me/mohdasif"><i class="fa-regular fa-comment-dots" style="font-size: 18px;"></i></a>
+        <a href="https://mohdasif.com"><i class="fa-solid fa-house" style="font-size: 18px; color: #fff;"></i></a>
+        <a href="https://mohdasif.in"><i class="fa-solid fa-feather" style="font-size: 18px; color: #fff;"></i></a>
+        <a href="https://mohdasif.net"><i class="fa-solid fa-camera" style="font-size: 18px; color: #fff;"></i></a>
+        <a href="https://m.youtube.com/@mohdasif/shorts"><i class="fa-brands fa-youtube" style="font-size: 18px; color: #fff;"></i></a>
+        <a href="https://telegram.me/mohdasif"><i class="fa-regular fa-comment-dots" style="font-size: 18px; color: #fff;"></i></a>
     </div>
+    <br>
 
 
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
