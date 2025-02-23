@@ -951,11 +951,23 @@ function handleScroll() {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    // Show button on all screen sizes (mobile & desktop)
-    if (currentScrollY > 100) {
-        moveToTopButton.classList.add('visible');
+    if (window.innerWidth >= 768) {
+        // Desktop: Show after scrolling 100px
+        if (currentScrollY > 100) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
     } else {
-        moveToTopButton.classList.remove('visible');
+        // Mobile: Show when scrolling up past 300px OR near bottom 80%
+        if (
+            (currentScrollY < lastScrollY && currentScrollY > 300) ||
+            (currentScrollY + windowHeight > documentHeight * 0.8)
+        ) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
     }
 
     // Apply special behavior only for mobile (≤600px)
