@@ -905,7 +905,6 @@ document.addEventListener('DOMContentLoaded', function () {
         /* Move to Top Button */
         .move-to-top {
             position: fixed;
-            bottom: 20px; /* Distance from the bottom */
             right: 30px; /* Distance from the right side */
             font-size: 15px; /* Icon size */
             color: #fff; /* Black arrow color */
@@ -947,15 +946,9 @@ function handleScroll() {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    if (window.innerWidth >= 768) {
-        // Desktop: Show after scrolling 100px
-        if (currentScrollY > 100) {
-            moveToTopButton.classList.add('visible');
-        } else {
-            moveToTopButton.classList.remove('visible');
-        }
-    } else {
-        // Mobile: Show when scrolling up past 300px OR near bottom 80%
+    // Apply behavior only for mobile screens (≤600px width)
+    if (window.innerWidth <= 600) {
+        // Show when scrolling up past 300px OR near bottom 80%
         if (
             (currentScrollY < lastScrollY && currentScrollY > 300) ||
             (currentScrollY + windowHeight > documentHeight * 0.8)
@@ -964,6 +957,16 @@ function handleScroll() {
         } else {
             moveToTopButton.classList.remove('visible');
         }
+
+        // Adjust position when at the bottom of the page
+        if (currentScrollY + windowHeight >= documentHeight - 10) {
+            moveToTopButton.style.bottom = "90px";
+        } else {
+            moveToTopButton.style.bottom = "20px"; // Default position
+        }
+    } else {
+        // Reset to default for larger screens (desktop)
+        moveToTopButton.style.bottom = "20px";
     }
 
     lastScrollY = currentScrollY;
@@ -978,7 +981,7 @@ moveToTopButton.addEventListener('click', () => {
     });
 });
 
-// Initial state check on load (optional)
+// Initial state check on load
 handleScroll();
     </script>
 
