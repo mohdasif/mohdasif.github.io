@@ -761,13 +761,13 @@ document.addEventListener('DOMContentLoaded', function () {
             position: fixed;
             bottom: 20px; /* Distance from the bottom */
             right: 30px; /* Distance from the right side */
-            font-size: 20px; /* Icon size */
+            font-size: 17px; /* Icon size */
             color: #333333; /* Black arrow color */
             background-color: #ffffff; /* Slightly off-white background */
             border: 1px solid #808080; /* Thin light gray border */
             border-radius: 50%; /* Circle shape */
-            width: 40px; /* Circle size */
-            height: 40px; /* Circle size */
+            width: 35px; /* Circle size */
+            height: 35px; /* Circle size */
             display: flex; /* Flexbox for centering the icon */
             justify-content: center; /* Center horizontally inside the button */
             align-items: center; /* Center vertically inside the button */
@@ -792,31 +792,48 @@ document.addEventListener('DOMContentLoaded', function () {
     </style>
 
     <script>
-// Move to Top Button Functionality
+// Move to Top Button functionality
 const moveToTopButton = document.getElementById('moveToTop');
-let lastScrollY = 0; // Keep track of the last scroll position
+let lastScrollY = window.scrollY;
 
-window.addEventListener('scroll', () => {
+function handleScroll() {
     const currentScrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
 
-    // Show the button only when scrolling up and past a threshold
-    if (currentScrollY > 300 && currentScrollY < lastScrollY) {
-        moveToTopButton.classList.add('visible');
+    if (window.innerWidth >= 768) {
+        // Desktop: Show after scrolling 100px
+        if (currentScrollY > 100) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
     } else {
-        moveToTopButton.classList.remove('visible');
+        // Mobile: Show when scrolling up past 300px OR near bottom 80%
+        if (
+            (currentScrollY < lastScrollY && currentScrollY > 300) ||
+            (currentScrollY + windowHeight > documentHeight * 0.8)
+        ) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
     }
 
-    // Update the last scroll position
     lastScrollY = currentScrollY;
-});
+}
 
-// Scroll to the top when the button is clicked
+window.addEventListener('scroll', handleScroll);
+
 moveToTopButton.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth',
     });
 });
+
+// Initial state check on load (optional)
+handleScroll();
     </script>
 
     <!-- Footer Section -->
