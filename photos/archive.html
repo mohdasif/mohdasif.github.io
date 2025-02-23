@@ -946,26 +946,22 @@ function handleScroll() {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    // Apply behavior only for mobile screens (≤600px width)
-    if (window.innerWidth <= 600) {
-        // Show when scrolling up past 300px OR near bottom 80%
-        if (
-            (currentScrollY < lastScrollY && currentScrollY > 300) ||
-            (currentScrollY + windowHeight > documentHeight * 0.8)
-        ) {
-            moveToTopButton.classList.add('visible');
-        } else {
-            moveToTopButton.classList.remove('visible');
-        }
+    // Show button on all screen sizes (mobile & desktop)
+    if (currentScrollY > 100) {
+        moveToTopButton.classList.add('visible');
+    } else {
+        moveToTopButton.classList.remove('visible');
+    }
 
-        // Adjust position when at the bottom of the page
+    // Apply special behavior only for mobile (≤600px)
+    if (window.innerWidth <= 600) {
         if (currentScrollY + windowHeight >= documentHeight - 10) {
-            moveToTopButton.style.bottom = "90px";
+            moveToTopButton.style.bottom = "90px"; // Move up when at page end
         } else {
-            moveToTopButton.style.bottom = "20px"; // Default position
+            moveToTopButton.style.bottom = "10px"; // Default position on mobile
         }
     } else {
-        // Reset to default for larger screens (desktop)
+        // Default position for desktops (no extra shift)
         moveToTopButton.style.bottom = "20px";
     }
 
