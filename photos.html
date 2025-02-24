@@ -926,6 +926,26 @@ document.addEventListener('DOMContentLoaded', function () {
             opacity: 0; /* Initially hidden */
             transition: opacity 0.3s, color 0.3s, transform 0.3s; /* Smooth effects */
         }
+        
+        /* Change icon color to black and background to white on desktop (601px and above) */
+@media (min-width: 601px) {
+    .move-to-top {
+        color: #000; /* Change icon color to black */
+        background-color: #fff; /* Change background to white */
+        border: 1px solid #fff; /* Thin light gray border */
+    }
+}
+/* Default icon color (white) */
+.move-to-top i {
+    color: #000; /* Default: white */
+}
+
+/* Change icon to black on screens 601px+ */
+@media (min-width: 601px) {
+    .move-to-top i {
+        color: #ff0000 !important; /* Force black color on desktop */
+    }
+}
 
         /* Show button when visible */
         .move-to-top.visible {
