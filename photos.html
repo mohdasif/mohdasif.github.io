@@ -572,7 +572,7 @@ nav li a {
     font-family: 'Arial', sans-serif;  /* Set font family */
     font-size: 15px;  /* Set font size */
     font-weight: normal;  /* Set normal font weight */
-    margin-bottom: 10px; /* Adds space below the buttons */
+    margin-bottom: 15px; /* Adds space below the buttons */
     display: inline-block; /* Ensures margin-bottom works */
 }
 /* Specific styling for About link */
@@ -641,7 +641,7 @@ nav ul li:nth-child(n+3) a {
   text-decoration: none;
   line-height: 14px;
   box-sizing: border-box;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 /* Optional: Remove bullet points from all <li> */
@@ -995,7 +995,7 @@ function handleScroll() {
     // Apply special behavior only for mobile (≤600px)
     if (window.innerWidth <= 600) {
         if (currentScrollY + windowHeight >= documentHeight - 10) {
-            moveToTopButton.style.bottom = "50px"; // Move up when at page end
+            moveToTopButton.style.bottom = "55px"; // Move up when at page end
         } else {
             moveToTopButton.style.bottom = "10px"; // Default position on mobile
         }
