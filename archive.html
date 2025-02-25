@@ -143,6 +143,9 @@
         background-color: initial; /* Disable background color change on hover */
         color: initial; /* Reset text color on hover */
     }
+    .gallery {
+        margin-top: 70px; /* Adjusted for the header height */        
+}
 }
         /* Your existing CSS styles here */
 
@@ -416,75 +419,7 @@ nav, nav ul, nav li, nav a, nav h4 {
                 display: none; /* Hide sidebar on small screens */
             }
         }
-        /* Reduce the size of the scrollbar */
-#sidebar::-webkit-scrollbar {
-    width: 3px; /* Adjust the width as needed */
-}
 
-/* Handle for the scrollbar */
-#sidebar::-webkit-scrollbar-thumb {
-    background-color: #ccc; /* Color of the scrollbar handle */
-    border-radius: 2px; /* Rounded corners for the scrollbar handle */
-}
-
-/* Track for the scrollbar */
-#sidebar::-webkit-scrollbar-track {
-    background-color: transparent; /* Color of the scrollbar track */
-}
-
-/* Corner of the scrollbar */
-#sidebar::-webkit-scrollbar-corner {
-    background-color: transparent; /* Color of the scrollbar corner */
-}
-    /* Media query to hide the menu toggle on desktop view */
-    @media (min-width: 768px) {
-        .menu-toggle {
-            display: none; /* Hide the menu toggle on larger screens */
-        }
-    }
-
-/* Active link styles */
-#sidebar a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #04AA6D; /* Background color for active link */
-}
-/* Active link styles */
-.categories a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #04AA6D; /* Background color for active link */
-  border-radius: 10px; /* Rounded corners */
-  padding: 2px 6px; /* Increase the size of the background color */
-  margin-right: 10px; /* Move the active button slightly to the right */
-  text-decoration: none; /* Remove underline */
-}
-    #sidebar .sidebar-section a {
-        display: block;
-        text-decoration: none;
-        color: #333;
-        border-bottom: 1px solid #e0e0e0; /* Light line */
-        transition: background 0.3s;
-    }
-
-    /* Line above the first <a> element */
-    #sidebar .sidebar-section a:first-of-type {
-        border-top: 1px solid #e0e0e0; /* Light line above the first link */
-    }
-
-    /* Remove the line after the last item */
-    #sidebar .sidebar-section a:last-child {
-        border-bottom: none;
-    }
-
-    /* Hover effect */
-    #sidebar .sidebar-section a:hover {
-        background-color: #f5f5f5; /* Optional hover effect */
-    }
-
-    /* Active link styling */
-    #sidebar .sidebar-section a.active {
-        background-color: #04AA6D; /* Background for active item */
-        color: white; /* White text for active link */
-    }
 /* Target all links inside the navigation */
 nav li a {
     padding: 0px 10px;  /* 0px for top & bottom, 10px for left & right */
@@ -495,7 +430,7 @@ nav li a {
     font-family: 'Arial', sans-serif;  /* Set font family */
     font-size: 15px;  /* Set font size */
     font-weight: normal;  /* Set normal font weight */
-    margin-bottom: 10px; /* Adds space below the buttons */
+    margin-bottom: 15px; /* Adds space below the buttons */
     display: inline-block; /* Ensures margin-bottom works */
 }
 /* Specific styling for About link */
@@ -564,7 +499,7 @@ nav ul li:nth-child(n+3) a {
   text-decoration: none;
   line-height: 14px;
   box-sizing: border-box;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 /* Optional: Remove bullet points from all <li> */
@@ -582,6 +517,8 @@ nav ul li {
     .privacy-policy a:visited {
         color: #007bff; /* Ensure visited links remain the same color */
     }
+    /* Change background to white for mobile screens */
+
 @media (max-width: 600px) {
     body {
         background-color: #000;
@@ -912,10 +849,11 @@ handleScroll();
 
 <!-- Footer Section -->
 <div class="privacy-policy">
-    <a href="/photos/gym" style="font-weight: normal;">Gym</a> |
-    <a href="/photos/personal" style="font-weight: normal;">Personal</a> |
-    <a href="/photos/travel" style="font-weight: normal;">Travel</a> 
-    <p>Every archive holds a forgotten story</p>
+    <a href="/gym" style="font-weight: normal;">Gym</a> |
+    <a href="/personal" style="font-weight: normal;">Personal</a> |
+    <a href="/travel" style="font-weight: normal;">Travel</a> |
+    <a href="/archive" style="font-weight: normal;">Archive</a>
+    <p>Every journey deserves to be remembered</p>
     </div>
 </div>
 

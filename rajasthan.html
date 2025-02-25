@@ -102,90 +102,13 @@
             padding: 20px; /* Adjust padding as needed */
         }
 
-
-
-    .categories {
-    text-align: center;
-    margin-left: 5px; /* Negative margin to shift content to the left */
-    margin-bottom: 30px; /* Reduced space */
-    padding: 10px 12px 2px 10px; /* Adjusted padding */
-    overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
-    white-space: nowrap; /* Prevent categories from wrapping */
-}
-
-    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
-        .categories::-webkit-scrollbar {
-        display: none;
-    }
-
-        .category-link {
-        display: inline-block; /* Display categories in a row */
-        margin-right: 18px; /* Adjusted margin for space between category links */
-        color: #000;
-        text-decoration: none;
-        padding: 3px 7px;
-        border-radius: 10px;
-        cursor: pointer;
-        background-color: #f5f5f5;
-        font-weight: normal; /* Set font weight to normal */
-    }
-
-    .category-link:hover {
-        background-color: #e0e0e0;
-    }
-    .articles-section {
-        display: none;
-        margin-top: 20px;
-    }
-
-    .articles-section.active {
-        display: block;
-    }
-
-    .article-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .article-list li {
-        background: #fff;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .article-list a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        padding: 20px;
-    }
-
-    .article-list a:hover {
-        background-color: #f5f5f5;
-    }
-
-    /* Mobile Styles */
-    @media only screen and (max-width: 600px) {
-        .categories {
-            overflow-x: auto; /* Enable horizontal scrolling */
-            white-space: nowrap; /* Prevent categories from wrapping */
-            padding-bottom: 0px; /* Add bottom padding to make room for scrollbar */
-        }
-            .categories {
-        display: none;
-    }
-}
-
 /* Gallery Styles */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 30px;
     padding: 20px;
-    margin-top: 10px; /* Adjusted for the header height */
+    margin-top: 60px; /* Adjusted for the header height */
 }
 
 .gallery .image {
@@ -220,6 +143,9 @@
         background-color: initial; /* Disable background color change on hover */
         color: initial; /* Reset text color on hover */
     }
+    .gallery {
+        margin-top: 70px; /* Adjusted for the header height */        
+}
 }
         /* Your existing CSS styles here */
 
@@ -493,75 +419,7 @@ nav, nav ul, nav li, nav a, nav h4 {
                 display: none; /* Hide sidebar on small screens */
             }
         }
-        /* Reduce the size of the scrollbar */
-#sidebar::-webkit-scrollbar {
-    width: 3px; /* Adjust the width as needed */
-}
 
-/* Handle for the scrollbar */
-#sidebar::-webkit-scrollbar-thumb {
-    background-color: #ccc; /* Color of the scrollbar handle */
-    border-radius: 2px; /* Rounded corners for the scrollbar handle */
-}
-
-/* Track for the scrollbar */
-#sidebar::-webkit-scrollbar-track {
-    background-color: transparent; /* Color of the scrollbar track */
-}
-
-/* Corner of the scrollbar */
-#sidebar::-webkit-scrollbar-corner {
-    background-color: transparent; /* Color of the scrollbar corner */
-}
-    /* Media query to hide the menu toggle on desktop view */
-    @media (min-width: 768px) {
-        .menu-toggle {
-            display: none; /* Hide the menu toggle on larger screens */
-        }
-    }
-
-/* Active link styles */
-#sidebar a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #04AA6D; /* Background color for active link */
-}
-/* Active link styles */
-.categories a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #04AA6D; /* Background color for active link */
-  border-radius: 10px; /* Rounded corners */
-  padding: 2px 6px; /* Increase the size of the background color */
-  margin-right: 10px; /* Move the active button slightly to the right */
-  text-decoration: none; /* Remove underline */
-}
-    #sidebar .sidebar-section a {
-        display: block;
-        text-decoration: none;
-        color: #333;
-        border-bottom: 1px solid #e0e0e0; /* Light line */
-        transition: background 0.3s;
-    }
-
-    /* Line above the first <a> element */
-    #sidebar .sidebar-section a:first-of-type {
-        border-top: 1px solid #e0e0e0; /* Light line above the first link */
-    }
-
-    /* Remove the line after the last item */
-    #sidebar .sidebar-section a:last-child {
-        border-bottom: none;
-    }
-
-    /* Hover effect */
-    #sidebar .sidebar-section a:hover {
-        background-color: #f5f5f5; /* Optional hover effect */
-    }
-
-    /* Active link styling */
-    #sidebar .sidebar-section a.active {
-        background-color: #04AA6D; /* Background for active item */
-        color: white; /* White text for active link */
-    }
 /* Target all links inside the navigation */
 nav li a {
     padding: 0px 10px;  /* 0px for top & bottom, 10px for left & right */
@@ -572,7 +430,7 @@ nav li a {
     font-family: 'Arial', sans-serif;  /* Set font family */
     font-size: 15px;  /* Set font size */
     font-weight: normal;  /* Set normal font weight */
-    margin-bottom: 10px; /* Adds space below the buttons */
+    margin-bottom: 15px; /* Adds space below the buttons */
     display: inline-block; /* Ensures margin-bottom works */
 }
 /* Specific styling for About link */
@@ -641,7 +499,7 @@ nav ul li:nth-child(n+3) a {
   text-decoration: none;
   line-height: 14px;
   box-sizing: border-box;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 /* Optional: Remove bullet points from all <li> */
@@ -659,6 +517,8 @@ nav ul li {
     .privacy-policy a:visited {
         color: #007bff; /* Ensure visited links remain the same color */
     }
+    /* Change background to white for mobile screens */
+
 @media (max-width: 600px) {
     body {
         background-color: #000;
@@ -785,11 +645,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- Mobile Navigation -->  
     <div id="mobile-navigation">  
-        <a href="/"><i class="fa-solid fa-house" style="font-size: 18px; color: #343a40;"></i></a>
-        <a href="/about"><i class="fa-solid fa-clipboard" style="font-size: 18px; color: #007E8F;"></i></a>
-        <a href="https://www.tiktok.com/@mohdasif"><i class="fa-brands fa-tiktok"" style="font-size: 18px; color: #000;"></i></a>
-        <a href="https://m.youtube.com/@mohdasif/shorts"><i class="fa-brands fa-youtube" style="font-size: 18px; color: #ff0000;"></i></a>
-        <a href="https://telegram.me/mohdasif"><i class="fa-regular fa-comment-dots" style="font-size: 18px;"></i></a>
+        <a href="/photos"><i class="fa-solid fa-house" style="font-size: 18px; color: #fff;"></i></a>
+        <a href="/about"><i class="fa-solid fa-clipboard" style="font-size: 18px; color: #fff;"></i></a>
+        <a href="https://www.tiktok.com/@mohdasif"><i class="fa-brands fa-tiktok" style="font-size: 18px; color: #fff;"></i></a>
+        <a href="https://m.youtube.com/@mohdasif/shorts"><i class="fa-brands fa-youtube" style="font-size: 18px; color: #fff;"></i></a>
+        <a href="https://telegram.me/mohdasif"><i class="fa-regular fa-comment-dots" style="font-size: 18px; color: #fff;"></i></a>
     </div>
 
 
@@ -1026,10 +886,10 @@ handleScroll();
 
     <!-- Footer Section -->
     <div class="privacy-policy">
-        <a href="/photos/lucknow" style="font-weight: normal;">Lucknow</a> |
-        <a href="/photos/nepal" style="font-weight: normal;">Nepal</a> | 
-        <a href="/photos/rajasthan" style="font-weight: normal;">Rajasthan</a> | 
-        <a href="/photos/moradabad" style="font-weight: normal;">Moradabad</a>
+        <a href="/lucknow" style="font-weight: normal;">Lucknow</a> |
+        <a href="/nepal" style="font-weight: normal;">Nepal</a> | 
+        <a href="/rajasthan" style="font-weight: normal;">Rajasthan</a> | 
+        <a href="/moradabad" style="font-weight: normal;">Moradabad</a>
         <p>Every journey deserves to be remembered</p>
     </div>
 </div>
