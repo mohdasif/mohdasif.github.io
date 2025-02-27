@@ -384,7 +384,38 @@ nav ul h4:first-of-type {
                 text-align: right; /* Align last section (Shop) to the right */
             }
         }
-    </style>
+/* Target all links inside the navigation */
+nav li a {
+    padding: 0px 10px;  /* 0px for top & bottom, 10px for left & right */
+    border-radius: 10px;  /* Optional: rounded corners */
+    background-color: white;  /* Set white background */
+    color: grey;  /* Set grey text color */
+    text-decoration: none;  /* Remove underline */
+    font-family: 'Arial', sans-serif;  /* Set font family */
+    font-size: 15px;  /* Set font size */
+    font-weight: normal;  /* Set normal font weight */
+    margin-bottom: 15px; /* Adds space below the buttons */
+    display: inline-block; /* Ensures margin-bottom works */
+}
+
+/**** STYLE FOR ALL NAV LINKS BUT SKIP FIRST TWO ****/
+
+/* Style only the links AFTER "Links" heading */
+nav ul li:nth-child(n+2) a {
+  background-color: #fff; /* White background */
+  color: grey;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 14px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+</style>
 </head>
 
 <body>
@@ -426,15 +457,9 @@ nav ul h4:first-of-type {
 <nav>
     <ul>
     <li><h4 style="margin-bottom: 50px;"></h4></li>
-
-        <li><h4>Links</h4></li>
-    <li><a href="https://x.com/mohdasif">X</a></li>
-    <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
-    <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
-    <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
-    <li><a href="https://goodreads.com/mohdasif">Goodreads</a></li>
-    <li><a href="https://quora.com/mohdasif">Quora</a></li>
-    <li><a href="https://github.com/mohdasif">GitHub</a></li>
+    
+    <li><a href="/privacy">Privacy</a></li>
+    <li><a href="/terms">Terms</a></li>
   </ul>
 </nav>
 
