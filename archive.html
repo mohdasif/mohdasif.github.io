@@ -773,9 +773,9 @@ function handleScroll() {
     // Apply special behavior only for mobile (≤600px)
     if (window.innerWidth <= 600) {
         if (currentScrollY + windowHeight >= documentHeight - 10) {
-            moveToTopButton.style.bottom = "90px"; // Move up when at page end
+            moveToTopButton.style.bottom = "75px"; // Move up when at page end
         } else {
-            moveToTopButton.style.bottom = "10px"; // Default position on mobile
+            moveToTopButton.style.bottom = "15px"; // Default position on mobile
         }
     } else {
         // Default position for desktops (no extra shift)
@@ -804,13 +804,10 @@ handleScroll();
     <a href="/personal" style="font-weight: normal;">Personal</a> |
     <a href="/travel" style="font-weight: normal;">Travel</a> |
     <a href="/archive" style="font-weight: normal;">Archive</a>
-    <p>Every archive holds a forgotten story</p>
     </div>
 </div>
 
 </footer>
-</div> <!-- Close the page-container div here. -->
-
-
+<br>
 </body>
 </html>

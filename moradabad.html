@@ -800,9 +800,9 @@ function handleScroll() {
     // Apply special behavior only for mobile (≤600px)
     if (window.innerWidth <= 600) {
         if (currentScrollY + windowHeight >= documentHeight - 10) {
-            moveToTopButton.style.bottom = "90px"; // Move up when at page end
+            moveToTopButton.style.bottom = "75px"; // Move up when at page end
         } else {
-            moveToTopButton.style.bottom = "10px"; // Default position on mobile
+            moveToTopButton.style.bottom = "15px"; // Default position on mobile
         }
     } else {
         // Default position for desktops (no extra shift)
@@ -831,13 +831,10 @@ handleScroll();
         <a href="/nepal" style="font-weight: normal;">Nepal</a> | 
         <a href="/rajasthan" style="font-weight: normal;">Rajasthan</a> | 
         <a href="/moradabad" style="font-weight: normal;">Moradabad</a>
-        <p>Every journey deserves to be remembered</p>
     </div>
 </div>
 
 </footer>
-</div> <!-- Close the page-container div here. -->
-
-
+<br>
 </body>
 </html>
