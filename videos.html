@@ -49,7 +49,7 @@
         }
 
 #mobile-navigation {
-    background-color: #FDFCFA;
+    background-color: #fff;
     color: #000;
     padding: 10px;
     display: none;
@@ -453,58 +453,6 @@ nav li a {
   margin-bottom: 5px;
   margin-left: -5px;
 }
-/* Specific styling for Videos link */
-nav ul li a[href='/videos'] {
-  background-color: grey; /* White background */
-  color: white;
-  padding: 10px 0; /* Top & Bottom padding */
-  width: 110px;    /* Fixed width for all buttons */
-  height: 35px;    /* Fixed height */
-  display: inline-block;
-  text-align: center;
-  border-radius: 10px;
-  text-decoration: none;
-  line-height: 15px;
-  box-sizing: border-box;
-  margin-bottom: 5px;
-  font-size:15px;
-}
-
-
-/* Specific styling for Mushaira link */
-nav ul li a[href='/mushaira'] {
-  background-color: grey; /* White background */
-  color: white;
-  padding: 10px 0; /* Top & Bottom padding */
-  width: 110px;    /* Fixed width for all buttons */
-  height: 35px;    /* Fixed height */
-  display: inline-block;
-  text-align: center;
-  border-radius: 10px;
-  text-decoration: none;
-  line-height: 15px;
-  box-sizing: border-box;
-  margin-bottom: 5px;
-  font-size:15px;
-}
-
-
-/* Specific styling for Tumblr link */
-nav ul li a[href='https://www.tumblr.com/mohdasif'] {
-  background-color: #808080; /* White background */
-  color: white;
-  padding: 10px 0; /* Top & Bottom padding */
-  width: 100px;    /* Fixed width for all buttons */
-  height: 35px;    /* Fixed height */
-  display: inline-block;
-  text-align: center;
-  border-radius: 15px;
-  text-decoration: none;
-  line-height: 13px;
-  box-sizing: border-box;
-  margin-bottom: 5px;
-}
-
 
 /**** STYLE FOR ALL NAV LINKS BUT SKIP FIRST TWO ****/
 
@@ -643,9 +591,9 @@ nav ul li {
     <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
     <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
     <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
-    <li><a href="https://www.tumblr.com/mohdasif">Tumblr</a></li>  
     <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
     <li><a href="https://x.com/mohdasif">X</a></li>
+    <li><a href="mailto:hi@mohdasif.com">Email</a></li> 
   </ul>
 </nav>
 
@@ -762,7 +710,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .move-to-top {
             position: fixed;
             bottom: 20px; /* Distance from the bottom */
-            right: 30px; /* Distance from the right side */
+            right: 20px; /* Distance from the right side */
             font-size: 17px; /* Icon size */
             color: #333333; /* Black arrow color */
             background-color: #ffffff; /* Slightly off-white background */
@@ -825,9 +773,9 @@ function handleScroll() {
     // Apply special behavior only for mobile (≤600px)
     if (window.innerWidth <= 600) {
         if (currentScrollY + windowHeight >= documentHeight - 10) {
-            moveToTopButton.style.bottom = "75px"; // Move up when at page end
+            moveToTopButton.style.bottom = "60px"; // Move up when at page end
         } else {
-            moveToTopButton.style.bottom = "10px"; // Default position on mobile
+            moveToTopButton.style.bottom = "20px"; // Default position on mobile
         }
     } else {
         // Default position for desktops (no extra shift)
