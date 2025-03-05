@@ -225,7 +225,7 @@
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
-    padding-bottom: 20px; /* Add space at the bottom */
+    padding-bottom: 0px; /* Add space at the bottom */
 }
 
 /* Media query for desktop screens */
@@ -366,7 +366,7 @@
 
     .categories {
         text-align: center;
-        margin-bottom: 28px;
+        margin-bottom: 10px;
         margin-left: -7px; /* Negative margin to shift content to the left */
         padding: 10px 10px 0px 0px; /* Adjusted padding */
         overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
@@ -836,15 +836,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 </script>
 
-<div class="content-container">
+<div class="content-container" style="background-color: #f2f2f2; padding: 15px; border-radius: 10px;">
     <div class="links-container" style="text-align: left;">
         <h2>About</h2>
-        <!-- About Text -->
         <p class="profile-text">
             Passionate about reading books, poetry, fitness and embracing minimalist living.
         </p>
     </div>
 </div>
+
 
 
 <style>
@@ -865,29 +865,32 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 </style>
 
-<!-- Content Container for Bookshelves Section -->
-<div class="content-container">
+<div class="content-container" style="background-color: #F8F9FA; padding: 15px; border-radius: 10px;">
     <h2 style="font-size: 19px;">Bookshelves</h2>
     <ul style="list-style-type: none; padding: 0;">
         <li style="margin-bottom: 10px; text-align: center;">
-            <a href="/reading" class="blank-button" style="display: inline-block; padding: 5px 10px; border: 1px solid #ccc; border-radius: 15px; cursor: pointer; max-width: 150px; margin: auto;">
+            <a href="/reading" class="blank-button" style="display: inline-block; padding: 5px 10px; background-color: #3498DB; color: white; border: 1px solid #3498DB; border-radius: 15px; cursor: pointer; max-width: 150px; margin: auto; text-decoration: none;">
                 Reading
             </a>
         </li>
         <li style="margin-bottom: 10px; text-align: center;">
-            <a href="/want-to-read" class="blank-button" style="display: inline-block; padding: 5px 10px; border: 1px solid #ccc; border-radius: 15px; cursor: pointer; max-width: 150px; margin: auto;">
+            <a href="/want-to-read" class="blank-button" style="display: inline-block; padding: 5px 10px; background-color: #F39C12; color: white; border: 1px solid #F39C12; border-radius: 15px; cursor: pointer; max-width: 150px; margin: auto; text-decoration: none;">
                 Want to Read
             </a>
         </li>
         <li style="text-align: center;">
-            <a href="/read" class="blank-button" style="display: inline-block; padding: 5px 10px; border: 1px solid #ccc; border-radius: 15px; cursor: pointer; max-width: 150px; margin: auto;">
+            <a href="/read" class="blank-button" style="display: inline-block; padding: 5px 10px; background-color: #27AE60; color: white; border: 1px solid #27AE60; border-radius: 15px; cursor: pointer; max-width: 150px; margin: auto; text-decoration: none;">
                 Read
             </a>
         </li>       
     </ul>
 </div>
 
-<div class="content-container">
+
+
+
+
+<div class="content-container" style="background-color: #FCE4EC; padding: 15px; border-radius: 10px;">
     <div class="confession-container" style="text-align: left;">
         <h2 style="font-size: 20px;">Confess Anonymously</h2>
         <p><em style="font-size: 0.9em;">“Speak your heart out without revealing your identity.”</em></p>
@@ -898,6 +901,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
     </div>
 </div>
+
 
 </div>
 
