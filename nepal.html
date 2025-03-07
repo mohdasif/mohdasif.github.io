@@ -38,7 +38,7 @@
 
     /* Styles for mobile navigation */
     #mobile-navigation {
-        background-color: #222;
+        background-color: #fff;
         color: #000;
         padding: 10px 10px 10px 30px; /* Adjust the padding for left space (20px left padding) */
         display: none; /* Hide by default */
@@ -305,7 +305,7 @@
     .menu-toggle {
         display: block; /* Show the menu toggle by default */
         position: fixed;
-        color: white;
+        color: black;
 
         top: 9px;
         left: 33px;
@@ -471,7 +471,7 @@ nav ul li {
 
 @media (max-width: 600px) {
     body {
-        background-color: #000;
+        background-color: #fff;
         color: #000; /* Black text for readability */
     }
 }
@@ -595,30 +595,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- Mobile Navigation -->  
     <div id="mobile-navigation">  
-        <a href="/photos"><i class="fa-solid fa-house" style="font-size: 18px; color: #fff;"></i></a>
-        <a href="https://mohdasif.in"><i class="fa-solid fa-feather" style="font-size: 18px; color: #fff;"></i></a>
-        <a href="/travel"><i class="fa-solid fa-camera" style="font-size: 18px; color: #fff;"></i></a>
-        <a href="https://www.tiktok.com/@mohdasif"><i class="fa-brands fa-tiktok" style="font-size: 18px; color: #fff;"></i></a>
-        <a href="https://telegram.me/mohdasif"><i class="fa-regular fa-comment-dots" style="font-size: 18px; color: #fff;"></i></a>
+        <a href="/"><i class="fa-solid fa-house" style="font-size: 18px; color: #000;"></i></a>
+        <a href="https://mohdasif.in"><i class="fa-solid fa-feather" style="font-size: 18px; color: #007E8F;"></i></a>
+        <a href="/photos"><i class="fa-solid fa-camera" style="font-size: 18px; color: #1ABC9C;"></i></a>
+        <a href="/media"><i class="fa-solid fa-play" style="font-size: 18px; color: #74c0f5;"></i></a>
+        <a href="https://telegram.me/mohdasif"><i class="fa-regular fa-comment-dots" style="font-size: 18px;"></i></a>
     </div>
 
 
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
-    <li><h4 style="margin-bottom: 50px;"></h4></li>
-    
-    <li><a href="/about">About</a></li>
-    <li><a href="https://mohdasif.com/tagged/books">Books</a></li>
+        <li><h4 style="margin-bottom: 50px;"></h4></li>
 
-        <li><h4>Links</h4></li>  
-    <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
-    <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
-    <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
-    <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
-    <li><a href="https://x.com/mohdasif">X</a></li>
-    <li><a href="mailto:mail@mohdasif.com">Email</a></li> 
-  </ul>
+        <li><h4>Locations</h4></li>
+        <li><a href="/lucknow">Lucknow</a></li>
+        <li><a href="/nepal">Nepal</a></li>
+        <li><a href="/rajasthan">Rajasthan</a></li>
+        <li><a href="/moradabad">Moradabad</a></li>
+    </ul>
 </nav>
 
 <!-- Place this script at the bottom of the page -->
@@ -702,19 +697,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <!-- Move to Top Button -->
     <div id="moveToTop" class="move-to-top">
-        <i class="fa-solid fa-chevron-up" style="color: #fff;"></i>
+        <i class="fa-solid fa-chevron-up" style="color: #1ABC9C;"></i>
     </div>
 
     <style>
         /* Move to Top Button */
         .move-to-top {
             position: fixed;
-            bottom: 20px; /* Distance from the bottom */
             right: 30px; /* Distance from the right side */
             font-size: 15px; /* Icon size */
-            color: #fff; /* Black arrow color */
-            background-color: #000; /* Slightly off-white background */
-            border: 1px solid #FFD700; /* Thin light gray border */
+            color: #1ABC9C; /* Black arrow color */
+            background-color: #fff; /* Slightly off-white background */
+            border: 1px solid #1ABC9C; /* Thin light gray border */
             border-radius: 50%; /* Circle shape */
             width: 35px; /* Circle size */
             height: 35px; /* Circle size */
@@ -743,7 +737,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /* Change icon to black on screens 601px+ */
 @media (min-width: 601px) {
     .move-to-top i {
-        color: #ff0000 !important; /* Force black color on desktop */
+        color: #1ABC9C !important; /* Force black color on desktop */
     }
 }
 
