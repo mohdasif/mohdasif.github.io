@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asif | Podcasts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png">
+
+    <!-- Add this style block to hide navigation links -->
+    <style>
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #desktop-navigation,
+        #mobile-navigation {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Styles for desktop navigation */
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 7px 0px; /* Consistent padding */
+            font-size: 18.7px; /* Font size */
+            font-weight: bold;
+            display: block; /* Ensure visibility */
+        }
+
+        /* Styles for mobile navigation */
+        #mobile-navigation {
+            background-color: #FDFCFA;
+            color: #000;
+            padding: 10px;
+            display: none; /* Hide by default */
+            font-size: 18px; /* Font size */
+            position: fixed;
+            top: 0;
+            left: 0px;
+            right: 10px;
+            width: 100%;
+        }
+
+        /* Common link styles for both desktop and mobile */
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Ensure proper spacing */
+        }
+
+        /* Remove margin from the last link */
+        #desktop-navigation a:last-child,
+        #mobile-navigation a:last-child {
+            margin-right: 0;
+        }
+
+
+        @media only screen and (min-width: 601px) {
+            /* Show desktop navigation on larger screens */
+            #desktop-navigation {
+                display: block;
+            }
+            /* Hide mobile navigation on larger screens */
+            #mobile-navigation {
+                display: none;
+            }
+        }
+
+        .page-container {
+            text-align: center;
+            max-width: 630px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container {
+            padding: 20px; /* Adjust padding as needed */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px; /* Add space between title and content */
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: normal;
+        }
+
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
+
+        /* Center-align Links */
+        .center-section {
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .page-container iframe,
+            .post-container iframe {
+                max-width: 100%;
+                width: 100%;
+                height: 190px; /* Adjust this height as needed */
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        /* New styles for the about.me link container and button */
+        .about-me-container {
+            text-align: center;
+        }
+
+    .categories {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 36px 23px 1px 25px; /* Adjusted padding */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
+
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+        .categories::-webkit-scrollbar {
+        display: none;
+    }
+
+        .category-link {
+        display: inline-block; /* Display categories in a row */
+        margin-right: 16px; /* Adjusted margin for space between category links */
+        color: #000;
+        text-decoration: none;
+        padding: 3px 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        font-weight: normal; /* Set font weight to normal */
+    }
+
+    .category-link:hover {
+        background-color: #e0e0e0;
+    }
+
+
+
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .blog-cards {
+                grid-template-columns: 1fr; /* Single column layout on mobile */
+            }
+
+            .blog-card iframe {
+                height: 205px; /* Adjusted height for mobile */
+            }
+
+            section {
+                padding: 10px 10px; /* Adjust padding for mobile */
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+            
+        }
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: normal;
+        }
+
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
+        /* Sidebar styles */
+        #sidebar {
+            height: 100%;
+            width: 150px; /* Adjusted width for the sidebar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ededed;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 30px;
+        }
+        
+        /* Style sidebar section headings */
+.sidebar-section h4 {
+    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+    margin-bottom: 5px; /* Add space below the heading */
+    padding: 10px; /* Add padding to the heading */
+    font-size: 16px; /* Adjust the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the color of the heading */
+}
+
+        #sidebar a {
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Add a shadow */
+        }
+
+        #sidebar a:hover {
+    background-color: #f9f9f9; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 9px;
+            left: 33px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 33%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+            top: 0; /* Position at the top */
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+    margin-bottom: 3px;
+
+}
+nav ul li:first-child {
+    margin-top: 15px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-bottom: 10px; /* Add space above all h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 35px; /* Add additional space above the first h4 */
+margin-bottom: 20px; /* Add additional space above the first h4 */
+}
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+/* Active link styles */
+#sidebar a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #f44336; /* Background color for active link */
+}
+
+/* Active link styles */
+.categories a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #8E44AD; /* Background color for active link */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2px 7px; /* Increase the size of the background color */
+  margin-right: 20px; /* Move the active button slightly to the right */
+  text-decoration: none;
+}
+.footer {
+      background-color: #f8f8f8;
+      padding: 40px 0;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      flex: 1 0 100%;
+      padding-left: 20px; /* Add left padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+      margin-bottom: 20px;
+      text-align: left; /* Align text to the left */
+    }
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left; /* Align title to the left */
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .footer-section ul li a:hover {
+      color: #007bff;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .privacy-policy {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+        @media (min-width: 768px) {
+            .footer-section {
+                flex: 1; /* Adjust width for desktop to allow sections to grow */
+            }
+
+            .footer-section:first-child {
+                text-align: left; /* Align first section (Pages) to the left */
+            }
+
+            .footer-section:last-child {
+                text-align: right; /* Align last section (Shop) to the right */
+            }
+        }
+        
+/* Target all links inside the navigation */
+nav li a {
+    padding: 5px 10px;  /* 0px for top & bottom, 10px for left & right */
+    border-radius: 10px;  /* Optional: rounded corners */
+    background-color: white;  /* Set white background */
+    color: grey;  /* Set grey text color */
+    text-decoration: none;  /* Remove underline */
+    font-family: 'Arial', sans-serif;  /* Set font family */
+    font-size: 15px;  /* Set font size */
+    font-weight: normal;  /* Set normal font weight */
+    margin-bottom: 7px; /* Adds space below the buttons */
+    display: inline-block; /* Ensures margin-bottom works */
+}
+/* Specific styling for About link */
+nav ul li a[href='/about'] {
+  background-color: #808080;  /* Grey background */
+  color: white;               /* White text */
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Specific styling for Blog link */
+nav ul li a[href='/blog'] {
+  background-color: #808080;  /* Grey background */
+  color: white;               /* White text */
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Specific styling for Amazon Shop link */
+nav ul li a[href='https://www.amazon.in/shop/mohdasif'] {
+  background-color: #808080;  /* Grey background */
+  color: white;               /* White text */
+  padding: 5px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* Target all links inside the navigation */
+nav li a {
+    padding: 0px 10px;  /* 0px for top & bottom, 10px for left & right */
+    border-radius: 10px;  /* Optional: rounded corners */
+    background-color: white;  /* Set white background */
+    color: grey;  /* Set grey text color */
+    text-decoration: none;  /* Remove underline */
+    font-family: 'Arial', sans-serif;  /* Set font family */
+    font-size: 15px;  /* Set font size */
+    font-weight: normal;  /* Set normal font weight */
+    margin-bottom: 10px; /* Adds space below the buttons */
+    display: inline-block; /* Ensures margin-bottom works */
+}
+/* Specific styling for About link */
+nav ul li a[href='/about'] {
+  background-color: #808080; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+
+/* Specific styling for Poetry link */
+nav ul li a[href='https://mohdasif.in'] {
+  background-color: #808080; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+
+/* Specific styling for Tumblr link */
+nav ul li a[href='https://www.tumblr.com/mohdasif'] {
+  background-color: #808080; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+
+/**** STYLE FOR ALL NAV LINKS BUT SKIP FIRST TWO ****/
+
+/* Style only the links AFTER "Links" heading */
+nav ul li:nth-child(n+3) a {
+  background-color: #fff; /* White background */
+  color: grey;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 14px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+/* Optional: Remove bullet points from all <li> */
+nav ul li {
+  list-style-type: none;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="/">Home</a>
+        <a href="https://mohdasif.in">Poetry</a>
+        <a href="/photos">Photos</a>
+        <a href="https://mohdasif.net">Videos</a>
+        
+        <a href="https://www.youtube.com/@mohdasif/shorts" style="position: absolute; right: 175px;"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@mohdasif" style="position: absolute; right: 140px;"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="mailto:hi@mohdasif.com" style="position: absolute; right: 120px;"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <!-- Mobile Navigation -->  
+    <div id="mobile-navigation">  
+        <a href="/"><i class="fa-solid fa-house" style="font-size: 18px; color: #000;"></i></a>
+        <a href="https://mohdasif.in"><i class="fa-solid fa-feather" style="font-size: 18px; color: #007E8F;"></i></a>
+        <a href="/photos"><i class="fa-solid fa-camera" style="font-size: 18px; color: #1ABC9C;"></i></a>
+        <a href="https://www.tiktok.com/@mohdasif" style="text-decoration: none;">
+    <i class="fa-brands fa-tiktok tiktok-icon" style="font-size: 18px;"></i>
+</a>
+        <a href="https://telegram.me/mohdasif"><i class="fa-brands fa-telegram" style="font-size: 18px; color: #0077b5;"></i></a>
+    </div>
+
+<style>
+.tiktok-icon {
+    background-image: linear-gradient(90deg, #EE1D52 50%, #69C9D0 50%);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* WebKit-specific for Safari, iOS */
+    -webkit-text-fill-color: transparent;
+}
+</style>
+
+
+<div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+<nav>
+    <ul>
+    <li><h4 style="margin-bottom: 50px;"></h4></li>
+
+        <li><h4>Links</h4></li>
+    <li><a href="https://x.com/mohdasif">X</a></li>
+    <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
+    <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
+    <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
+    <li><a href="https://goodreads.com/mohdasif">Goodreads</a></li>
+    <li><a href="https://quora.com/mohdasif">Quora</a></li>
+    <li><a href="https://github.com/mohdasif">GitHub</a></li>
+  </ul>
+</nav>
+
+<!-- Place this script at the bottom of the page -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const isAndroid = /android/i.test(navigator.userAgent);
+
+  if (isAndroid) {
+    const intentMap = {
+      'youtube.com': 'intent://www.youtube.com/@mohdasif/shorts#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=https%3A%2F%2Fwww.youtube.com%2F@mohdasif%2Fshorts;end;',
+      'm.youtube.com': 'intent://www.youtube.com/@mohdasif/shorts#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=https%3A%2F%2Fwww.youtube.com%2F@mohdasif%2Fshorts;end;',
+      'pinterest.com': 'intent://user/mohdasif#Intent;scheme=pinterest;package=com.pinterest;S.browser_fallback_url=https%3A%2F%2Fpinterest.com%2Fmohdasif;end;',
+      'tumblr.com': 'intent://mohdasif.tumblr.com#Intent;scheme=https;package=com.tumblr;S.browser_fallback_url=https%3A%2F%2Fwww.tumblr.com%2Fmohdasif;end;',
+      'twitter.com': 'intent://user?screen_name=mohdasif#Intent;scheme=twitter;package=com.twitter.android;S.browser_fallback_url=https%3A%2F%2Fx.com%2Fmohdasif;end;',
+      'x.com': 'intent://user?screen_name=mohdasif#Intent;scheme=twitter;package=com.twitter.android;S.browser_fallback_url=https%3A%2F%2Fx.com%2Fmohdasif;end;',
+    };
+
+    document.querySelectorAll('a[href^="http"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        const url = new URL(link.href);
+        const host = url.hostname.replace('www.', '');
+
+        // Special handling for Telegram
+        if (host === 'telegram.me' || host === 't.me') {
+          e.preventDefault();
+
+          // First try tg://
+          window.location.href = 'tg://resolve?domain=mohdasif';
+
+          // Fallback to intent:// after 1s if tg:// fails
+          setTimeout(function () {
+            window.location.href =
+              'intent://resolve?domain=mohdasif#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=https%3A%2F%2Ftelegram.me%2Fmohdasif;end;';
+          }, 1000);
+        } else if (intentMap[host]) {
+          e.preventDefault();
+          window.location.href = intentMap[host];
+        }
+      });
+    });
+  }
+});
+</script>
+
+    <!-- Page Container -->
+    <div class="page-container">
+    <div class="container">
+        <div class="categories">
+
+    </div>
+        </div>
+        <!-- HTML post content -->
+
+        <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/why-modern-society-makes-us-more-lonely/id1247526593?i=1000649869539&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=light" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
+        <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/sex-drugs-and-money-might-actually-make-you-happier/id1247526593?i=1000642794859&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=light" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
+        <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/what-nobody-tells-you-about-getting-rich-ft-morgan-housel/id1247526593?i=1000634149609&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=light" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
+        <p><iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/5-harsh-truths-that-will-change-your-life/id1247526593?i=1000633374757&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=light" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe></p>
+        <p></p>
+        <!-- Add more HTML content as needed -->
+    </div>
+
+    <!-- Your existing code below -->
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('menu-open');
+    });
+
+    function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+    }
+</script>
+
+    <!-- Other existing content -->
+
+    <!-- Move to Top Button -->
+    <div id="moveToTop" class="move-to-top">
+        <i class="fa-solid fa-chevron-up" style="color: #808080;"></i>
+    </div>
+
+    <style>
+        /* Move to Top Button */
+        .move-to-top {
+            position: fixed;
+            bottom: 20px; /* Distance from the bottom */
+            right: 30px; /* Distance from the right side */
+            font-size: 17px; /* Icon size */
+            color: #333333; /* Black arrow color */
+            background-color: #ffffff; /* Slightly off-white background */
+            border: 1px solid #808080; /* Thin light gray border */
+            border-radius: 50%; /* Circle shape */
+            width: 35px; /* Circle size */
+            height: 35px; /* Circle size */
+            display: flex; /* Flexbox for centering the icon */
+            justify-content: center; /* Center horizontally inside the button */
+            align-items: center; /* Center vertically inside the button */
+            cursor: pointer; /* Pointer on hover */
+            z-index: 1000; /* Ensure it's above other elements */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s, color 0.3s, transform 0.3s; /* Smooth effects */
+        }
+
+        /* Show button when visible */
+        .move-to-top.visible {
+            opacity: 1; /* Fully visible */
+        }
+
+        /* Adjust the button for larger screens (desktop) */
+        @media (min-width: 768px) {
+            .move-to-top {
+                left: auto; /* Remove left positioning */
+                right: 20px; /* Fixed to the right side */
+            }
+        }
+    </style>
+
+    <script>
+// Move to Top Button functionality
+const moveToTopButton = document.getElementById('moveToTop');
+let lastScrollY = window.scrollY;
+
+function handleScroll() {
+    const currentScrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (window.innerWidth >= 768) {
+        // Desktop: Show after scrolling 100px
+        if (currentScrollY > 100) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
+    } else {
+        // Mobile: Show when scrolling up past 300px OR near bottom 80%
+        if (
+            (currentScrollY < lastScrollY && currentScrollY > 300) ||
+            (currentScrollY + windowHeight > documentHeight * 0.8)
+        ) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
+    }
+
+    // Apply special behavior only for mobile (≤600px)
+    if (window.innerWidth <= 600) {
+        if (currentScrollY + windowHeight >= documentHeight - 10) {
+            moveToTopButton.style.bottom = "70px"; // Move up when at page end
+        } else {
+            moveToTopButton.style.bottom = "10px"; // Default position on mobile
+        }
+    } else {
+        // Default position for desktops (no extra shift)
+        moveToTopButton.style.bottom = "20px";
+    }
+
+    lastScrollY = currentScrollY;
+}
+
+window.addEventListener('scroll', handleScroll);
+
+moveToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});
+    </script>
+
+    <!-- Footer Section -->
+    <div class="privacy-policy">
+        <a href="/about" style="font-weight: normal;">about</a> | 
+        <a href="https://confessout.com/mohdasif" style="font-weight: normal;">confessout</a> | 
+        <a href="https://linktr.ee/mohdasif" style="font-weight: normal;">linktree</a>
+        <p>Content on this page embedded from Apple Podcasts</p>
+    </div>
+</div>
+
+</footer>
+</div> <!-- Close the page-container div here. -->
+
+</body>
+</html>
