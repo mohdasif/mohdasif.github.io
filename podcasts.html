@@ -605,7 +605,7 @@ nav ul li a[href='https://www.tumblr.com/mohdasif'] {
 /**** STYLE FOR ALL NAV LINKS BUT SKIP FIRST TWO ****/
 
 /* Style only the links AFTER "Links" heading */
-nav ul li:nth-child(n+3) a {
+nav ul li:nth-child(n+2) a {
   background-color: #fff; /* White background */
   color: grey;
   padding: 10px 0; /* Top & Bottom padding */
@@ -752,7 +752,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <!-- Move to Top Button -->
     <div id="moveToTop" class="move-to-top">
-        <i class="fa-solid fa-chevron-up" style="color: #808080;"></i>
+        <i class="fa-solid fa-chevron-up" style="color: #fff;"></i>
     </div>
 
     <style>
@@ -760,11 +760,11 @@ document.addEventListener('DOMContentLoaded', function () {
         .move-to-top {
             position: fixed;
             bottom: 20px; /* Distance from the bottom */
-            right: 30px; /* Distance from the right side */
+            left: 50%; /* Move it to the horizontal center */
+            transform: translateX(-50%); /* Offset it by half its width to truly center */
             font-size: 17px; /* Icon size */
             color: #333333; /* Black arrow color */
-            background-color: #ffffff; /* Slightly off-white background */
-            border: 1px solid #808080; /* Thin light gray border */
+            background-color: #3A8EE6; /* Slightly off-white background */
             border-radius: 50%; /* Circle shape */
             width: 35px; /* Circle size */
             height: 35px; /* Circle size */
@@ -823,9 +823,9 @@ function handleScroll() {
     // Apply special behavior only for mobile (≤600px)
     if (window.innerWidth <= 600) {
         if (currentScrollY + windowHeight >= documentHeight - 10) {
-            moveToTopButton.style.bottom = "70px"; // Move up when at page end
+            moveToTopButton.style.bottom = "30px"; // Move up when at page end
         } else {
-            moveToTopButton.style.bottom = "10px"; // Default position on mobile
+            moveToTopButton.style.bottom = "20px"; // Default position on mobile
         }
     } else {
         // Default position for desktops (no extra shift)
@@ -845,16 +845,6 @@ moveToTopButton.addEventListener('click', () => {
 });
     </script>
 
-    <!-- Footer Section -->
-    <div class="privacy-policy">
-        <a href="/about" style="font-weight: normal;">about</a> | 
-        <a href="https://confessout.com/mohdasif" style="font-weight: normal;">confessout</a> | 
-        <a href="https://linktr.ee/mohdasif" style="font-weight: normal;">linktree</a>
-        <p>Content on this page embedded from Apple Podcasts</p>
-    </div>
-</div>
-
-</footer>
 </div> <!-- Close the page-container div here. -->
 
 </body>
