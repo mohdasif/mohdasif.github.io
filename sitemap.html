@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Asif</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Asif | Sitemap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png">
 
     <!-- Add this style block to hide navigation links -->
-    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png">
-
     <style>
         body {
             background-color: #f4f4f4;
@@ -41,7 +39,7 @@
 
         /* Styles for mobile navigation */
         #mobile-navigation {
-            background-color: #fff;
+            background-color: #FDFCFA;
             color: #000;
             padding: 10px;
             display: none; /* Hide by default */
@@ -82,104 +80,15 @@
         }
 
 
-        .contact-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: transparent;
-            border-radius: 8px;
+        /* Add container style */
+        .container {
+            max-width: 550px;
+            margin: 20px auto;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        
-               .content-container {
-            max-width: 600px;
-            margin: 30px auto;
             background-color: #fff;
             border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
         }
 
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
-            border: none;
-            border-radius: 15px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 12px; /* Increase the font size */
-        }
-
-        button:hover {
-            background-color: #000000 !important; /* Change the hover background color */
-        }
-
-        @media only screen and (max-width: 600px) {
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 20px; /* Add space between title and content */
-        }
-
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
@@ -281,7 +190,6 @@ nav ul h4 {
 nav ul h4:first-of-type {
     margin-top: 40px; /* Add additional space above the first h4 */
 }
-
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
@@ -326,10 +234,14 @@ nav ul h4:first-of-type {
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
-/* Active link styles */
-#sidebar a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #007bff; /* Background color for active link */
+a {
+  text-decoration: none; /* Removes the underline */
+  color: blue; /* Keeps the text color same as surrounding text */
+}
+
+a:hover, a:focus {
+  text-decoration: none; /* Ensures underline is not shown on hover or focus */
+  color: blue; /* Keeps the text color same as surrounding text on hover or focus */
 }
     .footer {
       background-color: #f8f8f8;
@@ -389,38 +301,32 @@ nav ul h4:first-of-type {
                 text-align: right; /* Align last section (Shop) to the right */
             }
         }
-/* Target all links inside the navigation */
-nav li a {
-    padding: 0px 10px;  /* 0px for top & bottom, 10px for left & right */
-    border-radius: 10px;  /* Optional: rounded corners */
-    background-color: white;  /* Set white background */
-    color: grey;  /* Set grey text color */
-    text-decoration: none;  /* Remove underline */
-    font-family: 'Arial', sans-serif;  /* Set font family */
-    font-size: 15px;  /* Set font size */
-    font-weight: normal;  /* Set normal font weight */
-    margin-bottom: 15px; /* Adds space below the buttons */
-    display: inline-block; /* Ensures margin-bottom works */
+ul {
+    list-style-type: disc; /* Keep bullets for list items */
+    padding-left: 40px; /* Adjust indentation */
 }
 
-/**** STYLE FOR ALL NAV LINKS BUT SKIP FIRST TWO ****/
-
-/* Style only the links AFTER "Links" heading */
-nav ul li:nth-child(n+2) a {
-  background-color: #fff; /* White background */
-  color: grey;
-  padding: 10px 0; /* Top & Bottom padding */
-  width: 100px;    /* Fixed width for all buttons */
-  height: 35px;    /* Fixed height */
-  display: inline-block;
-  text-align: center;
-  border-radius: 15px;
-  text-decoration: none;
-  line-height: 14px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
+ul li {
+    list-style-type: none; /* Remove bullets from all list items */
 }
-</style>
+
+/* Target only list items that are not links (titles) */
+ul li:not(:has(a)) {
+    margin-bottom: 5px; /* Adds spacing below section titles */
+    font-weight: bold; /* Makes them stand out */
+}
+
+/* Restore bullets for links */
+ul li a {
+    list-style-type: disc;
+    display: list-item; /* Ensures bullets appear for links */
+}
+h1 {
+    padding-left: 15px; /* Adjust left padding */
+}
+
+    </style>
+
 </head>
 
 <body>
@@ -461,89 +367,67 @@ nav ul li:nth-child(n+2) a {
   </ul>
 </nav>
 
-<!-- Place this script at the bottom of the page -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const isAndroid = /android/i.test(navigator.userAgent);
+    
+    <!-- Add container div -->
+    <div class="container">
+    <br> 
+<h1>Sitemap</h1>
 
-  if (isAndroid) {
-    const intentMap = {
-      'youtube.com': 'intent://www.youtube.com/@mohdasif/shorts#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=https%3A%2F%2Fwww.youtube.com%2F@mohdasif%2Fshorts;end;',
-      'm.youtube.com': 'intent://www.youtube.com/@mohdasif/shorts#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=https%3A%2F%2Fwww.youtube.com%2F@mohdasif%2Fshorts;end;',
-      'pinterest.com': 'intent://user/mohdasif#Intent;scheme=pinterest;package=com.pinterest;S.browser_fallback_url=https%3A%2F%2Fpinterest.com%2Fmohdasif;end;',
-      'tumblr.com': 'intent://mohdasif.tumblr.com#Intent;scheme=https;package=com.tumblr;S.browser_fallback_url=https%3A%2F%2Fwww.tumblr.com%2Fmohdasif;end;',
-      'twitter.com': 'intent://user?screen_name=mohdasif#Intent;scheme=twitter;package=com.twitter.android;S.browser_fallback_url=https%3A%2F%2Fx.com%2Fmohdasif;end;',
-      'x.com': 'intent://user?screen_name=mohdasif#Intent;scheme=twitter;package=com.twitter.android;S.browser_fallback_url=https%3A%2F%2Fx.com%2Fmohdasif;end;',
-    };
-
-    document.querySelectorAll('a[href^="http"]').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        const url = new URL(link.href);
-        const host = url.hostname.replace('www.', '');
-
-        // Special handling for Telegram
-        if (host === 'telegram.me' || host === 't.me') {
-          e.preventDefault();
-
-          // First try tg://
-          window.location.href = 'tg://resolve?domain=mohdasif';
-
-          // Fallback to intent:// after 1s if tg:// fails
-          setTimeout(function () {
-            window.location.href =
-              'intent://resolve?domain=mohdasif#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=https%3A%2F%2Ftelegram.me%2Fmohdasif;end;';
-          }, 1000);
-        } else if (intentMap[host]) {
-          e.preventDefault();
-          window.location.href = intentMap[host];
-        }
-      });
-    });
-  }
-});
-</script>
-
-
-        <!-- Container for the privacy policy content -->
-        <div class="content-container">
-    <br> <!-- Add two <br> for mobile -->
-<h1>Privacy Policy</h1>
-<p><strong>Effective date:</strong> July 9, 2024</p>
-
-<p>This Privacy Policy applies to the following websites: mohdasif.com (hosted on Tumblr), other associated pages mohdasif.com/* hosted on Cloudflare Pages and GitHub Pages.</p>
-
-<h2>1. Introduction</h2>
-<p>We at mohdasif.com are committed to protecting the privacy of our visitors. This Privacy Policy outlines our practices concerning the collection, use, and sharing of your information through the use of our websites.</p>
-
-<h2>2. Information We Do Not Collect</h2>
-<p>We do not collect any personal data from visitors to our websites. This includes, but is not limited to, names, addresses, email addresses, and payment information.</p>
-
-<h2>3. Third-Party Policies</h2>
-<p>Our websites are hosted on Tumblr, Cloudflare Pages, and GitHub Pages, which are governed by their respective privacy policies. We do not control these platforms' data collection and processing practices. For more information, please refer to the following privacy policies:</p>
 <ul>
-    <li><a href="https://www.tumblr.com/privacy/en">Tumblr's Privacy Policy</a></li>
-    <li><a href="https://www.cloudflare.com/en-in/privacypolicy/">Cloudflare Privacy Policy</a></li>
-    <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Pages' Privacy Statement</a></li>
+
+    <li>Pages</li>
+    <li><a href="about">About</a></li>
+    <li><a href="islam">Islam</a></li>
+    <li><a href="books">Books</a></li>
+    <li><a href="quotes">Quotes</a></li>
+    <li><a href="news">News</a></li>
+<br> 
+    <li>Fitness</li>
+    <li><a href="fitness">Fitness</a></li>
+    <li><a href="workouts">Workouts</a></li>
+    <li><a href="motivations">Motivation</a></li>
+<br> 
+    <li>Media</li>
+    <li><a href="photos">Photos</a></li>
+    <li><a href="videos">Videos</a></li>
+    <li><a href="music">Music</a></li>
+<br> 
+    <li>Poets</li>
+    <li><a href="https://mohdasif.in/mirza-ghalib">Mirza Ghalib</a></li>
+    <li><a href="https://mohdasif.in/mir-taqi-mir">Mir Taqi Mir</a></li>
+    <li><a href="https://mohdasif.in/jaun-elia">Jaun Elia</a></li>
+    <li><a href="https://mohdasif.in/faiz-ahmad">Faiz Ahmad</a></li>
+    <li><a href="https://mohdasif.in/daagh-dehlvi">Daagh Dehlvi</a></li>
+<br> 
+    <li>Links</li>
+    <li><a href="https://x.com/mohdasif">X</a></li>
+    <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
+    <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
+    <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
+    <li><a href="https://www.tiktok.com/@mohdasif">TikTok</a></li>
+    <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
+    <li><a href="https://www.reddit.com/user/mohdasif">Reddit</a></li>
+    <li><a href="https://goodreads.com/mohdasif">Goodreads</a></li>
+    <li><a href="https://www.quora.com/mohdasif">Quora</a></li>
+    <li><a href="https://github.com/mohdasif">GitHub</a></li>
+    <li><a href="https://www.amazon.in/shop/mohdasif">Amazon</a></li>
+<br> 
+    <li>Policies</li>
+    <li><a href="privacy">Privacy</a></li>
+    <li><a href="terms">Terms</a></li>
+
 </ul>
 
-<h2>4. Cookies</h2>
-<p>We do not personally use cookies on our website, but third-party services may use cookies to enhance your browsing experience. By using our website, you acknowledge and accept this approach to managing cookies.</p>
-
-<h2>5. Changes to This Privacy Policy</h2>
-<p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-
-<h2>6. Contact Us</h2>
-<p>If you have any questions about this Privacy Policy, please contact us via email at <a href="mailto:mail@mohdasif.com">mail@mohdasif.com</a>.</p>
     </div>
 
     <!-- Footer Section -->
     <div class="privacy-policy">
         <a href="/about" style="font-weight: normal;">About</a> |
-        <a href="/sitemap" style="font-weight: normal;">Sitemap</a> |
-        <a href="/terms" style="font-weight: normal;">Terms</a>
-        <p></p>
+        <a href="mailto:mail@mohdasif.com" style="font-weight: normal;">Email</a> |
+        <a href="https://linktr.ee/mohdasif" style="font-weight: normal;">Linktree</a>
     </div>
 </div>
+<br>
 
 </footer>
 </div> <!-- Close the page-container div here. -->
