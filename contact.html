@@ -83,7 +83,7 @@
         .page-container {
             max-width: 500px;
             margin: 0px auto;
-            background-color: #f4f4f4;
+            background-color: #ffffff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -822,7 +822,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <!-- Content Container for Bookshelves Section -->
-<div class="content-container">
+<div class="content-container" style="background-color: #FFFFFF;">
     <ul style="list-style-type: none; padding: 0;">
         <li style="margin-bottom: 10px; text-align: center;">
             <a href="https://telegram.me/mohdasif" class="blank-button" style="display: inline-block; padding: 6px 13px; border: 1px solid #999; border-radius: 15px; cursor: pointer; max-width: 180px; margin: auto; text-decoration: none; color: grey;">
@@ -848,10 +848,23 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 <br>
 
+<style>
+@media (max-width: 768px) { 
+    .mobile-break::after { 
+        content: "\A"; 
+        white-space: pre; 
+    }
+}
+</style>
+
 <div class="content-container" style="background-color: #fff; padding: 15px; border-radius: 10px;">
     <div class="confession-container" style="text-align: left;">
         <h2 style="font-size: 18px;">Ask Me Anything</h2>
-        <p><em style="font-size: 0.9em;">A confession? Or just a random question? Share it anonymously!</em></p>
+        <p>
+            <em style="font-size: 0.9em;">
+                A confession? Or just a random question?<span class="mobile-break"></span> Share it anonymously!
+            </em>
+        </p>
         <p>
             <a href="https://confessout.com/mohdasif" target="_blank" style="text-decoration: none; color: #E05268; font-weight: bold;">
                 🔒 Submit Here
@@ -859,6 +872,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
     </div>
 </div>
+
 <br>
 </div>  
  
