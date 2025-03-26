@@ -85,17 +85,18 @@
             margin: 0px auto;
             background-color: #ffffff;
             border-radius: 8px;
-            padding: 20px;
+            padding: 0px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
         
                .content-container {
             max-width: 550px;
-            margin: 20px auto;
+            margin: 15px auto;
             background-color: #FEFDFB;
             border-radius: 8px;
-            padding: 20px;
+            padding: 0px;
+            margin-bottom: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
@@ -845,7 +846,6 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>       
     </ul>
 </div>
-<br>
 
 <style>
 @media (max-width: 768px) { 
@@ -858,7 +858,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div class="content-container" style="background-color: #fff; padding: 15px; border-radius: 10px;">
     <div class="confession-container" style="text-align: left;">
-        <h2 style="font-size: 18px;">Ask Me Anything</h2>
+        <h2 style="font-size: 20px;">Ask Me Anything</h2>
         <p>
             <em style="font-size: 0.9em;">
                 A confession? Or just a random question?<span class="mobile-break"></span> Share it anonymously!
@@ -871,8 +871,14 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
     </div>
 </div>
-
-<br>
+<div class="content-container" style="background-color: #fff; padding: 15px; border-radius: 10px;">
+    <div class="links-container" style="text-align: left;">
+        <h2>About</h2>
+        <p class="profile-text">
+            Passionate about reading books, poetry, fitness and embracing minimalist living.
+        </p>
+    </div>
+</div>
 </div>  
  
     <!-- Footer Section -->
@@ -884,7 +890,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 
 </footer>
-<br>
+
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
         document.querySelector('nav').classList.toggle('menu-open');
