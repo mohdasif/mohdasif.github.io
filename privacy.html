@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Asif</title>
+    <title>Privacy | Asif</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png">
 
     <!-- Add this style block to hide navigation links -->
-    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png">
-
     <style>
         body {
-            background-color: #f4f4f4;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
@@ -63,6 +61,7 @@
             display: inline-block; /* Ensure proper spacing */
         }
 
+
         /* Remove margin from the last link */
         #desktop-navigation a:last-child,
         #mobile-navigation a:last-child {
@@ -81,81 +80,30 @@
             }
         }
 
-
-        .contact-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: transparent;
+        .page-container {
+            max-width: 500px;
+            margin: 0px auto;
+            background-color: #ffffff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
+            text-align: center;
         }
         
                .content-container {
             max-width: 500px;
-            margin: 10px auto;
-            background-color: #fff;
+            margin: 20px auto;
+            background-color: #FEFDFB;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
+            text-align: center;
         }
 
-        h1 {
-            color: #333;
+        .content-container {
+            padding: 20px; /* Adjust padding as needed */
         }
 
-        p {
-            color: #666;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4285f4;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #24a0ed;
-            color: #fff;
-            border: none;
-            border-radius: 15px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 12px; /* Increase the font size */
-        }
-
-        button:hover {
-            background-color: #000000 !important; /* Change the hover background color */
-        }
-
-        @media only screen and (max-width: 600px) {
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-        }
         h1 {
             color: #333;
             margin-bottom: 20px; /* Add space between title and content */
@@ -181,106 +129,30 @@
             margin: 10px 0;
         }
 
-        @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
-            #desktop-navigation {
-                display: none;
-            }
-
-            #mobile-navigation {
-                display: block;
-            }
-        }
-
-        /* Sidebar styles */
-        #sidebar {
-            height: 100%;
-            width: 140px; /* Adjusted width for the sidebar */
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #FFF;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 30px;
-        }
-        
-        /* Style sidebar section headings */
-.sidebar-section h4 {
-    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
-    margin-bottom: 5px; /* Add space below the heading */
-    padding: 10px; /* Add padding to the heading */
-    font-size: 16px; /* Adjust the font size of the heading */
-    font-weight: bold; /* Make the heading bold */
-    color: #333; /* Set the color of the heading */
-}
-
-        #sidebar a {
-            padding: 10px 25px;
+        a {
             text-decoration: none;
-            font-size: 15px;
-            color: #333;
-            display: block;
-            transition: 0.3s;
+            color: #4285f4;
+            font-weight: normal;
         }
 
-        #sidebar a:hover {
-    background-color: #f9f9f9; /* Background color on hover */
-    color: #333; /* Text color on hover */
-}
-
-        #sidebar .close-btn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-        .menu-toggle {
-            display: block; /* Show the menu toggle by default */
-            position: fixed;
-            top: 9px;
-            left: 33px;
-            font-size: 21px; /* Increase the font size */
-            cursor: pointer;
-            z-index: 1000; /* Ensure the menu icon is on top */
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
         }
 
-        nav {
-            float: left;
-            width: 33%;
-            background-color: #f1f1f1;
-            padding: 32px;
-            height: 100vh;
-            position: fixed;
-            top: 0; /* Position at the top */
-            overflow: auto;
-            transition: transform 0.9s ease;
-            transform: translateX(-100%);
-            z-index: 999; /* Ensure the sidebar is on top */
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
         }
-        nav.menu-open {
-            transform: translateX(0);
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-    margin-bottom: 10px;
-    font-size: 1.2em; /* Adjust the size as needed */
-}
-nav ul li:first-child {
-    margin-top: 15px; /* Adjust the margin as needed */
-}
 
-nav ul h4 {
-    margin-top: 15px; /* Add space above all h4 elements */
-}
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
 
-nav ul h4:first-of-type {
-    margin-top: 40px; /* Add additional space above the first h4 */
-}
+        /* Center-align Links */
+        .center-section {
+            text-align: center;
+        }
 
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
@@ -291,46 +163,85 @@ nav ul h4:first-of-type {
             #mobile-navigation {
                 display: block;
             }
-
-            .content-container {
-                margin-left: 0; /* Reset margin for small screens */
-            }
-
-            #sidebar {
-                display: none; /* Hide sidebar on small screens */
-            }
         }
-        /* Reduce the size of the scrollbar */
-#sidebar::-webkit-scrollbar {
-    width: 3px; /* Adjust the width as needed */
-}
 
-/* Handle for the scrollbar */
-#sidebar::-webkit-scrollbar-thumb {
-    background-color: #ccc; /* Color of the scrollbar handle */
-    border-radius: 2px; /* Rounded corners for the scrollbar handle */
-}
-
-/* Track for the scrollbar */
-#sidebar::-webkit-scrollbar-track {
-    background-color: transparent; /* Color of the scrollbar track */
-}
-
-/* Corner of the scrollbar */
-#sidebar::-webkit-scrollbar-corner {
-    background-color: transparent; /* Color of the scrollbar corner */
-}
-    /* Media query to hide the menu toggle on desktop view */
-    @media (min-width: 768px) {
-        .menu-toggle {
-            display: none; /* Hide the menu toggle on larger screens */
+        /* New styles for the about.me link container and button */
+        .about-me-container {
+            text-align: center;
         }
+
+
+        /* New styles for the about.me link container and button */
+        .about-me-container {
+            text-align: center;
+        }
+
+
+.center-section .link-button:not(.last-buttons) {
+    display: inline-block;
+    padding: 9px 13px;
+    background-color: #24a0ed;
+    color: #ffffff;
+    text-decoration: none;
+    border: 0px solid black;
+    border-radius: 15px;
+    margin: 5px;
+    width: 75px; /* Set a fixed width */
+    height: 20px; /* Set a fixed height */
+    font-weight: 500; /* Adjust font weight to slightly reduce it */
+}
+.center-section .link-button.last-buttons {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #24a0ed;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 15px;
+    margin: 10px;
+    width: 18px;
+    height: 18px;
+    border: 0px solid black; /* Add a border with 1px width and black color */
+}
+    .link-button:hover {
+        background-color: #000000 !important; /* Change the hover background color */
     }
-/* Active link styles */
-#sidebar a.active {
-  color: #fff; /* Text color for active link */
-  background-color: #007bff; /* Background color for active link */
+        .about-me-button,
+        .link-button {
+            display: inline-block;
+            padding: 7px 8px;
+            background-color: #24a0ed;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 40px;
+            margin: 1px;
+        }
+
+        .about-me-button:hover,
+        .link-button:hover {
+            background-color: #000000;
+        }
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    padding-bottom: 20px; /* Add space at the bottom */
 }
+
+/* Media query for desktop screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding-bottom: 0; /* Remove the space at the bottom on mobile */
+    }
+}
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+
     .footer {
       background-color: #f8f8f8;
       padding: 40px 0;
@@ -389,9 +300,341 @@ nav ul h4:first-of-type {
                 text-align: right; /* Align last section (Shop) to the right */
             }
         }
+        
+        /* Apply margin to the buttons for mobile */
+        .custom-button {
+            background-color: #f5f5f5;
+            color: black;
+            padding: 3px 7px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 15px; /* Adjust font size as needed */
+            transition: background-color 0.9s; /* Added transition effect */
+            margin-right: 17px; /* Add margin between buttons for mobile */
+            transform: translateX(7px); /* Move the custom button slightly to the right */
+            margin-top: 5px; /* Add margin between navigation and buttons */
+        }
+
+        .custom-button:last-child {
+            margin-right: 0; /* Remove margin from the last button for mobile */
+        }
+
+    @media (max-width: 767px) {
+        .custom-button {
+            display: none; /* Hide the custom button on mobile screens */
+        }
+    }
+
+            /* Apply margin to the desktop navigation */
+            #desktop-navigation {
+                margin-bottom: px; /* Adjust the margin as needed for desktop */
+            }
+            
+/* Adjust the size of the "View More" button */
+.more {
+    display: inline-block; /* Ensures the button takes up only necessary space */
+}
+
+/* Center the "View More" button */
+.more {
+    display: left; /* Use flexbox to center button */
+    justify-content: left; /* Center button horizontally */
+    align-items: left; /* Center button vertically */
+}
+
+/* Style the "View More" button */
+.more a {
+    padding: 3px 6px; /* Adjust padding to make the button smaller */
+    font-size: 12px; /* Adjust font size to make the button text smaller */
+    border: 1px solid black;
+    border-radius: 20px; /* Make the button round */
+    text-decoration: none; /* Remove underline */
+    background-color: #fff; /* Add background color */
+    color: black; /* Add text color */
+    transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+/* Hover effect for the "View More" button */
+.more a:hover {
+    background-color: #333; /* Darken background color on hover */
+    color: white; /* Change text color on hover */
+}
+.custom-br {
+    height: 2em; /* Adjust as needed */
+}
+
+    .categories {
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: -7px; /* Negative margin to shift content to the left */
+        padding: 10px 10px 0px 0px; /* Adjusted padding */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
+
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+        .categories::-webkit-scrollbar {
+        display: none;
+    }
+
+        .category-link {
+        display: inline-block; /* Display categories in a row */
+        margin-right: 17px; /* Adjusted margin for space between category links */
+        color: #000;
+        text-decoration: none;
+        padding: 3px 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        font-weight: normal; /* Set font weight to normal */
+    }
+
+    .category-link:hover {
+        background-color: #e0e0e0;
+    }
+/* Hide .categories on desktop views */
+@media (min-width: 768px) {
+    .categories {
+        display: none;
+    }
+}
+
+    /* Sidebar styles */
+    #sidebar {
+        height: 100%;
+        width: 125px; /* Adjusted width for the sidebar */
+        position: fixed;
+        top: 0;
+        left: 15px;
+        background-color: #f5f5f5;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 32px;
+    }
+
+    /* Style sidebar section headings */
+    .sidebar-section h4 {
+        margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+        
+        margin-bottom: 5px; /* Add space below the heading */
+        padding: 10px; /* Add padding to the heading */
+        font-size: 16px; /* Adjust the font size of the heading */
+        font-weight: bold; /* Make the heading bold */
+        color: #333; /* Set the color of the heading */
+    }
+
+    #sidebar a {
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #FAF9F6;
+        border-radius: 20px;
+        font-size: 16px;
+        color: #333;
+        display: block;
+        transition: 0.3s;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Add a shadow */
+        margin-bottom: 10px; /* Add space between links */
+    }
+
+    #sidebar a:hover {
+        background-color: #03c04a; /* Background color on hover */
+        color: #fff; /* Text color on hover */
+    }
+
+    #sidebar .close-btn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 9px;
+            left: 33px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 33%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+            top: 0; /* Position at the top */
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+    margin-bottom: 3px;
+
+}
+nav ul li:first-child {
+    margin-top: 15px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-top: 15px; /* Add space above all h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 40px; /* Add additional space above the first h4 */
+margin-bottom: 20px; /* Add additional space above the first h4 */
+}
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+/* Active link styles */
+#sidebar a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #04AA6D; /* Background color for active link */
+}
+/* Active link styles */
+.categories a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #04AA6D; /* Background color for active link */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2px 6px; /* Increase the size of the background color */
+  margin-right: 10px; /* Move the active button slightly to the right */
+}
+    #sidebar .sidebar-section a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #e0e0e0; /* Light line */
+        transition: background 0.3s;
+    }
+
+    /* Line above the first <a> element */
+    #sidebar .sidebar-section a:first-of-type {
+        border-top: 1px solid #e0e0e0; /* Light line above the first link */
+    }
+
+    /* Remove the line after the last item */
+    #sidebar .sidebar-section a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hover effect */
+    #sidebar .sidebar-section a:hover {
+        background-color: #f5f5f5; /* Optional hover effect */
+    }
+
+    /* Active link styling */
+    #sidebar .sidebar-section a.active {
+        background-color: #04AA6D; /* Background for active item */
+        color: white; /* White text for active link */
+    }
 /* Target all links inside the navigation */
 nav li a {
-    padding: 0px 10px;  /* 0px for top & bottom, 10px for left & right */
+    padding: 5px 10px;  /* 0px for top & bottom, 10px for left & right */
     border-radius: 10px;  /* Optional: rounded corners */
     background-color: white;  /* Set white background */
     color: grey;  /* Set grey text color */
@@ -399,10 +642,32 @@ nav li a {
     font-family: 'Arial', sans-serif;  /* Set font family */
     font-size: 15px;  /* Set font size */
     font-weight: normal;  /* Set normal font weight */
-    margin-bottom: 15px; /* Adds space below the buttons */
+    margin-bottom: 7px; /* Adds space below the buttons */
     display: inline-block; /* Ensures margin-bottom works */
 }
 
+    #sidebar .sidebar-section a.active {
+    margin-top: 40px; /* Adjust the value as needed for the desired gap */
+    display: block;   /* Ensures the margin works effectively */
+}
+#sidebar .spacer {
+    background-color: #F5F5F5;  /* Light gray background */
+    height: 25px;                /* Increased height */
+    margin: 0px 0;              /* Space above and below */
+    display: block;              /* Block-level element */
+    width: 100%;                 /* Full width */
+}
+
+/* Adding border-top before X link */
+#sidebar .sidebar-section .x-link {
+    border-top: 2px solid #e0e0e0; /* Light line above the X link */
+}
+#sidebar .sidebar-section::after {
+    content: ""; /* Create an empty content block */
+    display: block;
+    height: 80px; /* Adjust height as needed */
+    background-color: #F5F5F5; /* Set background color */
+}
 /**** STYLE FOR ALL NAV LINKS BUT SKIP FIRST TWO ****/
 
 /* Style only the links AFTER "Links" heading */
@@ -418,9 +683,15 @@ nav ul li:nth-child(n+2) a {
   text-decoration: none;
   line-height: 14px;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+/* Optional: Remove bullet points from all <li> */
+nav ul li {
+  list-style-type: none;
 }
 </style>
+
 </head>
 
 <body>
@@ -428,21 +699,21 @@ nav ul li:nth-child(n+2) a {
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
         <a href="/">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/books">Books</a>
-        <a href="/fitness">Fitness</a>     
+        <a href="https://mohdasif.com/blog">Blog</a>       
+        <a href="https://mohdasif.com/books">Books</a>
+        <a href="https://mohdasif.com/fitness">Fitness</a>       
         
-        <a href="/photos" style="position: absolute; right: 200px;"><i class="fa-solid fa-camera"></i></a>
-        <a href="/videos" style="position: absolute; right: 160px;"><i class="fa-solid fa-clapperboard"></i></a>
-        <a href="/music" style="position: absolute; right: 140px;"><i class="fa-solid fa-headphones"></i></a> 
+        <a href="https://mohdasif.com/photos" style="position: absolute; right: 200px;"><i class="fa-solid fa-camera"></i></a>
+        <a href="https://mohdasif.com/videos" style="position: absolute; right: 160px;"><i class="fa-solid fa-clapperboard"></i></a>
+        <a href="https://mohdasif.com/music" style="position: absolute; right: 140px;"><i class="fa-solid fa-headphones"></i></a> 
     </div>
 
     <!-- Mobile Navigation -->  
     <div id="mobile-navigation">  
         <a href="/"><i class="fa-solid fa-house" style="font-size: 18px; color: #000;"></i></a>
-        <a href="https://mohdasif.in"><i class="fa-solid fa-feather" style="font-size: 18px; color: #007E8F;"></i></a>
-        <a href="/photos"><i class="fa-solid fa-camera" style="font-size: 18px; color: #1ABC9C;"></i></a>
-        <a href="/play"><i class="fa-solid fa-play" style="font-size: 18px; color: #74c0f5;"></i></a>
+        <a href="/"><i class="fa-solid fa-feather" style="font-size: 18px; color: #007E8F;"></i></a>
+        <a href="https://mohdasif.com/photos"><i class="fa-solid fa-camera" style="font-size: 18px; color: #1ABC9C;"></i></a>
+        <a href="https://mohdasif.com/play"><i class="fa-solid fa-play" style="font-size: 18px; color: #74c0f5;"></i></a>
         <a href="/contact"><i class="fa-regular fa-comment-dots" style="font-size: 18px;"></i></a>
     </div>
 
@@ -451,12 +722,10 @@ nav ul li:nth-child(n+2) a {
 <nav>
     <ul>
     <li><h4 style="margin-bottom: 50px;"></h4></li>
-
-    
     <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
-    <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
     <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
-    <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
+    <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
+    <li><a href="https://www.tiktok.com/@mohdasif">Tik Tok</a></li>
     <li><a href="https://x.com/mohdasif">X</a></li>
   </ul>
 </nav>
@@ -503,33 +772,83 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-
-        <!-- Container for the privacy policy content -->
-        <div class="content-container">
-    <br> <!-- Add two <br> for mobile -->
-<div class="content-container" style="background-color: #fff; padding: 15px; border-radius: 10px;">    
-    <div class="links-container" style="text-align: left;"></div>
-<h1>Privacy Policy</h1>
-<p><strong>Effective date:</strong> March 1, 2025</p>
-
-<p>We do not collect any personal data from visitors.</p>
-
-<h2>Google Adsense</h2>
-
-<p>We use Google AdSense to display ads. Google may use cookies to serve personalized or non-personalized ads based on your visit.</p>
-
-<p>Users can opt-out of personalized ads through Google Ads Settings.</p>
-
-<p>Any updates to this policy will be posted here.</p>
-
-<p>For inquiries, contact mail@mohdasif.com.</p>
+    <div class="content-container">
+<div class="container" style="margin-top: 0px;"> <!-- Added margin-top -->
+    <div class="categories"> 
+    </div>
 </div>
 
+<!-- Page Container -->
+
+
+    <!-- Your content goes here -->
+
+<!-- Page Container -->
+
+<!-- Content Container for Links Section -->
+
+<!-- Add the JavaScript script here -->
+<script>
+  // Check if the user is on a mobile device
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  // Get the YouTube link element by its ID
+  var youtubeLink = document.getElementById('youtubeLink');
+
+  // Set the href attribute based on the device type
+  if (isMobile) {
+    youtubeLink.href = 'https://m.youtube.com/@mohdasif/shorts';
+  } else {
+    youtubeLink.href = 'https://www.youtube.com/@mohdasif/shorts';
+  }
+</script>
+
+<div class="content-container" style="background-color: #fff; padding: 15px; border-radius: 10px;">
+    <div class="links-container" style="text-align: left;">
+        <h1 style="text-align: left;">Privacy Policy</h1>
+        <p><strong>Effective date:</strong> March 1, 2025</p>
+        <p>We do not collect any personal data from visitors.</p>
+        <h2>Google Adsense</h2>
+        <p>We use Google AdSense to display ads. Google may use cookies to serve personalized or non-personalized ads based on your visit.</p>
+        Users can opt out of personalized ads through <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.
+        <p>Any updates to this policy will be posted here.</p>
+        <p>For inquiries, contact mail@mohdasif.com.</p>
+    </div>
+</div>
+
+<style>
+    .dark-text {
+        font-weight: bold;
+        color: #333;
+        font-size: 14px; /* Adjust the font size to your preference */
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 15px; /* Add some spacing between list items */
+    }
+</style>
+
+<style>
+@media (max-width: 768px) { 
+    .mobile-break::after { 
+        content: "\A"; 
+        white-space: pre; 
+    }
+}
+</style>
+</div>  
+ 
     <!-- Footer Section -->
     <div class="privacy-policy">
-        <a href="/about" style="font-weight: normal;">About</a> |
-        <a href="/privacy" style="font-weight: normal;">Privacy</a> |
-        <a href="/terms" style="font-weight: normal;">Terms</a>
+        <a href="about" style="font-weight: normal;">About</a> |
+        <a href="/terms" style="font-weight: normal;">Terms</a> |
+        <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
     </div>
 </div>
 
@@ -549,7 +868,9 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector(".sidebar").style.width = "0";
     }
 </script>
-
+<br>
+<br>
+<br>
 </body>
 
 </html>

@@ -254,7 +254,7 @@
     }
     .footer-section {
       flex: 1 0 100%;
-      padding-left: 0px; /* Add left padding */
+      padding-left: 20px; /* Add left padding */
       box-sizing: border-box; /* Include padding in width calculation */
       margin-bottom: 20px;
       text-align: left; /* Align text to the left */
@@ -300,28 +300,6 @@
                 text-align: right; /* Align last section (Shop) to the right */
             }
         }
-        .footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 5px 0; /* Reduce padding */
-    width: 100%;
-    font-size: 13px; /* Reduce font size */
-    display: flex;
-    justify-content: center;
-    gap: 2px; /* Reduce spacing between links */
-    flex-wrap: nowrap; /* Prevent wrapping */
-}
-
-/* Ensure links don't have extra margin */
-.footer a {
-    text-decoration: none;
-    color: #007bff;
-    margin: 0; /* Removes unwanted space */
-    display: inline-block;
-    white-space: nowrap; /* Prevents breaking into multiple lines */
-    padding: 0 2px; /* Add small padding to avoid touching */
-}
-
         
         /* Apply margin to the buttons for mobile */
         .custom-button {
@@ -480,24 +458,6 @@
             cursor: pointer;
             z-index: 1000; /* Ensure the menu icon is on top */
         }
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Push footer down */
-    height: 100vh; /* Full height */
-}
-
-.menu {
-    flex-grow: 1; /* Push footer down */
-    padding-bottom: 50px; /* Creates space between menu and footer */
-}
-
-.footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 60px 0;
-    width: 100%;
-}
 
         nav {
             float: left;
@@ -730,7 +690,6 @@ nav ul li:nth-child(n+2) a {
 nav ul li {
   list-style-type: none;
 }
-
 </style>
 
 </head>
@@ -740,21 +699,21 @@ nav ul li {
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
         <a href="/">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/books">Books</a>
-        <a href="/fitness">Fitness</a>       
+        <a href="https://mohdasif.com/blog">Blog</a>       
+        <a href="https://mohdasif.com/books">Books</a>
+        <a href="https://mohdasif.com/fitness">Fitness</a>       
         
-        <a href="/photos" style="position: absolute; right: 200px;"><i class="fa-solid fa-camera"></i></a>
-        <a href="/videos" style="position: absolute; right: 160px;"><i class="fa-solid fa-clapperboard"></i></a>
-        <a href="/music" style="position: absolute; right: 140px;"><i class="fa-solid fa-headphones"></i></a> 
+        <a href="https://mohdasif.com/photos" style="position: absolute; right: 200px;"><i class="fa-solid fa-camera"></i></a>
+        <a href="https://mohdasif.com/videos" style="position: absolute; right: 160px;"><i class="fa-solid fa-clapperboard"></i></a>
+        <a href="https://mohdasif.com/music" style="position: absolute; right: 140px;"><i class="fa-solid fa-headphones"></i></a> 
     </div>
 
     <!-- Mobile Navigation -->  
     <div id="mobile-navigation">  
         <a href="/"><i class="fa-solid fa-house" style="font-size: 18px; color: #000;"></i></a>
-        <a href="https://mohdasif.in"><i class="fa-solid fa-feather" style="font-size: 18px; color: #007E8F;"></i></a>
-        <a href="/photos"><i class="fa-solid fa-camera" style="font-size: 18px; color: #1ABC9C;"></i></a>
-        <a href="/play"><i class="fa-solid fa-play" style="font-size: 18px; color: #74c0f5;"></i></a>
+        <a href="/"><i class="fa-solid fa-feather" style="font-size: 18px; color: #007E8F;"></i></a>
+        <a href="https://mohdasif.com/photos"><i class="fa-solid fa-camera" style="font-size: 18px; color: #1ABC9C;"></i></a>
+        <a href="https://mohdasif.com/play"><i class="fa-solid fa-play" style="font-size: 18px; color: #74c0f5;"></i></a>
         <a href="/contact"><i class="fa-regular fa-comment-dots" style="font-size: 18px;"></i></a>
     </div>
 
@@ -762,20 +721,13 @@ nav ul li {
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>
     <ul>
-        <li><h4 style="margin-bottom: 50px;"></h4></li>
-        <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
-        <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
-        <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
-        <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
-        <li><a href="https://x.com/mohdasif">X</a></li>
-    </ul>
-
-    <!-- Footer Section -->
-    <div class="footer">
-        <a href="/about">About</a> |
-        <a href="/privacy">Privacy</a> |
-        <a href="/terms">Terms</a>
-    </div>
+    <li><h4 style="margin-bottom: 50px;"></h4></li>
+    <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
+    <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
+    <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
+    <li><a href="https://www.tiktok.com/@mohdasif">Tik Tok</a></li>
+    <li><a href="https://x.com/mohdasif">X</a></li>
+  </ul>
 </nav>
 
 <!-- Place this script at the bottom of the page -->
@@ -897,7 +849,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 </style>
+</div>  
+ 
+    <!-- Footer Section -->
+    <div class="privacy-policy">
+        <a href="/privacy" style="font-weight: normal;">Privacy</a> |
+        <a href="/terms" style="font-weight: normal;">Terms</a></a> |
+        <a href="/sitemap" style="font-weight: normal;">Sitemap</a>
+    </div>
+</div>
 
+</footer>
+</div> <!-- Close the page-container div here. -->
 
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -912,8 +875,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector(".sidebar").style.width = "0";
     }
 </script>
-<br>
-<br>
 <br>
 <br>
 </body>
