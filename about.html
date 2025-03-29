@@ -254,7 +254,7 @@
     }
     .footer-section {
       flex: 1 0 100%;
-      padding-left: 20px; /* Add left padding */
+      padding-left: 0px; /* Add left padding */
       box-sizing: border-box; /* Include padding in width calculation */
       margin-bottom: 20px;
       text-align: left; /* Align text to the left */
@@ -300,6 +300,28 @@
                 text-align: right; /* Align last section (Shop) to the right */
             }
         }
+        .footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 5px 0; /* Reduce padding */
+    width: 100%;
+    font-size: 13px; /* Reduce font size */
+    display: flex;
+    justify-content: center;
+    gap: 3px; /* Reduce spacing between links */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Ensure links don't have extra margin */
+.footer a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0; /* Removes unwanted space */
+    display: inline-block;
+    white-space: nowrap; /* Prevents breaking into multiple lines */
+    padding: 0 2px; /* Add small padding to avoid touching */
+}
+
         
         /* Apply margin to the buttons for mobile */
         .custom-button {
@@ -458,6 +480,24 @@
             cursor: pointer;
             z-index: 1000; /* Ensure the menu icon is on top */
         }
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push footer down */
+    height: 100vh; /* Full height */
+}
+
+.menu {
+    flex-grow: 1; /* Push footer down */
+    padding-bottom: 50px; /* Creates space between menu and footer */
+}
+
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+}
 
         nav {
             float: left;
@@ -718,16 +758,26 @@ nav ul li {
     </div>
 
 
+<!-- Menu Toggle Button -->
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-<nav>
-    <ul>
-    <li><h4 style="margin-bottom: 50px;"></h4></li>
-    <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
-    <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
-    <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
-    <li><a href="https://www.tiktok.com/@mohdasif">Tik Tok</a></li>
-    <li><a href="https://x.com/mohdasif">X</a></li>
-  </ul>
+
+<!-- Sidebar Menu -->
+<nav class="sidebar">
+    <ul class="menu">
+        <li><h4 style="margin-bottom: 50px;"></h4></li>
+        <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
+        <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
+        <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
+        <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
+        <li><a href="https://x.com/mohdasif">X</a></li>
+    </ul>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <a href="/about">About</a> |
+        <a href="/privacy">Privacy</a> |
+        <a href="/terms">Terms</a>
+    </div>
 </nav>
 
 <!-- Place this script at the bottom of the page -->
@@ -849,18 +899,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 </style>
-</div>  
- 
-    <!-- Footer Section -->
-    <div class="privacy-policy">
-        <a href="mailto:mail@mohdasif.com" style="font-weight: normal;">Email</a> |
-        <a href="/privacy" style="font-weight: normal;">Privacy</a> |
-        <a href="/terms" style="font-weight: normal;">Terms</a>
-    </div>
-</div>
 
-</footer>
-</div> <!-- Close the page-container div here. -->
 
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
