@@ -483,21 +483,22 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Push footer down */
-    height: 100vh; /* Full height */
+    min-height: 100vh; /* Ensures full height */
 }
 
 .menu {
-    flex-grow: 1; /* Push footer down */
-    padding-bottom: 50px; /* Creates space between menu and footer */
+    flex-grow: 1; /* Pushes footer down */
+    padding-bottom: 20px; /* Adjust spacing */
 }
 
 .footer {
-    background-color: #f1f1f1;
+    margin-top: auto; /* Ensures footer stays at the bottom */
     text-align: center;
-    padding: 30px 0;
+    padding: 10px 0;
     width: 100%;
+    background-color: #f1f1f1;
 }
+
 
         nav {
             float: left;
@@ -730,6 +731,7 @@ nav ul li:nth-child(n+2) a {
 nav ul li {
   list-style-type: none;
 }
+
 </style>
 
 </head>
