@@ -308,7 +308,7 @@
     font-size: 13px; /* Reduce font size */
     display: flex;
     justify-content: center;
-    gap: 3px; /* Reduce spacing between links */
+    gap: 2px; /* Reduce spacing between links */
     flex-wrap: nowrap; /* Prevent wrapping */
 }
 
@@ -483,22 +483,21 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures full height */
+    justify-content: space-between; /* Push footer down */
+    height: 100vh; /* Full height */
 }
 
 .menu {
-    flex-grow: 1; /* Pushes footer down */
-    padding-bottom: 20px; /* Adjust spacing */
+    flex-grow: 1; /* Push footer down */
+    padding-bottom: 50px; /* Creates space between menu and footer */
 }
 
 .footer {
-    margin-top: auto; /* Ensures footer stays at the bottom */
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
     background-color: #f1f1f1;
+    text-align: center;
+    padding: 60px 0;
+    width: 100%;
 }
-
 
         nav {
             float: left;
@@ -760,12 +759,9 @@ nav ul li {
     </div>
 
 
-<!-- Menu Toggle Button -->
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-
-<!-- Sidebar Menu -->
-<nav class="sidebar">
-    <ul class="menu">
+<nav>
+    <ul>
         <li><h4 style="margin-bottom: 50px;"></h4></li>
         <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
         <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
