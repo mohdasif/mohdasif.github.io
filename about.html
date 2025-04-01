@@ -690,6 +690,52 @@ nav ul li:nth-child(n+2) a {
 nav ul li {
   list-style-type: none;
 }
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push footer down */
+    height: 100vh; /* Full height */
+}
+
+.menu {
+    flex-grow: 1; /* Push footer down */
+    padding-bottom: 50px; /* Creates space between menu and footer */
+}
+
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 60px 0;
+    width: 100%;
+    margin-left: -15px; /* Adjust the value as needed */
+}
+
+
+        .footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 5px 0; /* Reduce padding */
+    width: 100%;
+    font-size: 13px; /* Reduce font size */
+    display: flex;
+    justify-content: center;
+    gap: 3px; /* Reduce spacing between links */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Ensure links don't have extra margin */
+.footer a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0; /* Removes unwanted space */
+    display: inline-block;
+    white-space: nowrap; /* Prevents breaking into multiple lines */
+    padding: 0 2px; /* Add small padding to avoid touching */
+}
+    .footer {
+      background-color: #f1f1f1;
+      padding: 50px 0;
+    }
 </style>
 
 </head>
@@ -723,12 +769,17 @@ nav ul li {
 <nav>
     <ul>
     <li><h4 style="margin-bottom: 50px;"></h4></li>
-    <li><a href="https://clubhouse.com/@mohdasif">Clubhouse</a></li>
-    <li><a href="https://m.youtube.com/@mohdasif/shorts">YouTube</a></li>
-    <li><a href="https://linkedin.com/in/mohdasif">LinkedIn</a></li>
-    <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
-    <li><a href="https://x.com/mohdasif">X</a></li>
-  </ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/fitness">Fitness</a></li>
+    <li><a href="/books">Books</a></li>
+    </ul>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <a href="/privacy">Privacy</a> |
+        <a href="/terms">Terms</a>
+    </div>
 </nav>
 
 <!-- Place this script at the bottom of the page -->
