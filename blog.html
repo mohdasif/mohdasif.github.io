@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif | Sitemap</title>
+    <title>Asif | Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="https://imgur.com/yMpZ3pQ.png">
 
-    <!-- Add this style block to hide navigation links -->
     <style>
         body {
             background-color: #f4f4f4;
@@ -79,19 +78,251 @@
             }
         }
 
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
 
-        /* Add container style */
-        .container {
-            max-width: 500px;
-            margin: 30px auto;
+section {
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid with minimum item width of 250px */
+    gap: 20px; /* Gap between grid items */
+    grid-auto-flow: dense; /* Dense packing of grid items */
+}
+
+.blog-card {
+    flex: 1 1 calc(25% - 20px); /* Adjust width for three columns */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: 0px;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-card-content {
+    padding: 10px; /* Reduced padding */
+}
+
+.blog-card-content h3 {
+    margin: 5px 0 0; /* Reduced margin around the title */
+}
+
+/* CSS for centering only the heading "Latest Blog Posts" */
+section h2 {
+    text-align: center;
+    margin-bottom: 30px; /* Add margin for spacing */
+}
+        /* CSS for centering the feature section and setting up grid layout */
+        .featured-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns, each occupying 1/3 of the available space */
+            gap: 20px; /* Gap between grid items */
+            justify-content: center; /* Center the grid */
+            margin-top: 10px; /* Add margin for spacing */
+        }
+
+        .featured-post {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .featured-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .featured-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .featured-post-content {
             padding: 20px;
-            background-color: #fff;
+        }
+
+        .footer {
+            background-color: #f4f4f4;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1 0 100%;
+            padding-left: 20px; /* Add left padding */
+            box-sizing: border-box; /* Include padding in width calculation */
+            margin-bottom: 10px;
+            text-align: left; /* Align text to the left */
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: left; /* Align title to the left */
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: normal; /* Change font weight to normal */
+        }
+
+        .footer-section ul li a:hover {
+            color: #007bff;
+            font-weight: normal; /* Change font weight to normal */
+        }
+
+        .privacy-policy {
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            margin-top: 0; /* Remove top margin */;
+margin-bottom: 0; /* Remove bottom margin */
+        }
+
+        @media (min-width: 768px) {
+            .footer-section {
+                flex: 1;
+            }
+
+            .footer-section:first-child {
+                text-align: left;
+            }
+
+            .footer-section:last-child {
+                text-align: right;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .blog-card {
+                flex: 1 1 100%;
+            }
+
+            .featured-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .featured-post {
+                width: 100%;
+            }
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
             border-radius: 8px;
         }
 
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: bold;
+        }
+
+        /* New style for left-aligning specific sections */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center-align the about.me link */
+        .about-me {
+            text-align: center;
+        }
+
+        /* Center-align Links */
+        .center-section {
+            text-align: center;
+        }
+
+
+        button {
+            padding: 10px 20px;
+            background-color: #24a0ed;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 15px; /* Increase the font size */
+        }
+
+        button:hover {
+            background-color: #000000 !important; /* Change the hover background color */
+        }
 
         @media only screen and (max-width: 600px) {
-            /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
                 display: none;
             }
@@ -100,7 +331,6 @@
                 display: block;
             }
         }
-
         /* Sidebar styles */
         #sidebar {
             height: 100%;
@@ -190,6 +420,7 @@ nav ul h4 {
 nav ul h4:first-of-type {
     margin-top: 40px; /* Add additional space above the first h4 */
 }
+
         @media only screen and (max-width: 600px) {
             /* Show mobile navigation and hide desktop navigation on small screens */
             #desktop-navigation {
@@ -234,142 +465,11 @@ nav ul h4:first-of-type {
             display: none; /* Hide the menu toggle on larger screens */
         }
     }
-a {
-  text-decoration: none; /* Removes the underline */
-  color: #007bff; /* Keeps the text color same as surrounding text */
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
 }
 
-a:hover, a:focus {
-  text-decoration: none; /* Ensures underline is not shown on hover or focus */
-  color: #007bff; /* Keeps the text color same as surrounding text on hover or focus */
-}
-    .footer {
-      background-color: #f8f8f8;
-      padding: 40px 0;
-    }
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .footer-section {
-      flex: 1 0 100%;
-      padding-left: 20px; /* Add left padding */
-      box-sizing: border-box; /* Include padding in width calculation */
-      margin-bottom: 20px;
-      text-align: left; /* Align text to the left */
-    }
-    .footer-section h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      text-align: left; /* Align title to the left */
-    }
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .footer-section ul li {
-      margin-bottom: 10px;
-    }
-    .footer-section ul li a {
-      color: #333;
-      text-decoration: none;
-      font-weight: normal; /* Change font weight to normal */
-    }
-    .footer-section ul li a:hover {
-      color: #007bff;
-      font-weight: normal; /* Change font weight to normal */
-    }
-    .privacy-policy {
-      font-size: 12px;
-      text-align: center;
-      width: 100%;
-      margin-top: 10px;
-    }
-        @media (min-width: 768px) {
-            .footer-section {
-                flex: 1; /* Adjust width for desktop to allow sections to grow */
-            }
-
-            .footer-section:first-child {
-                text-align: left; /* Align first section (Pages) to the left */
-            }
-
-            .footer-section:last-child {
-                text-align: right; /* Align last section (Shop) to the right */
-            }
-        }
-ul {
-    list-style-type: disc; /* Keep bullets for list items */
-    padding-left: 40px; /* Adjust indentation */
-}
-
-ul li {
-    list-style-type: none; /* Remove bullets from all list items */
-}
-
-/* Target only list items that are not links (titles) */
-ul li:not(:has(a)) {
-    margin-bottom: 5px; /* Adds spacing below section titles */
-    font-weight: bold; /* Makes them stand out */
-}
-
-/* Restore bullets for links */
-ul li a {
-    list-style-type: disc;
-    display: list-item; /* Ensures bullets appear for links */
-}
-h1 {
-    padding-left: 15px; /* Adjust left padding */
-}
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Push footer down */
-    height: 100vh; /* Full height */
-}
-
-.menu {
-    flex-grow: 1; /* Push footer down */
-    padding-bottom: 50px; /* Creates space between menu and footer */
-}
-
-.footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 60px 0;
-    width: 100%;
-    margin-left: -15px; /* Adjust the value as needed */
-}
-
-
-        .footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 5px 0; /* Reduce padding */
-    width: 100%;
-    font-size: 13px; /* Reduce font size */
-    display: flex;
-    justify-content: center;
-    gap: 3px; /* Reduce spacing between links */
-    flex-wrap: nowrap; /* Prevent wrapping */
-}
-
-/* Ensure links don't have extra margin */
-.footer a {
-    text-decoration: none;
-    color: #007bff;
-    margin: 0; /* Removes unwanted space */
-    display: inline-block;
-    white-space: nowrap; /* Prevents breaking into multiple lines */
-    padding: 0 2px; /* Add small padding to avoid touching */
-}
-    .footer {
-      background-color: #f1f1f1;
-      padding: 50px 0;
-    }
     </style>
 
 </head>
@@ -409,53 +509,79 @@ h1 {
     <li><a href="/books">Books</a></li>
     </ul>
 </nav>
-    
-    <!-- Add container div -->
-    <div class="container">
-<h1>Sitemap</h1>
 
-<ul>
+<section>
+    <h2>Latest Blog Posts</h2>
 
-    <li>Pages</li>
-    <li><a href="about">About</a></li>
-    <li><a href="blog">Blog</a></li>
-    <li><a href="contact">Contact</a></li>
-    <li><a href="islam">Islam</a></li>
-    <li><a href="fitness">Fitness</a></li>
-    <li><a href="books">Books</a></li>
-<br> 
+    <div class="blog-cards">
 
-    <li>Bookshelves</li>
-    <li><a href="reading">Reading</a></li>
-    <li><a href="want-to-read">Want To Read</a></li>
-    <li><a href="read">Read</a></li>
-<br> 
+        <!-- Blog Post 5 -->
+        <div class="blog-card">
+            <a href="https://mohdasif.com/blog/body-recomposition">
+                <img src="https://pub-bdb2bba0cf7b496aa1835c70d708c610.r2.dev/deadlift.jfif" alt="Blog Post 1">
+                <div class="blog-card-content">
+                    <h3><a href="https://mohdasif.com/blog/body-recomposition">Deficit Body Recomposition</a></h3>
+                </div>
+            </a>
+        </div>
 
-    <li>Media</li>
-    <li><a href="photos">Photos</a></li>
-    <li><a href="videos">Videos</a></li>
-    <li><a href="music">Music</a></li>
-    <li><a href="podcasts">Podcasts</a></li>
-<br> 
+        <!-- Blog Post 4 -->
+        <div class="blog-card">
+            <a href="https://mohdasif.com/blog/quad-exercises">
+        <img src="https://pub-bdb2bba0cf7b496aa1835c70d708c610.r2.dev/Quad.webp" alt="Conventional to Sumo">
+        <div class="blog-card-content">
+            <h3><a href="https://mohdasif.com/blog/quad-exercises">Quad Exercises</a></h3>
+        </div>
+    </a>
+</div>
 
-    <li>Policies</li>
-    <li><a href="privacy">Privacy</a></li>
-    <li><a href="terms">Terms</a></li>
-</ul>
+        <!-- Blog Post 3 -->
+        <div class="blog-card">
+            <a href="https://mohdasif.com/blog/hamstring-exercises">
+                <img src="https://pub-bdb2bba0cf7b496aa1835c70d708c610.r2.dev/Hams.webp" alt="Blog Post 1">
+                <div class="blog-card-content">
+                    <h3><a href="https://mohdasif.com/blog/hamstring-exercises">Hamstring Exercises</a></h3>
+                </div>
+            </a>
+        </div>
+
+
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card">
+            <a href="https://mohdasif.com/blog/glute-exercises">
+                <img src="https://pub-bdb2bba0cf7b496aa1835c70d708c610.r2.dev/glutes.webp" alt="Blog Post 3">
+                <div class="blog-card-content">
+                    <h3><a href="https://mohdasif.com/blog/glute-exercises">Glute Exercises</a></h3>
+                </div>
+            </a>
+        </div>
+
+
+        <!-- Blog Post 1 -->
+        <div class="blog-card">
+            <a href="https://mohdasif.com/blog/fitness-goals">
+                <img src="https://photos.mohdasif.com/recompostion.webp" alt="Blog Post 1">
+                <div class="blog-card-content">
+                    <h3><a href="https://mohdasif.com/blog/fitness-goals">Fitness Goals</a></h3>
+                </div>
+            </a>
+        </div>
+
 
     </div>
+</section>
 
-    <!-- Footer Section -->
-    <div class="privacy-policy">
+    </section>
+
+    <footer class="footer">
+
+        <div class="privacy-policy">
         <a href="/about" style="font-weight: normal;">About</a> |
         <a href="/privacy" style="font-weight: normal;">Privacy</a> |
         <a href="/terms" style="font-weight: normal;">Terms</a>
-    </div>
-</div>
-<br>
-
-</footer>
-</div> <!-- Close the page-container div here. -->
+        </div>
+    </footer>
 
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -472,5 +598,4 @@ h1 {
 </script>
 
 </body>
-
 </html>
