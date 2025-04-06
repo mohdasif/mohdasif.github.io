@@ -370,6 +370,41 @@ h1 {
       background-color: #f1f1f1;
       padding: 50px 0;
     }
+/* Thin-style for all icons: black by default, grey on hover */
+.house-thin-style,
+.feather-thin-style,
+.camera-thin-style,
+.play-thin-style,
+.comment-thin-style {
+  color: transparent;
+  -webkit-text-stroke: 0.8px #000; /* black outline by default */
+  font-size: 24px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.house-thin-style:hover,
+.feather-thin-style:hover,
+.camera-thin-style:hover,
+.play-thin-style:hover,
+.comment-thin-style:hover {
+  -webkit-text-stroke: 0.8px #6C757D; /* soft grey on hover */
+  opacity: 0.85;
+}
+
+.bars-light-style {
+  color: transparent;
+  -webkit-text-stroke: 0.9px #333;  /* mimic light look */
+  font-size: 24px;
+  transform: scale(0.85);           /* scale down to match visual size */
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.bars-light-style:hover {
+  -webkit-text-stroke: 0.9px #000;
+  opacity: 1;
+}
     </style>
 
 </head>
@@ -389,18 +424,16 @@ h1 {
         <a href="/music" style="position: absolute; right: 140px;"><i class="fa-solid fa-headphones"></i></a> 
     </div>
 
-<!-- Mobile Navigation -->  
-<div id="mobile-navigation">  
-    <a href="/"><i class="fa-solid fa-house" style="font-size: 18px; color: #888;"></i></a>
-    <a href="/blog"><i class="fa-solid fa-feather" style="font-size: 18px; color: #888;"></i></a>
-    <a href="/photos"><i class="fa-solid fa-camera" style="font-size: 18px; color: #888;"></i></a>
-    <a href="/play"><i class="fa-solid fa-play" style="font-size: 18px; color: #888;"></i></a>
-    <a href="/contact"><i class="fa-regular fa-comment-dots" style="font-size: 18px; color: #888;"></i></a>
-</div>
+    <!-- Mobile Navigation -->  
+    <div id="mobile-navigation">  
+        <a href="/"><i class="fa-solid fa-house house-thin-style" style="font-size: 18px;"></i></a>
+        <a href="/blog"><i class="fa-solid fa-feather feather-thin-style" style="font-size: 18px;"></i></a>
+        <a href="/photos"><i class="fa-solid fa-camera camera-thin-style" style="font-size: 18px;"></i></a>
+        <a href="/play"><i class="fa-solid fa-play play-thin-style" style="font-size: 18px;"></i></a>
+        <a href="/contact"><i class="fa-solid fa-comment-dots comment-thin-style" style="font-size: 18px;"></i></a>
+    </div>
 
-
-
-<div class="menu-toggle"><i class="fa-solid fa-bars" style="color: #888;"></i></div>
+<div class="menu-toggle"><i class="fa-solid fa-bars bars-light-style"></i></div>
 <nav>
     <ul>
     <li><h4 style="margin-bottom: 50px;"></h4></li>
