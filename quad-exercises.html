@@ -13,14 +13,14 @@
 
     <style>
         body {
-            background-color: #fff;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
             overflow-x: hidden;
         }
 
-       #desktop-navigation,
+        #desktop-navigation,
         #mobile-navigation {
             text-align: center;
             position: fixed;
@@ -39,37 +39,50 @@
             display: block; /* Ensure visibility */
         }
 
+        /* Styles for mobile navigation */
+        #mobile-navigation {
+            background-color: #FDFCFA;
+            color: #000;
+            padding: 10px;
+            display: none; /* Hide by default */
+            font-size: 18px; /* Font size */
+            position: fixed;
+            top: 0;
+            left: 0px;
+            right: 10px;
+            width: 100%;
+        }
+
+        /* Common link styles for both desktop and mobile */
         #desktop-navigation a,
         #mobile-navigation a {
             color: inherit;
             margin: 0 18px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block; /* Make sure the links are on separate lines */
+            display: inline-block; /* Ensure proper spacing */
         }
 
-        #desktop-navigation a:last-child {
-            margin-right: 0; /* Remove margin from the last element */
+        /* Remove margin from the last link */
+        #desktop-navigation a:last-child,
+        #mobile-navigation a:last-child {
+            margin-right: 0;
         }
 
-#mobile-navigation {
-    background-color: #FDFCFA;
-    color: #000;
-    padding: 10px;
-    display: none;
-    font-size: 18px; /* Adjust the font size as needed */
-    position: fixed; /* Ensure it stays fixed on the screen */
-    top: 0; /* Align to the top edge */
-    left: 0; /* Align to the left edge */
-    width: 100%; /* Make it full width */
-}
 
-#mobile-navigation a:first-child {
-    margin-left: 33px; /* Adjust this value as needed to create the desired space */
-}
+        @media only screen and (min-width: 601px) {
+            /* Show desktop navigation on larger screens */
+            #desktop-navigation {
+                display: block;
+            }
+            /* Hide mobile navigation on larger screens */
+            #mobile-navigation {
+                display: none;
+            }
+        }
 
         .contact-container {
-            max-width: 600px;
+            max-width: 550px;
             margin: 30px auto;
             background-color: transparent;
             border-radius: 8px;
@@ -79,7 +92,7 @@
         }
         
                .content-container {
-            max-width: 600px;
+            max-width: 550px;
             margin: 30px auto;
             background-color: #fff;
             border-radius: 8px;
@@ -668,12 +681,12 @@ nav ul li {
     </div>
 
 
-<div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+<div class="menu-toggle"><i class="fa-solid fa-bars bars-light-style"></i></div>
 <nav>
     <ul>
     <li><h4 style="margin-bottom: 50px;"></h4></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/blog">Blog</a></li>
+    <li><a href="about">About</a></li>
+    <li><a href="/islam">Islam</a></li>
     <li><a href="/fitness">Fitness</a></li>
     <li><a href="/books">Books</a></li>
     </ul>
@@ -681,7 +694,6 @@ nav ul li {
 
         <!-- Container for the privacy policy content -->
         <div class="content-container">
-    <br> <!-- Add two <br> for mobile -->
 
 <h2>Quad exercises:</h2>
     <br> 
@@ -728,6 +740,109 @@ nav ul li {
         document.querySelector(".sidebar").style.width = "0";
     }
 </script>
+
+    </script>
+    <!-- Other existing content -->
+
+    <!-- Move to Top Button -->
+    <div id="moveToTop" class="move-to-top">
+      <i class="fa-solid fa-chevron-up" style="color: #808080;"></i>
+  </div>
+
+  <style>
+        /* Move to Top Button */
+        .move-to-top {
+            position: fixed;
+            bottom: 20px; /* Distance from the bottom */
+            left: 50%; /* Move it to the horizontal center */
+            margin-bottom: 10px;
+            transform: translateX(-50%); /* Offset it by half its width to truly center */
+            font-size: 17px; /* Icon size */
+            color: #333333; /* Black arrow color */
+            background-color: #ffffff; /* Slightly off-white background */
+            border-radius: 50%; /* Circle shape */
+            width: 35px; /* Circle size */
+            height: 35px; /* Circle size */
+            display: flex; /* Flexbox for centering the icon */
+            justify-content: center; /* Center horizontally inside the button */
+            align-items: center; /* Center vertically inside the button */
+            cursor: pointer; /* Pointer on hover */
+            z-index: 1000; /* Ensure it's above other elements */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s, color 0.3s, transform 0.3s; /* Smooth effects */
+        }
+
+
+    /* Show button when visible */
+    .move-to-top.visible {
+        opacity: 1; /* Fully visible */
+    }
+
+    /* Adjust the button for larger screens (desktop) */
+    @media (min-width: 768px) {
+        .move-to-top {
+            left: auto; /* Remove left positioning */
+            right: 20px; /* Fixed to the right side */
+        }
+    }
+  </style>
+
+    <script>
+// Move to Top Button functionality
+const moveToTopButton = document.getElementById('moveToTop');
+let lastScrollY = window.scrollY;
+
+function handleScroll() {
+    const currentScrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (window.innerWidth >= 768) {
+        // Desktop: Show after scrolling 100px
+        if (currentScrollY > 100) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
+    } else {
+        // Mobile: Show when scrolling up past 300px OR near bottom 80%
+        if (
+            (currentScrollY < lastScrollY && currentScrollY > 300) ||
+            (currentScrollY + windowHeight > documentHeight * 0.8)
+        ) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
+    }
+
+    // Apply special behavior only for mobile (≤600px)
+    if (window.innerWidth <= 600) {
+        if (currentScrollY + windowHeight >= documentHeight - 10) {
+            moveToTopButton.style.bottom = "20px"; // Move up when at page end
+        } else {
+            moveToTopButton.style.bottom = "10px"; // Default position on mobile
+        }
+    } else {
+        // Default position for desktops (no extra shift)
+        moveToTopButton.style.bottom = "20px";
+    }
+
+    lastScrollY = currentScrollY;
+}
+
+window.addEventListener('scroll', handleScroll);
+
+moveToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});
+
+// Initial state check on load
+handleScroll();
+    </script>
 
 </body>
 </html>
