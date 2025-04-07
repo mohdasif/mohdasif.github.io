@@ -774,10 +774,11 @@ nav ul li {
 .bottom-nav {
   position: fixed;
   bottom: 16px;
-  right: 16px; /* Move to right side */
+  left: 5%;
+  transform: translateX(-5%);
   background: transparent;
   display: flex;
-  justify-content: center; /* center inside the wrapper */
+  justify-content: center;
   align-items: center;
   height: auto;
   padding: 0;
@@ -871,7 +872,7 @@ nav ul li {
     <!-- Bottom Navigation for Mobile -->
 <div class="bottom-nav">
   <div class="menu-wrapper">
-    <button class="menu-button" onclick="toggleMenu()">⋮</button>
+    <button class="menu-button" onclick="toggleMenu()">⋯</button>
     <div class="dropdown" id="menu">
       <a href="/islam">Islam</a>
       <a href="/naat">Naat</a>
