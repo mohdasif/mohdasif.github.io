@@ -774,8 +774,6 @@ nav ul li {
 .bottom-nav {
   position: fixed;
   bottom: 16px;
-  left: 5%;
-  transform: translateX(-5%);
   background: transparent;
   display: flex;
   justify-content: center;
@@ -786,6 +784,21 @@ nav ul li {
   box-shadow: none;
 }
 
+/* Desktop - centered */
+@media (min-width: 601px) {
+  .bottom-nav {
+    left: 10%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile - aligned to left */
+@media (max-width: 600px) {
+  .bottom-nav {
+    left: 10px;
+    transform: none;
+  }
+}
 
 
 .menu-wrapper {
@@ -840,6 +853,39 @@ nav ul li {
   background-color: #f2f2f2;
 }
 
+/* By default, hide both */
+.mobile-only,
+.desktop-only {
+  display: none;
+}
+
+/* Show mobile version under 600px */
+@media (max-width: 600px) {
+  .mobile-only {
+    display: inline-flex;
+  }
+}
+
+/* Show desktop version 601px and above */
+@media (min-width: 601px) {
+  .desktop-only {
+    display: inline-flex;
+  }
+}
+@media (max-width: 600px) {
+  .menu-button {
+    background: transparent;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  .bottom-nav {
+    bottom: 50px; /* adjust this value to move it higher or lower */
+  }
+}
 
 </style>
 
@@ -869,10 +915,16 @@ nav ul li {
         <a href="/contact"><i class="fa-solid fa-comment-dots comment-thin-style" style="font-size: 18px;"></i></a>
     </div>
 
-    <!-- Bottom Navigation for Mobile -->
+<!-- Bottom Navigation -->
 <div class="bottom-nav">
   <div class="menu-wrapper">
-    <button class="menu-button" onclick="toggleMenu()">⋯</button>
+    
+    <!-- Mobile version (⋮) -->
+    <button class="menu-button mobile-only" onclick="toggleMenu()">⋮</button>
+
+    <!-- Desktop version (⋯) -->
+    <button class="menu-button desktop-only" onclick="toggleMenu()">⋯</button>
+
     <div class="dropdown" id="menu">
       <a href="/islam">Islam</a>
       <a href="/naat">Naat</a>
@@ -880,8 +932,10 @@ nav ul li {
       <a href="/quran">Quran</a>
       <a href="/stories">Stories</a>
     </div>
+
   </div>
 </div>
+
 
 
 <div class="menu-toggle"><i class="fa-solid fa-bars bars-light-style"></i></div>
