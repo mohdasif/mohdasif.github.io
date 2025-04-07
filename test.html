@@ -883,9 +883,23 @@ nav ul li {
 }
 @media (max-width: 600px) {
   .bottom-nav {
-    bottom: 50px; /* adjust this value to move it higher or lower */
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: 20px;
+    transform: translateY(-50%);
   }
 }
+@media (max-width: 600px) {
+  .dropdown {
+    left: auto;
+    right: 40px; /* Adjust as needed to align it to the left of the button */
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
 
 </style>
 
