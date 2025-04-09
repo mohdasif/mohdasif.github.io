@@ -749,11 +749,11 @@ nav ul li {
       <i class="fa-solid fa-chevron-up" style="color: #808080;"></i>
   </div>
 
-  <style>
+    <style>
         /* Move to Top Button */
         .move-to-top {
             position: fixed;
-            bottom: 20px; /* Distance from the bottom */
+            bottom: 10px; /* Distance from the bottom */
             left: 50%; /* Move it to the horizontal center */
             margin-bottom: 10px;
             transform: translateX(-50%); /* Offset it by half its width to truly center */
@@ -778,14 +778,16 @@ nav ul li {
         opacity: 1; /* Fully visible */
     }
 
-    /* Adjust the button for larger screens (desktop) */
-    @media (min-width: 768px) {
-        .move-to-top {
-            left: auto; /* Remove left positioning */
-            right: 20px; /* Fixed to the right side */
-        }
+/* Adjust for desktop */
+@media (min-width: 601px) {
+    .move-to-top {
+        left: auto;
+        right: 100px; /* Slightly more to the left than 20px */
+        bottom: 15px; /* Slightly lower */
+        transform: none;
     }
-  </style>
+}
+    </style>
 
     <script>
 // Move to Top Button functionality
@@ -821,7 +823,7 @@ function handleScroll() {
         if (currentScrollY + windowHeight >= documentHeight - 10) {
             moveToTopButton.style.bottom = "20px"; // Move up when at page end
         } else {
-            moveToTopButton.style.bottom = "10px"; // Default position on mobile
+            moveToTopButton.style.bottom = "20px"; // Default position on mobile
         }
     } else {
         // Default position for desktops (no extra shift)
