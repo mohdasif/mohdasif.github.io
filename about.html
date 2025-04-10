@@ -405,7 +405,7 @@
         height: 100%;
         width: 125px; /* Adjusted width for the sidebar */
         position: fixed;
-        top: 0;
+        top: 45px;
         left: 15px;
         background-color: #f5f5f5;
         overflow-x: hidden;
@@ -647,7 +647,6 @@ nav li a {
 }
 
     #sidebar .sidebar-section a.active {
-    margin-top: 40px; /* Adjust the value as needed for the desired gap */
     display: block;   /* Ensures the margin works effectively */
 }
 #sidebar .spacer {
@@ -736,11 +735,18 @@ nav ul li {
       background-color: #f1f1f1;
       padding: 50px 0;
     }
+    #mobile-navigation i {
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
 /* Thin-style for all icons: black by default, grey on hover */
 .house-thin-style,
 .feather-thin-style,
+.bag-thin-style,
 .camera-thin-style,
 .play-thin-style,
+.amazon-brand-style,
 .comment-thin-style {
   color: transparent;
   -webkit-text-stroke: 0.8px #000; /* black outline by default */
@@ -749,9 +755,11 @@ nav ul li {
   transition: all 0.3s ease;
 }
 
+.amazon-brand-style:hover,
 .house-thin-style:hover,
 .feather-thin-style:hover,
 .camera-thin-style:hover,
+.bag-thin-style:hover,
 .play-thin-style:hover,
 .comment-thin-style:hover {
   -webkit-text-stroke: 0.8px #6C757D; /* soft grey on hover */
@@ -915,51 +923,23 @@ nav ul li {
 }
 </style>
 
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
-  }
-
-  const menuWrapper = document.querySelector('.menu-wrapper');
-  const desktopQuery = window.matchMedia('(min-width: 601px)');
-
-  function closeMenuIfClickedOutside(e) {
-    if (!menuWrapper.contains(e.target)) {
-      document.getElementById('menu').classList.remove('show');
-    }
-  }
-
-  window.addEventListener('click', closeMenuIfClickedOutside);
-  window.addEventListener('touchstart', closeMenuIfClickedOutside); // 👈 this fixes mobile
-
-  function updateMenuVisibility() {
-    const scrollTop = window.scrollY;
-    const scrollBottom = window.innerHeight + scrollTop >= document.body.scrollHeight;
-
-    if (desktopQuery.matches) {
-      menuWrapper.style.display = 'inline-flex';
-    } else {
-      if (scrollTop === 0 || scrollBottom) {
-        menuWrapper.style.display = 'inline-flex';
-      } else {
-        menuWrapper.style.display = 'none';
-        document.getElementById('menu').classList.remove('show');
-      }
-    }
-  }
-
-  window.addEventListener('scroll', updateMenuVisibility);
-  window.addEventListener('resize', updateMenuVisibility);
-
-  document.addEventListener("DOMContentLoaded", () => {
-    updateMenuVisibility();
-  });
-</script>
-
-</head>
-
+<!-- Move to Top Button -->
+<div id="moveToTop" class="move-to-top">
+    <i class="fa-solid fa-chevron-up" style="color: #1ABC9C;"></i>
+</div>
+    
 <body>
+<!-- Sidebar -->
+<div id="sidebar">
+    <div class="sidebar-section">
+        <a href="https://mohdasif.com">Home</a>
+        <a href="https://mohdasif.com/islam">Islam</a>
+        <a href="https://mohdasif.com/fitness">Fitness</a>
+        <a href="https://mohdasif.com/books">Books</a>
+        <a href="https://mohdasif.in" class="active">Poetry</a>
+    </div>
+</div>
+
 
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
@@ -981,7 +961,8 @@ nav ul li {
         <a href="/play"><i class="fa-solid fa-play play-thin-style" style="font-size: 18px;"></i></a>
         <a href="/contact"><i class="fa-solid fa-comment-dots comment-thin-style" style="font-size: 18px;"></i></a>
     </div>
-
+  
+    
 <!-- Bottom Navigation -->
 <div class="bottom-nav">
   <div class="menu-wrapper">
@@ -1011,9 +992,9 @@ nav ul li {
     <ul>
     <li><h4 style="margin-bottom: 50px;"></h4></li>
     <li><a href="/about">About</a></li>
-    <li><a href="/islam">Islam</a></li>
-    <li><a href="/fitness">Fitness</a></li>
-    <li><a href="/books">Books</a></li>
+    <li><a href="https://mohdasif.com/islam">Islam</a></li>
+    <li><a href="https://mohdasif.com/fitness">Fitness</a></li>
+    <li><a href="https://mohdasif.com/books">Books</a></li>
     </ul>
 </nav>
 
@@ -1170,6 +1151,48 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeNav() {
         document.querySelector(".sidebar").style.width = "0";
     }
+</script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+
+  const menuWrapper = document.querySelector('.menu-wrapper');
+  const desktopQuery = window.matchMedia('(min-width: 601px)');
+
+  function closeMenuIfClickedOutside(e) {
+    if (!menuWrapper.contains(e.target)) {
+      document.getElementById('menu').classList.remove('show');
+    }
+  }
+
+  window.addEventListener('click', closeMenuIfClickedOutside);
+  window.addEventListener('touchstart', closeMenuIfClickedOutside); // 👈 this fixes mobile
+
+  function updateMenuVisibility() {
+    const scrollTop = window.scrollY;
+    const scrollBottom = window.innerHeight + scrollTop >= document.body.scrollHeight;
+
+    if (desktopQuery.matches) {
+      menuWrapper.style.display = 'inline-flex';
+    } else {
+      if (scrollTop === 0 || scrollBottom) {
+        menuWrapper.style.display = 'inline-flex';
+      } else {
+        menuWrapper.style.display = 'none';
+        document.getElementById('menu').classList.remove('show');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateMenuVisibility);
+  window.addEventListener('resize', updateMenuVisibility);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateMenuVisibility();
+  });
 </script>
 <br>
 </body>
