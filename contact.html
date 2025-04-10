@@ -406,8 +406,8 @@
         height: 100%;
         width: 125px; /* Adjusted width for the sidebar */
         position: fixed;
-        top: 0;
-        left: 5px;
+        top: 45px;
+        left: 15px;
         background-color: #f5f5f5;
         overflow-x: hidden;
         transition: 0.5s;
@@ -648,7 +648,6 @@ nav li a {
 }
 
     #sidebar .sidebar-section a.active {
-    margin-top: 40px; /* Adjust the value as needed for the desired gap */
     display: block;   /* Ensures the margin works effectively */
 }
 #sidebar .spacer {
@@ -737,11 +736,18 @@ nav ul li {
       background-color: #f1f1f1;
       padding: 50px 0;
     }
+    #mobile-navigation i {
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
 /* Thin-style for all icons: black by default, grey on hover */
 .house-thin-style,
 .feather-thin-style,
+.bag-thin-style,
 .camera-thin-style,
 .play-thin-style,
+.amazon-brand-style,
 .comment-thin-style {
   color: transparent;
   -webkit-text-stroke: 0.8px #000; /* black outline by default */
@@ -750,9 +756,11 @@ nav ul li {
   transition: all 0.3s ease;
 }
 
+.amazon-brand-style:hover,
 .house-thin-style:hover,
 .feather-thin-style:hover,
 .camera-thin-style:hover,
+.bag-thin-style:hover,
 .play-thin-style:hover,
 .comment-thin-style:hover {
   -webkit-text-stroke: 0.8px #6C757D; /* soft grey on hover */
@@ -772,13 +780,167 @@ nav ul li {
   -webkit-text-stroke: 0.9px #000;
   opacity: 1;
 }
+.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 0;
+  z-index: 999;
+  box-shadow: none;
+}
+
+/* Desktop - centered */
+@media (min-width: 601px) {
+  .bottom-nav {
+    left: 15%;
+    transform: translateX(-80%);
+  }
+}
+
+/* Mobile - aligned to right middle */
+@media (max-width: 600px) {
+  .bottom-nav {
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: 3px;
+    transform: translateY(-50%);
+  }
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+/* Menu button styled as a circle (desktop) */
+.menu-button {
+  background: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+/* Menu button on mobile - flat look */
+@media (max-width: 600px) {
+  .menu-button {
+    background: transparent;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+/* Bottom dropdown menu */
+.dropdown {
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: none;
+  z-index: 1000;
+
+  width: auto;
+  max-width: 250px;
+  min-width: 140px;
+  padding: 10px 12px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* Show the dropdown */
+.dropdown.show {
+  display: block;
+}
+
+/* Dropdown link styles */
+.dropdown a {
+  display: block;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Desktop position: center under button */
+@media (min-width: 601px) {
+  .dropdown {
+    left: 80%;
+    bottom: 70px;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .dropdown {
+    left: auto;
+    right: 40px; /* Adjust as needed to align it to the left of the button */
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* Show/hide per device */
+.mobile-only,
+.desktop-only {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-only {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 601px) {
+  .desktop-only {
+    display: inline-flex;
+  }
+}
+@media (min-width: 601px) {
+  .dropdown {
+    left: 70%; /* a bit more right than 60% */
+    bottom: 70px;
+    transform: translateX(-25%) translateY(-10px); /* balances the shift */
+  }
+}
 </style>
 
-</head>
-
-<body>
-    
+<!-- Move to Top Button -->
+<div id="moveToTop" class="move-to-top">
+    <i class="fa-solid fa-chevron-up" style="color: #1ABC9C;"></i>
 </div>
+    
+<body>
+<!-- Sidebar -->
+<div id="sidebar">
+    <div class="sidebar-section">
+        <a href="https://mohdasif.com">Home</a>
+        <a href="https://mohdasif.com/islam">Islam</a>
+        <a href="https://mohdasif.com/fitness">Fitness</a>
+        <a href="https://mohdasif.com/books">Books</a>
+        <a href="https://mohdasif.in" class="active">Poetry</a>
+    </div>
+</div>
+
 
     <!-- Desktop Navigation -->
     <div id="desktop-navigation">
@@ -786,10 +948,9 @@ nav ul li {
         <a href="/blog">Blog</a>
         <a href="/about">About</a>
         <a href="https://mohdasif.in/store">Store</a> 
-     
         
         <a href="/photos" style="position: absolute; right: 200px;"><i class="fa-solid fa-camera"></i></a>
-        <a href="/videos" style="position: absolute; right: 160px;"><i class="fa-solid fa-clapperboard"></i></a>
+        <a href="/videos" style="position: absolute; right: 162px;"><i class="fa-solid fa-clapperboard"></i></a>
         <a href="/music" style="position: absolute; right: 140px;"><i class="fa-solid fa-headphones"></i></a> 
     </div>
 
@@ -801,18 +962,40 @@ nav ul li {
         <a href="/play"><i class="fa-solid fa-play play-thin-style" style="font-size: 18px;"></i></a>
         <a href="/contact"><i class="fa-solid fa-comment-dots comment-thin-style" style="font-size: 18px;"></i></a>
     </div>
+  
+    
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+  <div class="menu-wrapper">
+    
+    <!-- Mobile version (⋮) -->
+    <button class="menu-button mobile-only" onclick="toggleMenu()">||</button>
+
+    <!-- Desktop version (⋯) -->
+    <button class="menu-button desktop-only" onclick="toggleMenu()">⋯</button>
+
+    <div class="dropdown" id="menu">
+        <a href="https://www.tumblr.com/mohdasif">Tumblr</a>
+        <a href="https://www.youtube.com/@mohdasif">YouTube</a>
+        <a href="https://goodreads.com/mohdasif">Goodreads</a>
+        <a href="https://quora.com/mohdasif">Quora</a>
+        <a href="https://github.com/mohdasif">GitHub</a>
+        <a href="https://tinder.com/@mohdasif">Tinder</a>
+    </div>
+
+  </div>
+</div>
+
 
 <div class="menu-toggle"><i class="fa-solid fa-bars bars-light-style"></i></div>
 <nav>
     <ul>
     <li><h4 style="margin-bottom: 50px;"></h4></li>
-    <li><a href="https://www.tumblr.com/mohdasif">Tumblr</a></li>
-    <li><a href="https://www.youtube.com/@mohdasif">YouTube</a></li>
-    <li><a href="https://pinterest.com/mohdasif">Pinterest</a></li>
-    <li><a href="https://goodreads.com/mohdasif">Goodreads</a></li>
-    <li><a href="https://quora.com/mohdasif">Quora</a></li>
-    <li><a href="https://github.com/mohdasif">GitHub</a></li>
-  </ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/islam">Islam</a></li>
+    <li><a href="/fitness">Fitness</a></li>
+    <li><a href="/books">Books</a></li>
+    </ul>
 </nav>
 
 
@@ -917,7 +1100,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </a>
         </li>
         <li style="margin-bottom: 10px; text-align: center;">
-            <a href="https://www.linkedin.com/in/mohdasif" class="blank-button" style="display: inline-block; padding: 6px 16px; border: 1px solid #999; border-radius: 15px; cursor: pointer; max-width: 180px; margin: auto; text-decoration: none; color: grey;">
+            <a href="https://linkedin.com/in/mohdasif" class="blank-button" style="display: inline-block; padding: 6px 16px; border: 1px solid #999; border-radius: 15px; cursor: pointer; max-width: 180px; margin: auto; text-decoration: none; color: grey;">
                 Linkedin
             </a>
         </li>
@@ -956,7 +1139,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <p><a href="https://www.confessout.com/mohdasif" target="_blank">confessout.com/mohdasif</a></p>
     </div>
 </div>
-
 </div>
 
 <!-- Footer Section -->
@@ -982,8 +1164,49 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector(".sidebar").style.width = "0";
     }
 </script>
-<br>
 
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+
+  const menuWrapper = document.querySelector('.menu-wrapper');
+  const desktopQuery = window.matchMedia('(min-width: 601px)');
+
+  function closeMenuIfClickedOutside(e) {
+    if (!menuWrapper.contains(e.target)) {
+      document.getElementById('menu').classList.remove('show');
+    }
+  }
+
+  window.addEventListener('click', closeMenuIfClickedOutside);
+  window.addEventListener('touchstart', closeMenuIfClickedOutside); // 👈 this fixes mobile
+
+  function updateMenuVisibility() {
+    const scrollTop = window.scrollY;
+    const scrollBottom = window.innerHeight + scrollTop >= document.body.scrollHeight;
+
+    if (desktopQuery.matches) {
+      menuWrapper.style.display = 'inline-flex';
+    } else {
+      if (scrollTop === 0 || scrollBottom) {
+        menuWrapper.style.display = 'inline-flex';
+      } else {
+        menuWrapper.style.display = 'none';
+        document.getElementById('menu').classList.remove('show');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateMenuVisibility);
+  window.addEventListener('resize', updateMenuVisibility);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateMenuVisibility();
+  });
+</script>
+<br>
 </body>
 
 </html>
