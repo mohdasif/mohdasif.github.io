@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asif | Mushaira</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="icon" href="https://imgur.com/yMpZ3pQ.png" />
+    <style>
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'Teimpos', 'Roboto', 'Sentinel', 'Helvetica', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #desktop-navigation,
+        #mobile-navigation {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Styles for desktop navigation */
+        #desktop-navigation {
+            background-color: #333;
+            color: #fff;
+            padding: 7px 0px; /* Consistent padding */
+            font-size: 18.7px; /* Font size */
+            font-weight: bold;
+            display: block; /* Ensure visibility */
+        }
+
+        #desktop-navigation a,
+        #mobile-navigation a {
+            color: inherit;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Make sure the links are on separate lines */
+        }
+
+        #desktop-navigation a:last-child {
+            margin-right: 0; /* Remove margin from the last element */
+        }
+
+#mobile-navigation {
+    background-color: #FDFCFA;
+    color: #000;
+    padding: 10px;
+    display: none;
+    font-size: 18px; /* Adjust the font size as needed */
+    position: fixed; /* Ensure it stays fixed on the screen */
+    top: 0; /* Align to the top edge */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Make it full width */
+}
+
+#mobile-navigation a:first-child {
+    margin-left: 33px; /* Adjust this value as needed to create the desired space */
+}
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        section {
+            padding: 10px 20px;
+            text-align: left;
+        }
+
+        .blog-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns, each taking up one-third of the available space */
+            gap: 20px; /* Gap between grid items */
+            grid-auto-flow: dense; /* Dense packing of grid items */
+        }
+
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+            margin-bottom: 10px;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card iframe {
+            width: 100%;
+            height: 237px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* CSS for centering only the heading "Latest Blog Posts" */
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px; /* Add margin for spacing */
+        }
+        .categories {
+        text-align: center;
+        margin-bottom: 45px;
+        padding: 10px 23px 10px 25px; /* Adjusted padding */
+        overflow-x: auto; /* Enable horizontal scrolling without displaying the scrollbar */
+        white-space: nowrap; /* Prevent categories from wrapping */
+    }
+
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) */
+        .categories::-webkit-scrollbar {
+        display: none;
+    }
+
+        .category-link {
+        display: inline-block; /* Display categories in a row */
+        margin-right: 18px; /* Adjusted margin for space between category links */
+        color: #000;
+        text-decoration: none;
+        padding: 3px 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        font-weight: normal; /* Set font weight to normal */
+    }
+
+    .category-link:hover {
+        background-color: #e0e0e0;
+    }
+
+
+
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .blog-cards {
+                grid-template-columns: 1fr; /* Single column layout on mobile */
+            }
+
+            .blog-card iframe {
+                height: 205px; /* Adjusted height for mobile */
+            }
+
+            section {
+                padding: 10px 10px; /* Adjust padding for mobile */
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: #4285f4;
+            font-weight: normal;
+        }
+
+        a:hover {
+            text-decoration: none; /* Remove underline on hover */
+        }
+    /* Sidebar styles */
+    #sidebar {
+        height: 100%;
+        width: 125px; /* Adjusted width for the sidebar */
+        position: fixed;
+        top: 45px;
+        left: 15px;
+        background-color: #f5f5f5;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 32px;
+    }
+        
+        /* Style sidebar section headings */
+.sidebar-section h4 {
+    margin: 20px 0; /* Adjust top and bottom margin to create a gap */
+    margin-bottom: 5px; /* Add space below the heading */
+    padding: 10px; /* Add padding to the heading */
+    font-size: 16px; /* Adjust the font size of the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the color of the heading */
+}
+
+        #sidebar a {
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+    background-color: #f9f9f9; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 9px;
+            left: 33px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 33%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+            top: 0; /* Position at the top */
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+    margin-bottom: 3px;
+
+}
+nav ul li:first-child {
+    margin-top: 15px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-bottom: 10px; /* Add space above all h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 35px; /* Add additional space above the first h4 */
+margin-bottom: 20px; /* Add additional space above the first h4 */
+}
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+
+
+        @media only screen and (max-width: 600px) {
+            /* Show mobile navigation and hide desktop navigation on small screens */
+            #desktop-navigation {
+                display: none;
+            }
+
+            #mobile-navigation {
+                display: block;
+            }
+
+            .content-container {
+                margin-left: 0; /* Reset margin for small screens */
+            }
+
+            #sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+        }
+        /* Reduce the size of the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+}
+
+/* Handle for the scrollbar */
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar handle */
+    border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Track for the scrollbar */
+#sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+/* Corner of the scrollbar */
+#sidebar::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corner */
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+
+/* Active link styles */
+.categories a.active {
+  color: #fff; /* Text color for active link */
+  background-color: #007E8F; /* Background color for active link */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2px 5px; /* Increase the size of the background color */
+  margin-right: 20px; /* Move the active button slightly to the right */
+  text-decoration: none;
+}
+/* Adjusting margin to reduce gap between sections */
+.container {
+    margin-top: 60px; /* Adjust as needed */
+    margin-bottom: -40px; /* Adjust as needed */
+}
+.footer {
+      background-color: #f8f8f8;
+      padding: 40px 0;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      flex: 1 0 100%;
+      padding-left: 20px; /* Add left padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+      margin-bottom: 20px;
+      text-align: left; /* Align text to the left */
+    }
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left; /* Align title to the left */
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .footer-section ul li a:hover {
+      color: #007bff;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .privacy-policy {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+        @media (min-width: 768px) {
+            .footer-section {
+                flex: 1; /* Adjust width for desktop to allow sections to grow */
+            }
+
+            .footer-section:first-child {
+                text-align: left; /* Align first section (Pages) to the left */
+            }
+
+            .footer-section:last-child {
+                text-align: right; /* Align last section (Shop) to the right */
+            }
+        }
+        
+        .menu-toggle {
+            display: block; /* Show the menu toggle by default */
+            position: fixed;
+            top: 9px;
+            left: 33px;
+            font-size: 21px; /* Increase the font size */
+            cursor: pointer;
+            z-index: 1000; /* Ensure the menu icon is on top */
+        }
+
+        nav {
+            float: left;
+            width: 33%;
+            background-color: #f1f1f1;
+            padding: 32px;
+            height: 100vh;
+            position: fixed;
+            top: 0; /* Position at the top */
+            overflow: auto;
+            transition: transform 0.9s ease;
+            transform: translateX(-100%);
+            z-index: 999; /* Ensure the sidebar is on top */
+        }
+        nav.menu-open {
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+    margin-bottom: 10px;
+
+}
+nav ul li:first-child {
+    margin-top: 15px; /* Adjust the margin as needed */
+}
+
+nav ul h4 {
+    margin-bottom: 10px; /* Add space above all h4 elements */
+}
+
+nav ul h4:first-of-type {
+    margin-top: 35px; /* Add additional space above the first h4 */
+margin-bottom: 20px; /* Add additional space above the first h4 */
+}
+
+nav, nav ul, nav li, nav a, nav h4 {
+    font-weight: normal !important; /* Ensure all elements inside nav have normal font weight */
+}
+
+/* Target all links inside the navigation */
+nav li a {
+  background-color: #fff; /* White background */
+  color: grey;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 110px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 14px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  margin-left: -5px;
+}
+/* Specific styling for Videos link */
+nav ul li a[href='/videos'] {
+  background-color: grey; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 110px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  line-height: 15px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  font-size:15px;
+}
+
+
+/* Specific styling for Mushaira link */
+nav ul li a[href='/mushaira'] {
+  background-color: grey; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 110px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  line-height: 15px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  font-size:15px;
+}
+
+
+/* Specific styling for Tumblr link */
+nav ul li a[href='https://www.tumblr.com/mohdasif'] {
+  background-color: #808080; /* White background */
+  color: white;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 13px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+
+/**** STYLE FOR ALL NAV LINKS BUT SKIP FIRST TWO ****/
+
+/* Style only the links AFTER "Links" heading */
+nav ul li:nth-child() a {
+  background-color: #fff; /* White background */
+  color: grey;
+  padding: 10px 0; /* Top & Bottom padding */
+  width: 100px;    /* Fixed width for all buttons */
+  height: 35px;    /* Fixed height */
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  line-height: 14px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+/* Optional: Remove bullet points from all <li> */
+nav ul li {
+  list-style-type: none;
+}
+    /* Media query to hide the menu toggle on desktop view */
+    @media (min-width: 601px) {
+        .menu-toggle {
+            display: none; /* Hide the menu toggle on larger screens */
+        }
+    }
+    .footer {
+      background-color: #f8f8f8;
+      padding: 40px 0;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      flex: 1 0 100%;
+      padding-left: 20px; /* Add left padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+      margin-bottom: 20px;
+      text-align: left; /* Align text to the left */
+    }
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left; /* Align title to the left */
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .footer-section ul li a:hover {
+      color: #007bff;
+      font-weight: normal; /* Change font weight to normal */
+    }
+    .privacy-policy {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+        @media (min-width: 768px) {
+            .footer-section {
+                flex: 1; /* Adjust width for desktop to allow sections to grow */
+            }
+
+            .footer-section:first-child {
+                text-align: left; /* Align first section (Pages) to the left */
+            }
+
+            .footer-section:last-child {
+                text-align: right; /* Align last section (Shop) to the right */
+            }
+        }
+        .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push footer down */
+    height: 100vh; /* Full height */
+}
+
+.menu {
+    flex-grow: 1; /* Push footer down */
+    padding-bottom: 50px; /* Creates space between menu and footer */
+}
+
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 60px 0;
+    width: 100%;
+    margin-left: -15px; /* Adjust the value as needed */
+}
+
+
+        .footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 5px 0; /* Reduce padding */
+    width: 100%;
+    font-size: 13px; /* Reduce font size */
+    display: flex;
+    justify-content: center;
+    gap: 3px; /* Reduce spacing between links */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Ensure links don't have extra margin */
+.footer a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0; /* Removes unwanted space */
+    display: inline-block;
+    white-space: nowrap; /* Prevents breaking into multiple lines */
+    padding: 0 2px; /* Add small padding to avoid touching */
+}
+    .footer {
+      background-color: #f1f1f1;
+      padding: 50px 0;
+    }
+
+    /* Thin-style for all icons: black by default, grey on hover */
+.house-thin-style,
+.feather-thin-style,
+.bag-thin-style,
+.camera-thin-style,
+.play-thin-style,
+.amazon-brand-style,
+.comment-thin-style {
+  color: transparent;
+  -webkit-text-stroke: 0.8px #000; /* black outline by default */
+  font-size: 24px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.amazon-brand-style:hover,
+.house-thin-style:hover,
+.feather-thin-style:hover,
+.camera-thin-style:hover,
+.bag-thin-style:hover,
+.play-thin-style:hover,
+.comment-thin-style:hover {
+  -webkit-text-stroke: 0.8px #6C757D; /* soft grey on hover */
+  opacity: 0.85;
+}
+
+.bars-light-style {
+  color: transparent;
+  -webkit-text-stroke: 0.9px #333;  /* mimic light look */
+  font-size: 24px;
+  transform: scale(0.85);           /* scale down to match visual size */
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.bars-light-style:hover {
+  -webkit-text-stroke: 0.9px #000;
+  opacity: 1;
+}
+
+    </style>
+
+
+  </head>
+
+  <body>
+    
+    <!-- Desktop Navigation -->
+    <div id="desktop-navigation">
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="https://mohdasif.in">Shop</a>     
+        
+        <a href="https://x.com/mohdasif" style="position: absolute; right: 200px;"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/mohdasif" style="position: absolute; right: 162px;"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:hi@mohdasif.com" style="position: absolute; right: 140px;"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <!-- Mobile Navigation -->  
+    <div id="mobile-navigation">  
+        <a href="/"><i class="fa-solid fa-house house-thin-style" style="font-size: 18px;"></i></a>
+        <a href="/blog"><i class="fa-solid fa-feather feather-thin-style" style="font-size: 18px;"></i></a>
+        <a href="/photos"><i class="fa-solid fa-camera camera-thin-style" style="font-size: 18px;"></i></a>
+        <a href="/play"><i class="fa-solid fa-play play-thin-style" style="font-size: 18px;"></i></a>
+        <a href="/contact"><i class="fa-solid fa-comment-dots comment-thin-style" style="font-size: 18px;"></i></a>
+    </div>
+    
+
+<div class="menu-toggle"><i class="fa-solid fa-bars bars-light-style"></i></div>
+<nav>
+    <ul>
+    <li><h4 style="margin-bottom: 50px;"></h4></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/islam">Islam</a></li>
+    <li><a href="/fitness">Fitness</a></li>
+    <li><a href="/books">Books</a></li>
+    </ul>
+</nav>
+
+<!-- Place this script at the bottom of the page -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const isAndroid = /android/i.test(navigator.userAgent);
+
+  if (isAndroid) {
+    const intentMap = {
+      'youtube.com': 'intent://www.youtube.com/@mohdasif/shorts#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=https%3A%2F%2Fwww.youtube.com%2F@mohdasif%2Fshorts;end;',
+      'm.youtube.com': 'intent://www.youtube.com/@mohdasif/shorts#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=https%3A%2F%2Fwww.youtube.com%2F@mohdasif%2Fshorts;end;',
+      'pinterest.com': 'intent://user/mohdasif#Intent;scheme=pinterest;package=com.pinterest;S.browser_fallback_url=https%3A%2F%2Fpinterest.com%2Fmohdasif;end;',
+      'tumblr.com': 'intent://mohdasif.tumblr.com#Intent;scheme=https;package=com.tumblr;S.browser_fallback_url=https%3A%2F%2Fwww.tumblr.com%2Fmohdasif;end;',
+      'twitter.com': 'intent://user?screen_name=mohdasif#Intent;scheme=twitter;package=com.twitter.android;S.browser_fallback_url=https%3A%2F%2Fx.com%2Fmohdasif;end;',
+      'x.com': 'intent://user?screen_name=mohdasif#Intent;scheme=twitter;package=com.twitter.android;S.browser_fallback_url=https%3A%2F%2Fx.com%2Fmohdasif;end;',
+    };
+
+    document.querySelectorAll('a[href^="http"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        const url = new URL(link.href);
+        const host = url.hostname.replace('www.', '');
+
+        // Special handling for Telegram
+        if (host === 'telegram.me' || host === 't.me') {
+          e.preventDefault();
+
+          // First try tg://
+          window.location.href = 'tg://resolve?domain=mohdasif';
+
+          // Fallback to intent:// after 1s if tg:// fails
+          setTimeout(function () {
+            window.location.href =
+              'intent://resolve?domain=mohdasif#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=https%3A%2F%2Ftelegram.me%2Fmohdasif;end;';
+          }, 1000);
+        } else if (intentMap[host]) {
+          e.preventDefault();
+          window.location.href = intentMap[host];
+        }
+      });
+    });
+  }
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const amazonLink = document.getElementById('amazonLink');
+
+  amazonLink.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const androidIntentLink = 'intent://www.amazon.in/shop/mohdasif#Intent;scheme=https;package=in.amazon.mShop.android.shopping;end;';
+    const fallbackUrl = 'https://www.amazon.in/shop/mohdasif';
+
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(userAgent)) {
+      window.location.href = androidIntentLink;
+      setTimeout(() => {
+        window.location.href = fallbackUrl; // Fallback in case the intent fails
+      }, 1500);
+    } else {
+      window.location.href = fallbackUrl; // iOS and Desktop
+    }
+  });
+});
+</script>
+
+    <div class="container">
+      <div class="categories">
+
+      </div>
+    </div>
+
+    <section>
+      <div class="blog-cards">
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/QtjLwA9Ydxc"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/YZp74ls2NT0"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/qrbHlqHYkv0"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/X0nXMTsxhWg"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/XcUe3vTYq78"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/QfabxJkNRHg"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/4nOrTcsf7ow"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/mB8-GJIAWuU"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/L2rKhYp9XV4"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/O1KQawtyeiw"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/N6myDseM28Y"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/Fs3O6iGj77Q"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/T5LdaKa6TIo"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/ehv34LUn3sg"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/r3XAKip-cZc"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/ZcpijYmUNM0"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/YSU8njtRia4"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="blog-card">
+          <iframe
+            src="https://www.youtube.com/embed/C79dWo7z9vw"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.toggle("menu-open");
+        });
+
+      function openNav() {
+        document.querySelector(".sidebar").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.querySelector(".sidebar").style.width = "0";
+      }
+    </script>
+    <!-- Other existing content -->
+
+    <!-- Move to Top Button -->
+    <div id="moveToTop" class="move-to-top">
+      <i class="fa-solid fa-chevron-up" style="color: #808080;"></i>
+  </div>
+
+    <style>
+        /* Move to Top Button */
+        .move-to-top {
+            position: fixed;
+            bottom: 10px; /* Distance from the bottom */
+            left: 50%; /* Move it to the horizontal center */
+            margin-bottom: 10px;
+            transform: translateX(-50%); /* Offset it by half its width to truly center */
+            font-size: 17px; /* Icon size */
+            color: #333333; /* Black arrow color */
+            background-color: #ffffff; /* Slightly off-white background */
+            border-radius: 50%; /* Circle shape */
+            width: 35px; /* Circle size */
+            height: 35px; /* Circle size */
+            display: flex; /* Flexbox for centering the icon */
+            justify-content: center; /* Center horizontally inside the button */
+            align-items: center; /* Center vertically inside the button */
+            cursor: pointer; /* Pointer on hover */
+            z-index: 1000; /* Ensure it's above other elements */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s, color 0.3s, transform 0.3s; /* Smooth effects */
+        }
+
+
+    /* Show button when visible */
+    .move-to-top.visible {
+        opacity: 1; /* Fully visible */
+    }
+
+/* Adjust for desktop */
+@media (min-width: 601px) {
+    .move-to-top {
+        left: auto;
+        right: 100px; /* Slightly more to the left than 20px */
+        bottom: 15px; /* Slightly lower */
+        transform: none;
+    }
+}
+    </style>
+
+    <script>
+// Move to Top Button functionality
+const moveToTopButton = document.getElementById('moveToTop');
+let lastScrollY = window.scrollY;
+
+function handleScroll() {
+    const currentScrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (window.innerWidth >= 768) {
+        // Desktop: Show after scrolling 100px
+        if (currentScrollY > 100) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
+    } else {
+        // Mobile: Show when scrolling up past 300px OR near bottom 80%
+        if (
+            (currentScrollY < lastScrollY && currentScrollY > 300) ||
+            (currentScrollY + windowHeight > documentHeight * 0.8)
+        ) {
+            moveToTopButton.classList.add('visible');
+        } else {
+            moveToTopButton.classList.remove('visible');
+        }
+    }
+
+    // Apply special behavior only for mobile (≤600px)
+    if (window.innerWidth <= 600) {
+        if (currentScrollY + windowHeight >= documentHeight - 10) {
+            moveToTopButton.style.bottom = "20px"; // Move up when at page end
+        } else {
+            moveToTopButton.style.bottom = "20px"; // Default position on mobile
+        }
+    } else {
+        // Default position for desktops (no extra shift)
+        moveToTopButton.style.bottom = "20px";
+    }
+
+    lastScrollY = currentScrollY;
+}
+
+window.addEventListener('scroll', handleScroll);
+
+moveToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});
+
+// Initial state check on load
+handleScroll();
+    </script>
+
+    
+ <script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+
+  const menuWrapper = document.querySelector('.menu-wrapper');
+  const desktopQuery = window.matchMedia('(min-width: 601px)');
+
+  function closeMenuIfClickedOutside(e) {
+    if (!menuWrapper.contains(e.target)) {
+      document.getElementById('menu').classList.remove('show');
+    }
+  }
+
+  window.addEventListener('click', closeMenuIfClickedOutside);
+  window.addEventListener('touchstart', closeMenuIfClickedOutside); // 👈 this fixes mobile
+
+  function updateMenuVisibility() {
+    const scrollTop = window.scrollY;
+    const scrollBottom = window.innerHeight + scrollTop >= document.body.scrollHeight;
+
+    if (desktopQuery.matches) {
+      menuWrapper.style.display = 'inline-flex';
+    } else {
+      if (scrollTop === 0 || scrollBottom) {
+        menuWrapper.style.display = 'inline-flex';
+      } else {
+        menuWrapper.style.display = 'none';
+        document.getElementById('menu').classList.remove('show');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateMenuVisibility);
+  window.addEventListener('resize', updateMenuVisibility);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateMenuVisibility();
+  });
+</script>   
+
+    <!-- Footer Section -->
+    <div class="privacy-policy">
+        <p>Content on this page embedded from YouTube</p>
+    </div>
+</div>
+
+</footer>
+</div> <!-- Close the page-container div here. -->
+
+
+</body>
+</html>
