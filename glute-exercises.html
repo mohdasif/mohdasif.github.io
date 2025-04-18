@@ -537,7 +537,7 @@ nav ul li {
         <a href="/">Home</a>
         <a href="/blog">Blog</a>
         <a href="/about">About</a>
-        <a href="https://mohdasif.in">Shop</a> 
+        <a href="https://mohdasif.in/shop">Shop</a> 
      
         
         <a href="/photos" style="position: absolute; right: 200px;"><i class="fa-solid fa-camera"></i></a>
@@ -754,6 +754,36 @@ moveToTopButton.addEventListener('click', () => {
 // Initial state check on load
 handleScroll();
     </script>
+<script>
+    let lastScrollTop = 0; // Track the last scroll position
+
+    const mobileNav = document.getElementById("mobile-navigation");
+    const desktopNav = document.getElementById("desktop-navigation");
+
+    // Listen for scroll events
+    window.addEventListener("scroll", function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Show or hide mobile navigation based on scroll direction
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down, hide mobile navigation
+            mobileNav.style.top = "-60px"; // Adjust to the height of your mobile nav
+        } else {
+            // Scrolling up, show mobile navigation
+            mobileNav.style.top = "0"; // Set to 0 to make it visible
+        }
+
+        // Show mobile navigation when user is at the bottom of the page
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            mobileNav.style.bottom = "0"; // Make sure it sticks to the bottom
+        } else {
+            mobileNav.style.bottom = ""; // Reset if not at the bottom
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scroll
+    });
+</script>
+
 
 </body>
 </html>
