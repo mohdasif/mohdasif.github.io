@@ -884,6 +884,12 @@ nav ul li {
     transform: translateX(-25%) translateY(-10px); /* balances the shift */
   }
 }
+/* Menu button font size for desktop (screens above 601px) */
+@media (min-width: 601px) {
+  .menu-button.desktop-only {
+    font-size: 30px; /* Set font size for desktop version */
+  }
+}
 </style>
 
 <!-- Move to Top Button -->
@@ -920,10 +926,12 @@ nav ul li {
   <div class="menu-wrapper">
     
     <!-- Mobile version (⋮) -->
-    <button class="menu-button mobile-only" onclick="toggleMenu()">||</button>
+    <button class="menu-button mobile-only" onclick="toggleMenu()">+</button>
+
 
     <!-- Desktop version (⋯) -->
-    <button class="menu-button desktop-only" onclick="toggleMenu()">⋯</button>
+    <button class="menu-button desktop-only" onclick="toggleMenu()">+</button>
+
 
     <div class="dropdown" id="menu">
         <a href="https://www.pinterest.com/mohdasif">Pinterest</a>
