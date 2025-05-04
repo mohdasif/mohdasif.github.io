@@ -902,12 +902,6 @@ nav ul li {
     transform: translateX(-25%) translateY(-10px); /* balances the shift */
   }
 }
-/* Menu button font size for desktop (screens above 601px) */
-@media (min-width: 601px) {
-  .menu-button.desktop-only {
-    font-size: 30px; /* Set font size for desktop version */
-  }
-}
 </style>
 
 <!-- Move to Top Button -->
@@ -937,25 +931,6 @@ nav ul li {
         <a href="/play"><i class="fa-solid fa-play" style="font-size: 18px; color: #74c0f5;"></i></a>
         <a href="/contact"><i class="fa-regular fa-comment-dots" style="font-size: 18px;"></i></a>
     </div>
-  
-    
-<!-- Bottom Navigation -->
-<div class="bottom-nav">
-  <div class="menu-wrapper">
-
-    <!-- Desktop version (⋯) -->
-    <button class="menu-button desktop-only" onclick="toggleMenu()">+</button>
-
-
-    <div class="dropdown" id="menu">
-        <!-- New Links First -->
-        <a href="/photos">Photos</a>
-        <a href="/videos">Videos</a>
-        <a href="/music">Music</a>
-    </div>
-
-  </div>
-</div>
 
 
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
@@ -1052,15 +1027,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div class="content-container" style="background-color: #fff; padding: 15px; border-radius: 10px;">
     <div class="links-container" style="text-align: left;">
-        <h2 style="text-align: left;">Buy Me a Coffee</h2>
-        <p class="profile-text">
-            Like my work? You can support it here.
-        </p>
-        <p><a href="https://buymeacoffee.com/mohdasif" target="_blank">buymeacoffee.com/mohdasif</a></p>
-    </div>
-</div>
-<div class="content-container" style="background-color: #fff; padding: 15px; border-radius: 10px;">
-    <div class="links-container" style="text-align: left;">
         <h2 style="text-align: left;">Contact</h2>
         <p class="profile-text">
             Feel free to reach out for inquiries or collaborations.
@@ -1101,8 +1067,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- Footer Section -->
     <div class="privacy-policy">
         <a href="/about" style="font-weight: normal;">About</a> |
-        <a href="/privacy" style="font-weight: normal;">Privacy</a> |
-        <a href="/terms" style="font-weight: normal;">Terms</a>
+        <a href="/privacy" style="font-weight: normal;">Privacy</a>
     </div>
 </div>
 
@@ -1164,7 +1129,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateMenuVisibility();
   });
 </script>
-<br>
 </body>
 
 </html>
