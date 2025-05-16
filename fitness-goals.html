@@ -515,9 +515,12 @@ nav ul li {
 <body>
 
 
-    <!-- Desktop Navigation -->
-    <div id="desktop-navigation">
-        <a href="/blog">Home</a>
+<!-- Desktop Navigation -->  
+<div id="desktop-navigation">
+    <!-- Home button (should redirect to https://mohdasif.com directly) -->
+    <a href="/blog" class="home-link only-home">Home</a>
+    
+    <!-- Other links -->
         <a href="/blog">Blog</a>
         <a href="/books">Books</a>
         <a href="/about">About</a>
@@ -528,9 +531,12 @@ nav ul li {
         <a href="https://telegram.me/mohdasif" style="position: absolute; right: 140px;"><i class="fa-solid fa-comment"></i></a>
     </div>
 
-    <!-- Mobile Navigation -->  
-    <div id="mobile-navigation">  
-        <a href="/blog"><i class="fa-solid fa-house house-thin-style" style="font-size: 18px;"></i></a>
+<!-- Mobile Navigation -->  
+<div id="mobile-navigation">  
+    <!-- Home button (should redirect on homepage) -->
+    <a href="/blog" class="home-link only-home">
+        <i class="fa-solid fa-house house-thin-style" style="font-size: 18px;"></i>
+    </a>
         <a href="https://mohdasif.in"><i class="fa-solid fa-feather feather-thin-style" style="font-size: 18px;"></i></a>
         <a href="/photos"><i class="fa-solid fa-camera camera-thin-style" style="font-size: 18px;"></i></a>
         <a href="/play"><i class="fa-solid fa-play play-thin-style" style="font-size: 18px;"></i></a>
@@ -705,6 +711,24 @@ moveToTopButton.addEventListener('click', () => {
 // Initial state check on load
 handleScroll();
     </script>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const homeLinks = document.querySelectorAll(".home-link.only-home");
+    
+      homeLinks.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+    
+          // Check if there's a valid referrer that is not the current page
+          if (document.referrer && document.referrer !== window.location.href) {
+            window.history.back();
+          } else {
+            // Fallback to /blog if no history
+            window.location.href = "/blog";
+          }
+        });
+      });
+    });
+    </script>
 </body>
 </html>
