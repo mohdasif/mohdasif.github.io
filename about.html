@@ -902,6 +902,176 @@ nav ul li {
     transform: translateX(-25%) translateY(-10px); /* balances the shift */
   }
 }
+.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 0;
+  z-index: 999;
+  box-shadow: none;
+}
+
+/* Desktop - centered */
+@media (min-width: 601px) {
+  .bottom-nav {
+    left: 15%;
+    transform: translateX(-80%);
+  }
+}
+
+/* Mobile - aligned to right middle */
+@media (max-width: 600px) {
+  .bottom-nav {
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: 3px;
+    transform: translateY(-50%);
+  }
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+/* Menu button styled as a circle (desktop) */
+.menu-button {
+  background: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+/* Menu button on mobile - flat look */
+@media (max-width: 600px) {
+  .menu-button {
+    background: transparent;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+/* Bottom dropdown menu */
+.dropdown {
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: none;
+  z-index: 1000;
+
+  width: auto;
+  max-width: 250px;
+  min-width: 140px;
+  padding: 10px 12px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* Show the dropdown */
+.dropdown.show {
+  display: block;
+}
+
+/* Dropdown link styles */
+.dropdown a {
+  display: block;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Desktop position: center under button */
+@media (min-width: 601px) {
+  .dropdown {
+    left: 80%;
+    bottom: 70px;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .dropdown {
+    left: auto;
+    right: 40px; /* Adjust as needed to align it to the left of the button */
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* Show/hide per device */
+.mobile-only,
+.desktop-only {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-only {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 601px) {
+  .desktop-only {
+    display: inline-flex;
+  }
+}
+@media (min-width: 601px) {
+  .dropdown {
+    left: -20%; /* a bit more right than 60% */
+    bottom: 70px;
+    transform: translateX(-25%) translateY(-10px); /* balances the shift */
+  }
+}
+blockquote.npf_indented + blockquote.npf_indented {
+  margin-top: 1.5em; /* Increase as needed */
+}
+.menu-button.desktop-only {
+  font-size: 25px;
+  color: grey; /* Set font color to grey */
+}
+
+figure.tmblr-embed + p {
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+.npf_indented {
+  margin-top: 4px !important;
+  padding-top: 0 !important;
+}
+@media (max-width: 600px) {
+  .hide-on-mobile { display: none !important; }
+  .desktop-only { display: none !important; }
+}
+
+@media (min-width: 601px) {
+  .hide-on-desktop { display: none !important; }
+  .mobile-only { display: none !important; }
+}
+.npf_row + .npf_indented {
+  margin-top: 0.75rem !important;
+}
 </style>
 
 <!-- Move to Top Button -->
@@ -932,6 +1102,34 @@ nav ul li {
         <a href="/contact"><i class="fa-regular fa-comment-dots" style="font-size: 18px;"></i></a>
     </div>
 
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+    <div class="menu-wrapper">
+  
+      <!-- Mobile version (⋮) -->
+      <button class="menu-button mobile-only" onclick="toggleMenu()">||</button>
+  
+      <!-- Desktop version (⋯) -->
+      <button class="menu-button desktop-only" onclick="toggleMenu()">+</button>
+  
+      <div class="dropdown" id="menu">
+        <!-- 🔹 Desktop Only -->
+        <a href="https://www.linkedin.com/in/mohdasif" class="hide-on-mobile">Linkedin</a>
+        <a href="https://www.youtube.com/@mohdasif" class="hide-on-mobile">YouTube</a>
+        <a href="https://www.reddit.com/user/mohdasif" class="hide-on-mobile">Reddit</a>
+        <a href="https://github.com/mohdasif" class="hide-on-mobile">GitHub</a>
+        
+  
+        <!-- 🔹 Mobile Only -->
+        <a href="https://www.linkedin.com/in/mohdasif" class="hide-on-desktop">Linkedin</a>
+        <a href="https://www.clubhouse.com/@mohdasif" class="hide-on-desktop">Clubhouse</a>
+        <a href="https://www.pinterest.com/mohdasif" class="hide-on-desktop">Pinterest</a>
+        <a href="https://www.youtube.com/@mohdasif" class="hide-on-desktop">YouTube</a>
+        
+      </div>
+  
+    </div>
+  </div>
 
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 <nav>

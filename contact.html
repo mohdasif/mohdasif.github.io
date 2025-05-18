@@ -879,10 +879,38 @@ nav ul li {
 }
 @media (min-width: 601px) {
   .dropdown {
-    left: 70%; /* a bit more right than 60% */
+    left: -20%; /* a bit more right than 60% */
     bottom: 70px;
     transform: translateX(-25%) translateY(-10px); /* balances the shift */
   }
+}
+blockquote.npf_indented + blockquote.npf_indented {
+  margin-top: 1.5em; /* Increase as needed */
+}
+.menu-button.desktop-only {
+  font-size: 25px;
+  color: grey; /* Set font color to grey */
+}
+
+figure.tmblr-embed + p {
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+.npf_indented {
+  margin-top: 4px !important;
+  padding-top: 0 !important;
+}
+@media (max-width: 600px) {
+  .hide-on-mobile { display: none !important; }
+  .desktop-only { display: none !important; }
+}
+
+@media (min-width: 601px) {
+  .hide-on-desktop { display: none !important; }
+  .mobile-only { display: none !important; }
+}
+.npf_row + .npf_indented {
+  margin-top: 0.75rem !important;
 }
 </style>
 
@@ -913,6 +941,25 @@ nav ul li {
         <a href="/play"><i class="fa-solid fa-play" style="font-size: 18px; color: #74c0f5;"></i></a>
         <a href="/contact"><i class="fa-regular fa-comment-dots" style="font-size: 18px;"></i></a>
     </div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+    <div class="menu-wrapper">
+  
+      <!-- Desktop version (⋯) -->
+      <button class="menu-button desktop-only" onclick="toggleMenu()">+</button>
+  
+      <div class="dropdown" id="menu">
+        <!-- 🔹 Desktop Only -->
+        <a href="https://www.youtube.com/@mohdasif" class="hide-on-mobile">YouTube</a>
+        <a href="https://www.reddit.com/user/mohdasif" class="hide-on-mobile">Reddit</a>
+        <a href="https://github.com/mohdasif" class="hide-on-mobile">GitHub</a>
+        <a href="https://www.tumblr.com/mohdasif" class="hide-on-mobile">Tumblr</a>
+        
+      </div>
+  
+    </div>
+  </div>
 
 
 <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
@@ -1062,7 +1109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- Footer Section -->
     <div class="privacy-policy">
         <a href="/about" style="font-weight: normal;">About</a> |
-        <a href="/privacy" style="font-weight: normal;">Privacy</a>
+        <a href="https://linktr.ee/mohdasif" style="font-weight: normal;">Linktree</a>
     </div>
 </div>
 
