@@ -1119,6 +1119,21 @@ figure.tmblr-embed + p {
     </ul>
 </nav>
 
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+  <div class="menu-wrapper">
+
+    <!-- Desktop version (⋯) -->
+    <button class="menu-button desktop-only" onclick="toggleMenu()">+</button>
+
+    <div class="dropdown" id="menu">
+      <!-- 🔹 Desktop Only -->
+      <a href="/photos" class="hide-on-mobile">Photos</a>
+    </div>
+
+  </div>
+</div>
+    
 <!-- Place this script at the bottom of the page -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
