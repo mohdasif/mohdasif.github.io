@@ -1089,8 +1089,8 @@ figure.tmblr-embed + p {
 
 .telegram-float{
   position: fixed;
-  bottom: 20px;
-  right: 15px;
+  bottom: 30px;
+  right: 20px; /* Mobile default */
   width: 45px;
   height: 45px;
   background: #0088cc;
@@ -1105,10 +1105,10 @@ figure.tmblr-embed + p {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* desktop par hide */
-@media (min-width:601px){
+/* Desktop only */
+@media (min-width: 768px) {
   .telegram-float{
-    display:none;
+    right: 150px; /* thoda left aa jayega */
   }
 }
 </style>
