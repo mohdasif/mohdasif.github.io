@@ -1238,14 +1238,38 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 
 
+<style>
+/* Mobile ke liye */
+.mobile-link{
+  display:none;
+}
+
+@media (max-width:768px){
+  .desktop-link{
+    display:none;
+  }
+  .mobile-link{
+    display:inline-block;
+  }
+}
+</style>
+
 <!-- Content Container for Bookshelves Section -->
 <div class="content-container" style="background-color: #FFFFFF;">
   <ul style="list-style-type: none; padding: 0;">
 
     <li style="margin-bottom: 10px; text-align: center;">
-      <a href="/photos" class="blank-button" style="display: inline-block; padding: 6px 15px; border: 1px solid #999; border-radius: 15px; cursor: pointer; max-width: 180px; margin: auto; text-decoration: none; color: grey;">
+
+      <!-- Desktop link -->
+      <a href="/photos" class="blank-button desktop-link" style="display: inline-block; padding: 6px 15px; border: 1px solid #999; border-radius: 15px; cursor: pointer; max-width: 180px; margin: auto; text-decoration: none; color: grey;">
         Photos
       </a>
+
+      <!-- Mobile link -->
+      <a href="https://telegram.me/mohdasif" class="blank-button mobile-link" style="padding: 6px 15px; border: 1px solid #999; border-radius: 15px; cursor: pointer; max-width: 180px; margin: auto; text-decoration: none; color: grey;">
+        Photos
+      </a>
+
     </li>
 
 
