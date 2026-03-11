@@ -1239,17 +1239,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <style>
-/* Mobile ke liye */
+/* Default: mobile link hide */
 .mobile-link{
-  display:none;
+  display:none !important;
 }
 
+/* Mobile view */
 @media (max-width:768px){
   .desktop-link{
-    display:none;
+    display:none !important;
   }
   .mobile-link{
-    display:inline-block;
+    display:inline-block !important;
   }
 }
 </style>
@@ -1267,7 +1268,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       <!-- Mobile link -->
       <a href="https://telegram.me/mohdasif" class="blank-button mobile-link" style="padding: 6px 15px; border: 1px solid #999; border-radius: 15px; cursor: pointer; max-width: 180px; margin: auto; text-decoration: none; color: grey;">
-        Photos
+        Telegram 
       </a>
 
     </li>
