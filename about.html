@@ -1082,6 +1082,22 @@ figure.tmblr-embed + p {
   color: grey;
   box-sizing: border-box;
 }
+/* Tumhara existing CSS yahan hoga */
+
+.mobile-link{
+  display:none;
+}
+
+@media (max-width:768px){
+  .desktop-link{
+    display:none;
+  }
+
+  .mobile-link{
+    display:inline;
+  }
+}
+
 </style>
 
 <!-- Move to Top Button -->
@@ -1302,14 +1318,22 @@ document.addEventListener('DOMContentLoaded', function () {
 </style>
 </div>  
  
-    <!-- Footer Section -->
-    <div class="privacy-policy">
-        <a href="https://mohdasif.com/shop" style="font-weight: normal;">Shop</a>
-    </div>
-</div>
+<!-- Footer Section -->
+<div class="privacy-policy">
+    
+    <!-- Desktop Link -->
+    <a href="https://mohdasif.com/shop" class="desktop-link" style="font-weight: normal;">
+        Shop
+    </a>
 
+    <!-- Mobile Link -->
+    <a href="https://mohdasif.com/blog" class="mobile-link" style="font-weight: normal;">
+        Blog
+    </a>
+
+</div>
 </footer>
-</div> <!-- Close the page-container div here. -->
+</div> <!-- Close the page-container div here -->
 
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
